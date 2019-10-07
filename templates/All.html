@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- title上面加圖片 -->
+  <link rel="Shortcut Icon" type="image/x-icon" href="cathayicon.png">
+  <title>Cathay Domestic Equity Team</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- keep failed -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/dashboard/dashboard.css">
+  <!-- <link rel="stylesheet" href="/stylesheets/style.css?q=1280549780" type="text/css" media="screen" charset="utf-8" /> -->
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" charset="utf-8" />
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+
+    <div class="col-lg-12  col-md-12 col-sm-12" align="center">
+      <div class="hidden-xs hidden-sm"></div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <!-- <button border-color="#ff0000;" type="button" class="navbar-toggle pull-right hidden-md hidden-lg"
+            data-toggle="collapse" aria-expanded="true" data-target="#navbar-1" style=" border-color: red;">
+            
+            <span class="sr-only ">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+
+          <!-- <div class="navbar-header"><a class="navbar-brand" href="/">主網站</a></div> -->
+          <!-- 這行為什麼擺在這裡才能正常運作 若是擺在button上面會怪怪的 -->
+
+          <div class="collapse navbar-collapse" aria-expanded="true" id="navbar-1">
+            <ul class="nav navbar-nav">
+              <li><a href="/">主網站</a></li>
+              </li>
+
+              <!-- <li><a href="#">Iphone3</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">iPhone <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/delivery-message?Product=IPhone11Pro-Max">iPohone11Pro-Max</a></li>
+                  <li><a href="/delivery-message?Product=Iphone11Pro">iPhone11Pro</a></li>
+                  <li><a href="/delivery-message?Product=IPhone11">iPhone11</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/delivery-message?Product=IphoneXs-Max">iPhoneXs-Max</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/delivery-message?Product=Iphone8-plus">iPhone8-plus</a></li>
+                  <li><a href="/delivery-message?Product=Iphone8">iPhone8</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">iPad <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/delivery-message?Product=Ipad">New iPad</a></li>
+                  <li><a href="/delivery-message?Product=IpadPro">iPadPro</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">AppleWatch <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/delivery-message?Product=AppleWatch5">Apple Watch5</a></li>
+                  <li><a href="/delivery-message?Product=AppleWatch4">Apple Watch4</a></li>
+                  <li><a href="/delivery-message?Product=AppleWatch3">Apple Watch3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="col-lg-1 col-md-1 hidden-sm" align="right"></div> -->
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 col-md-2 sidebar">
+
+        <ul class="nav nav-sidebar">
+          <li class={{'active' if Title == 'Overview' else ''}}><a href="/delivery-message?Product={{Product}}">Overview
+            </a></li>
+          <li class={{'active' if Country == 'Us' else ''}}>
+            <a href="/delivery-message?Country=Us&Product={{Product}}"><img src="united_states.png">America</a></li>
+          <li class={{'active' if Country == 'Cn' else ''}}>
+            <a href="/delivery-message?Country=Cn&Product={{Product}}"><img src="china.png">China</a></li>
+          <li class={{'active' if Country == 'Hk' else ''}}>
+            <a href="/delivery-message?Country=Hk&Product={{Product}}"><img src="hong_kong.png">Hong Kong</a></li>
+          <li class={{'active' if Country == 'Tw' else ''}}>
+            <a href="/delivery-message?Country=Tw&Product={{Product}}"><img src="taiwan.png">Taiwan</a></li>
+          <li class={{'active' if Country == 'Jp' else ''}}>
+            <a href="/delivery-message?Country=Jp&Product={{Product}}"><img src="japan.png">Japan</a></li>
+          <li class={{'active' if Country == 'Uk' else ''}}>
+            <a href="/delivery-message?Country=Uk&Product={{Product}}"><img src="united_kingdom.png">United Kingdom</a>
+          </li>
+          <li class={{'active' if Country == 'De' else ''}}>
+            <a href="/delivery-message?Country=De&Product={{Product}}"><img src="germany.png">German</a></li>
+          <li class={{'active' if Country == 'Fr' else ''}}>
+            <a href="/delivery-message?Country=Fr&Product={{Product}}"><img src="france.png">Franch</a></li>
+          <li class={{'active' if Country == 'Ru' else ''}}>
+            <a href="/delivery-message?Country=Ru&Product={{Product}}"><img src="russia.png">Russin</a></li>
+          <li class={{'active' if Country == 'Br' else ''}}>
+            <a href="/delivery-message?Country=Br&Product={{Product}}"><img src="brazil.png">Brazil</a></li>
+          <li class={{'active' if Country == 'Mx' else ''}}>
+            <a href="/delivery-message?Country=Mx&Product={{Product}}"><img src="mexico.png">Mexico</a></li>
+        </ul>
+
+      </div>
+
+      <div class="col-sm-10 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="row placeholders ">
+
+          <!-- New header -->
+          <header id="header">
+            <div class="container">
+              <div class="row">
+                <div align="left" class="col-md-10">
+                  <h1><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>{{Product}}
+                    <small>{{Title}}</small></h1>
+                </div>
+                <div class="col-md-2">
+                  <a class="btn btn-default" href="../data/Data.csv" role="button">Download CSV</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- New header -->
+
+          <div class="table-responsive">
+
+            {{Table|safe}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <script>
+    src = "https://getbootstrap.com/docs/3.3/assets/js/docs.min.js"
+  </script>
+
+</body>
+
+</html>
