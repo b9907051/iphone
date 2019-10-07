@@ -180,7 +180,7 @@ def dashboard():
     # print(Product)
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
-    df = pd.read_csv("../../mainweb/static/data/Data.csv")
+    df = pd.read_csv("static/data/Data.csv")
     # 如果現在不是在虛擬環境下的話路徑使用
     # df = pd.read_csv("static/data/Data.csv")
     df = df.drop_duplicates()
