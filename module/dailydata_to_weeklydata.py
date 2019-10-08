@@ -50,8 +50,8 @@ def dailydata_to_weeklydata(productinfo, maininfo):
     # print(tempdf)
     # 把datime 格式 轉換成文字
     for m in range(len(tempdf)):
-        tempdf.iloc[m, 1] = [
-            k.strftime("%Y-%m-%d") for k in pd.to_datetime(tempdf.iloc[m, 1]).tolist()
+        tempdf.iloc[m, 0] = [
+            k.strftime("%Y-%m-%d") for k in pd.to_datetime(tempdf.iloc[m, 0]).tolist()
         ]
     # print(tempdf.iloc[0, 0])
     # 這裡 denest dataframe裡的list 並且以index為Label把資料排在一起
