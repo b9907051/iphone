@@ -153,8 +153,6 @@ else:
     #     products_of_shops 的 key 是所有的產品
     #     products_of_shops 的 value 是所有產品相關的店家
     # 這裡稍微注意華為官方網站 的商品有兩個
-    for key in products_of_shops.keys():
-        products_of_shops[key] = sum([products_of_shops[key], shop_dealer_list], [])
 
     shop_id = {}
     for shop_item in shop_product_id.keys():  # countries.keys 是全部的型號
