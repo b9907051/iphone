@@ -61,6 +61,14 @@ def chinese_to_url(chinese):
     return url
 
 
+# 試看看有沒有ban掉
+# sort = d 放在gcp上面會被ban掉
+# 試看看能不能放在GCP
+url = "https://list.tmall.com/search_shopitem.htm?user_id=883737303&q=nex3&sort=td"
+source = requests.get(url, headers=headers).text
+soup = Bt4(source, "html.parser")
+# ,headers = headers
+
 ban_by_Tmall = soup.find("p").text
 
 # 如果IP被Tmall ban掉的話
@@ -68,7 +76,8 @@ if "二正忙" in ban_by_Tmall:
     print("目前被ban了")
 
 else:
-    #     TODO
+    time.sleep(random.randint(1, 3))
+
     # 店家的部分想要改成使用 user_id=883737303 的方式來把 商家的名字 去做對應
     # key:user_id , value:商家名字
     shop_official = {
