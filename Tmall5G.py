@@ -206,5 +206,6 @@ else:
     Old_Data = Data.to_dict("records")
     newres = res + Old_Data
     df = pd.DataFrame(res)
+    df = df.drop_duplicates()
     df.to_csv(path, encoding="utf_8_sig", index=False)
 
