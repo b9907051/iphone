@@ -61,15 +61,6 @@ def chinese_to_url(chinese):
     return url
 
 
-# 試看看有沒有ban掉
-# sort = d 放在gcp上面會被ban掉
-# 試看看能不能放在GCP
-url = "https://list.tmall.com/search_shopitem.htm?user_id=883737303&q=nex3&sort=td"
-source = requests.get(url, headers=headers).text
-soup = Bt4(source, "html.parser")
-print(soup)
-# ,headers = headers
-
 ban_by_Tmall = soup.find("p").text
 
 # 如果IP被Tmall ban掉的話
