@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup as Bt4
-import requests
+import requests #2.18.4
 import json
 import datetime
 import pandas as pd
@@ -15,7 +15,7 @@ headers = {
 'Cache-Control': 'max-age=0',
 'Connection': 'keep-alive',
 'Host': 'list.tmall.com',
-'Cookie':'hng=TW%7Czh-TW%7CTWD%7C158; cna=jHXFFBm0WQoCATz7MNNIhhSZ; _med=dw:1536&dh:864&pw:1920&ph:1080&ist:0; UM_distinctid=16a7b974bd6b4-0292494cbf0192-f353163-144000-16a7b974bd72f8; otherx=e%3D1%26p%3D*%26s%3D0%26c%3D0%26f%3D0%26g%3D0%26t%3D0; x=__ll%3D-1%26_ato%3D0; enc=VmR9ETNvX%2BmMSD5EbeM22pqnb9rM4ICzcTYWnYET3%2BOPKftkMsbVSvL99lz9AzekqNmmnwauXVkExlCpPdY7QQ%3D%3D; lid=lay9412206; _uab_collina=155713150980738456613855; t=176cce93bf1d1d50235eafac551d6a73; _tb_token_=eeb5de3ee1e1e; cookie2=10bca5b3e4f3af28e3248103f28be498; tracknick=lay9412206; ck1=""; lgc=lay9412206; swfstore=21290; uc1=cookie16=UIHiLt3xCS3yM2h4eKHS9lpEOw%3D%3D&cookie21=UtASsssmfufd&cookie15=V32FPkk%2Fw0dUvg%3D%3D&existShop=false&pas=0&cookie14=UoTZ7HULcZZRjA%3D%3D&tag=8&lng=zh_CN; uc3=vt3=F8dBy3qOPriEl4sm1Tc%3D&id2=UUphy%2FA7bLfhK2tpIw%3D%3D&nk2=D8L11Gtav7Mfdw%3D%3D&lg2=URm48syIIVrSKA%3D%3D; csg=27cf4778; skt=993f3b24b65d53ba; whl=-1%260%260%260; x5sec=7b22746d616c6c7365617263683b32223a223362613864653238666437303235653562313930393736663362643831363538434d2b76694f6346454e4755334d47753673727a41786f504d6a49774d5449794e4463774e5455774e6a7378227d; res=scroll%3A1381*5894-client%3A1381*612-offset%3A1381*5894-screen%3A1536*864; cq=ccp%3D1; pnm_cku822=098%23E1hv5pvUvbpvUvCkvvvvvjiPRLLWAjDbRFS9QjYHPmPOQj3bPL5W1jtUnLs9QjlP2QhvCvvvMM%2FtvpvIvvvvvhCvvvvvvUUTphvUypvvvQCvpvACvvv2vhCv2RvvvvWvphvWgUyCvvOUvvVva6RivpvUvvmvnXRrVzUEvpCWmVs%2FvvwK%2BExr1CuKf3qxs4V9eEB%2Bm7zh6jZcR2xVI42viC4AVAdpafFCKdyIvWmy%2BE7rjC69D7zh68g7Ecqh6jc6RqwiLO2v%2BE7rVphCvvOvUvvvphvtvpvhvvvvv8wCvvpvvUmm; isg=BPX1ph6oxVb_XSHObfhQLj0sBHFv2nvK-6ZhkncbNGziThdAPsO7VSqMmFpdDsE8; l=bBaiAnZ7vfBUsT6oBOfNZuIJEZbtiIdb8sPzw49POICP_8f6nEfRWZt28b8BC3GNa6fWJ387PXqBByT3ty4Eh',
+'Cookie':'cna=zhUfFklCJnICAT3YSknK5icd; _med=dw:1536&dh:864&pw:1728&ph:972&ist:0; t=79d6fb89a0ae72213838fe10d5e0da8f; _tb_token_=a1bee7e361e0; cookie2=176a86413a3c9c0cbc41d95280356db5; _m_h5_tk=acd19319020a1144fd02a569eb3f3a8f_1570644520682; _m_h5_tk_enc=ba09262ec70187c8eb0c69c036e6ba76; dnk=lay9412206; uc1=cookie15=URm48syIIVrSKA%3D%3D&existShop=false&tag=8&pas=0&cookie16=VT5L2FSpNgq6fDudInPRgavC%2BQ%3D%3D&lng=zh_CN&cookie14=UoTbnV5vpUaYOQ%3D%3D&cookie21=U%2BGCWk%2F7oPIg; uc3=nk2=D8L11Gtav7Mfdw%3D%3D&id2=UUphy%2FA7bLfhK2tpIw%3D%3D&lg2=VFC%2FuZ9ayeYq2g%3D%3D&vt3=F8dByuDm5RWLSqY5iII%3D; tracknick=lay9412206; lid=lay9412206; _l_g_=Ug%3D%3D; uc4=id4=0%40U2grEJfOjhrzTBMkSZEdu%2FOiPIFKfRJd&nk4=0%40DeF1P2922TLBbtywEbqwFHzdSh9S; unb=2201224705506; lgc=lay9412206; cookie1=B0f3xdYsfwH%2FP7qmTrJDVvgwSXKhKY99qALrSeXklYM%3D; login=true; cookie17=UUphy%2FA7bLfhK2tpIw%3D%3D; _nk_=lay9412206; sg=666; csg=10f75fae; cq=ccp%3D0; otherx=e%3D1%26p%3D*%26s%3D0%26c%3D0%26f%3D0%26g%3D0%26t%3D0; swfstore=210517; x=__ll%3D-1%26_ato%3D0; enc=0LxVaFfV%2B8bDkg%2ByNgopDbIOyLKOiD1GNPJwzG3u6Q%2BUh2cbUeiyj3gP%2BoAtOoI8dHqFkp5OQvKjPJggQoPd3A%3D%3D; pnm_cku822=098%23E1hvCvvUvbpvU9CkvvvvvjiPRssOsjl8P2sWzjYHPmPvQj1HR2Syzj3WnLLp1jDvPLZPvpvhMMGvvvhCvvOvCvvvphvEvpCWCjBxvvwQAbmxfXk4jomxfwLyd3ODN%2BLyaNpOHkyZ0nsy0COqb64B9W2%2B%2BfvsxI2hgR9t%2BFBCAfevD40Xjo2v%2B8c6e1DQpf2XS4ZAhbyCvm9vvvvvphvvvvvvvYxvpvAWvvv2vhCv2UhvvvWvphvWgvvvvQCvpvs9uphvmvvv9bf1s03NkphvC99vvOCzp2yCvvpvvvvviQhvCvvv9UU%3D; res=scroll%3A1688*1782-client%3A1688*803-offset%3A1688*1782-screen%3A1536*864; whl=-1%260%260%260; l=cBg5pR8cq4ywv3qCBOCZnurza779tIRxiuPzaNbMi_5aD18_3pbOk9WI2eJ6DfWdt9TB4tm2-g29-etksdB2Pjnqn7MV.; isg=BJ-fqJ2vPsj-ITrXbADQ8A_VLvMpBPOm4-krDjHses6VwL5COdLN9miahzgb6Mse',
 'Upgrade-Insecure-Requests': '1',
 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
 }
@@ -50,10 +50,10 @@ def chinese_to_url(chinese):
 # 試看看有沒有ban掉
 # sort = d 放在gcp上面會被ban掉
 # 試看看能不能放在GCP
-url = 'https://list.tmall.com/search_product.htm?q=p30&sort=d'
+url = 'https://list.tmall.com/search_shopitem.htm?user_id=883737303&q=nex3&sort=td'
 source = requests.get(url,headers = headers).text
 soup = Bt4(source,'html.parser')
-# print(soup)
+print(soup)
 ban_by_Tmall = soup.find("p").text
 
 # 如果IP被Tmall ban掉的話
