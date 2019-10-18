@@ -171,6 +171,7 @@ else:
     #         print(url)
 
     res = []
+    d = {}
     # 迴圈跑每個產品
     # product:'mate30','nex30'...
     for shop in shop_product_id.keys():
@@ -179,8 +180,12 @@ else:
             # .\可以讓過長的字串換行
             url = f"https://list.tmall.com/search_shopitem.htm?user_id={shop_all_R[shop]}.\
                 &start_price=1000&q={product_of_url[product]}&sort=td&style=w"
-            source = requests.get(url, headers=headers).text
+            sessions = requests.session()
+            sessions.headers = headers
+            source = sessions.get(url,allow_redirects = False).text
+            # source = requests.get(url, headers=headers).text
             soup = Bt4(source, "html.parser")
+            print(soup)
             # search_id 是一個正則表示 要拿去對 html 搜尋 <a>標籤裡的 href 有沒有符合的
             search_id = re.compile(shop_product_id[shop][product])
             deal_price, deal_number = get_the_dealinfo(soup.find("a", href=search_id))
@@ -191,16 +196,18 @@ else:
             d["Dealnumber"] = deal_number
             d["Timestamp"] = datetime.datetime.today().strftime("%Y-%m-%d")
             res.append(d)
+            print(d)
+
             d = {}
             #         等一會再跑下一圈
             time.sleep(random.randint(1, 3))
 
     if platform.system() == "Windows":
         # Local 端
-        path = "static/data/Tmall5G.csv"
+        path = "static/data/Tmall5g.csv"
     else:
         # AWS 端
-        path = "/home/ubuntu/iphone11/mainweb/static/data/Tmall5G.csv"
+        path = "/home/ubuntu/iphone11/mainweb/static/data/Tmall5g.csv"
 
     Data = pd.read_csv(path)
     Old_Data = Data.to_dict("records")
