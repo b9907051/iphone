@@ -16,9 +16,10 @@ headers = {
     "Cache-Control": "max-age=0",
     "Connection": "keep-alive",
     "Host": "list.tmall.com",
-    "Cookie": "cna=zhUfFklCJnICAT3YSknK5icd; _med=dw:1536&dh:864&pw:1728&ph:972&ist:0; t=79d6fb89a0ae72213838fe10d5e0da8f; _tb_token_=a1bee7e361e0; cookie2=176a86413a3c9c0cbc41d95280356db5; dnk=lay9412206; tracknick=lay9412206; lid=lay9412206; lgc=lay9412206; otherx=e%3D1%26p%3D*%26s%3D0%26c%3D0%26f%3D0%26g%3D0%26t%3D0; swfstore=210517; x=__ll%3D-1%26_ato%3D0; _uab_collina=157084999806509442489467; uc3=lg2=URm48syIIVrSKA%3D%3D&id2=UUphy%2FA7bLfhK2tpIw%3D%3D&vt3=F8dByuDg%2B5yNxwxhpQU%3D&nk2=D8L11Gtav7Mfdw%3D%3D; uc4=nk4=0%40DeF1P2922TLBbtywEbqwGq%2F2QSUI&id4=0%40U2grEJfOjhrzTBMkSZEdu%2FOiMh3f5BCm; csg=c215030a; hng=TW%7Czh-TW%7CTWD%7C158; uc1=cookie15=Vq8l%2BKCLz3%2F65A%3D%3D; enc=QPrXIalV%2FsbEiSGLrm3aO9uA9ZOnX5y3lkx5fphRS%2BS6IvlEsEY2T4m4ntQspA%2Fvwo5jhFPEIvHN3DasXFvrxg%3D%3D; whl=-1%260%260%260; cq=ccp%3D1; _m_h5_tk=a4acbcae4841f2d0abb9b9430d1d8658_1571119388358; _m_h5_tk_enc=a96d65188f0f14a1b4fd822fd276a6c6; _fbp=fb.1.1571124426952.1840870754; x5sec=7b22746d616c6c7365617263683b32223a226136363431383963313862613336626631323637373739306336626231656539434b4f306d2b304645502f4873595779742f6a5333774561447a49794d4445794d6a51334d4455314d4459374d673d3d227d; pnm_cku822=098%23E1hvlvvUvbpvUvCkvvvvvjiPRszU1jtjPsMO6j3mPmP9QjlUR2Fh6jrUPsqh0j3WiQhvCvvv9UUEvpCWCjvvvvw0TWex6fItb9TxfwLvdigDNrClKU66%2B2E1SXVxCLIZEcqya4oQ%2Bul1pjc6sWpwbAx%2F1WCl%2Bb8rwZHlYhzBRfpKofkXAf00IOyCvvOUvvVva6mivpvUvvmvrincvFRtvpvIvvvvvhCvvvvvvvUvphvhCQvvvQCvpvACvvv2vhCv2RvvvvWvphvWgvhCvvOvUvvvphvPvpvhvv2MMsyCvvpvvvvv; res=scroll%3A1013*1636-client%3A1013*449-offset%3A1013*1636-screen%3A1536*864; l=dBg5pR8cq4ywv9G2KOCNSuIJE5bTQIRAguPRwLSei_5dG6L_BPbOkgzdoFp6cfWftu8B4NSLztv9-etkmppTY-cHtBU4XxDc.; isg=BF5e5gw6jy8-bdvwdUsBH0a-r_Rgt_DGc_Wz_Qjn1qGcK_4FcK5dqQrJI3-CExqx",
+    "Cookie": "cna=zhUfFklCJnICAT3YSknK5icd; _med=dw:1536&dh:864&pw:1728&ph:972&ist:0; t=79d6fb89a0ae72213838fe10d5e0da8f; _tb_token_=a1bee7e361e0; cookie2=176a86413a3c9c0cbc41d95280356db5; dnk=lay9412206; tracknick=lay9412206; lid=lay9412206; lgc=lay9412206; otherx=e%3D1%26p%3D*%26s%3D0%26c%3D0%26f%3D0%26g%3D0%26t%3D0; swfstore=210517; x=__ll%3D-1%26_ato%3D0; _uab_collina=157084999806509442489467; hng=TW%7Czh-TW%7CTWD%7C158; enc=QPrXIalV%2FsbEiSGLrm3aO9uA9ZOnX5y3lkx5fphRS%2BS6IvlEsEY2T4m4ntQspA%2Fvwo5jhFPEIvHN3DasXFvrxg%3D%3D; whl=-1%260%260%260; _fbp=fb.1.1571124426952.1840870754; _m_h5_tk=59f14bec0cb3ef4d5dd4071ecdcff03c_1571291926047; _m_h5_tk_enc=09d56624359b802d0b2313738f7cf7ce; res=scroll%3A1215*1782-client%3A1215*578-offset%3A1215*1782-screen%3A1536*864; uc1=cookie14=UoTbnKCr47rp6w%3D%3D&cookie16=URm48syIJ1yk0MX2J7mAAEhTuw%3D%3D&tag=8&cookie21=W5iHLLyFfoaZ&pas=0&existShop=false&lng=zh_CN&cookie15=UtASsssmOIJ0bQ%3D%3D; uc3=lg2=W5iHLLyFOGW7aA%3D%3D&vt3=F8dByuDtxkcz3MaUS7w%3D&id2=UUphy%2FA7bLfhK2tpIw%3D%3D&nk2=D8L11Gtav7Mfdw%3D%3D; _l_g_=Ug%3D%3D; uc4=nk4=0%40DeF1P2922TLBbtywEbqxJxpBFtQ9&id4=0%40U2grEJfOjhrzTBMkSZEdu%2FOj0OKfDh6X; unb=2201224705506; cookie1=B0f3xdYsfwH%2FP7qmTrJDVvgwSXKhKY99qALrSeXklYM%3D; login=true; cookie17=UUphy%2FA7bLfhK2tpIw%3D%3D; _nk_=lay9412206; sg=666; csg=091e06d3; tt=login.tmall.com; pnm_cku822=098%23E1hvK9vUvbpvUpCkvvvvvjiPRszW0jtjRFsyQjnEPmPp1jtWn2spljDnPFMZtjrPR9GCvvpvvvvvvphvC9v9vvCvpvyCvhQvSLGvCsfW0RoQRqwiLO2vqU0QKoZH1nFIAfUTnZJt98c6%2Bull8PmxfwmKHA1EKXzBIX%2FXahNWTR2pVBO0747B9Wma%2BoHoDO2hzC6tkphvC99vvOCzp8yCvv9vvUm05m5AnqyCvm9vvvvvphvvvvvvvKXvpv9Evvv2vhCv2UhvvvWvphvWgvvvvQCvpvs9RphvCvvvvvm5vpvhvvmv99%3D%3D; cq=ccp%3D0; l=dBg5pR8cq4ywvbT2BOCwquIJE579_IRY6uPRwLSvi_5aG18saQ7OkG1nAeJ6DfWfTIYB4NSLztv9-etkZU9UIe60ll2zUxDc.; isg=BMPDPmrJmoOnXFbDqMz0XAPBUoetkIUFVtr-LvWgDiKZtOPWfQqJyuAmKwxfS69y",
     "Upgrade-Insecure-Requests": "1",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36",
+    "reffer": "https://login.tmall.com/?spm=a220m.1000862.a2226mz.2.521077cfFKkpDM&redirectURL=https%3A%2F%2Flist.tmall.com%2Fsearch_shopitem.htm%3Fuser_id%3D883737303%26q%3Dnex3%26sort%3Dtd",
 }
 
 # 這個函式所有商品都可以用
@@ -41,14 +42,14 @@ def get_the_dealinfo(htmlscript):
             htmlscript.parent.parent.select(".productStatus")[0].find("em").text
         )
         # 處理中文
-        # 如果拿到的字理面有萬，把後面兩個字"萬筆"去掉
+        # 如果拿到的字理面有萬，把後面"萬"去掉並乘上10000
         if re.search("萬", get_dealnumber_with_chinese):
-            deal_number = int(float(get_dealnumber_with_chinese[:-2]) * 10000)
-        # 其餘狀況把筆去掉
+            deal_number = int(float(get_dealnumber_with_chinese[:-1])*10000)
+        # 其餘狀況直接轉int
         else:
-            deal_number = int(get_dealnumber_with_chinese[:-1])
+            deal_number = int(get_dealnumber_with_chinese)
 
-        return deal_price, deal_number
+        return deal_price,deal_number
 
     # 如果搜尋的頁面找不到對應的商家
     except:
@@ -67,8 +68,6 @@ def chinese_to_url(chinese):
 url = "https://list.tmall.com/search_shopitem.htm?user_id=883737303&q=nex3&sort=td"
 source = requests.get(url, headers=headers).text
 soup = Bt4(source, "html.parser")
-# ,headers = headers
-
 ban_by_Tmall = soup.find("p").text
 
 # 如果IP被Tmall ban掉的話
@@ -178,14 +177,14 @@ else:
         for product in shop_product_id[shop].keys():
 
             # .\可以讓過長的字串換行
-            url = f"https://list.tmall.com/search_shopitem.htm?user_id={shop_all_R[shop]}.\
+            url = f"https://list.tmall.com/search_shopitem.htm?user_id={shop_all_R[shop]}\
                 &start_price=1000&q={product_of_url[product]}&sort=td&style=w"
             sessions = requests.session()
             sessions.headers = headers
-            source = sessions.get(url,allow_redirects = False).text
+            source = sessions.get(url, allow_redirects=False).text
             # source = requests.get(url, headers=headers).text
             soup = Bt4(source, "html.parser")
-            print(soup)
+
             # search_id 是一個正則表示 要拿去對 html 搜尋 <a>標籤裡的 href 有沒有符合的
             search_id = re.compile(shop_product_id[shop][product])
             deal_price, deal_number = get_the_dealinfo(soup.find("a", href=search_id))
