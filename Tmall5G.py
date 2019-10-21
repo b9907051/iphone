@@ -44,12 +44,12 @@ def get_the_dealinfo(htmlscript):
         # 處理中文
         # 如果拿到的字理面有萬，把後面"萬"去掉並乘上10000
         if re.search("萬", get_dealnumber_with_chinese):
-            deal_number = int(float(get_dealnumber_with_chinese[:-1])*10000)
+            deal_number = int(float(get_dealnumber_with_chinese[:-1]) * 10000)
         # 其餘狀況直接轉int
         else:
             deal_number = int(get_dealnumber_with_chinese)
 
-        return deal_price,deal_number
+        return deal_price, deal_number
 
     # 如果搜尋的頁面找不到對應的商家
     except:
@@ -214,4 +214,4 @@ else:
     df = pd.DataFrame(res)
     df = df.drop_duplicates()
     df.to_csv(path, encoding="utf_8_sig", index=False)
-
+    print("執行完畢")
