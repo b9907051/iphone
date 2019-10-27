@@ -16,7 +16,7 @@ def get_csv(datasource, maininfo, timeperiod="week"):
         df = Read_data
 
     else:
-        Read_data = pd.read_csv("static/data/Tmall5G.csv", encoding="utf-8")
+        Read_data = pd.read_csv("static/data/Tmall5g.csv", encoding="utf-8")
         # 把同一個產品同一個時間  所有的代理商[Shopname]的 銷售數字[Dealnumber] 加起來
         # 所有代理商的 銷售價格[Dealprice] 做平均
 
