@@ -33,6 +33,7 @@ def dailydata_to_weeklydata(productinfo, maininfo):
 
     for i in pd_productioninfo.columns:
         df = pd_productioninfo[i]
+
         # 因為這裡再處理astype('int')時是整串資料一起處理，所以如果使用try catch跳過的話接下來要進行其他的資料運算都會碰到問題，所以
         # 再進行週資料的轉換部分 要放到 impose non 函數之前 以免裡面有none的值出現
 
@@ -43,17 +44,20 @@ def dailydata_to_weeklydata(productinfo, maininfo):
         # 這裡不知道為什麼我不能用pd1_productinfo去存，Week的資訊進不去
         tempdf[i] = df
 
-    # print(tempdf)
     tempdf = pd.DataFrame(tempdf).T
-    print(tempdf.iloc[0, 0])
-    print(tempdf.iloc[0, 1])
-    # print(tempdf)
+
     # 把datime 格式 轉換成文字
+    # 這裡要注意!! 雲端上跟這裡的iloc 好像不一樣!!!!
+    # 如果是iloc[0,0]我們在windows端會拿到價格,但在linux端會拿到日期
+    # 乾乾乾乾乾乾
+
+    # print(tempdf.iloc[0, 0])
+
     for m in range(len(tempdf)):
         tempdf.iloc[m, 0] = [
             k.strftime("%Y-%m-%d") for k in pd.to_datetime(tempdf.iloc[m, 0]).tolist()
         ]
-    # print(tempdf.iloc[0, 0])
+
     # 這裡 denest dataframe裡的list 並且以index為Label把資料排在一起
     df = pd.concat([explode_list(tempdf, col)[col] for col in tempdf.columns], axis=1)
 

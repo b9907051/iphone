@@ -39,6 +39,7 @@
 	// TODO: 天貓的第一次渲染
 	// renderChart()
 	// 接著的渲染都要按了按鍵以後
+	// 按了案件以後會觸發 renderChart()函數 並assign timePeriod 標籤的屬性
 	$(document).ready(function () {
 		//去接 class = tab 的點擊事件
 		$(".tab").click(function () {

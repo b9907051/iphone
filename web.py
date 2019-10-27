@@ -162,7 +162,7 @@ def api():
 def Tmall():
     timeperiod = request.values.get("timeperiod")
     Product_info = get_csv(
-        datasource="Tmall.Data", maininfo="Dealnumber", timeperiod=timeperiod
+        datasource="Tmall5G", maininfo="Dealnumber", timeperiod=timeperiod
     )
     return Product_info
 

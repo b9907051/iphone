@@ -211,7 +211,7 @@ else:
     Data = pd.read_csv(path)
     Old_Data = Data.to_dict("records")
     newres = res + Old_Data
-    df = pd.DataFrame(res)
+    df = pd.DataFrame(newres)
     df = df.drop_duplicates()
     df.to_csv(path, encoding="utf_8_sig", index=False)
     print("執行完畢")
