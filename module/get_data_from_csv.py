@@ -10,7 +10,7 @@ from . import impose_none as impn
 def get_csv(datasource, maininfo, timeperiod="week"):
 
     if datasource == "Zhongguancun":
-        Read_data = pd.read_csv("static/data/Zhongguancun.csv", encoding="utf-8")
+        Read_data = pd.read_csv("static/data/Zhongguancun_V2.csv", encoding="utf-8")
         # 如果現在不是在虛擬環境下的話路徑使用
         # Read_data = pd.read_csv("static/data/Zhongguancun.csv")
         df = Read_data
