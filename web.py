@@ -175,7 +175,7 @@ def dashboard():
     Country = request.values.get("Country")
     Index = request.values.get(
         "Index", "TimeStemp"
-    )  # 這裡如果get不到index 會給default值 'colors'
+    )  # 這裡如果get不到index 會給default值 'TimeStemp'
     Product = request.values.get("Product", "IPhone11Pro-Max")
     # print(Product)
     # df = get_df()
@@ -216,32 +216,69 @@ def dashboard():
     # 只把我們要的 product 拿出來
     df = df[df["Product"] == Product]
 
-    # 把Size裡的項目轉成類別等等進行pivot就會排好
-    Product_Categories = df["Size"].unique().tolist()
-    df["Size"] = df["Size"].astype(
-        pd.api.types.CategoricalDtype(categories=Product_Categories)
-    )
-
-    pivot = pd.pivot_table(
-        df,
-        values="Deliver",
-        # index=["All_countries", "Colors", "Size"],
-        index=Index,
-        columns=["All_countries", "Colors", "Size"],
-        aggfunc=lambda x: " ".join(x),
-    ).sort_index(ascending=False)
-
-    # ---------------------     協理要的國家排序    ---------------------#
-    cols = ["美國", "中國", "香港", "台灣", "日本", "德國", "法國", "俄羅斯", "巴西", "墨西哥"]
-    cols2 = ["美國", "中國", "香港", "日本", "德國", "英國", "法國", "英國", "俄羅斯"]
+    # 如果是AirPod的話 沒有size color 等資訊
     try:
-        pivot = pivot[cols]
-    except:
-        pivot = pivot[cols2]
-    finally:
-        # df_fill_country會把篩選過後的表格輸出
+    # 把Size裡的項目轉成類別等等進行pivot就會排好
+        Product_Categories = df["Size"].unique().tolist()
+        df["Size"] = df["Size"].astype(
+            pd.api.types.CategoricalDtype(categories=Product_Categories)
+        )
 
-        # ---------------------  返回網頁 --------------------------#
+        pivot = pd.pivot_table(
+            df,
+            values="Deliver",
+            # index=["All_countries", "Colors", "Size"],
+            index=Index,
+            columns=["All_countries", "Colors", "Size"],
+            aggfunc=lambda x: " ".join(x),
+        ).sort_index(ascending=False)
+
+        # ---------------------     協理要的國家排序    ---------------------#
+        cols = ["美國", "中國", "香港", "台灣", "日本", "德國", "法國", "俄羅斯", "巴西", "墨西哥"]
+        cols2 = ["美國", "中國", "香港", "日本", "德國", "英國", "法國", "英國", "俄羅斯"]
+        try:
+            pivot = pivot[cols]
+        except:
+            pivot = pivot[cols2]
+        finally:
+            # df_fill_country會把篩選過後的表格輸出
+
+            # ---------------------  返回網頁 --------------------------#
+            if not Country:
+                Title = "Overview"
+                Table = pivot
+                Country = None
+
+            # 如果有選擇國家的話
+            else:
+                df_fill_country = df[df["Country"] == Country]
+                df_fill_country = pd.pivot_table(
+                    df_fill_country,
+                    values="Deliver",
+                    index=Index,
+                    columns=["All_countries", "Colors", "Size"],
+                    aggfunc=lambda x: " ".join(x),
+                ).sort_index(ascending=False)
+
+                Table = df_fill_country
+                Title = All_countries_E[Country]
+
+            return render_template(
+                "All.html",
+                Table=Table.to_html(classes="table table-striped table-hover"),
+                Title=Title,
+                Country=Country,
+                Product=Product,
+            )
+    except:
+        pivot = df
+        pivot = pd.pivot_table(
+            pivot,
+            values="Deliver",
+            index=Index,
+            columns=["All_countries"],
+            aggfunc=lambda x: " ".join(x),
+        ).sort_index(ascending=False)
         if not Country:
             Title = "Overview"
             Table = pivot
@@ -250,14 +287,6 @@ def dashboard():
         # 如果有選擇國家的話
         else:
             df_fill_country = df[df["Country"] == Country]
-            df_fill_country = pd.pivot_table(
-                df_fill_country,
-                values="Deliver",
-                index=Index,
-                columns=["All_countries", "Colors", "Size"],
-                aggfunc=lambda x: " ".join(x),
-            ).sort_index(ascending=False)
-
             Table = df_fill_country
             Title = All_countries_E[Country]
 
@@ -268,7 +297,6 @@ def dashboard():
             Country=Country,
             Product=Product,
         )
-
 
 if __name__ == "__main__":
     app.secret_key = "secret123"

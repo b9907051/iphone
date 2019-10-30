@@ -28,6 +28,23 @@ Old_Data = Data.to_dict('records')
 # 'Ipad'
 # 'AppleWatch5'
 countries = {
+'AirPod':{'Tw':['MWP22AM/A'],
+
+'Cn':['MWP22CH/A'],
+
+'Jp':['MWP22J/A'],
+
+'Hk':['MWP22ZP/A'],
+
+'Uk':['MWP22ZM/A'],
+
+'De':['MWP22ZM/A'],
+
+'Ru':['MWP22RU/A'],
+
+'Fr':['MWP22ZM/A']
+},
+
 'Iphone11Pro':{
 'Tw':['MWC22TA/A','MWC72TA/A','MWCD2TA/A','MWC32TA/A','MWC82TA/A','MWCE2TA/A','MWC62TA/A','MWCC2TA/A',
 'MWCG2TA/A','MWC52TA/A','MWC92TA/A','MWCF2TA/A'],
@@ -215,6 +232,7 @@ countries = {
 
 
 Us ={
+	'AirPod':['MWP22AM/A'],
 	'IphoneXr':[
 	'MT3L2LL/A', 'MT3U2LL/A','MT412LL/A','MT3K2LL/A','MT3T2LL/A', 'MT402LL/A','MT3R2LL/A','MT3Y2LL/A', 'MT462LL/A',
 	'MT3N2LL/A','MT3W2LL/A','MT442LL/A', 'MT3Q2LL/A','MT3X2LL/A','MT452LL/A', 'MT3M2LL/A','MT3V2LL/A','MT422LL/A'],
@@ -455,6 +473,7 @@ Size_R = {k: key for key, value in Size.items() for k in value}
 # "{}".format(Product_item) 會產生變數名稱 , eg:{'Iphone8':'MQ6H2TA/A'}
 Product = {}
 for Product_item in countries.keys(): #countries.keys 是全部的型號
+	
 	Product["{}".format(Product_item)]= sum([v for v in countries[Product_item].values()], [])
 
 Product_R = {k: key for key, value in Product.items() for k in value}
@@ -484,12 +503,15 @@ for Model in Model_Us:
 	# print(Model)
 	d = {} #清空dictionary
 
+
 	d['Country'] = 'Us'
 	d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-
-	d['Size'] = Size_R[Model[0:5]]
 	d['Product'] = Product_Us_R[Model]
-	d['Colors'] = Color_R[Model[0:5]]
+	# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+	if Product_Us_R[Model] != 'AirPod':
+		d['Size'] = Size_R[Model[0:5]]
+		d['Colors'] = Color_R[Model[0:5]]
+
 
 	url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
 	r = requests.get(url)
@@ -511,11 +533,12 @@ for Product in countries:
 			d = {} #清空dictionary
 			# 現在 要處理新增的選項一樣丟在color裡嗎XD
 			d['Country'] = Country
-
-			d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-			d['Size'] = Size_R[Model[0:5]]
 			d['Product'] = Product_R[Model]
-			d['Colors'] = Color_R[Model[0:5]]
+			d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+			# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+			if Product_R[Model] != 'AirPod':
+				d['Size'] = Size_R[Model[0:5]]
+				d['Colors'] = Color_R[Model[0:5]]
 
 
 			#單獨擷取一個產品
