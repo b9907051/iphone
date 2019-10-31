@@ -28,7 +28,7 @@ Old_Data = Data.to_dict('records')
 # 'Ipad'
 # 'AppleWatch5'
 countries = {
-'AirPod':{'Tw':['MWP22AM/A'],
+'AirPodPro':{'Tw':['MWP22TA/A'],
 
 'Cn':['MWP22CH/A'],
 
@@ -232,7 +232,7 @@ countries = {
 
 
 Us ={
-	'AirPod':['MWP22AM/A'],
+	'AirPodPro':['MWP22AM/A'],
 	'IphoneXr':[
 	'MT3L2LL/A', 'MT3U2LL/A','MT412LL/A','MT3K2LL/A','MT3T2LL/A', 'MT402LL/A','MT3R2LL/A','MT3Y2LL/A', 'MT462LL/A',
 	'MT3N2LL/A','MT3W2LL/A','MT442LL/A', 'MT3Q2LL/A','MT3X2LL/A','MT452LL/A', 'MT3M2LL/A','MT3V2LL/A','MT422LL/A'],
@@ -508,7 +508,7 @@ for Model in Model_Us:
 	d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 	d['Product'] = Product_Us_R[Model]
 	# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-	if Product_Us_R[Model] != 'AirPod':
+	if Product_Us_R[Model] != 'AirPodPro':
 		d['Size'] = Size_R[Model[0:5]]
 		d['Colors'] = Color_R[Model[0:5]]
 
@@ -536,7 +536,7 @@ for Product in countries:
 			d['Product'] = Product_R[Model]
 			d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 			# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-			if Product_R[Model] != 'AirPod':
+			if Product_R[Model] != 'AirPodPro':
 				d['Size'] = Size_R[Model[0:5]]
 				d['Colors'] = Color_R[Model[0:5]]
 
