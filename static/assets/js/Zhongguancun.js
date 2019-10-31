@@ -86,6 +86,11 @@
 					console.log('destroy')
 					myChart.destroy();
 				}
+				// canvas[1] = week[1] or day[1] 去對應 html 的 label
+				// period2ctx = {
+				// 	week: { 1: ctx1_week, 2: ctx2_week },
+				// 	day: { 1: ctx1_day, 2: ctx2_day }
+				// }
 				var myChart = new Chart(canvas[1], {
 					type: 'line',
 					data: {

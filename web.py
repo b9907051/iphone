@@ -142,7 +142,7 @@ def is_logged_in(f):
 @app.route("/")
 @is_logged_in
 def mainpage():
-    return render_template("index.html")
+    return render_template("zhongguanchun.html")
 
 
 @app.route("/api")

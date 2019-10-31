@@ -23,7 +23,7 @@ product_index = {
     "華為-Mat30Pro": ["1294", "1293857"],
     "華為-Mat30Pro-5G": ["1266", "1265181"],
     # Vivo
-    "Vivo-X27": ["1263", "1262905"],
+    # "Vivo-X27": ["1263", "1262905"],
     "Vivo-Nex3": ["1286", "1285391"],
     "Vivo-Nex3-5G": ["1292", "1291141"],
     # 三星
@@ -55,10 +55,10 @@ for key, index in product_index.items():
 
 if platform.system() == "Windows":
     # Local 端
-    path = "static/data/Zhongguancun.csv"
+    path = "static/data/Zhongguancun_V2.csv"
 else:
     # AWS 端
-    path = "/home/ubuntu/iphone11/mainweb/static/data/Zhongguancun.csv"
+    path = "/home/ubuntu/iphone11/mainweb/static/data/Zhongguancun_V2.csv"
 
 Data = pd.read_csv(path)
 Old_Data = Data.to_dict("records")
