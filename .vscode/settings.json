@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+    "python.pythonPath": "C:\\Users\\user\\.virtualenvs\\Mainweb-ahFgTc3C\\Scripts\\python.exe",
     "python.formatting.provider": "black",
     "git.ignoreLimitWarning": true
 }

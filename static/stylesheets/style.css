@@ -1,3 +1,6 @@
+#tmallPriceWeek, #tmallVolumeWeek, #tmallPriceDay, #tmallVolumeDay{
+  display: inline-block !important;
+}
 
 #header {
     background: #333333;

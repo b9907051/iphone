@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block body%}
+<div class="content mt-3">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="default-tab">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active tab" timeperiod="week" id="week-tab"
+                                    data-toggle="tab" href="#week" role="tab" aria-controls="week"
+                                    aria-selected="true">Week</a>
+                                <a class="nav-item nav-link tab" timeperiod="day" id="day-tab" data-toggle="tab"
+                                    href="#day" role="tab" aria-controls="day" aria-selected="false">Day</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="week" role="tabpanel" aria-labelledby="week-tab"
+                                style="height:500px;width:660px">
+                                <!-- style="height:500px;width:660px" -->
+                                <canvas id="tmallPriceWeek"></canvas>
+                                <canvas id="tmallVolumeWeek"></canvas>
+
+                            </div>
+                            <div class="tab-pane fade" id="day" role="tabpanel" aria-labelledby="day-tab"
+                                style="height:500px;width:660px">
+
+                                <canvas id="tmallPriceDay"></canvas>
+                                <canvas id="tmallVolumeDay"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+</div>
+{% endblock %}

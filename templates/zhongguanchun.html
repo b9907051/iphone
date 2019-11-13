@@ -1,33 +1,39 @@
 {% extends 'layout.html' %}
 {% block body%}
 <div class="content mt-3">
-    <div class="col-lg-8">
-        <div class="card">
-            <div class="card-body">
-                <div class="default-tab">
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active tab" timeperiod="week" id="week-tab" data-toggle="tab"
-                                href="#week" role="tab" aria-controls="week" aria-selected="true">Week</a>
-                            <a class="nav-item nav-link tab" timeperiod="day" id="day-tab" data-toggle="tab" href="#day"
-                                role="tab" aria-controls="day" aria-selected="false">Day</a>
-                        </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="week" role="tabpanel" aria-labelledby="week-tab">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="default-tab">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active tab" timeperiod="week" id="week-tab"
+                                    data-toggle="tab" href="#week" role="tab" aria-controls="week"
+                                    aria-selected="true">Week</a>
+                                <a class="nav-item nav-link tab" timeperiod="day" id="day-tab" data-toggle="tab"
+                                    href="#day" role="tab" aria-controls="day" aria-selected="false">Day</a>
+                            </div>
+                        </nav>
+                        <!-- 如果要調整 canvas 的size 要去調整他外面的div 把欲調整的size放到style裡 -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="week" role="tabpanel" aria-labelledby="week-tab"
+                                style="height:600px;width:800px">
 
-                            <canvas id="Zhongguancun_week" style="height:200px;" height="200"></canvas>
+                                <canvas id="Zhongguancun_week"></canvas>
 
-                        </div>
-                        <div class="tab-pane fade" id="day" role="tabpanel" aria-labelledby="day-tab">...
+                            </div>
+                            <div class="tab-pane fade" id="day" role="tabpanel" aria-labelledby="day-tab"
+                                style="height:600px;width:800px">
 
-                            <canvas id="Zhongguancun_day" style="height:200px;" height="200"></canvas>
+                                <canvas id="Zhongguancun_day"></canvas>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> <!-- .content -->
+        </div> <!-- .content -->
+    </div>
 </div><!-- /#right-panel -->
 {% endblock %}

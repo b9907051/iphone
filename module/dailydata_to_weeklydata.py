@@ -4,6 +4,7 @@ import numpy as np
 
 
 def explode_list(df, col):
+
     s = df[col]  # s is the column i got to deal with
 
     # len(s) give us the number of rows. arange(len(s)) give us a array of number start from 0 ex:arange(2):[0,1]
@@ -15,7 +16,7 @@ def explode_list(df, col):
     ## **可以傳入字典的格式
     # concatenate method will Join a sequence of arrays along an existing axis
     # assign method will create or replace columns of dataframe by dictionary(keys for column name, values for content)
-
+    print(df)
     return df.iloc[i].assign(**{col: np.concatenate(s)})
 
 
@@ -30,10 +31,10 @@ def dailydata_to_weeklydata(productinfo, maininfo):
     tempdf = pd.DataFrame(
         columns=pd_productioninfo.columns, index=pd_productioninfo_index
     )
-
+    # print(tempdf)
     for i in pd_productioninfo.columns:
         df = pd_productioninfo[i]
-
+        
         # 因為這裡再處理astype('int')時是整串資料一起處理，所以如果使用try catch跳過的話接下來要進行其他的資料運算都會碰到問題，所以
         # 再進行週資料的轉換部分 要放到 impose non 函數之前 以免裡面有none的值出現
 
@@ -44,6 +45,11 @@ def dailydata_to_weeklydata(productinfo, maininfo):
         # 這裡不知道為什麼我不能用pd1_productinfo去存，Week的資訊進不去
         tempdf[i] = df
 
+
+    # loc 是以 index 為主的取值方式, Timestamp 在 tempdf 裡是 index, 取出來會是一個以column為index的series
+    for i in range(len(tempdf.loc['Timestamp'])):
+        tempdf.loc['Timestamp'][i] = tempdf.loc['Timestamp'][i].strftime("%Y-%m-%d")
+
     tempdf = pd.DataFrame(tempdf).T
 
     # 把datime 格式 轉換成文字
@@ -51,16 +57,16 @@ def dailydata_to_weeklydata(productinfo, maininfo):
     # 如果是iloc[0,0]我們在windows端會拿到價格,但在linux端會拿到日期
     # 乾乾乾乾乾乾
 
-    # print(tempdf.iloc[0, 0])
-
-    for m in range(len(tempdf)):
-        tempdf.iloc[m, 0] = [
-            k.strftime("%Y-%m-%d") for k in pd.to_datetime(tempdf.iloc[m, 0]).tolist()
-        ]
-
+    # for m in range(len(tempdf)):
+    #     tempdf.iloc[m, 1] = [
+    #         k.strftime("%Y-%m-%d") for k in pd.to_datetime(tempdf.iloc[m, 1]).tolist()
+    #     ]
+    # 從時間的格式 pass 成文字
+    # print(tempdf["Timestamp"])
     # 這裡 denest dataframe裡的list 並且以index為Label把資料排在一起
+    # print(tempdf['Timestamp'])
     df = pd.concat([explode_list(tempdf, col)[col] for col in tempdf.columns], axis=1)
-
+    # print(df)
     dfs_column = [d for d, _ in df.groupby(df.index)]
 
     dfs = [d for _, d in df.groupby(df.index)]
@@ -71,7 +77,7 @@ def dailydata_to_weeklydata(productinfo, maininfo):
         # 重設index為數列以後原本的index變成了一個欄位，把他drop掉
         dfs[k] = dfs[k].reset_index().drop(columns="index")
         # 創造出一個包含了所有產品的Dataframe
-        df_final["{}".format(dfs_column[k])] = dfs[k]
+        df_final[dfs_column[k]] = dfs[k]
 
         ##進行pivot
         df_final[dfs_column[k]] = pd.pivot_table(
@@ -80,12 +86,12 @@ def dailydata_to_weeklydata(productinfo, maininfo):
             values=[maininfo, "Timestamp"],
             aggfunc={maininfo: np.mean, "Timestamp": max},
         )
-
+        # print(df_final)
         # 把 flot64轉成Int
         df_final[dfs_column[k]][maininfo] = df_final[dfs_column[k]][maininfo].astype(
             "int"
         )
         # DataFrame 轉dictionary 並且用list 包著
         df_final[dfs_column[k]] = df_final[dfs_column[k]].to_dict("list")
-
+        # print(df_final)
     return df_final

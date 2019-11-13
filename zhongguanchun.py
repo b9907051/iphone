@@ -49,7 +49,7 @@ for key, index in product_index.items():
     # print(soup.prettify())
     d["Product"] = product_R[index[1]]
     d["Timestamp"] = datetime.datetime.today().strftime("%Y-%m-%d")
-    d["Price"] = price
+    d["Dealprice"] = price
     print(d)
     res.append(d)
 

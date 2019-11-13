@@ -20,8 +20,13 @@ def get_csv(datasource, maininfo, timeperiod="week"):
         # 把同一個產品同一個時間  所有的代理商[Shopname]的 銷售數字[Dealnumber] 加起來
         # 所有代理商的 銷售價格[Dealprice] 做平均
 
+        # as_index = False 可以幫我補足 groupby 自動幫我做分組的欄位
         # df = Read_data.groupby(["Timestamp", "Product"], as_index=False).sum()
-        # TODO 把 Dealnumber Dealprice 分別做 sum 跟平均
+
+        # TODO Dealnumber 現在是每天的數字會往上走
+        # 每天的數據 - 前一天的數據 才是今天的銷售量
+        # 要先把銷售量 按照 產品別 給出 pd.series
+        # 先拿到欄位有哪些種類 
         df = pd.pivot_table(
             Read_data,
             index=["Timestamp", "Product"],
@@ -34,9 +39,6 @@ def get_csv(datasource, maininfo, timeperiod="week"):
         #            BBB GGG → 2019-10-21 BBB GGG
         #            CCC PPP   2019-10-21 CCC PPP
         df.reset_index(inplace=True)
-
-    # TODO SUM DEALNUMBER GROUP BY TIMESTAMP PRODUCT
-    # as_index = False 可以幫我補足 groupby 自動幫我做分組的欄位
 
     data = df.to_dict("records")
     columns = list(df.columns)
@@ -58,8 +60,8 @@ def get_csv(datasource, maininfo, timeperiod="week"):
         Product_info[Product][maininfo] += [Mainfo]
         Product_info[Product]["Timestamp"] += [Timestamp]
 
-    # print(Product_info.values())
-
+    print(Product_info)
+    # 如果資料頻率是週的話
     if timeperiod == "week":
         Product_info = dw.dailydata_to_weeklydata(Product_info, maininfo)
 
@@ -76,4 +78,5 @@ def get_csv(datasource, maininfo, timeperiod="week"):
     Product_info["X_axis"] = Timestamp_index_in_list
     Product_info["Max_info"] = math.ceil(Max_info / (10 ** power)) * (10 ** power)
     # print(Product_info)
+
     return json.dumps(Product_info, default=str)

@@ -7,15 +7,15 @@
 
 	// 就是這行去抓 html 的 id  畫在相對應的位置
 	var ctx1_day = $('#Zhongguancun_day');
-	var ctx2_day = $('#Tmall_day');
+	// var ctx2_day = $('#Tmall_day');
 	var ctx1_week = $('#Zhongguancun_week');
-	var ctx2_week = $('#Tmall_week')
+	// var ctx2_week = $('#Tmall_week')
 
 
 
 	var period2ctx = {
-		week: { 1: ctx1_week, 2: ctx2_week },
-		day: { 1: ctx1_day, 2: ctx2_day }
+		week: ctx1_week,
+		day: ctx1_day
 	}
 	const brandPrimary = '#20a8d8'
 	const brandSuccess = '#4dbd74'
@@ -23,7 +23,14 @@
 	const brandDanger = '#f86c6b'
 	const brandyellow = '#FFF700'
 	const brandblack = '#000000'
+	const brandblue = '#47A8BD'
+	const brandmeat = '#FFD4CA'
+	const brandbrown = '#6b3900'
+	var borderColorArr = [brandSuccess, brandDanger, brandPrimary,
+		brandyellow, brandblack, brandblue,
+		brandmeat, brandbrown]
 
+	// converHex 這個函數在後面會給出rgba(r,g,b)的字串 讓chart.js使用
 	function convertHex(hex, opacity) {
 		hex = hex.replace('#', '')
 		const r = parseInt(hex.substring(0, 2), 16)
@@ -46,14 +53,14 @@
 			const timePeriod = $(this).attr('timeperiod');
 
 			console.log('[timePeriod]', timePeriod);
-			// 中關村的畫圖
+			// period2ctx['week'] = { 1: ctx1_week, 2: ctx2_week }
 			renderChart(timePeriod, period2ctx[timePeriod]);
 			//TODO: 天貓的畫圖
 		})
 
 	});
 
-	// TODO: 天貓的renderChart
+	//中關村的renderChart
 
 	function renderChart(timePeriod, canvas) {
 		axios.get(`/api?timeperiod=${timePeriod}`)
@@ -61,12 +68,15 @@
 				const Data = res.data;
 				console.log('[DATA]', Data)
 				const Cellphone = Object.keys(Data)
-					.filter(k => k !== 'Max_info' && k !== 'X_axis')
+					.filter(k => k !== 'Max_info' && k !== 'X_axis'
+						&& k !== 'Main_info' && k !== 'Time_period'
+						&& k !== 'Step')
 					.map(k => ({ [k]: Data[k] }));
 				const MaxPrice = Data.Max_info;
 				const X_axis = Data.X_axis;
+				var Main_info = Data.Main_info;
+				var TimePeriod = Data.Time_period;
 
-				var borderColorArr = [brandSuccess, brandDanger, brandPrimary, brandyellow, brandblack]
 
 				var data, time, dealnumber;
 
@@ -78,7 +88,10 @@
 					borderColor: borderColorArr[i],
 					pointHoverBackgroundColor: '#fff',
 					borderWidth: 2,
-					data: d[Object.keys(d)[0]].Price
+
+					// 這行決定要畫圖的主要資訊
+					data: d[Object.keys(d)[0]][Main_info]
+
 				}))
 
 				//如果 myChart 之前有產生過的話先把他給刪掉等夏畫
@@ -91,7 +104,8 @@
 				// 	week: { 1: ctx1_week, 2: ctx2_week },
 				// 	day: { 1: ctx1_day, 2: ctx2_day }
 				// }
-				var myChart = new Chart(canvas[1], {
+				var myChart = new Chart(canvas, {
+
 					type: 'line',
 					data: {
 						// 取出第一個Data的key
@@ -105,8 +119,8 @@
 							text: '中關村銷售資訊',
 							fontSize: 20
 						},
-
-						maintainAspectRatio: true,
+						// 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
+						maintainAspectRatio: false,
 						legend: {
 							display: true
 						},
@@ -123,14 +137,14 @@
 								},
 								type: 'time',
 								time: {
-									unit: 'week'
+									unit: TimePeriod
 								},
-								distribution: 'series'
+								distribution: 'linear'
 							}],
 							yAxes: [{
 								scaleLabel: {
 									display: true,
-									labelString: '價格',
+									labelString: Main_info,
 									fontStyle: 'bold'
 								},
 								ticks: {
@@ -158,112 +172,11 @@
 				});
 				// console.log(myChart)
 			});
-		axios.get(`/Tmall?timeperiod=${timePeriod}`)
-			.then(function (res) {
-				const Data = res.data;
-				console.log('[DATA]', Data)
-				const Cellphone = Object.keys(Data)
-					.filter(k => k !== 'Max_info' && k !== 'X_axis')
-					.map(k => ({ [k]: Data[k] }));
-				const MaxDealnumber = Data.Max_info;
-				const X_axis = Data.X_axis;
 
-				var borderColorArr = [brandSuccess, brandDanger, brandPrimary, brandyellow, brandblack]
-
-				var data, time, dealnumber;
-
-				data = Object.values(Cellphone).map((d, i) => ({
-					// 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
-					label: Object.keys(d)[0],
-					backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
-					// 這裡的i總共有幾個阿??
-					borderColor: borderColorArr[i],
-					pointHoverBackgroundColor: '#fff',
-					borderWidth: 2,
-					data: d[Object.keys(d)[0]].Dealnumber
-				}))
-				console.log(data)
-				//如果 myChart2 之前有產生過的話先把他給刪掉等夏畫
-				if (myChart2 != undefined) {
-					console.log('destroy')
-					myChart2.destroy();
-				}
-				var myChart2 = new Chart(canvas[2], {
-					type: 'line',
-					data: {
-						// 取出第一個Data的key
-						labels: X_axis,
-						datasets: data
-
-					},
-					options: {
-
-						maintainAspectRatio: true,
-						legend: {
-							display: true
-						},
-						responsive: true,
-						title: {
-							display: true,
-							text: '天貓交易資訊',
-							fontSize: 20
-						},
-						scales: {
-							xAxes: [{
-
-								ticks: {
-									autoSkip: false,
-									// maxRotation: 90,
-									minRotation: 60
-								},
-								gridLines: {
-									drawOnChartArea: false
-								},
-								type: 'time',
-								time: {
-									unit: 'day'
-								}
-							}],
-							yAxes: [{
-								ticks: {
-									beginAtZero: true,
-									maxTicksLimit: 5,
-									stepSize: 5000,
-									max: MaxDealnumber
-								},
-								scaleLabel: {
-									display: true,
-									labelString: '月銷售量',
-									fontStyle: 'bold'
-								},
-								gridLines: {
-									display: true
-								}
-							}]
-						},
-						elements: {
-							point: {
-								radius: 2,
-								hitRadius: 10,
-								hoverRadius: 4,
-								hoverBorderWidth: 3
-							}
-						}
-
-
-					}
-				});
-				// console.log(myChart)
-			});
 
 		//這裡怎麼沒有去相對應的路由拿東西
 
 	}
-
-
-
-
-
 
 })(jQuery);
 

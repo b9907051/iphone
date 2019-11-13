@@ -24,7 +24,7 @@ import datetime
 import impose_none
 
 
-from module.get_data_from_csv import get_csv
+from module.get_data_from_csv_V2 import get_csv
 
 # from module.get_data_from_sql import get_datafromsql
 from module import dailydata_to_weeklydata as dw
@@ -144,15 +144,18 @@ def is_logged_in(f):
 def mainpage():
     return render_template("zhongguanchun.html")
 
+@app.route("/Tmallpage")
+@is_logged_in
+def Tmallpage():
+    return render_template("tmall.html")
 
 @app.route("/api")
 def api():
     timeperiod = request.values.get("timeperiod")
-    name_of_data = request.values.get("namedata")
+    # name_of_data = request.values.get("namedata")
     Product_info = get_csv(
-        datasource="Zhongguancun", maininfo="Price", timeperiod=timeperiod
+        datasource="Zhongguancun", mainInfo="Dealprice", timeperiod=timeperiod
     )
-
     # session
     # 把參數留在後端
     return Product_info
@@ -161,9 +164,11 @@ def api():
 @app.route("/Tmall")
 def Tmall():
     timeperiod = request.values.get("timeperiod")
+    mainInfo = request.values.get("mainInfo")
     Product_info = get_csv(
-        datasource="Tmall5G", maininfo="Dealnumber", timeperiod=timeperiod
+        datasource="Tmall5G", mainInfo = mainInfo , timeperiod=timeperiod
     )
+    
     return Product_info
 
 
