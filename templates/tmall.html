@@ -16,18 +16,25 @@
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="week" role="tabpanel" aria-labelledby="week-tab"
-                                style="height:500px;width:660px">
-                                <!-- style="height:500px;width:660px" -->
-                                <canvas id="tmallPriceWeek"></canvas>
-                                <canvas id="tmallVolumeWeek"></canvas>
+                            <div class="tab-pane fade show active" id="week" role="tabpanel" aria-labelledby="week-tab">
+                                <!-- style = "display:inline-block"> -->
+
+                                <div class = "col-lg-6 col-md-6" style="height:500px;width:660px">
+                                    <canvas id="tmallPriceWeek"></canvas>
+                                </div>
+                                <div class = "col-lg-6 col-md-6" style="height:500px;width:660px">
+                                    <canvas id="tmallVolumeWeek"></canvas>
+                                </div>
 
                             </div>
                             <div class="tab-pane fade" id="day" role="tabpanel" aria-labelledby="day-tab"
-                                style="height:500px;width:660px">
-
-                                <canvas id="tmallPriceDay"></canvas>
-                                <canvas id="tmallVolumeDay"></canvas>
+                                >
+                                <div class = "col-lg-6 col-md-6" style="height:500px;width:660px">
+                                    <canvas id="tmallPriceDay"></canvas>
+                                </div>
+                                <div class = "col-lg-6 col-md-6" style="height:500px;width:660px">
+                                    <canvas id="tmallVolumeDay"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
