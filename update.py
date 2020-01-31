@@ -396,7 +396,7 @@ Size = {
 			'MT942','MT952','MT962','MT9E2','MT9F2','MT9G2','MT9P2','MT9Q2','MT9R2','MTAW2','MTAX2','MTAY2',
 
 			#IphoneXsMax
-			'MT502','MT512','MT522','MT592','MT5A2','MT5C2','MT6Q2','MT6R2','MT6T2','MT712','MT722','MT732',
+			#'MT502','MT512','MT522','MT592','MT5A2','MT5C2','MT6Q2','MT6R2','MT6T2','MT712','MT722','MT732',
 			#iphone11Pro
 			'MWCH2','MWCJ2','MWCL2','MWCK2','MWC22','MWC32','MWC62','MWC52','MWD92','MWDA2','MWDD2','MWDC2',
 			#iphone11ProMax
@@ -414,19 +414,19 @@ Size = {
 			'MWLF2','MWLE2','MWLK2','MWLH2','MWLJ2','MWLG2','MWM22','MWM02','MWM62','MWM42','MWM52','MWM32','MWN82','MWN72','MWNE2','MWNC2','MWND2','MWN92'],
 '256GB' : [
 			#Iphone8 
-			'MQ7H2', 'MQ802', 'MQ832','MQ7G2', 'MQ7Y2', 'MQ822','MQ7F2', 'MQ7X2', 'MQ812','MRRL2', 'MRRW2', 'MRRX2','MQ7E2',
-			'MQ7T2', 'MQ7W2','MQ7D2', 'MQ7R2', 'MQ7V2',	'MQ7C2', 'MQ7Q2', 'MQ7U2','MRRN2', 'MRRU2', 'MRRV2',
+			#'MQ7H2', 'MQ802', 'MQ832','MQ7G2', 'MQ7Y2', 'MQ822','MQ7F2', 'MQ7X2', 'MQ812','MRRL2', 'MRRW2', 'MRRX2','MQ7E2',
+			#'MQ7T2', 'MQ7W2','MQ7D2', 'MQ7R2', 'MQ7V2',	'MQ7C2', 'MQ7Q2', 'MQ7U2','MRRN2', 'MRRU2', 'MRRV2',
 			#Iphone8plus
-			'MQ8J2', 'MQ9C2', 'MQ9J2','MQ8H2', 'MQ9A2', 'MQ9H2','MQ8G2', 'MQ9G2', 'MQ992','MRTH2', 'MRTK2', 'MRT82','MQ8R2', 'MQ8Y2',
-			'MQ952','MQ8Q2', 'MQ8X2', 'MQ942','MQ8P2', 'MQ8W2', 'MQ932','MRTA2', 'MRTD2', 'MRTF2','MQ852','MQ862','MQ842','MQ9P2',
-			'MQ9Q2','MQ9N2',
+			#'MQ8J2', 'MQ9C2', 'MQ9J2','MQ8H2', 'MQ9A2', 'MQ9H2','MQ8G2', 'MQ9G2', 'MQ992','MRTH2', 'MRTK2', 'MRT82','MQ8R2', 'MQ8Y2',
+			#'MQ952','MQ8Q2', 'MQ8X2', 'MQ942','MQ8P2', 'MQ8W2', 'MQ932','MRTA2', 'MRTD2', 'MRTF2','MQ852','MQ862','MQ842','MQ9P2',
+			#'MQ9Q2','MQ9N2',
 			#IphoneXr
-			'MRYL2','MRYJ2','MRYQ2','MRYN2','MRYP2','MRYM2','MT1J2','MT1H2','MT1Q2','MT1M2','MT1P2','MT1L2','MT0W2','MT0V2',
-			'MT112','MT0Y2','MT102','MT0X2','MT412', 'MT402', 'MT462','MT442', 'MT452','MT422',
+			#'MRYL2','MRYJ2','MRYQ2','MRYN2','MRYP2','MRYM2','MT1J2','MT1H2','MT1Q2','MT1M2','MT1P2','MT1L2','MT0W2','MT0V2',
+			#'MT112','MT0Y2','MT102','MT0X2','MT412', 'MT402', 'MT462','MT442', 'MT452','MT422',
 			#IphoneXs
-			'MT972','MT982','MT992','MT9H2','MT9J2','MT9K2','MT9T2','MT9U2','MT9V2','MTE02','MTE12','MTE22',
+			#'MT972','MT982','MT992','MT9H2','MT9J2','MT9K2','MT9T2','MT9U2','MT9V2','MTE02','MTE12','MTE22',
 			#IphoneXsMax
-			'MT532','MT542','MT552','MT5D2','MT5E2','MT5F2','MT6U2','MT6V2','MT6W2','MT742','MT752','MT762',
+			#'MT532','MT542','MT552','MT5D2','MT5E2','MT5F2','MT6U2','MT6V2','MT6W2','MT742','MT752','MT762',
 			#IpadPro
 			'MTXR2','MTFN2','MTXQ2','MTFL2',
 			#iphone11Pro
@@ -440,7 +440,7 @@ Size = {
 			#IphoneXs
 			'MT9A2','MT9C2','MT9D2','MT9L2','MT9M2','MT9N2','MT9W2','MT9X2','MT9Y2','MTE32','MTE42','MTE52',
 			#IphoneXsMax
-			'MT562','MT572','MT582','MT5G2','MT5H2','MT5J2','MT6X2','MT6Y2','MT702','MT772','MT782','MT792',
+			#'MT562','MT572','MT582','MT5G2','MT5H2','MT5J2','MT6X2','MT6Y2','MT702','MT772','MT782','MT792',
 			#IpadPro
 			'MTXU2','MTFQ2','MTXT2','MTFP2',
 			#iphone11Pro
@@ -507,22 +507,35 @@ for Model in Model_Us:
 	d['Country'] = 'Us'
 	d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 	d['Product'] = Product_Us_R[Model]
-	# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+
+	# 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
 	if Product_Us_R[Model] != 'AirPodPro':
-		d['Size'] = Size_R[Model[0:5]]
-		d['Colors'] = Color_R[Model[0:5]]
 
+		# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
+		try:
+			d['Size'] = Size_R[Model[0:5]]
+			d['Colors'] = Color_R[Model[0:5]]
+			url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+			r = requests.get(url)
+			response = json.loads(r.text)
 
-	url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-	r = requests.get(url)
-	response = json.loads(r.text)
+			d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+			print(d)
+			res.append(d)
 
-	try:
+		except:
+			print(d,'下架')
+
+	#如果是 AirPodPro 直接做 request
+	else:
+		url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+		r = requests.get(url)
+		response = json.loads(r.text)
+
 		d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
 		print(d)
 		res.append(d)
-	except:
-		print(d,'下架')
+
 
 for Product in countries:
 	#外迴圈跑國家
@@ -535,22 +548,34 @@ for Product in countries:
 			d['Country'] = Country
 			d['Product'] = Product_R[Model]
 			d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+
 			# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
 			if Product_R[Model] != 'AirPodPro':
-				d['Size'] = Size_R[Model[0:5]]
-				d['Colors'] = Color_R[Model[0:5]]
+				# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
+				try:
+					d['Size'] = Size_R[Model[0:5]]
+					d['Colors'] = Color_R[Model[0:5]]
 
+					url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+					r = requests.get(url)
 
-			#單獨擷取一個產品
-			url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-			r = requests.get(url)
-			response = json.loads(r.text)
-			try:
+					response = json.loads(r.text)
+					d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+					print(d)
+					res.append(d)
+
+				except:
+					print(d,'下架')
+					
+			else:
+				url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+				r = requests.get(url)
+
+				response = json.loads(r.text)
 				d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
 				print(d)
 				res.append(d)
-			except:
-				print(d,'下架')
+				
 
 newres = res + Old_Data
 

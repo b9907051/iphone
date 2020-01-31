@@ -16,7 +16,7 @@ def explode_list(df, col):
     ## **可以傳入字典的格式
     # concatenate method will Join a sequence of arrays along an existing axis
     # assign method will create or replace columns of dataframe by dictionary(keys for column name, values for content)
-    print(df)
+    #print(df)
     return df.iloc[i].assign(**{col: np.concatenate(s)})
 
 
