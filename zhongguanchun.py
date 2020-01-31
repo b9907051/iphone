@@ -9,7 +9,6 @@ import re
 import random
 import platform
 
-1227
 
 product_index = {
     # Oppo
@@ -58,7 +57,7 @@ if platform.system() == "Windows":
     path = "static/data/Zhongguancun_V2.csv"
 else:
     # AWS 端
-    path = "/home/ubuntu/iphone11/mainweb/static/data/Zhongguancun_V2.csv"
+    path = "/home/cathaylife04/smartphone/iphone11/static/data/Zhongguancun_V2.csv"
 
 Data = pd.read_csv(path)
 Old_Data = Data.to_dict("records")

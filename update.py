@@ -14,7 +14,7 @@ if platform.system() == "Windows":
 	path = 'static/data/Data.csv'
 else:
     # AWS 端
-	path = "/home/ubuntu/iphone11/mainweb/static/data/Data.csv"
+	path = "/home/cathaylife04/smartphone/iphone11/static/data/Data.csv"
 
 
 # path = 'static/data/Data.csv'
@@ -566,7 +566,7 @@ for Product in countries:
 
 				except:
 					print(d,'下架')
-					
+
 			else:
 				url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
 				r = requests.get(url)
