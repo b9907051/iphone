@@ -15,7 +15,7 @@ from . import impose_none as impn
 def get_csv(datasource, mainInfo, timeperiod="week"):
 
     if datasource == "Zhongguancun":
-        print("ZHONG")
+
         Read_data = pd.read_csv("static/data/Zhongguancun_V2.csv", encoding="utf-8")
         # 如果現在不是在虛擬環境下的話路徑使用
         # Read_data = pd.read_csv("static/data/Zhongguancun.csv")
@@ -35,7 +35,7 @@ def get_csv(datasource, mainInfo, timeperiod="week"):
 
     # 中國 5G 手機的資料
     elif datasource == "1H2020":
-        print("1H2020")
+
         Read_data = pd.read_csv("static/data/1H2020.csv", encoding="utf-8")
         # 如果現在不是在虛擬環境下的話路徑使用
         # Read_data = pd.read_csv("static/data/Zhongguancun.csv")
@@ -55,7 +55,7 @@ def get_csv(datasource, mainInfo, timeperiod="week"):
 
 
     else:
-        print("Tmall")
+
         Read_data = pd.read_csv("static/data/Tmall5g.csv", encoding="utf-8")
         product_info = {}
         product_list = Read_data["Product"].unique()
