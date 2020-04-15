@@ -14,9 +14,9 @@ import platform
 # Product list:
 
 huawei_list = {"P40":'10086013232739',"P40-Pro":'10086715691479'}
-vivo_list = {"NEX-3S":'10001939'}
-oppo_list = {"X2":'1119',"X2-Pro":'1122'}
-xiomi_list = {"X10":'10000214',"X10-Pro":'10000213'}
+vivo_list = {"NEX3S":'10001939'}
+oppo_list = {"FindX2":'1119',"FindX2-Pro":'1122'}
+xiomi_list = {"Mi10":'10000214',"Mi10-Pro":'10000213'}
 
 #
 def update_res(res,product,price):
@@ -73,7 +73,7 @@ def get_data_oppo(res, product_list):
         B = A[0].getText()
 
         price = B[3:-4]
-
+        print(price)
         update_res(res,product,price)
     return(res)
 
@@ -100,8 +100,6 @@ def get_data_xiomi(res, product_list):
     return(res)
 
 
-
-
 res = []
 
 get_data_huawei(res,huawei_list)
@@ -110,13 +108,12 @@ get_data_oppo(res, oppo_list)
 get_data_xiomi(res,xiomi_list)
 
 
-
 if platform.system() == "Windows":
     # Local 端
-    path = "static/data/China-5G.csv"
+    path = "static/data/1H2020.csv"
 else:
     # AWS 端
-    path = "/home/cathaylife04/smartphone/iphone11/static/data/China-5G.csv"
+    path = "/home/cathaylife04/smartphone/iphone11/static/data/1H2020.csv"
 
 Data = pd.read_csv(path)
 Old_Data = Data.to_dict("records")
