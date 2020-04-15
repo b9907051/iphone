@@ -142,19 +142,47 @@ def is_logged_in(f):
 @app.route("/")
 @is_logged_in
 def mainpage():
-    return render_template("zhongguanchun.html")
+    return render_template("1H2020.html")
+
+@app.route("/1H2020-page")
+@is_logged_in
+def H12020_page():
+    return render_template("1H2020.html")
+
+
+@app.route("/Zhongguancun")
+@is_logged_in
+def Zhongguancun():
+    return render_template("Zhongguanchun.html")
+
 
 @app.route("/Tmallpage")
 @is_logged_in
 def Tmallpage():
     return render_template("tmall.html")
 
+
+@app.route("/1H2020")
+@is_logged_in
+def H12020():
+
+    timeperiod = request.values.get("timeperiod")
+    # name_of_data = request.values.get("namedata")
+
+    print("go Product_info")
+    Product_info = get_csv(
+        datasource="1H2020", mainInfo="Dealprice", timeperiod=timeperiod
+    )
+    # session
+    # 把參數留在後端
+    return Product_info
+
 @app.route("/api")
 def api():
     timeperiod = request.values.get("timeperiod")
     # name_of_data = request.values.get("namedata")
     Product_info = get_csv(
-        datasource="Zhongguancun", mainInfo="Dealprice", timeperiod=timeperiod
+        datasource="Zhongguanchun", mainInfo="Dealprice", timeperiod=timeperiod
     )
     # session
     # 把參數留在後端
