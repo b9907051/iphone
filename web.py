@@ -153,7 +153,7 @@ def H12020_page():
 @app.route("/Zhongguancun")
 @is_logged_in
 def Zhongguancun():
-    return render_template("Zhongguanchun.html")
+    return render_template("zhongguanchun.html")
 
 
 @app.route("/Tmallpage")
