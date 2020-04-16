@@ -12,6 +12,7 @@ requests = "*"
 bs4 = "*"
 flask = "*"
 ipykernel = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.7"

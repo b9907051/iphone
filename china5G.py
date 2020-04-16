@@ -73,7 +73,7 @@ def get_data_oppo(res, product_list):
         B = A[0].getText()
 
         price = B[3:-4]
-        print(price)
+
         update_res(res,product,price)
     return(res)
 
