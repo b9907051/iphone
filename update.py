@@ -28,6 +28,40 @@ Old_Data = Data.to_dict('records')
 # 'Ipad'
 # 'AppleWatch5'
 countries = {
+'IphoneSE':{
+	'Tw':['MX9T2TA/A','MXD12TA/A','MXVU2TA/A',
+		'MX9R2TA/A','MXD02TA/A','MXVT2TA/A',
+		'MX9U2TA/A','MXD22TA/A','MXVV2TA/A'],
+
+	'Cn':['MXAN2CH/A','MXD72CH/A','MXW12CH/A',
+	'MXAM2CH/A','MXD62CH/A','MXW02CH/A',
+	'MXAP2CH/A','MXD82CH/A','MXW22CH/A'],
+
+	'Jp':['MX9T2J/A','MXD12J/A','MXVU2J/A',
+	'MX9R2J/A','MXD02J/A','MXVT2J/A',
+	'MX9U2J/A','MXD22J/A','MXVV2J/A'],
+
+	'Hk':['MX9T2ZP/A','MXD12ZP/A','MXVU2ZP/A',
+	'MX9R2ZP/A','MXD02ZP/A','MXVT2ZP/A',
+	'MX9U2ZP/A','MXD22ZP/A','MXVV2ZP/A'],
+
+	'Uk':['MX9T2B/A','MXD12B/A','MXVU2B/A',
+	'MX9R2B/A','MXD02B/A','MXVT2B/A',
+	'MX9U2B/A','MXD22B/A','MXVV2B/A'],
+
+	'De':['MX9T2ZD/A','MXD12ZD/A','MXVU2ZD/A',
+	'MX9R2ZD/A','MXD02ZD/A','MXVT2ZD/A',
+	'MX9U2ZD/A','MXD22ZD/A','MXVV2ZD/A'],
+
+	'Ru':['MX9T2RU/A','MXD12RU/A','MXVU2RU/A',
+	'MX9R2RU/A','MXD02RU/A','MXVT2RU/A',
+	'MX9U2RU/A','MXD22RU/A','MXVV2RU/A'],
+
+	'Fr':['MX9T2ZD/A','MXD12ZD/A','MXVU2ZD/A',
+	'MX9R2ZD/A','MXD02ZD/A','MXVT2ZD/A',
+	'MX9U2ZD/A','MXD22ZD/A','MXVV2ZD/A']
+},
+
 'AirPodPro':{'Tw':['MWP22TA/A'],
 
 'Cn':['MWP22CH/A'],
@@ -232,6 +266,11 @@ countries = {
 
 
 Us ={
+	'IphoneSE':[
+	'MX9P2LL/A','MXCX2LL/A','MXVQ2LL/A',
+	'MX9N2LL/A','MXCW2LL/A','MXVP2LL/A',
+	'MX9Q2LL/A','MXCY2LL/A','MXVR2LL/A'],
+
 	'AirPodPro':['MWP22AM/A'],
 	'IphoneXr':[
 	'MT3L2LL/A', 'MT3U2LL/A','MT412LL/A','MT3K2LL/A','MT3T2LL/A', 'MT402LL/A','MT3R2LL/A','MT3Y2LL/A', 'MT462LL/A',
@@ -256,13 +295,16 @@ Us ={
 	'Ipad':['MW742LL/A','MW6W2LL/A','MW772LL/A','MW702LL/A','MW752LL/A','MW6X2LL/A','MW782LL/A','MW712LL/A',
 	'MW762LL/A','MW6Y2LL/A','MW792LL/A','MW722LL/A'],
 
-	'AppleWatch5':['MWV82LL/A','MWWQ2LL/A','MWVF2LL/A','MWW12LL/A']}
+	'AppleWatch5':['MWV82LL/A','MWWQ2LL/A','MWVF2LL/A','MWW12LL/A']
+	}
 Product_Us_R = {k: key for key, value in Us.items() for k in value}
 # for key,value in Us.items()
 	# for k in value
 		# k = key
 #---------------------------------------------------------------- Colors-----------------------------------------------------------#
 Colors = {
+
+
 'Silver' : ['MQ8E2', 'MQ9E2', 'MQ972', 'MQ8H2', 'MQ9A2', 'MQ9H2', 'MQ8M2', 'MQ8U2', 'MQ912', 'MQ8Q2', 'MQ8X2', 'MQ942','MQ9L2','MQ9P2',
 		'MQAK2', 'MQAR2', 'MQAD2', 'MQAN2', 'MQAV2', 'MQAG2', 'MQCT2', 'MQCL2', 'MQAY2', 'MQA62','MQCW2', 'MQCP2', 'MQC22', 'MQA92',
 		#iphone8
@@ -314,16 +356,23 @@ Colors = {
 		#iphoneXr
 		 'MT3M2','MT3V2','MT422','MRY62','MRYE2','MRYM2','MT142','MT1D2','MT1L2','MT062','MT0N2','MT0X2',
 		#iphon11
-		'MWL92','MWLG2','MWLN2','MWLV2','MWM32','MWM92','MWN22','MWN92','MWNH2'],
+		'MWL92','MWLG2','MWLN2','MWLV2','MWM32','MWM92','MWN22','MWN92','MWNH2',
+		#iphoneSE
+		'MX9Q2','MXCY2','MXVR2','MX9U2','MXD22','MXVV2','MXAP2','MXD82','MXW22'],
 
 'White' : [#iphoneXr
 		'MT3L2', 'MT3U2','MT412','MRY52', 'MRYD2', 'MRYL2', 'MT132', 'MT1A2', 'MT1J2', 'MT032', 'MT0J2', 'MT0W2',
 		#iphone11
-		'MWL82','MWLF2','MWLM2','MWLU2','MWM22','MWM82','MWN12','MWN82','MWNG2'],
+		'MWL82','MWLF2','MWLM2','MWLU2','MWM22','MWM82','MWN12','MWN82','MWNG2',
+		#iphoneSE
+		'MX9P2','MXCX2','MXVQ2','MX9T2','MXD12','MXVU2','MXVV2','MXAN2','MXD72'],
+
 'Black' : [#iphoneXr
 		'MT3K2','MT3T2', 'MT402','MRY42','MRY92', 'MRYJ2','MT122','MT192', 'MT1H2','MT002','MT0G2', 'MT0V2',
 		#iphone11
-		'MWL72','MWLE2','MWLL2','MWLT2','MWM02','MWM72','MWN02','MWN72','MWNF2'],
+		'MWL72','MWLE2','MWLL2','MWLT2','MWM02','MWM72','MWN02','MWN72','MWNF2',
+		#iphoneSE
+		'MX9N2','MXCW2','MXVP2','MX9R2','MXD02','MXVT2','MXAM2','MXD62','MXW02'],
 
 'Green' : [#iphone11
 			'MWLD2','MWLK2','MWLR2','MWLY2','MWM62','MWMD2','MWN62','MWNE2','MWNL2',
@@ -372,7 +421,7 @@ Colors = {
 #iphone11
 #Ipad
 #Iphone Watch 5
-
+print("1")
 Color_R = {k: key for key, value in Colors.items() for k in value}
 #---------------------------------------------------------------- SIZE -------------------------------------------------------------#
 Size = {
@@ -402,7 +451,9 @@ Size = {
 			#iphone11ProMax
 			'MWGY2','MWH02','MWH22','MWH12','MWHD2','MWHF2','MWHH2','MWHG2','MWEV2','MWEW2','MWF02','MWEX2',
 			#iphone11
-			'MWL82','MWL72','MWLD2','MWLA2','MWLC2','MWL92','MWLU2','MWLT2','MWLY2','MWLW2','MWLX2','MWLV2','MWN12','MWN02','MWN62','MWN32','MWN52','MWN22'],
+			'MWL82','MWL72','MWLD2','MWLA2','MWLC2','MWL92','MWLU2','MWLT2','MWLY2','MWLW2','MWLX2','MWLV2','MWN12','MWN02','MWN62','MWN32','MWN52','MWN22',
+			#iphoneSE
+			'MX9P2','MX9N2','MX9Q2','MX9T2','MX9R2','MX9U2','MXAN2','MXAM2','MXAP2'],
 
 '128GB' : [
 			#IphonXr
@@ -411,7 +462,9 @@ Size = {
 			#Ipad
 			'MW772','MW702','MW782','MW712','MW792','MW722','MW6E2','MW6F2','MW6G2','MW6T2','MW6U2','MW6V2',
 			#Iphone11
-			'MWLF2','MWLE2','MWLK2','MWLH2','MWLJ2','MWLG2','MWM22','MWM02','MWM62','MWM42','MWM52','MWM32','MWN82','MWN72','MWNE2','MWNC2','MWND2','MWN92'],
+			'MWLF2','MWLE2','MWLK2','MWLH2','MWLJ2','MWLG2','MWM22','MWM02','MWM62','MWM42','MWM52','MWM32','MWN82','MWN72','MWNE2','MWNC2','MWND2','MWN92',
+			#iphoneSE
+			'MXCX2','MXCW2','MXCY2','MXD12','MXD02','MXD22','MXD72','MXD62','MXD82'],
 '256GB' : [
 			#Iphone8 
 			#'MQ7H2', 'MQ802', 'MQ832','MQ7G2', 'MQ7Y2', 'MQ822','MQ7F2', 'MQ7X2', 'MQ812','MRRL2', 'MRRW2', 'MRRX2','MQ7E2',
@@ -434,7 +487,9 @@ Size = {
 			#iphone11ProMax
 			'MWH42','MWH52','MWH72','MWH62','MWHJ2','MWHK2','MWHM2','MWHL2','MWF12','MWF22','MWF42','MWF32',
 			#iphone11
-			'MWLM2','MWLL2','MWLR2','MWLP2','MWLQ2','MWLN2','MWM82','MWM72','MWMD2','MWMA2','MWMC2','MWM92','MWNG2','MWNF2','MWNL2','MWNJ2','MWNK2','MWNH2'],
+			'MWLM2','MWLL2','MWLR2','MWLP2','MWLQ2','MWLN2','MWM82','MWM72','MWMD2','MWMA2','MWMC2','MWM92','MWNG2','MWNF2','MWNL2','MWNJ2','MWNK2','MWNH2',
+			#iphoneSE
+			'MXVQ2','MXVP2','MXVR2','MXVU2','MXVT2','MXVV2','MXW12','MXW02','MXW22'],
 
 '512GB' : [
 			#IphoneXs

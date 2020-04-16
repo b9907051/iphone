@@ -55,6 +55,7 @@ for key, index in product_index.items():
 if platform.system() == "Windows":
     # Local 端
     path = "static/data/Zhongguancun_V2.csv"
+     
 else:
     # AWS 端
     path = "/home/cathaylife04/smartphone/iphone11/static/data/Zhongguancun_V2.csv"

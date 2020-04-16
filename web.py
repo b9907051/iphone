@@ -208,7 +208,7 @@ def dashboard():
     Index = request.values.get(
         "Index", "TimeStemp"
     )  # 這裡如果get不到index 會給default值 'TimeStemp'
-    Product = request.values.get("Product", "AirPodPro")
+    Product = request.values.get("Product", "IphoneSE")
     # print(Product)
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
