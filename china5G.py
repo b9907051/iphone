@@ -71,7 +71,7 @@ def get_data_oppo(res, product_list):
 
         A = soup.select('p.product-price')
         B = A[0].getText()
-
+        print(B)
         price = B[3:-4]
 
         update_res(res,product,price)
