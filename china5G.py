@@ -31,6 +31,9 @@ def update_res(res,product,price):
 # 華為
 def get_data_huawei(res,product_list):
 
+# P40網址
+# https://www.vmall.com/product/10086013232739.html
+
     # num 是網址列要放的東西
     for product, num in product_list.items():
         
@@ -93,7 +96,11 @@ def get_data_xiomi(res, product_list):
         tt = tt.rstrip(');\r\n')
 
         response = json.loads(tt)
-        price = response['data']['list'][0]['list'][0]['goods']['market_price']
+        if product == 'Mi10'
+            price = response['data']['list'][1]['list'][0]['goods']['market_price']
+        else
+            # Mi10pro 的規格
+            price = response['data']['list'][0]['list'][0]['goods']['market_price']
 
         update_res(res,product,price)
 
