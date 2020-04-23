@@ -96,9 +96,9 @@ def get_data_xiomi(res, product_list):
         tt = tt.rstrip(');\r\n')
 
         response = json.loads(tt)
-        if product == 'Mi10'
+        if product == 'Mi10':
             price = response['data']['list'][1]['list'][0]['goods']['market_price']
-        else
+        else:
             # Mi10pro 的規格
             price = response['data']['list'][0]['list'][0]['goods']['market_price']
 
