@@ -45,6 +45,9 @@ def get_data_huawei(res,product_list):
         B = A[0]['value']
         
         price = B[:-3]
+        price = int(price)
+
+        print(product,":",price)
         update_res(res,product,price)
         
     return(res)
@@ -60,6 +63,9 @@ def get_data_vivo(res, product_list):
         response = json.loads(r.text)
 
         price = response['data']['102963']['salePrice']
+        price = int(price)
+
+        print(product,":",price)
         update_res(res,product,price)
     return(res)
 
@@ -74,9 +80,26 @@ def get_data_oppo(res, product_list):
 
         A = soup.select('p.product-price')
         B = A[0].getText()
-        print(B)
-        price = B[3:-4]
 
+        if product == 'FindX2':
+
+            price = B[3:-12]
+            if not price:
+                print('case1')
+                price = B[1:-10]
+
+        # 如果是 FindX2-Pro
+        else:
+            price = B[3:-4]
+
+            if int(price)< 100:
+                print('case2')
+                price = B[1:-4]
+
+
+        price = int(price)
+
+        print(product,":",price)
         update_res(res,product,price)
     return(res)
 
@@ -96,12 +119,16 @@ def get_data_xiomi(res, product_list):
         tt = tt.rstrip(');\r\n')
 
         response = json.loads(tt)
-        if product == 'Mi10':
-            price = response['data']['list'][1]['list'][0]['goods']['market_price']
-        else:
-            # Mi10pro 的規格
+        if product == 'Mi10-Pro':
+            # 5/13 mi10pro 官網改放 高規格手機 低規改到次要
             price = response['data']['list'][0]['list'][0]['goods']['market_price']
+        else:
+            # 6/18 有短期降價機會
+            price = response['data']['list'][1]['list'][0]['goods']['market_price']
+            
+        price = int(price)
 
+        print(product,":",price)
         update_res(res,product,price)
 
     return(res)
@@ -124,8 +151,10 @@ else:
 
 Data = pd.read_csv(path)
 Old_Data = Data.to_dict("records")
+
 newres = res + Old_Data
 df = pd.DataFrame(newres)
+df = df.round(0)
 df = df.drop_duplicates()
 df.to_csv(path, encoding="utf_8_sig", index=False)
 print("執行完畢")
