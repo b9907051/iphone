@@ -168,7 +168,6 @@ def H12020():
 
     timeperiod = request.values.get("timeperiod")
     # name_of_data = request.values.get("namedata")
-
     Product_info = get_csv(
         datasource="1H2020", mainInfo="Dealprice", timeperiod=timeperiod
     )

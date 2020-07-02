@@ -305,7 +305,8 @@ Product_Us_R = {k: key for key, value in Us.items() for k in value}
 Colors = {
 
 
-'Silver' : ['MQ8E2', 'MQ9E2', 'MQ972', 'MQ8H2', 'MQ9A2', 'MQ9H2', 'MQ8M2', 'MQ8U2', 'MQ912', 'MQ8Q2', 'MQ8X2', 'MQ942','MQ9L2','MQ9P2',
+'Silver' : [#iphone 8-plus
+		'MQ8E2', 'MQ9E2', 'MQ972', 'MQ8H2', 'MQ9A2', 'MQ9H2', 'MQ8M2', 'MQ8U2', 'MQ912', 'MQ8Q2', 'MQ8X2', 'MQ942','MQ9L2','MQ9P2',
 		'MQAK2', 'MQAR2', 'MQAD2', 'MQAN2', 'MQAV2', 'MQAG2', 'MQCT2', 'MQCL2', 'MQAY2', 'MQA62','MQCW2', 'MQCP2', 'MQC22', 'MQA92',
 		#iphone8
 		'MQ6H2', 'MQ6W2', 'MQ702','MQ7D2', 'MQ7R2', 'MQ7V2','MQ6L2', 'MQ732', 'MQ762','MQ7G2', 'MQ7Y2', 'MQ822','MQ792','MQ852',
@@ -320,7 +321,8 @@ Colors = {
 		#iPad
 		'MW752','MW6X2','MW782','MW712','MW6C2','MW6F2','MW6Q2','MW6U2'],
 
-'Gold' : ['MQ8F2', 'MQ9F2', 'MQ982','MQ8J2', 'MQ9C2', 'MQ9J2', 'MQ8N2', 'MQ8V2', 'MQ922','MQ8R2', 'MQ8Y2', 'MQ952','MQ9M2','MQ9Q2',
+'Gold' : [#iphone8-plus
+		'MQ8F2', 'MQ9F2', 'MQ982','MQ8J2', 'MQ9C2', 'MQ9J2', 'MQ8N2', 'MQ8V2', 'MQ922','MQ8R2', 'MQ8Y2', 'MQ952','MQ9M2','MQ9Q2',
 		#iphone8
 		'MQ6M2', 'MQ742', 'MQ772', 'MQ7H2', 'MQ802', 'MQ832', 'MQ6J2', 'MQ6X2', 'MQ712', 'MQ7E2', 'MQ7T2', 'MQ7W2','MQ7A2','MQ862',
 		#iphoneXs
@@ -335,7 +337,8 @@ Colors = {
 		'MW762','MW6Y2','MW792','MW722','MW6D2','MW6G2','MW6R2','MW6V2'],
 
 
-'Gray' : ['MQ8D2', 'MQ9D2', 'MQ962', 'MQ8G2', 'MQ9G2', 'MQ992', 'MQ8L2', 'MQ8T2', 'MQ902', 'MQ8P2', 'MQ8W2', 'MQ932','MQ9K2','MQ9N2',
+'Gray' : [#iphone8-plus
+		'MQ8D2', 'MQ9D2', 'MQ962', 'MQ8G2', 'MQ9G2', 'MQ992', 'MQ8L2', 'MQ8T2', 'MQ902', 'MQ8P2', 'MQ8W2', 'MQ932','MQ9K2','MQ9N2',
 		'MQAJ2', 'MQAQ2', 'MQAC2', 'MQAM2', 'MQAU2', 'MQAF2','MQCR2', 'MQCK2', 'MQAX2', 'MQA52','MQCV2', 'MQCN2', 'MQC12', 'MQA82',
 		#iphone8
 		'MQ6K2','MQ722','MQ752','MQ7F2','MQ7X2','MQ812','MQ6G2','MQ6V2', 'MQ6Y2','MQ7C2','MQ7Q2','MQ7U2','MQ782','MQ842',
@@ -350,7 +353,8 @@ Colors = {
 		#iPad
 		'MW742','MW6W2','MW772','MW702','MW6A2','MW6E2','MW6P2','MW6T2'],
 
-'Red' : ['MRTG2', 'MRTJ2', 'MRT72', 'MRTH2', 'MRTK2', 'MRT82', 'MRTC2', 'MRTE2', 'MRT92', 'MRTA2', 'MRTD2', 'MRTF2','MRTL2','MRTM2',
+'Red' : [#iphone8-plus
+		'MRTG2', 'MRTJ2', 'MRT72', 'MRTH2', 'MRTK2', 'MRT82', 'MRTC2', 'MRTE2', 'MRT92', 'MRTA2', 'MRTD2', 'MRTF2','MRTL2','MRTM2',
 		#iphone8
 		'MRRK2', 'MRRR2', 'MRRT2', 'MRRL2', 'MRRW2', 'MRRX2', 'MRRM2', 'MRRP2', 'MRRQ2', 'MRRN2', 'MRRU2', 'MRRV2',
 		#iphoneXr
@@ -421,28 +425,28 @@ Colors = {
 #iphone11
 #Ipad
 #Iphone Watch 5
-print("1")
+
 Color_R = {k: key for key, value in Colors.items() for k in value}
 #---------------------------------------------------------------- SIZE -------------------------------------------------------------#
 Size = {
 
 '32GB' : [#Ipad
 			'MW742','MW6W2','MW752','MW6X2','MW762','MW6Y2','MW6A2','MW6C2','MW6D2','MW6P2','MW6Q2','MW6R2'],
-'64GB' : [
-			'MQ8F2', 'MQ9F2', 'MQ982', 'MQ8E2', 'MQ9E2', 'MQ972', 'MQ8D2', 'MQ9D2', 'MQ962', 'MRTG2', 'MRTJ2', 'MRT72',
-			'MQ8N2', 'MQ8V2', 'MQ922', 'MQ8M2', 'MQ8U2', 'MQ912', 'MQ8L2', 'MQ8T2', 'MQ902', 'MRTC2', 'MRTE2', 'MRT92',
-			'MQ9L2', 'MQ9M2', 'MQ9K2', 'MRTL2', 'MQAK2', 'MQAR2', 'MQAD2', 'MQCT2', 'MQCL2', 'MQAY2', 'MQA62', 'MQCR2',
-			'MQCK2', 'MQAX2', 'MQA52', 'MQAJ2', 'MQAQ2', 'MQAC2',
+'64GB' : [#Iphone8plus
+			# 'MQ8F2', 'MQ9F2', 'MQ982', 'MQ8E2', 'MQ9E2', 'MQ972', 'MQ8D2', 'MQ9D2', 'MQ962', 'MRTG2', 'MRTJ2', 'MRT72',
+			# 'MQ8N2', 'MQ8V2', 'MQ922', 'MQ8M2', 'MQ8U2', 'MQ912', 'MQ8L2', 'MQ8T2', 'MQ902', 'MRTC2', 'MRTE2', 'MRT92',
+			# 'MQ9L2', 'MQ9M2', 'MQ9K2', 'MRTL2', 'MQAK2', 'MQAR2', 'MQAD2', 'MQCT2', 'MQCL2', 'MQAY2', 'MQA62', 'MQCR2',
+			# 'MQCK2', 'MQAX2', 'MQA52', 'MQAJ2', 'MQAQ2', 'MQAC2',
 			#Iphone8
-			'MQ6M2', 'MQ742', 'MQ772','MQ6L2', 'MQ732', 'MQ762','MQ6K2', 'MQ722', 'MQ752','MRRK2', 'MRRR2', 'MRRT2','MQ6J2',
-			 'MQ6X2', 'MQ712','MQ6H2', 'MQ6W2', 'MQ702','MQ6G2', 'MQ6V2','MQ6Y2','MRRM2', 'MRRP2', 'MRRQ2','MQ792','MQ7A2','MQ782',
+			# 'MQ6M2', 'MQ742', 'MQ772','MQ6L2', 'MQ732', 'MQ762','MQ6K2', 'MQ722', 'MQ752','MRRK2', 'MRRR2', 'MRRT2','MQ6J2',
+			#  'MQ6X2', 'MQ712','MQ6H2', 'MQ6W2', 'MQ702','MQ6G2', 'MQ6V2','MQ6Y2','MRRM2', 'MRRP2', 'MRRQ2','MQ792','MQ7A2','MQ782',
 
 			#IphoneXr
 			'MRY52','MRY42','MRYA2','MRY72','MRY82','MRY62','MT132','MT122','MT182','MT162','MT172','MT142','MT032','MT002','MT0E2',
 			'MT082','MT0A2','MT062','MT3L2','MT3K2','MT3R2','MT3N2','MT3Q2', 'MT3M2',
 
 			#IphoneXs
-			'MT942','MT952','MT962','MT9E2','MT9F2','MT9G2','MT9P2','MT9Q2','MT9R2','MTAW2','MTAX2','MTAY2',
+			# 'MT942','MT952','MT962','MT9E2','MT9F2','MT9G2','MT9P2','MT9Q2','MT9R2','MTAW2','MTAX2','MTAY2',
 
 			#IphoneXsMax
 			#'MT502','MT512','MT522','MT592','MT5A2','MT5C2','MT6Q2','MT6R2','MT6T2','MT712','MT722','MT732',
@@ -481,7 +485,7 @@ Size = {
 			#IphoneXsMax
 			#'MT532','MT542','MT552','MT5D2','MT5E2','MT5F2','MT6U2','MT6V2','MT6W2','MT742','MT752','MT762',
 			#IpadPro
-			'MTXR2','MTFN2','MTXQ2','MTFL2',
+			# 'MTXR2','MTFN2','MTXQ2','MTFL2',
 			#iphone11Pro
 			'MWCM2','MWCN2','MWCQ2','MWCP2','MWC72','MWC82','MWCC2','MWC92','MWDE2','MWDF2','MWDH2','MWDG2',
 			#iphone11ProMax
@@ -493,11 +497,11 @@ Size = {
 
 '512GB' : [
 			#IphoneXs
-			'MT9A2','MT9C2','MT9D2','MT9L2','MT9M2','MT9N2','MT9W2','MT9X2','MT9Y2','MTE32','MTE42','MTE52',
+			# 'MT9A2','MT9C2','MT9D2','MT9L2','MT9M2','MT9N2','MT9W2','MT9X2','MT9Y2','MTE32','MTE42','MTE52',
 			#IphoneXsMax
 			#'MT562','MT572','MT582','MT5G2','MT5H2','MT5J2','MT6X2','MT6Y2','MT702','MT772','MT782','MT792',
 			#IpadPro
-			'MTXU2','MTFQ2','MTXT2','MTFP2',
+			# 'MTXU2','MTFQ2','MTXT2','MTFP2',
 			#iphone11Pro
 			'MWCR2','MWCT2','MWCV2','MWCU2','MWCD2','MWCE2','MWCG2','MWCF2','MWDJ2','MWDK2','MWDM2','MWDL2',
 			#iphone11ProMax
@@ -508,7 +512,7 @@ Size = {
 '38mm': ['MTEY2','MTGG2','MTGN2','MTGK2'],
 '42mm': ['MTF22','MTGR2','MTH12','MTGX2'],
 #IphoneWatch4
-'40mm': ['MTUD2','MTVA2','MU642',
+'40mm': [#'MTUD2','MTVA2','MU642',
 #IphoneWqatch5
 		'MWV82','MWWQ2','MWX32'],
 '44mm': ['MTUU2','MTVR2','MU6A2',
@@ -568,13 +572,15 @@ for Model in Model_Us:
 
 		# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
 		try:
-			d['Size'] = Size_R[Model[0:5]]
 			d['Colors'] = Color_R[Model[0:5]]
+			d['Size'] = Size_R[Model[0:5]]
 			url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+			
 			r = requests.get(url)
 			response = json.loads(r.text)
 
-			d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+			# d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+			d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 			print(d)
 			res.append(d)
 
@@ -587,7 +593,7 @@ for Model in Model_Us:
 		r = requests.get(url)
 		response = json.loads(r.text)
 
-		d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+		d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 		print(d)
 		res.append(d)
 
@@ -608,14 +614,14 @@ for Product in countries:
 			if Product_R[Model] != 'AirPodPro':
 				# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
 				try:
-					d['Size'] = Size_R[Model[0:5]]
 					d['Colors'] = Color_R[Model[0:5]]
-
+					d['Size'] = Size_R[Model[0:5]]
+					
 					url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
 					r = requests.get(url)
 
 					response = json.loads(r.text)
-					d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+					d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 					print(d)
 					res.append(d)
 
@@ -627,7 +633,7 @@ for Product in countries:
 				r = requests.get(url)
 
 				response = json.loads(r.text)
-				d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+				d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 				print(d)
 				res.append(d)
 				
