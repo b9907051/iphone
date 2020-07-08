@@ -106,7 +106,7 @@ def get_data_oppo(res, product_list):
 
         # 如果是 FindX2-Pro
         elif product == 'FindX2-Pro':
-            price = B[3:-4]
+            price = B[3:-12]
 
             if int(price)< 100:
                 print('case2')
