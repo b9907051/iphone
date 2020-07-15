@@ -98,28 +98,23 @@ def get_data_oppo(res, product_list):
         B = A[0].getText()
 
         if product == 'FindX2':
-
-            price = B[3:-12]
-            if not price:
-                print('case1')
-                price = B[1:-10]
+            try:
+                price = int(B[3:-12])
+            except:
+                price = int(B[1:-10])
 
         # 如果是 FindX2-Pro
         elif product == 'FindX2-Pro':
-            price = B[3:-12]
-
-            if int(price)< 100:
-                print('case2')
-                price = B[1:-4]
-        # 如果是 
+            try:
+                price = int(B[3:-12])
+            except:
+                price = int(B[1:-4])
+        # 如果是 reno4pro
         else:
             try:
                 price = int(B[1:-4])
             except:
                 price = int(B[3:-4])
-
-
-        price = int(price)
 
         print(product,":",price)
         update_res(res,product,price)
