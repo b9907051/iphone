@@ -50,7 +50,10 @@ def get_data_huawei(res,product_list):
         B = A[0]['value']
         
         price = B[:-3]
-        price = int(price)
+        
+        # 這裡華為官網把P40規格改成 8G+512G 目前找不到方法更正回來先直接-300元
+        price = int(price) - 300 
+
 
         print(product,":",price)
         update_res(res,product,price)
@@ -108,13 +111,23 @@ def get_data_oppo(res, product_list):
             try:
                 price = int(B[3:-12])
             except:
-                price = int(B[1:-4])
+                try:
+                    price = int(B[1:-10])
+                    print(B[1:-10])
+                except:
+                    price = int(B[1:-4])
+                    print(B[1:-4])
+
+
         # 如果是 reno4pro
         else:
             try:
                 price = int(B[1:-4])
             except:
-                price = int(B[3:-4])
+                try:
+                    price = int(B[1:-10])
+                except:
+                    price = int(B[3:-4])
 
         print(product,":",price)
         update_res(res,product,price)
