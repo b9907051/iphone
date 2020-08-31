@@ -79,6 +79,7 @@
 
 
 				var data, time, dealnumber;
+				// => 這個東西是 arrow function. 有點像匿名函數
 
 				data = Object.values(Cellphone).map((d, i) => ({
 					// 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
@@ -104,6 +105,8 @@
 				// 	week: { 1: ctx1_week, 2: ctx2_week },
 				// 	day: { 1: ctx1_day, 2: ctx2_day }
 				// }
+				console.log(data)
+
 				var myChart = new Chart(canvas, {
 
 					type: 'line',

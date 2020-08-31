@@ -144,6 +144,11 @@ def is_logged_in(f):
 def mainpage():
     return render_template("1H2020.html")
 
+@app.route("/TomTom-page")
+@is_logged_in
+def TomTom_page():
+    return render_template("TomTom.html")
+
 @app.route("/1H2020-page")
 @is_logged_in
 def H12020_page():
@@ -160,6 +165,18 @@ def Zhongguancun():
 @is_logged_in
 def Tmallpage():
     return render_template("tmall.html")
+
+
+# 去後端拿資料的地方
+@app.route("/TomTom")
+@is_logged_in
+def TomTom():
+    timeperiod = request.values.get("timeperiod")
+    # name_of_data = request.values.get("namedata")
+    df = pd.read_csv("static/data/TomTom.csv")
+    df = df.to_dict(orient='list')
+    # 把 data 用json的格式 return 回 TomTom.js
+    return json.dumps(df)
 
 
 @app.route("/1H2020")
@@ -189,6 +206,11 @@ def api():
 
 @app.route("/Tmall")
 def Tmall():
+
+    # request.values.get("變數名稱") 
+    # 在 axios.get(`/Tmall?timeperiod=${timePeriod}&mainInfo=Dealprice`) 
+    # 這行拿到timeperiod這個標籤的內容 還有我們想看的 maininfo
+
     timeperiod = request.values.get("timeperiod")
     mainInfo = request.values.get("mainInfo")
     Product_info = get_csv(
