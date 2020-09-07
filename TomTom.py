@@ -31,6 +31,7 @@ for city in city_list:
     for rowdata in response:
         data[city]['dates'].append(rowdata['date'])
         data[city]['diffratio'].append(rowdata['diffRatio'] * 30 * data[city]['weigh'][0] /100)
+    print(city + ' done')
 
 # TODO 這裡抓完資料後發現資料長度有些沒有跟上最新的資料還沒更新上去
 length = 0
@@ -39,15 +40,17 @@ for city in city_list:
         # 把最長的資料長度紀錄起來
         longest_length = len(data[city]['diffratio'])
 for city in city_list:
-    data_num_diff = length - len(data[city]['diffratio'])
+    data_num_diff = longest_length - len(data[city]['diffratio'])
     if data_num_diff > 0:
         data[city]['dates'] = data[city]['dates'][:-data_num_diff]
         data[city]['diffratio'] = data[city]['diffratio'][:-data_num_diff]
+    print(city,"   ",len(data[city]['dates']),len(data[city]['diffratio']))
 
 
 # 所以如果長度不一樣的話要進行資料裁切
 # TODO 日期跟DIFF 都要進行裁切
 totaldiff = map(lambda x: data[x]['diffratio'],city_list.keys())
+# 把每個數字加起來以後進行小數點兩位四捨五入
 totaldiff = [round(sum(x),2) for x in zip(*list(totaldiff))]
 X_axis = [datetime.strptime(str(i), "%Y-%m-%d") for i in data[city]['dates']]
 

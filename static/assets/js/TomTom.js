@@ -8,7 +8,6 @@
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
     var ctx = $('#TomTom');
-    var ctx2 = $('#TomTom2');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -35,7 +34,6 @@
     }
     // 第一次渲染 直接呼叫下面的 function
     renderChart(ctx);
-    renderChart(ctx2);
 
     //Tmall的renderChart
 
