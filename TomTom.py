@@ -33,18 +33,21 @@ for city in city_list:
         data[city]['diffratio'].append(rowdata['diffRatio'] * 30 * data[city]['weigh'][0] /100)
     print(city + ' done')
 
-# TODO 這裡抓完資料後發現資料長度有些沒有跟上最新的資料還沒更新上去
-length = 0
+
+length = []
 for city in city_list:
-    if len(data[city]['diffratio'])> length:
-        # 把最長的資料長度紀錄起來
-        longest_length = len(data[city]['diffratio'])
+    length.append(len(data[city]['diffratio']))
+
+shortest_length = min(length)
+print(shortest_length)
 for city in city_list:
-    data_num_diff = longest_length - len(data[city]['diffratio'])
+    data_num_diff = len(data[city]['diffratio']) - shortest_length
+    
     if data_num_diff > 0:
-        data[city]['dates'] = data[city]['dates'][:-data_num_diff]
+        print(city,' 資料進行裁切 捨棄',data_num_diff,'筆資料')
+        data2[city]['dates'] = data[city]['dates'][:-data_num_diff]
         data[city]['diffratio'] = data[city]['diffratio'][:-data_num_diff]
-    print(city,"   ",len(data[city]['dates']),len(data[city]['diffratio']))
+        print(city,"   ",len(data[city]['dates']),len(data[city]['diffratio']))
 
 
 # 所以如果長度不一樣的話要進行資料裁切

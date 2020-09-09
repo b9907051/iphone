@@ -78,7 +78,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: 'Congestion time',
+                            // text: 'Congestion time',
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉

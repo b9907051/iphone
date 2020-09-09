@@ -171,7 +171,7 @@ def Tmallpage():
 @app.route("/TomTom")
 @is_logged_in
 def TomTom():
-    timeperiod = request.values.get("timeperiod")
+
     # name_of_data = request.values.get("namedata")
     df = pd.read_csv("static/data/TomTom.csv")
     df = df.to_dict(orient='list')
@@ -181,9 +181,18 @@ def TomTom():
 @app.route("/TomTom2")
 @is_logged_in
 def TomTom2():
-    timeperiod = request.values.get("timeperiod")
+
     # name_of_data = request.values.get("namedata")
     df = pd.read_csv("static/data/TomTom_china.csv")
+    df = df.to_dict(orient='list')
+    # 把 data 用json的格式 return 回 TomTom.js
+    return json.dumps(df)
+
+@app.route("/TomTom3")
+@is_logged_in
+def TomTom3():
+    # name_of_data = request.values.get("namedata")
+    df = pd.read_csv("static/data/TomTom_europe.csv")
     df = df.to_dict(orient='list')
     # 把 data 用json的格式 return 回 TomTom.js
     return json.dumps(df)
