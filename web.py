@@ -172,27 +172,13 @@ def Tmallpage():
 @is_logged_in
 def TomTom():
 
+    # 從前端 拿到要看的國家
+    region = request.values.get("region")
+    print(region)
     # name_of_data = request.values.get("namedata")
     df = pd.read_csv("static/data/TomTom.csv")
-    df = df.to_dict(orient='list')
-    # 把 data 用json的格式 return 回 TomTom.js
-    return json.dumps(df)
-
-@app.route("/TomTom2")
-@is_logged_in
-def TomTom2():
-
-    # name_of_data = request.values.get("namedata")
-    df = pd.read_csv("static/data/TomTom_china.csv")
-    df = df.to_dict(orient='list')
-    # 把 data 用json的格式 return 回 TomTom.js
-    return json.dumps(df)
-
-@app.route("/TomTom3")
-@is_logged_in
-def TomTom3():
-    # name_of_data = request.values.get("namedata")
-    df = pd.read_csv("static/data/TomTom_europe.csv")
+    df = df[df['Region_name'] == region]
+    print(df)
     df = df.to_dict(orient='list')
     # 把 data 用json的格式 return 回 TomTom.js
     return json.dumps(df)

@@ -7,7 +7,9 @@
 
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
-    var ctx = $('#TomTom');
+    var ctx1 = $('#TomTom_US');
+    var ctx2 = $('#TomTom_CH');
+    var ctx3 = $('#TomTom_EU');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -32,26 +34,29 @@
         const result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')'
         return result
     }
-    // 第一次渲染 直接呼叫下面的 function
-    renderChart(ctx);
+    // 第一次渲染 直接呼叫下面的 function 引數分別是:
+    // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
+    renderChart('USA',ctx1,0,'USD congestion');
+    renderChart('EU',ctx2,2,'EU congestion');
+    renderChart('CHN',ctx3,4,'CH congestion');
 
     //Tmall的renderChart
 
-    function renderChart(canvas) {
+    function renderChart(region,canvas,color,title) {
         // 這裡去跟後端拿資料
-        axios.get(`/TomTom`)
+        axios.get(`/TomTom?region=${region}`)
             .then(function (res) {
                 const Data = res.data;
                 const X_axis = Data.X_axis;
-                var totaldiff = Data.totaldiff;
-                var data
+                const totaldiff = Data.totaldiff;
+                var datasetting
                 // data要記得用 array包起來不能直接放dictionary進去
-                data = [{
+                datasetting = [{
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
-                    label:'America congestion',
+                    label: title,
                     backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
                     // 這裡的i總共有幾個阿??
-                    borderColor: borderColorArr[0],
+                    borderColor: borderColorArr[color],
                     pointHoverBackgroundColor: '#fff',
                     borderWidth: 2,
 
@@ -60,16 +65,19 @@
 
                 }]
                 console.log('Xaxis',X_axis)
-                console.log(data)
+                console.log(datasetting)
 
 
                 var myChart = new Chart(canvas, {
 
                     type: 'line',
+                    // 這行的 data 是這個 js.Chart 物件裡已經定義好的
                     data: {
                         // 取出第一個Data的key
                         labels: X_axis,
-                        datasets: data
+
+                        // 這裡的datasets 裡面就是要放 我們前面把一堆東西放進去的地方
+                        datasets: datasetting
 
                     },
                     options: {
