@@ -311,9 +311,9 @@ Us ={
 
 	# 'AppleWatch6':["MG2A3LL/A,MY702AM/A","M0D73LL/A,MY702AM/A","M02G3LL/A,MY8C2AM/A","M0G93LL/A,MY8C2AM/A"],
 	# 'AppleWatchSE':["MYDY2LL/A,MYPD2AM/A","MYF32LL/A,MYPD2AM/A","MYE22LL/A,MYTW2AM/A","MYF92LL/A,MYTW2AM/A"],
-	'iPad2020':["MYL92","MYN32","MYLD2","MYN72","MYLA2","MYN52","MYLE2","MYN82","MYLC2","MYN62","MYLF2","MYN92"],
-	'iPadAir2020':["MYFM2","MYHX2","MYFT2","MYJ32","MYFN2","MYHY2","MYFW2","MYJ42","MYFP2","MYJ02","MYFX2",
-	"MYJ52","MYFR2","MYJ22","MYG02","MYJ72","MYFQ2","MYJ12","MYFY2","MYJ62"]
+	'iPad2020':["MYL92LL/A","MYN32LL/A","MYLD2LL/A","MYN72LL/A","MYLA2LL/A","MYN52LL/A","MYLE2LL/A","MYN82LL/A","MYLC2LL/A","MYN62LL/A","MYLF2LL/A","MYN92LL/A"],
+	'iPadAir2020':["MYFM2LL/A","MYHX2LL/A","MYFT2LL/A","MYJ32LL/A","MYFN2LL/A","MYHY2LL/A","MYFW2LL/A","MYJ42LL/A","MYFP2LL/A","MYJ02LL/A","MYFX2LL/A",
+	"MYJ52LL/A","MYFR2LL/A","MYJ22LL/A","MYG02LL/A","MYJ72LL/A","MYFQ2LL/A","MYJ12LL/A","MYFY2LL/A","MYJ62LL/A"]
 
 
 	# 'IphoneSE':[
@@ -773,7 +773,6 @@ for Product in countries:
 
                 url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
                 r = requests.get(url)
-                response = json.loads(r.text)
 
                 d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
                 print(d)
@@ -781,12 +780,14 @@ for Product in countries:
             else:
             # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
                 try:
+                	print(Model)
                     d['Colors'] = Color_R[Model[0:5]]
                     d['Size'] = Size_R[Model[0:5]]
 
                     url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+
+
                     r = requests.get(url)
-                    print(url)
                     response = json.loads(r.text)
                     d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
                     print(d)
