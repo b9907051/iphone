@@ -28,46 +28,46 @@ Old_Data = Data.to_dict('records')
 # 'Ipad'
 # 'AppleWatch5'
 countries = {
-'iPad2020':{
-'Tw':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMH2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'Cn':["MYL92/A","MYMW2/A","MYLD2/A","MYN02/A","MYLA2/A","MYMX2/A","MYLE2/A","MYN12/A","MYLC2/A","MYMY2/A","MYLF2/A","MYN22/A"],
-'Jp':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'Hk':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'Uk':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'De':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'Ru':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
-'Fr':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"]
-},
-'iPadAir2020':{
-'Tw': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'Cn': ["MYFM2/A","MYHL2/A","MYFT2/A","MYHR2/A","MYFN2/A","MYHM2/A","MYFW2/A","MYHT2/A","MYFP2/A","MYHN2/A","MYFX2/A","MYHU2/A","MYFR2/A","MYHQ2/A","MYG02/A","MYHW2/A","MYFQ2/A","MYHP2/A","MYFY2/A","MYHV2/A"],
-'Jp': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'Hk': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'Uk': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'De': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'Ru': ["MYFM2/A","MYFM2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-'Fr': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
-},
+# 'iPad2020':{
+# 'Tw':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMH2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'Cn':["MYL92/A","MYMW2/A","MYLD2/A","MYN02/A","MYLA2/A","MYMX2/A","MYLE2/A","MYN12/A","MYLC2/A","MYMY2/A","MYLF2/A","MYN22/A"],
+# 'Jp':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'Hk':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'Uk':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'De':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'Ru':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"],
+# 'Fr':["MYL92/A","MYMH2/A","MYLD2/A","MYML2/A","MYLA2/A","MYMJ2/A","MYLE2/A","MYMM2/A","MYLC2/A","MYMK2/A","MYLF2/A","MYMN2/A"]
+# },
+# 'iPadAir2020':{
+# 'Tw': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'Cn': ["MYFM2/A","MYHL2/A","MYFT2/A","MYHR2/A","MYFN2/A","MYHM2/A","MYFW2/A","MYHT2/A","MYFP2/A","MYHN2/A","MYFX2/A","MYHU2/A","MYFR2/A","MYHQ2/A","MYG02/A","MYHW2/A","MYFQ2/A","MYHP2/A","MYFY2/A","MYHV2/A"],
+# 'Jp': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'Hk': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'Uk': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'De': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'Ru': ["MYFM2/A","MYFM2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# 'Fr': ["MYFM2/A","MYGW2/A","MYFT2/A","MYH22/A","MYFN2/A","MYGX2/A","MYFW2/A","MYH42/A","MYFP2/A","MYGY2/A","MYFX2/A","MYH52/A","MYFR2/A","MYH12/A","MYG02/A","MYH72/A","MYFQ2/A","MYH02/A","MYFY2/A","MYH62/A"],
+# },
 
 'AppleWatch6':{
-'Tw': ["MG2A3TA/A,CMY702F/A","M0DR3TA/A,CMY702F/A","M02G3TA/A,CMY8C2F/A","M0GT3TA/A,CMY8C2F/A"],
-'Cn': ["MG2A3CH/A,CMY702F/A","M0DR3CH/A,CMY702F/A","M02G3CH/A,CMY8C2F/A","M0GT3CH/A,CMY8C2F/A"],
-'Jp': ["MG2A3J/A,CMY702/A","M0DR3J/A,CMY702/A","M02G3J/A,CMY8C2/A","M0GT3J/A,CMY8C2/A"],
-'Hk': ["MG2A3ZP/A,CMY702F/A","M0DR3ZP/A,CMY702F/A","M02G3ZP/A,CMY8C2F/A","M0GT3ZP/A,CMY8C2F/A"],
-'Uk': ["MG2A3B/A,CMY702/A","M0DR3B/A,CMY702/A","M02G3B/A,CMY8C2/A","M0GT3B/A,CMY8C2/A"],
-'De': ["MG2A3FD/A,CMY702Z/A","M0DR3FD/A,CMY702Z/A","M02G3FD/A,CMY8C2Z/A","M0GT3FD/A,CMY8C2Z/A"],
-'Fr': ["MG2A3NF/A,CMY702Z/A","M0DR3NF/A,CMY702Z/A","M02G3NF/A,CMY8C2Z/A","M0GT3NF/A,CMY8C2Z/A"]
+'Tw': ["MG2A3TA/A,MY702F/A","M0DR3TA/A,MY702F/A","M02G3TA/A,MY8C2F/A","M0GT3TA/A,MY8C2F/A"],
+'Cn': ["MG2A3CH/A,MY702F/A","M0DR3CH/A,MY702F/A","M02G3CH/A,MY8C2F/A","M0GT3CH/A,MY8C2F/A"],
+'Jp': ["MG2A3J/A,MY702/A","M0DR3J/A,MY702/A","M02G3J/A,MY8C2/A","M0GT3J/A,MY8C2/A"],
+'Hk': ["MG2A3ZP/A,MY702F/A","M0DR3ZP/A,MY702F/A","M02G3ZP/A,MY8C2F/A","M0GT3ZP/A,MY8C2F/A"],
+'Uk': ["MG2A3B/A,MY702/A","M0DR3B/A,MY702/A","M02G3B/A,MY8C2/A","M0GT3B/A,MY8C2/A"],
+'De': ["MG2A3FD/A,MY702Z/A","M0DR3FD/A,MY702Z/A","M02G3FD/A,MY8C2Z/A","M0GT3FD/A,MY8C2Z/A"],
+'Fr': ["MG2A3NF/A,MY702Z/A","M0DR3NF/A,MY702Z/A","M02G3NF/A,MY8C2Z/A","M0GT3NF/A,MY8C2Z/A"]
 },
 
 'AppleWatchSE':{
-'Tw': ["MYDY2TA/A,CMYPD2F/A","MYF62TA/A,CMYPD2F/A","MYE22TA/A,CMYTW2F/A","MYFD2TA/A,CMYTW2F/A"],
-'Cn': ["MYDY2CH/A,CMYPD2F/A","MYF62CH/A,CMYPD2F/A","MYE22CH/A,CMYTW2F/A","MYFD2CH/A,CMYTW2F/A"],
-'Jp': ["MYDY2J/A,CMYPD2/A","MYF62J/A,CMYPD2/A","MYE22J/A,CMYTW2/A","MYFD2J/A,CMYTW2/A"],
-'Hk': ["MYDY2ZP/A,CMYPD2F/A","MYF62ZP/A,CMYPD2F/A","MYE22ZP/A,CMYTW2F/A","MYFD2ZP/A,CMYTW2F/A"],
-'Uk': ["MYDY2B/A,CMYPD2/A","MYF62B/A,CMYPD2/A","MYE22B/A,CMYTW2/A","MYFD2B/A,CMYTW2/A"],
-'De': ["MYDY2FD/A,CMYPD2Z/A","MYF62FD/A,CMYPD2Z/A","MYE22FD/A,CMYTW2Z/A","MYFD2FD/A,CMYTW2Z/A"],
-'Ru': ["MYDY2NF/A,CMYPD2Z/A","MYF62NF/A,CMYPD2Z/A","MYE22NF/A,CMYTW2Z/A","MYFD2NF/A,CMYTW2Z/A"],
-'Fr': ["MYDY2LL/A,CMYPD2A/A","MYF32LL/A,CMYPD2A/A","MYE22LL/A,CMYTW2A/A","MYF92LL/A,CMYTW2A/A"]
+'Tw': ["MYDY2TA/A,MYPD2F/A","MYF62TA/A,MYPD2F/A","MYE22TA/A,MYTW2F/A","MYFD2TA/A,MYTW2F/A"],
+'Cn': ["MYDY2CH/A,MYPD2F/A","MYF62CH/A,MYPD2F/A","MYE22CH/A,MYTW2F/A","MYFD2CH/A,MYTW2F/A"],
+'Jp': ["MYDY2J/A,MYPD2/A","MYF62J/A,MYPD2/A","MYE22J/A,MYTW2/A","MYFD2J/A,MYTW2/A"],
+'Hk': ["MYDY2ZP/A,MYPD2F/A","MYF62ZP/A,MYPD2F/A","MYE22ZP/A,MYTW2F/A","MYFD2ZP/A,MYTW2F/A"],
+'Uk': ["MYDY2B/A,MYPD2/A","MYF62B/A,MYPD2/A","MYE22B/A,MYTW2/A","MYFD2B/A,MYTW2/A"],
+'De': ["MYDY2FD/A,MYPD2Z/A","MYF62FD/A,MYPD2Z/A","MYE22FD/A,MYTW2Z/A","MYFD2FD/A,MYTW2Z/A"],
+'Ru': ["MYDY2NF/A,MYPD2Z/A","MYF62NF/A,MYPD2Z/A","MYE22NF/A,MYTW2Z/A","MYFD2NF/A,MYTW2Z/A"],
+'Fr': ["MYDY2LL/A,MYPD2A/A","MYF32LL/A,MYPD2A/A","MYE22LL/A,MYTW2A/A","MYF92LL/A,MYTW2A/A"]
 }
 
 
@@ -310,11 +310,11 @@ countries = {
 
 Us ={
 
-	'AppleWatch6':["MG2A3LL/A,CMY702A/A","M0D73LL/A,CMY702A/A","M02G3LL/A,CMY8C2A/A","M0G93LL/A,CMY8C2A/A"],
-	'AppleWatchSE':["MYDY2LL/A,CMYPD2A/A","MYF32LL/A,CMYPD2A/A","MYE22LL/A,CMYTW2A/A","MYF92LL/A,CMYTW2A/A"],
-	'iPad2020':["MYL92","MYN32","MYLD2","MYN72","MYLA2","MYN52","MYLE2","MYN82","MYLC2","MYN62","MYLF2","MYN92"],
-	'iPadAir2020':["MYFM2","MYHX2","MYFT2","MYJ32","MYFN2","MYHY2","MYFW2","MYJ42","MYFP2","MYJ02","MYFX2",
-	"MYJ52","MYFR2","MYJ22","MYG02","MYJ72","MYFQ2","MYJ12","MYFY2","MYJ62"]
+	'AppleWatch6':["MG2A3LL/A,MY702A/A","M0D73LL/A,MY702A/A","M02G3LL/A,MY8C2A/A","M0G93LL/A,MY8C2A/A"],
+	'AppleWatchSE':["MYDY2LL/A,MYPD2A/A","MYF32LL/A,MYPD2A/A","MYE22LL/A,MYTW2A/A","MYF92LL/A,MYTW2A/A"],
+	# 'iPad2020':["MYL92","MYN32","MYLD2","MYN72","MYLA2","MYN52","MYLE2","MYN82","MYLC2","MYN62","MYLF2","MYN92"],
+	# 'iPadAir2020':["MYFM2","MYHX2","MYFT2","MYJ32","MYFN2","MYHY2","MYFW2","MYJ42","MYFP2","MYJ02","MYFX2",
+	# "MYJ52","MYFR2","MYJ22","MYG02","MYJ72","MYFQ2","MYJ12","MYFY2","MYJ62"]
 
 
 	# 'IphoneSE':[
@@ -472,16 +472,16 @@ Colors = {
 		#Iphone Watch 5
 		'MWV82','MWVF2',
 		#AppleWatch6
-		"MG2A3LL/A,CMY702A/A","M02G3LL/A,CMY8C2A/A","MG2A3TA/A,CMY702F/A","M02G3TA/A,CMY8C2F/A",
-		"MG2A3CH/A,CMY702F/A","M02G3CH/A,CMY8C2F/A","MG2A3J/A,CMY702/A","M02G3J/A,CMY8C2/A",
-		"MG2A3ZP/A,CMY702F/A","M02G3ZP/A,CMY8C2F/A","MG2A3B/A,CMY702/A","M02G3B/A,CMY8C2/A",
-		"MG2A3FD/A,CMY702Z/A","M02G3FD/A,CMY8C2Z/A","MG2A3NF/A,CMY702Z/A","M02G3NF/A,CMY8C2Z/A",
+		"MG2A3LL/A,MY702A/A","M02G3LL/A,MY8C2A/A","MG2A3TA/A,MY702F/A","M02G3TA/A,MY8C2F/A",
+		"MG2A3CH/A,MY702F/A","M02G3CH/A,MY8C2F/A","MG2A3J/A,MY702/A","M02G3J/A,MY8C2/A",
+		"MG2A3ZP/A,MY702F/A","M02G3ZP/A,MY8C2F/A","MG2A3B/A,MY702/A","M02G3B/A,MY8C2/A",
+		"MG2A3FD/A,MY702Z/A","M02G3FD/A,MY8C2Z/A","MG2A3NF/A,MY702Z/A","M02G3NF/A,MY8C2Z/A",
 
 		#AppleWatchSE
-		"MYDY2LL/A,CMYPD2A/A","MYE22LL/A,CMYTW2A/A","MYDY2TA/A,CMYPD2F/A","MYE22TA/A,CMYTW2F/A",
-		"MYDY2CH/A,CMYPD2F/A","MYE22CH/A,CMYTW2F/A","MYDY2J/A,CMYPD2/A","MYE22J/A,CMYTW2/A",
-		"MYDY2ZP/A,CMYPD2F/A","MYE22ZP/A,CMYTW2F/A","MYDY2B/A,CMYPD2/A","MYE22B/A,CMYTW2/A",
-		"MYDY2FD/A,CMYPD2Z/A","MYE22FD/A,CMYTW2Z/A","MYDY2NF/A,CMYPD2Z/A","MYE22NF/A,CMYTW2Z/A"],
+		"MYDY2LL/A,MYPD2A/A","MYE22LL/A,MYTW2A/A","MYDY2TA/A,MYPD2F/A","MYE22TA/A,MYTW2F/A",
+		"MYDY2CH/A,MYPD2F/A","MYE22CH/A,MYTW2F/A","MYDY2J/A,MYPD2/A","MYE22J/A,MYTW2/A",
+		"MYDY2ZP/A,MYPD2F/A","MYE22ZP/A,MYTW2F/A","MYDY2B/A,MYPD2/A","MYE22B/A,MYTW2/A",
+		"MYDY2FD/A,MYPD2Z/A","MYE22FD/A,MYTW2Z/A","MYDY2NF/A,MYPD2Z/A","MYE22NF/A,MYTW2Z/A"],
 
 'GPSCelluar' :[# Iphone Watch 3
 			'MTGG2', 'MTGN2', 'MTGK2','MTGR2','MTGX2','MTH12',
@@ -491,16 +491,16 @@ Colors = {
 			'MWWQ2','MWW12','MWX32','MWWE2',
 
 			#AppleWatch6
-			"M0D73LL/A,CMY702A/A","M0G93LL/A,CMY8C2A/A","M0DR3TA/A,CMY702F/A","M0GT3TA/A,CMY8C2F/A",
-			"M0DR3CH/A,CMY702F/A","M0GT3CH/A,CMY8C2F/A","M0DR3J/A,CMY702/A","M0GT3J/A,CMY8C2/A",
-			"M0DR3ZP/A,CMY702F/A","M0GT3ZP/A,CMY8C2F/A","M0DR3B/A,CMY702/A","M0GT3B/A,CMY8C2/A",
-			"M0DR3FD/A,CMY702Z/A","M0GT3FD/A,CMY8C2Z/A","M0DR3NF/A,CMY702Z/A","M0GT3NF/A,CMY8C2Z/A",
+			"M0D73LL/A,MY702A/A","M0G93LL/A,MY8C2A/A","M0DR3TA/A,MY702F/A","M0GT3TA/A,MY8C2F/A",
+			"M0DR3CH/A,MY702F/A","M0GT3CH/A,MY8C2F/A","M0DR3J/A,MY702/A","M0GT3J/A,MY8C2/A",
+			"M0DR3ZP/A,MY702F/A","M0GT3ZP/A,MY8C2F/A","M0DR3B/A,MY702/A","M0GT3B/A,MY8C2/A",
+			"M0DR3FD/A,MY702Z/A","M0GT3FD/A,MY8C2Z/A","M0DR3NF/A,MY702Z/A","M0GT3NF/A,MY8C2Z/A",
 
 			#AppleWatchSE
-			"MYF32LL/A,CMYPD2A/A","MYF92LL/A,CMYTW2A/A","MYF62TA/A,CMYPD2F/A","MYFD2TA/A,CMYTW2F/A",
-			"MYF62CH/A,CMYPD2F/A","MYFD2CH/A,CMYTW2F/A","MYF62J/A,CMYPD2/A","MYFD2J/A,CMYTW2/A",
-			"MYF62ZP/A,CMYPD2F/A","MYFD2ZP/A,CMYTW2F/A","MYF62B/A,CMYPD2/A","MYFD2B/A,CMYTW2/A",
-			"MYF62FD/A,CMYPD2Z/A","MYFD2FD/A,CMYTW2Z/A","MYF62NF/A,CMYPD2Z/A","MYFD2NF/A,CMYTW2Z/A"
+			"MYF32LL/A,MYPD2A/A","MYF92LL/A,MYTW2A/A","MYF62TA/A,MYPD2F/A","MYFD2TA/A,MYTW2F/A",
+			"MYF62CH/A,MYPD2F/A","MYFD2CH/A,MYTW2F/A","MYF62J/A,MYPD2/A","MYFD2J/A,MYTW2/A",
+			"MYF62ZP/A,MYPD2F/A","MYFD2ZP/A,MYTW2F/A","MYF62B/A,MYPD2/A","MYFD2B/A,MYTW2/A",
+			"MYF62FD/A,MYPD2Z/A","MYFD2FD/A,MYTW2Z/A","MYF62NF/A,MYPD2Z/A","MYFD2NF/A,MYTW2Z/A"
 			],
 
 '11inch' :[	#Ipad Pro
@@ -620,32 +620,32 @@ Size = {
 		#IphoneWqatch5
 		'MWV82','MWWQ2','MWX32',
 		#AppleWatch6
-		"MG2A3LL/A,CMY702A/A","M0D73LL/A,CMY702A/A","MG2A3TA/A,CMY702F/A","M0DR3TA/A,CMY702F/A",
-		"MG2A3CH/A,CMY702F/A","M0DR3CH/A,CMY702F/A","MG2A3J/A,CMY702/A","M0DR3J/A,CMY702/A",
-		"MG2A3ZP/A,CMY702F/A","M0DR3ZP/A,CMY702F/A","MG2A3B/A,CMY702/A","M0DR3B/A,CMY702/A",
-		"MG2A3FD/A,CMY702Z/A","M0DR3FD/A,CMY702Z/A","MG2A3NF/A,CMY702Z/A","M0DR3NF/A,CMY702Z/A",
+		"MG2A3LL/A,MY702A/A","M0D73LL/A,MY702A/A","MG2A3TA/A,MY702F/A","M0DR3TA/A,MY702F/A",
+		"MG2A3CH/A,MY702F/A","M0DR3CH/A,MY702F/A","MG2A3J/A,MY702/A","M0DR3J/A,MY702/A",
+		"MG2A3ZP/A,MY702F/A","M0DR3ZP/A,MY702F/A","MG2A3B/A,MY702/A","M0DR3B/A,MY702/A",
+		"MG2A3FD/A,MY702Z/A","M0DR3FD/A,MY702Z/A","MG2A3NF/A,MY702Z/A","M0DR3NF/A,MY702Z/A",
 
 		#AppleWatchSE
-		"MYDY2LL/A,CMYPD2A/A","MYF32LL/A,CMYPD2A/A","MYDY2TA/A,CMYPD2F/A","MYF62TA/A,CMYPD2F/A",
-		"MYDY2CH/A,CMYPD2F/A","MYF62CH/A,CMYPD2F/A","MYDY2J/A,CMYPD2/A","MYF62J/A,CMYPD2/A",
-		"MYDY2ZP/A,CMYPD2F/A","MYF62ZP/A,CMYPD2F/A","MYDY2B/A,CMYPD2/A","MYF62B/A,CMYPD2/A",
-		"MYDY2FD/A,CMYPD2Z/A","MYF62FD/A,CMYPD2Z/A","MYDY2NF/A,CMYPD2Z/A","MYF62NF/A,CMYPD2Z/A"
+		"MYDY2LL/A,MYPD2A/A","MYF32LL/A,MYPD2A/A","MYDY2TA/A,MYPD2F/A","MYF62TA/A,MYPD2F/A",
+		"MYDY2CH/A,MYPD2F/A","MYF62CH/A,MYPD2F/A","MYDY2J/A,MYPD2/A","MYF62J/A,MYPD2/A",
+		"MYDY2ZP/A,MYPD2F/A","MYF62ZP/A,MYPD2F/A","MYDY2B/A,MYPD2/A","MYF62B/A,MYPD2/A",
+		"MYDY2FD/A,MYPD2Z/A","MYF62FD/A,MYPD2Z/A","MYDY2NF/A,MYPD2Z/A","MYF62NF/A,MYPD2Z/A"
 		],
 
 '44mm': ['MTUU2','MTVR2','MU6A2',
 		#IphoneWqatch5
 		'MWVF2','MWW12','MWWE2',
 		#AppleWatch6
-		"M02G3LL/A,CMY8C2A/A","M0G93LL/A,CMY8C2A/A","M02G3TA/A,CMY8C2F/A","M0GT3TA/A,CMY8C2F/A",
-		"M02G3CH/A,CMY8C2F/A","M0GT3CH/A,CMY8C2F/A","M02G3J/A,CMY8C2/A","M0GT3J/A,CMY8C2/A",
-		"M02G3ZP/A,CMY8C2F/A","M0GT3ZP/A,CMY8C2F/A","M02G3B/A,CMY8C2/A","M0GT3B/A,CMY8C2/A",
-		"M02G3FD/A,CMY8C2Z/A","M0GT3FD/A,CMY8C2Z/A","M02G3NF/A,CMY8C2Z/A","M0GT3NF/A,CMY8C2Z/A",
+		"M02G3LL/A,MY8C2A/A","M0G93LL/A,MY8C2A/A","M02G3TA/A,MY8C2F/A","M0GT3TA/A,MY8C2F/A",
+		"M02G3CH/A,MY8C2F/A","M0GT3CH/A,MY8C2F/A","M02G3J/A,MY8C2/A","M0GT3J/A,MY8C2/A",
+		"M02G3ZP/A,MY8C2F/A","M0GT3ZP/A,MY8C2F/A","M02G3B/A,MY8C2/A","M0GT3B/A,MY8C2/A",
+		"M02G3FD/A,MY8C2Z/A","M0GT3FD/A,MY8C2Z/A","M02G3NF/A,MY8C2Z/A","M0GT3NF/A,MY8C2Z/A",
 
 		#AppleWatchSE
-		"MYE22LL/A,CMYTW2A/A","MYF92LL/A,CMYTW2A/A","MYE22TA/A,CMYTW2F/A","MYFD2TA/A,CMYTW2F/A",
-		"MYE22CH/A,CMYTW2F/A","MYFD2CH/A,CMYTW2F/A","MYE22J/A,CMYTW2/A","MYFD2J/A,CMYTW2/A",
-		"MYE22ZP/A,CMYTW2F/A","MYFD2ZP/A,CMYTW2F/A","MYE22B/A,CMYTW2/A","MYFD2B/A,CMYTW2/A",
-		"MYE22FD/A,CMYTW2Z/A","MYFD2FD/A,CMYTW2Z/A","MYE22NF/A,CMYTW2Z/A","MYFD2NF/A,CMYTW2Z/A"
+		"MYE22LL/A,MYTW2A/A","MYF92LL/A,MYTW2A/A","MYE22TA/A,MYTW2F/A","MYFD2TA/A,MYTW2F/A",
+		"MYE22CH/A,MYTW2F/A","MYFD2CH/A,MYTW2F/A","MYE22J/A,MYTW2/A","MYFD2J/A,MYTW2/A",
+		"MYE22ZP/A,MYTW2F/A","MYFD2ZP/A,MYTW2F/A","MYE22B/A,MYTW2/A","MYFD2B/A,MYTW2/A",
+		"MYE22FD/A,MYTW2Z/A","MYFD2FD/A,MYTW2Z/A","MYE22NF/A,MYTW2Z/A","MYFD2NF/A,MYTW2Z/A"
 		]}
 
 #為了方便接下來 不同的 model 進行 Size 的對應 這裡將 key(size) 跟 value(model) 進行對調 變成 Key 為 model ,value 為 size 
@@ -689,112 +689,111 @@ res=[]
 for Model in Model_Us:
 	# if Product_Us_R[Model] == 'IpadPro':
 	# print(Model)
-	d = {} #清空dictionary
+    d = {} #清空dictionary
+    d['Country'] = 'Us'
+    d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+    d['Product'] = Product_Us_R[Model]
 
+    # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
+    if Product_Us_R[Model] == 'AirPodPro':
 
-	d['Country'] = 'Us'
-	d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-	d['Product'] = Product_Us_R[Model]
+        url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+        r = requests.get(url)
+        response = json.loads(r.text)
 
-	# 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
-	if Product_Us_R[Model] == 'AirPodPro':
+        d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+        print(d)
+        res.append(d)
 
-		url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-		r = requests.get(url)
-		response = json.loads(r.text)
+    # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
+    elif Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
 
-		d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-		print(d)
-		res.append(d)
+        # ApppleWatch6 及 AppleWatchSE 因為網址比較複雜所以只能直接對整個網址判斷
+        d['Colors'] = Color_R[Model]
+        d['Size'] = Size_R[Model]
 
-	# Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-	elif: Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
+        url = f'https://www.apple.com/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+        print(url)
+        r = requests.get(url)
+        response = json.loads(r.text)
+        print(response)
+        d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
+        print(d)
+        res.append(d)
 
-		# ApppleWatch6 及 AppleWatchSE 因為網址比較複雜所以只能直接對整個網址判斷
-		d['Colors'] = Color_R[Model]
-		d['Size'] = Size_R[Model]
+    #如果是 AirPodPro 直接做 request
+    else: 
+    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
+        try:
+            d['Colors'] = Color_R[Model[0:5]]
+            d['Size'] = Size_R[Model[0:5]]
+            url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+            
+            r = requests.get(url)
+            response = json.loads(r.text)
+            print(url)
+            # d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+            d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+            print(d)
+            res.append(d)
 
-		url = f'https://www.apple.com/shop/delivery-message?parts.0='+ Model +'&little=true'
-		r = requests.get(url)
-		response = json.loads(r.text)
-
-		d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
-		print(d)
-		res.append(d)
-
-	#如果是 AirPodPro 直接做 request
-	else: 
-		# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
-		try:
-			d['Colors'] = Color_R[Model[0:5]]
-			d['Size'] = Size_R[Model[0:5]]
-			url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-			
-			r = requests.get(url)
-			response = json.loads(r.text)
-
-			# d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
-			d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-			print(d)
-			res.append(d)
-
-		except:
-			print(d,'下架')
+        except:
+            print(d,'下架')
 
 
 for Product in countries:
 	#外迴圈跑國家
-	for Country in countries[Product]:
-	#內迴圈跑型號
-		for Model in countries[Product][Country]:
-			# if Product_R[Model] == 'IpadPro':
-			d = {} #清空dictionary
-			# 現在 要處理新增的選項一樣丟在color裡嗎XD
-			d['Country'] = Country
-			d['Product'] = Product_R[Model]
-			d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+    for Country in countries[Product]:
+    #內迴圈跑型號
+        for Model in countries[Product][Country]:
+            # if Product_R[Model] == 'IpadPro':
+            d = {} #清空dictionary
+            # 現在 要處理新增的選項一樣丟在color裡嗎XD
+            d['Country'] = Country
+            d['Product'] = Product_R[Model]
+            d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 
-			# 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-			if Product_R[Model] == 'AirPodPro':
+            # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+            if Product_R[Model] == 'AirPodPro':
 
-				url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-				r = requests.get(url)
+                url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+                r = requests.get(url)
 
-				response = json.loads(r.text)
-				d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-				print(d)
-				res.append(d)
+                response = json.loads(r.text)
+                d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+                print(d)
+                res.append(d)
 
-			# Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-			elif: Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
+            # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
+            elif Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
 
-				# ApppleWatch6 及 AppleWatchSE 因為網址比較複雜所以只能直接對整個網址判斷
-				d['Colors'] = Color_R[Model]
-				d['Size'] = Size_R[Model]
+                # ApppleWatch6 及 AppleWatchSE 因為網址比較複雜所以只能直接對整個網址判斷
+                d['Colors'] = Color_R[Model]
+                d['Size'] = Size_R[Model]
 
-				url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/delivery-message?parts.0='+ Model +'&little=true'
-				r = requests.get(url)
-				response = json.loads(r.text)
+                url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                r = requests.get(url)
+                response = json.loads(r.text)
 
-				d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
-				print(d)
-				res.append(d)
-			else:
-				# 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
-				try:
-					d['Colors'] = Color_R[Model[0:5]]
-					d['Size'] = Size_R[Model[0:5]]
-					
-					url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-					r = requests.get(url)
+                d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
+                print(d)
+                res.append(d)
+            else:
+            # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
+                try:
+                    d['Colors'] = Color_R[Model[0:5]]
+                    d['Size'] = Size_R[Model[0:5]]
 
-					response = json.loads(r.text)
-					d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-					print(d)
-					res.append(d)
+                    url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+                    r = requests.get(url)
+                    print(url)
+                    response = json.loads(r.text)
+                    d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+                    print(d)
+                    res.append(d)
 
-				except:
-					print(d,'下架')
+                except:
+                    print(d,'下架')
 
 newres = res + Old_Data
 
