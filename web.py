@@ -233,7 +233,7 @@ def dashboard():
     Index = request.values.get(
         "Index", "TimeStemp"
     )  # 這裡如果get不到index 會給default值 'TimeStemp'
-    Product = request.values.get("Product", "IphoneSE")
+    Product = request.values.get("Product", "iPad2020")
     # print(Product)
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
@@ -273,30 +273,64 @@ def dashboard():
     # 只把我們要的 product 拿出來
     df = df[df["Product"] == Product]
 
-    # 如果是AirPod的話 沒有size color 等資訊
     try:
     # 把Size裡的項目轉成類別等等進行pivot就會排好
         Product_Categories = df["Size"].unique().tolist()
         df["Size"] = df["Size"].astype(
             pd.api.types.CategoricalDtype(categories=Product_Categories)
         )
+        # 如果是ipad 有 colar 有 size 有 wifi(celuar) 系列"
+        if Product[0:4] == 'iPad':
 
-        pivot = pd.pivot_table(
+            pivot = pd.pivot_table(
             df,
             values="Deliver",
             # index=["All_countries", "Colors", "Size"],
             index=Index,
-            columns=["All_countries", "Colors", "Size"],
+            columns=["All_countries", "Colors", "Size","Celluar"],
             aggfunc=lambda x: " ".join(x),
-        ).sort_index(ascending=False)
+            ).sort_index(ascending=False)
+
+        # Applewatch系列 少了 color gps(celuar) 系列
+        elif Product[0:10] == 'AppleWatch':
+
+            pivot = pd.pivot_table(
+            df,
+            values="Deliver",
+            # index=["All_countries", "Colors", "Size"],
+            index=Index,
+            columns=["All_countries", "Size","Celluar"],
+            aggfunc=lambda x: " ".join(x),
+            ).sort_index(ascending=False)
+
+        else:
+        # 少了 Celluar
+            pivot = pd.pivot_table(
+                df,
+                values="Deliver",
+                # index=["All_countries", "Colors", "Size"],
+                index=Index,
+                columns=["All_countries", "Colors", "Size"],
+                aggfunc=lambda x: " ".join(x),
+            ).sort_index(ascending=False)
 
         # ---------------------     協理要的國家排序    ---------------------#
         cols = ["美國", "中國", "香港", "台灣", "日本", "英國", "德國", "法國", "俄羅斯"]
-        cols2 = ["美國", "中國", "香港", "日本", "德國", "英國", "法國", "英國", "俄羅斯"]
+        cols2 = ["美國", "中國", "香港", "日本", "德國", "英國", "法國", "俄羅斯"]
+
+        # AppleWatch6, SE 俄羅斯沒有主流錶
+        cols3 = ["美國", "中國", "香港", "日本", "德國", "英國", "法國"]
+
         try:
             pivot = pivot[cols]
+            
         except:
-            pivot = pivot[cols2]
+            try:
+                pivot = pivot[cols2]
+                
+            except:
+                pivot = pivot[cols3]
+                
         finally:
             # df_fill_country會把篩選過後的表格輸出
 
@@ -327,6 +361,7 @@ def dashboard():
                 Country=Country,
                 Product=Product,
             )
+    # 這個 Except 是為了 Airpod 建立的 如果是AirPod的話 沒有size color 等資訊
     except:
         pivot = df
         pivot = pd.pivot_table(
