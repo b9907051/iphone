@@ -238,6 +238,7 @@ def dashboard():
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
     df = pd.read_csv("static/data/Data.csv")
+    print(df)
     # 如果現在不是在虛擬環境下的話路徑使用
     # df = pd.read_csv("static/data/Data.csv")
     df = df.drop_duplicates()
@@ -342,6 +343,7 @@ def dashboard():
 
             # 如果有選擇國家的話
             else:
+                # Todo: 不同的產品有不同的column 要做pivot 要寫成函數.
                 df_fill_country = df[df["Country"] == Country]
                 df_fill_country = pd.pivot_table(
                     df_fill_country,
