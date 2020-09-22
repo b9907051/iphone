@@ -28,7 +28,7 @@ Old_Data = Data.to_dict('records')
 # 'Ipad'
 # 'AppleWatch5'
 countries = {
-'iPad2020':{
+'iPad 2020':{
 'Tw':["MYL92TA/A","MYMH2TA/A","MYLD2TA/A","MYML2TA/A","MYLA2TA/A","MYMH2TA/A","MYLE2TA/A","MYMM2TA/A","MYLC2TA/A","MYMK2TA/A","MYLF2TA/A","MYMN2TA/A"],
 'Cn':["MYL92CH/A","MYMW2CH/A","MYLD2CH/A","MYN02CH/A","MYLA2CH/A","MYMX2CH/A","MYLE2CH/A","MYN12CH/A","MYLC2CH/A","MYMY2CH/A","MYLF2CH/A","MYN22CH/A"],
 'Jp':["MYL92J/A","MYMH2J/A","MYLD2J/A","MYML2J/A","MYLA2J/A","MYMJ2J/A","MYLE2J/A","MYMM2J/A","MYLC2J/A","MYMK2J/A","MYLF2J/A","MYMN2J/A"],
@@ -38,7 +38,7 @@ countries = {
 'Ru':["MYL92RU/A","MYMH2RU/A","MYLD2RU/A","MYML2RU/A","MYLA2RU/A","MYMJ2RU/A","MYLE2RU/A","MYMM2RU/A","MYLC2RU/A","MYMK2RU/A","MYLF2RU/A","MYMN2RU/A"],
 'Fr':["MYL92NF/A","MYMH2NF/A","MYLD2NF/A","MYML2NF/A","MYLA2NF/A","MYMJ2NF/A","MYLE2NF/A","MYMM2NF/A","MYLC2NF/A","MYMK2NF/A","MYLF2NF/A","MYMN2NF/A"]
 },
-'iPadAir2020':{
+'iPadAir 2020':{
 'Tw': ["MYFM2TA/A","MYGW2TA/A","MYFT2TA/A","MYH22TA/A","MYFN2TA/A","MYGX2TA/A","MYFW2TA/A","MYH42TA/A","MYFP2TA/A","MYGY2TA/A","MYFX2TA/A","MYH52TA/A","MYFR2TA/A","MYH12TA/A","MYG02TA/A","MYH72TA/A","MYFQ2TA/A","MYH02TA/A","MYFY2TA/A","MYH62TA/A"],
 'Cn': ["MYFM2CH/A","MYHL2CH/A","MYFT2CH/A","MYHR2CH/A","MYFN2CH/A","MYHM2CH/A","MYFW2CH/A","MYHT2CH/A","MYFP2CH/A","MYHN2CH/A","MYFX2CH/A","MYHU2CH/A","MYFR2CH/A","MYHQ2CH/A","MYG02CH/A","MYHW2CH/A","MYFQ2CH/A","MYHP2CH/A","MYFY2CH/A","MYHV2CH/A"],
 'Jp': ["MYFM2J/A","MYGW2J/A","MYFT2J/A","MYH22J/A","MYFN2J/A","MYGX2J/A","MYFW2J/A","MYH42J/A","MYFP2J/A","MYGY2J/A","MYFX2J/A","MYH52J/A","MYFR2J/A","MYH12J/A","MYG02J/A","MYH72J/A","MYFQ2J/A","MYH02J/A","MYFY2J/A","MYH62J/A"],
@@ -104,7 +104,7 @@ countries = {
 	'MX9U2ZD/A','MXD22ZD/A','MXVV2ZD/A']
 },
 
-'AirPodPro':{'Tw':['MWP22TA/A'],
+'AirPod Pro':{'Tw':['MWP22TA/A'],
 
 'Cn':['MWP22CH/A'],
 
@@ -464,45 +464,6 @@ Colors = {
 		'MT3Q2','MT3X2','MT452','MRY82','MRYG2','MRYP2','MT172','MT1F2','MT1P2','MT0A2','MT0T2','MT102'],
 
 
-# 'GPS' : [# Iphone Watch 3
-# 		'MTEY2', 'MTF22',
-# 		# Iphone Watch 4
-# 		'MU642','MU6A2',
-# 		#Iphone Watch 5
-# 		'MWV82','MWVF2',
-# 		#AppleWatch6
-# 		"MG2A3LL/A,MY702AM/A","M02G3LL/A,MY8C2AM/A","MG2A3TA/A,MY702FE/A","M02G3TA/A,MY8C2FE/A",
-# 		"MG2A3CH/A,MY702FE/A","M02G3CH/A,MY8C2FE/A","MG2A3J/A,MY702FE/A","M02G3J/A,MY8C2FE/A",
-# 		"MG2A3ZP/A,MY702FE/A","M02G3ZP/A,MY8C2FE/A","MG2A3B/A,MY702ZM/A","M02G3B/A,MY8C2ZM/A",
-# 		"MG2A3FD/A,MY702ZM/A","M02G3FD/A,MY8C2ZM/A","MG2A3NF/A,MY702ZM/A","M02G3NF/A,MY8C2ZM/A",
-
-# 		#AppleWatchSE
-# 		"MYDY2LL/A,MYPD2AM/A","MYE22LL/A,MYTW2AM/A","MYDY2TA/A,MYPD2FE/A","MYE22TA/A,MYTW2FE/A",
-# 		"MYDY2CH/A,MYPD2FE/A","MYE22CH/A,MYTW2FE/A","MYDY2J/A,MYPD2FE/A","MYE22J/A,MYTW2FE/A",
-# 		"MYDY2ZP/A,MYPD2FE/A","MYE22ZP/A,MYTW2FE/A","MYDY2B/A,MYPD2ZM/A","MYE22B/A,MYTW2ZM/A",
-# 		"MYDY2FD/A,MYPD2ZM/A","MYE22FD/A,MYTW2ZM/A","MYDY2NF/A,MYPD2ZM/A","MYE22NF/A,MYTW2ZM/A"
-# 		],
-
-# 'GPSCelluar' :[# Iphone Watch 3
-# 			'MTGG2', 'MTGN2', 'MTGK2','MTGR2','MTGX2','MTH12',
-# 			# Iphone Watch 4
-# 			'MTUD2','MTUU2','MTVA2','MTVR2',
-# 			# Iphone Watch 5
-# 			'MWWQ2','MWW12','MWX32','MWWE2',
-
-# 			#AppleWatch6
-# 			"M0D73LL/A,MY702AM/A","M0G93LL/A,MY8C2AM/A","M0DR3TA/A,MY702FE/A","M0GT3TA/A,MY8C2FE/A",
-# 			"M0DR3CH/A,MY702FE/A","M0GT3CH/A,MY8C2FE/A","M0DR3J/A,MY702FE/A","M0GT3J/A,MY8C2FE/A",
-# 			"M0DR3ZP/A,MY702FE/A","M0GT3ZP/A,MY8C2FE/A","M0DR3B/A,MY702ZM/A","M0GT3B/A,MY8C2ZM/A",
-# 			"M0DR3FD/A,MY702ZM/A","M0GT3FD/A,MY8C2ZM/A","M0DR3NF/A,MY702ZM/A","M0GT3NF/A,MY8C2ZM/A",
-
-# 			#AppleWatchSE
-# 			"MYF32LL/A,MYPD2AM/A","MYF92LL/A,MYTW2AM/A","MYF62TA/A,MYPD2FE/A","MYFD2TA/A,MYTW2FE/A",
-# 			"MYF62CH/A,MYPD2FE/A","MYFD2CH/A,MYTW2FE/A","MYF62J/A,MYPD2FE/A","MYFD2J/A,MYTW2FE/A",
-# 			"MYF62ZP/A,MYPD2FE/A","MYFD2ZP/A,MYTW2FE/A","MYF62B/A,MYPD2ZM/A","MYFD2B/A,MYTW2ZM/A",
-# 			"MYF62FD/A,MYPD2ZM/A","MYFD2FD/A,MYTW2ZM/A","MYF62NF/A,MYPD2ZM/A","MYFD2NF/A,MYTW2ZM/A"
-# 			],
-
 '11inch' :[	#Ipad Pro
 			'MTXR2','MTXU2','MTXQ2','MTXT2'],
 '12.9inch':[#Ipad Pro
@@ -774,54 +735,57 @@ for Model in Model_Us:
     d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
     d['Product'] = Product_Us_R[Model]
 
+    try:
     # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
-    if Product_Us_R[Model] == 'AirPodPro':
+        if Product_Us_R[Model] == 'AirPodPro':
 
-        url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-        r = requests.get(url)
-        response = json.loads(r.text)
-
-        d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-        print(d)
-        res.append(d)
-
-    # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-    elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
-
-        if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
-
-            url = f'https://www.apple.com/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+            url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
             r = requests.get(url)
             response = json.loads(r.text)
-            d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
-            d['Celluar'] = Celluar_R[Model]
-            d['Size'] = Size_R[Model]
 
-        else:
-
-            url = f'https://www.apple.com/shop/delivery-message?parts.0='+ Model + '&little=true'
-            r = requests.get(url)
-            response = json.loads(r.text)
             d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+            print(d)
+            res.append(d)
 
-        print(url)
+        # 產品線是 AppleWatch 系列 或是 iPad 系列
+        elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
+
+        # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
+            if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
+
+                url = f'https://www.apple.com/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                r = requests.get(url)
+                response = json.loads(r.text)
+                d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
+                d['Celluar'] = Celluar_R[Model]
+                d['Size'] = Size_R[Model]
+
+            else:
+
+                url = f'https://www.apple.com/shop/delivery-message?parts.0='+ Model + '&little=true'
+                r = requests.get(url)
+                response = json.loads(r.text)
+
+                d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+
+            
 
 
-        # 如果是iPad 則多了 Colar 這個 項目
-        if Product_Us_R[Model][0:4] == 'iPad':
-            d['Colors'] = Color_R[Model[0:5]]
+            # 如果是iPad 則多了 Colar 這個 項目
+            if Product_Us_R[Model][0:4] == 'iPad':
+                d['Colors'] = Color_R[Model[0:5]]
 
-        # 如果產品不是 Apple watch6 跟 ApplewatchSE
-        if 'Celluar' not in d.keys():
-            d['Celluar'] = Celluar_R[Model[0:5]]
-            d['Size'] = Size_R[Model[0:5]]
+            # 如果產品不是 Apple watch6 跟 ApplewatchSE
+            if 'Celluar' not in d.keys():
+                d['Celluar'] = Celluar_R[Model[0:5]]
+                d['Size'] = Size_R[Model[0:5]]
 
-        print(d)
-        res.append(d)
+            print(d)
+            res.append(d)
 
-    else: 
-    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
-        try:
+        else: 
+        # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
+
             url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
             print(url)
             d['Colors'] = Color_R[Model[0:5]]
@@ -836,9 +800,9 @@ for Model in Model_Us:
             print(d)
             res.append(d)
 
-        except:
-            print(d,'下架')
-
+                
+    except:
+        print(d,'下架')
 
 for Product in countries:
 	#外迴圈跑國家
@@ -852,54 +816,58 @@ for Product in countries:
             d['Product'] = Product_R[Model]
             d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 
-            # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-            if Product_R[Model] == 'AirPodPro':
+            try:
 
-                url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-
-                r = requests.get(url)
-
-                response = json.loads(r.text)
-                d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-                print(d)
-                res.append(d)
-            # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-            elif Product_R[Model][0:10] == 'AppleWatch' or Product_R[Model][0:4] == 'iPad':
-
-                if Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
-
-                    url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
-                    r = requests.get(url)
-                    response = json.loads(r.text)
-                    d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
-                    d['Celluar'] = Celluar_R[Model]
-                    d['Size'] = Size_R[Model]
-                else:
+                # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+                if Product_R[Model] == 'AirPodPro':
 
                     url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+
                     r = requests.get(url)
+
                     response = json.loads(r.text)
                     d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+                    print(d)
+                    res.append(d)
 
-                print(url)
+                # 產品線是 AppleWatch 系列 或是 iPad 系列
+                elif Product_R[Model][0:10] == 'AppleWatch' or Product_R[Model][0:4] == 'iPad':
 
-                # 如果是iPad 則多了 Colar 這個 項目
-                if Product_R[Model][0:4] == 'iPad':
-                    d['Colors'] = Color_R[Model[0:5]]
+                    # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
+                    if Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
 
-                # 如果產品不是 Apple watch6 跟 ApplewatchSE
-                if 'Celluar' not in d.keys():
-                    d['Celluar'] = Celluar_R[Model[0:5]]
-                    d['Size'] = Size_R[Model[0:5]]
-                
-                
+                        url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                        r = requests.get(url)
+                        response = json.loads(r.text)
+                        d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
+                        d['Celluar'] = Celluar_R[Model]
+                        d['Size'] = Size_R[Model]
+                    else:
 
-                print(d)
-                res.append(d)
+                        url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+                        r = requests.get(url)
+                        response = json.loads(r.text)
+                        d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 
-            else:
-            # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
-                try:
+                    print(url)
+
+                    # 如果是iPad 則多了 Colar 這個 項目
+                    if Product_R[Model][0:4] == 'iPad':
+                        d['Colors'] = Color_R[Model[0:5]]
+
+                    # 如果產品不是 Apple watch6 跟 ApplewatchSE
+                    if 'Celluar' not in d.keys():
+                        d['Celluar'] = Celluar_R[Model[0:5]]
+                        d['Size'] = Size_R[Model[0:5]]
+                    
+                    
+
+                    print(d)
+                    res.append(d)
+
+                else:
+                # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
+                    
                     url = 'https://www.apple.com/%s/shop/delivery-message?parts.0=%s&little=true' % (d['Country'].lower(), Model)
                     print(url)
                     d['Colors'] = Color_R[Model[0:5]]
@@ -911,8 +879,9 @@ for Product in countries:
                     print(d)
                     res.append(d)
 
-                except:
-                    print(d,'下架')
+            except:
+                print(d,'下架')
+
 
 newres = res + Old_Data
 # newres = res
