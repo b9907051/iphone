@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body%}
+<div class="content my-3">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="card" style = "height:140vh">
+                <div class="card-body">
+                    'US','JP','IT','ES','CA','DE','GB','FR','BR','IN','TW','RS'
+                    <div class="col-lg-6 col-md-6" style = "height:400px">
+                        <canvas id="google_US"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style = "height:400px">
+                        <canvas id="google_JP"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style = "height:400px">
+                        <canvas id="google_IT"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style = "height:400px">
+                        <canvas id="google_ES"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div><!-- /#right-panel -->
+{% endblock %}

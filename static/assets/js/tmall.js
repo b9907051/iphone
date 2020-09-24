@@ -74,6 +74,7 @@
                         && k !== 'Main_info' && k !== 'Time_period'
                         && k !== 'Step')
                     .map(k => ({ [k]: Data[k] }));
+                console.log(Cellphone)
                 const MaxPrice = Data.Max_info;
                 const X_axis = Data.X_axis;
                 var Main_info = Data.Main_info;

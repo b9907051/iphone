@@ -167,7 +167,43 @@ def Tmallpage():
     return render_template("tmall.html")
 
 
-# 去後端拿資料的地方
+# JS 去後端拿資料的地方
+@app.route("/google-mobility-trend")
+@is_logged_in
+def google_mobility_trend():
+
+    # 從前端 拿到要看的國家
+    country = request.values.get("country")
+    
+    # name_of_data = request.values.get("namedata")
+    df = pd.read_csv("static/data/Global_Mobility_Report.csv")
+
+    # country Candidate
+    country_list = ['US','JP','IT','ES','CA','DE','GB','FR','BR','IN']
+    data_dic = {}
+    # for country in country_list:
+        # 拿到國家
+    df_temp = df[ df['country_region_code'] == country ]
+
+    # 將資料轉成list
+    data_dic[country] = {'X_axis' : df_temp['X_axis'].values.tolist(),
+
+                         'retail_and_recreation': df_temp['retail_and_recreation'].values.tolist(),
+
+                         'grocery_and_pharmacy': df_temp['grocery_and_pharmacy'].values.tolist(),
+
+                         'parks': df_temp['parks'].values.tolist(),
+
+                         'transit_stations': df_temp['transit_stations'].values.tolist(),
+
+                         'workplaces': df_temp['workplaces'].values.tolist(),
+
+                         'residential': df_temp['residential'].values.tolist()
+    }
+    # 把 data 用json的格式 return 回 TomTom.js
+
+    return json.dumps(data_dic)
+
 @app.route("/TomTom")
 @is_logged_in
 def TomTom():
@@ -238,7 +274,7 @@ def dashboard():
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
     df = pd.read_csv("static/data/Data.csv")
-    print(df)
+
     # 如果現在不是在虛擬環境下的話路徑使用
     # df = pd.read_csv("static/data/Data.csv")
     df = df.drop_duplicates()
