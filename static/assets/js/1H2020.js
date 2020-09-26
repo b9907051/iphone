@@ -66,7 +66,7 @@
 		axios.get(`/1H2020?timeperiod=${timePeriod}`)
 			.then(function (res) {
 				const Data = res.data;
-				console.log('[DATA]', Data)
+				// console.log('[DATA]', Data)
 				const Cellphone = Object.keys(Data)
 					.filter(k => k !== 'Max_info' && k !== 'X_axis'
 						&& k !== 'Main_info' && k !== 'Time_period'
@@ -105,7 +105,7 @@
 				// 	week: { 1: ctx1_week, 2: ctx2_week },
 				// 	day: { 1: ctx1_day, 2: ctx2_day }
 				// }
-				console.log(data)
+				// console.log(data)
 
 				var myChart = new Chart(canvas, {
 

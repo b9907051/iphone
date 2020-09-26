@@ -47,6 +47,7 @@
         axios.get(`/TomTom?region=${region}`)
             .then(function (res) {
                 const Data = res.data;
+                // console.log(typeof Data)
                 const X_axis = Data.X_axis;
                 const totaldiff = Data.totaldiff;
                 var datasetting
@@ -64,9 +65,11 @@
                     data: totaldiff
 
                 }]
-                console.log('Xaxis',X_axis)
-                console.log(datasetting)
 
+                // console.log('Xaxis',X_axis)
+                console.log(datasetting)
+                var test
+                console.log(test)
 
                 var myChart = new Chart(canvas, {
 

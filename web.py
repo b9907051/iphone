@@ -144,6 +144,12 @@ def is_logged_in(f):
 def mainpage():
     return render_template("1H2020.html")
 
+@app.route("/googlemobilitytrend-page")
+@is_logged_in
+def googlemobilitytrend_page():
+    return render_template("googlemobility.html")
+
+
 @app.route("/TomTom-page")
 @is_logged_in
 def TomTom_page():
@@ -174,7 +180,7 @@ def google_mobility_trend():
 
     # 從前端 拿到要看的國家
     country = request.values.get("country")
-    
+
     # name_of_data = request.values.get("namedata")
     df = pd.read_csv("static/data/Global_Mobility_Report.csv")
 
@@ -184,23 +190,24 @@ def google_mobility_trend():
     # for country in country_list:
         # 拿到國家
     df_temp = df[ df['country_region_code'] == country ]
-
     # 將資料轉成list
-    data_dic[country] = {'X_axis' : df_temp['X_axis'].values.tolist(),
+    data_dic[country] = {#'X_axis' : df_temp['X_axis'].values.tolist(),
 
-                         'retail_and_recreation': df_temp['retail_and_recreation'].values.tolist(),
+                         # 'retail_and_recreation': df_temp['retail_and_recreation'].values.tolist(),
 
-                         'grocery_and_pharmacy': df_temp['grocery_and_pharmacy'].values.tolist(),
+                         # 'grocery_and_pharmacy': df_temp['grocery_and_pharmacy'].values.tolist(),
 
-                         'parks': df_temp['parks'].values.tolist(),
+                         # 'parks': df_temp['parks'].values.tolist(),
 
-                         'transit_stations': df_temp['transit_stations'].values.tolist(),
+                         # 'transit_stations': df_temp['transit_stations'].values.tolist(),
 
                          'workplaces': df_temp['workplaces'].values.tolist(),
 
                          'residential': df_temp['residential'].values.tolist()
     }
+    data_dic['X_axis'] = df_temp['X_axis'].values.tolist()
     # 把 data 用json的格式 return 回 TomTom.js
+    # print(data_dic)
 
     return json.dumps(data_dic)
 

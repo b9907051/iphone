@@ -52,7 +52,7 @@
 		$(".tab").click(function () {
 			const timePeriod = $(this).attr('timeperiod');
 
-			console.log('[timePeriod]', timePeriod);
+			// console.log('[timePeriod]', timePeriod);
 			// period2ctx['week'] = { 1: ctx1_week, 2: ctx2_week }
 			renderChart(timePeriod, period2ctx[timePeriod]);
 			//TODO: 天貓的畫圖
@@ -66,7 +66,7 @@
 		axios.get(`/api?timeperiod=${timePeriod}`)
 			.then(function (res) {
 				const Data = res.data;
-				console.log('[DATA]', Data)
+				// console.log('[DATA]', Data)
 				const Cellphone = Object.keys(Data)
 					.filter(k => k !== 'Max_info' && k !== 'X_axis'
 						&& k !== 'Main_info' && k !== 'Time_period'

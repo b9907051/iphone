@@ -68,7 +68,9 @@
         axios.get(`/Tmall?timeperiod=${timePeriod}&mainInfo=Dealprice`)
             .then(function (res) {
                 const Data = res.data;
-                console.log('[DATA]', Data)
+
+                // console.log(typeof Data)
+                // console.log('[DATA]', Data)
                 const Cellphone = Object.keys(Data)
                     .filter(k => k !== 'Max_info' && k !== 'X_axis'
                         && k !== 'Main_info' && k !== 'Time_period'
@@ -82,6 +84,7 @@
                 var Step = Data.Step;
 
                 var data
+                console.log('[cellphone]', Cellphone)
 
                 data = Object.values(Cellphone).map((d, i) => ({
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
@@ -96,7 +99,8 @@
                     data: d[Object.keys(d)[0]][Main_info]
 
                 }))
-
+                console.log(data)
+                // console.log('[DATA]', data)
                 //如果 myChart 之前有產生過的話先把他給刪掉等夏畫
                 if (myChart != undefined) {
                     console.log('destroy')
@@ -180,7 +184,7 @@
         axios.get(`/Tmall?timeperiod=${timePeriod}&mainInfo=Dealnumber`)
             .then(function (res) {
                 const Data = res.data;
-                console.log('[DATA]', Data)
+
                 const Cellphone = Object.keys(Data)
                     .filter(k => k !== 'Max_info' && k !== 'X_axis'
                         && k !== 'Main_info' && k !== 'Time_period'
@@ -191,9 +195,10 @@
                 var Main_info = Data.Main_info;
                 var TimePeriod = Data.Time_period;
                 var Step = Data.Step;
-
                 var data
 
+                // console.log(X_axis)
+                // console.log(typeof X_axis)
                 data = Object.values(Cellphone).map((d, i) => ({
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
                     label: Object.keys(d)[0],
@@ -207,6 +212,7 @@
                     data: d[Object.keys(d)[0]][Main_info]
 
                 }))
+                
 
                 //如果 myChart 之前有產生過的話先把他給刪掉等夏畫
                 if (myChart != undefined) {

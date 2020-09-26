@@ -10,8 +10,8 @@
     var ctx1 = $('#google_US');
     var ctx2 = $('#google_JP');
     var ctx3 = $('#google_IT');
-    var ctx3 = $('#google_ES');
-    
+    var ctx4 = $('#google_ES');
+
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
     const brandInfo = '#63c2de'
@@ -37,31 +37,43 @@
     }
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
-    renderChart('USA',ctx1,0,'USD congestion');
-    renderChart('EU',ctx2,2,'EU congestion');
-    renderChart('CHN',ctx3,4,'CH congestion');
+    renderChart('US',ctx1);
+    // renderChart('JP',ctx2);
+    // renderChart('IT',ctx3);
+    // renderChart('ES',ctx4);
 
     //Tmall的renderChart
 
-    function renderChart(timePeriod, canvas) {
-        axios.get(`/googlemobility?timeperiod=${timePeriod}&mainInfo=Dealprice`)
+    function renderChart(country, canvas) {
+        axios.get(`/google-mobility-trend?country=${country}`)
+
             .then(function (res) {
-                const Data = res.data;
-                console.log('[DATA]', Data)
-                const Cellphone = Object.keys(Data)
-                    .filter(k => k !== 'Max_info' && k !== 'X_axis'
-                        && k !== 'Main_info' && k !== 'Time_period'
-                        && k !== 'Step')
-                    .map(k => ({ [k]: Data[k] }));
-                const MaxPrice = Data.Max_info;
-                const X_axis = Data.X_axis;
-                var Main_info = Data.Main_info;
-                var TimePeriod = Data.Time_period;
-                var Step = Data.Step;
 
-                var data
+                // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
+                const Data = res.data[country];
+                // console.log(typeof Data)
+                // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
 
-                data = Object.values(Cellphone).map((d, i) => ({
+                // 把後端拿到的json : {US:{xaxis:[...],parks:[....],..},JP:{xaxis:[...],parks:[....]}....
+                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
+                // 0: US:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
+                // 1: JP:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
+
+                                // .map(k => ({ [k]: Data[k] }));
+
+                const X_axis = res.data['X_axis'];
+                // const workplaces = Data.workplace;
+                // const residential = Data.residential;
+                // console.log('[DATA]',Data[country])
+
+                // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
+                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
+
+                const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
+                console.log('[data_set]',data_set)
+                var data_for_plot
+
+                data_for_plot = Object.values(data_set).map((d, i) => ({
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
                     label: Object.keys(d)[0],
                     backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
@@ -71,33 +83,32 @@
                     borderWidth: 2,
 
                     // 這行決定要畫圖的主要資訊
-                    data: d[Object.keys(d)[0]][Main_info]
+                    data: d[Object.keys(d)[0]]
 
                 }))
 
-                //如果 myChart 之前有產生過的話先把他給刪掉等夏畫
-                if (myChart != undefined) {
-                    console.log('destroy')
-                    myChart.destroy();
-                }
+                console.log('[data_for_plot]',data_for_plot)
+
                 // canvas[1] = week[1] or day[1] 去對應 html 的 label
                 // period2ctx = {
                 //  week: { 1: ctx1_week, 2: ctx2_week },
                 //  day: { 1: ctx1_day, 2: ctx2_day }
                 // }
-                var myChart = new Chart(canvas[1], {
+
+                console.log('[X_axis]',X_axis)
+                console.log(typeof X_axis)
+                var myChart = new Chart(canvas, {
 
                     type: 'line',
                     data: {
                         // 取出第一個Data的key
                         labels: X_axis,
-                        datasets: data
-
+                        datasets: data_for_plot
                     },
                     options: {
                         title: {
                             display: true,
-                            text: '天貓銷售資訊',
+                            text: country.concat('  Mobility-Trend') ,
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
@@ -118,21 +129,20 @@
                                 },
                                 type: 'time',
                                 time: {
-                                    unit: TimePeriod
+                                    unit: 'day'
                                 },
                                 distribution: 'linear'
                             }],
                             yAxes: [{
                                 scaleLabel: {
                                     display: true,
-                                    labelString: Main_info,
+                                    labelString: 'percentage',
                                     fontStyle: 'bold'
                                 },
                                 ticks: {
                                     beginAtZero: true,
                                     maxTicksLimit: 5,
-                                    stepSize: Step,
-                                    max: MaxPrice
+
                                 },
                                 gridLines: {
                                     display: true
