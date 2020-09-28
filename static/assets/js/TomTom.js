@@ -36,7 +36,7 @@
     }
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
-    renderChart('USA',ctx1,0,'USD congestion');
+    renderChart('USA',ctx1,0,'US congestion');
     renderChart('EU',ctx2,2,'EU congestion');
     renderChart('CHN',ctx3,4,'CH congestion');
 

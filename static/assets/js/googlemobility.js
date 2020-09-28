@@ -38,9 +38,9 @@
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
     renderChart('US',ctx1);
-    // renderChart('JP',ctx2);
-    // renderChart('IT',ctx3);
-    // renderChart('ES',ctx4);
+    renderChart('JP',ctx2);
+    renderChart('IT',ctx3);
+    renderChart('ES',ctx4);
 
     //Tmall的renderChart
 

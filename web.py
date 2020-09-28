@@ -388,15 +388,40 @@ def dashboard():
             else:
                 # Todo: 不同的產品有不同的column 要做pivot 要寫成函數.
                 df_fill_country = df[df["Country"] == Country]
-                df_fill_country = pd.pivot_table(
+
+                if Product[0:4] == 'iPad':
+
+                    pivot = pd.pivot_table(
                     df_fill_country,
                     values="Deliver",
                     index=Index,
-                    columns=["All_countries", "Colors", "Size"],
+                    columns=["All_countries","Colors", "Size","Celluar"],
                     aggfunc=lambda x: " ".join(x),
-                ).sort_index(ascending=False)
+                    ).sort_index(ascending=False)
 
-                Table = df_fill_country
+                elif Product[0:10] == 'AppleWatch':
+
+                    pivot = pd.pivot_table(
+                    df_fill_country,
+                    values="Deliver",
+                    # index=["All_countries", "Colors", "Size"],
+                    index=Index,
+                    columns=["Size","Celluar"],
+                    aggfunc=lambda x: " ".join(x),
+                    ).sort_index(ascending=False)
+
+                else:
+                # 少了 Celluar
+                    pivot = pd.pivot_table(
+                        df_fill_country,
+                        values="Deliver",
+                        # index=["All_countries", "Colors", "Size"],
+                        index=Index,
+                        columns=[ "Colors", "Size"],
+                        aggfunc=lambda x: " ".join(x),
+                    ).sort_index(ascending=False)
+
+                Table = pivot
                 Title = All_countries_E[Country]
 
             return render_template(
