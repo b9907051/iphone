@@ -8,9 +8,19 @@
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
     var ctx1 = $('#google_US');
-    var ctx2 = $('#google_JP');
-    var ctx3 = $('#google_IT');
-    var ctx4 = $('#google_ES');
+    var ctx2 = $('#google_CA');
+    var ctx3 = $('#google_DE');
+    var ctx4 = $('#google_JP');
+
+    var ctx5 = $('#google_GB');
+    var ctx6 = $('#google_IT');
+    var ctx7 = $('#google_ES');
+    var ctx8 = $('#google_FR');
+
+    var ctx9 = $('#google_BR');
+    var ctx10 = $('#google_IN');
+    var ctx11 = $('#google_TW');
+    var ctx12 = $('#google_RS');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -41,6 +51,14 @@
     renderChart('JP',ctx2);
     renderChart('IT',ctx3);
     renderChart('ES',ctx4);
+    renderChart('GB',ctx5);
+    renderChart('IT',ctx6);
+    renderChart('ES',ctx7);
+    renderChart('FR',ctx8);
+    renderChart('BR',ctx9);
+    renderChart('IN',ctx10);
+    renderChart('TW',ctx11);
+    renderChart('RS',ctx12);
 
     //Tmall的renderChart
 
@@ -95,8 +113,6 @@
                 //  day: { 1: ctx1_day, 2: ctx2_day }
                 // }
 
-                console.log('[X_axis]',X_axis)
-                console.log(typeof X_axis)
                 var myChart = new Chart(canvas, {
 
                     type: 'line',

@@ -185,7 +185,8 @@ def google_mobility_trend():
     df = pd.read_csv("static/data/Global_Mobility_Report.csv")
 
     # country Candidate
-    country_list = ['US','JP','IT','ES','CA','DE','GB','FR','BR','IN']
+    country_list = ['US','JP','IT','ES','CA','DE','GB','FR','BR','IN','TW','RS']
+    
     data_dic = {}
     # for country in country_list:
         # 拿到國家
