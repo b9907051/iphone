@@ -2,7 +2,7 @@
 import requests
 import pandas as pd
 import platform
-
+import os
 req = requests.get('https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv')
 url_content = req.content
 csv_file = open('Global_Mobility_Report.csv', 'wb')
@@ -38,4 +38,5 @@ else:
     # AWS 端
     path = "/home/cathaylife04/smartphone/iphone11/static/data/Global_Mobility_Report.csv"
 datatemp.to_csv(path,encoding='utf_8_sig', index=False)
+os.remove("Global_Mobility_Report.csv")
 print('done')
