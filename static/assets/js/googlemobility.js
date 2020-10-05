@@ -20,7 +20,7 @@
     var ctx9 = $('#google_BR');
     var ctx10 = $('#google_IN');
     var ctx11 = $('#google_TW');
-    var ctx12 = $('#google_RS');
+    var ctx12 = $('#google_RU');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -48,9 +48,9 @@
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
     renderChart('US',ctx1);
-    renderChart('JP',ctx2);
-    renderChart('IT',ctx3);
-    renderChart('ES',ctx4);
+    renderChart('CA',ctx2);
+    renderChart('DE',ctx3);
+    renderChart('JP',ctx4);
     renderChart('GB',ctx5);
     renderChart('IT',ctx6);
     renderChart('ES',ctx7);
@@ -58,7 +58,7 @@
     renderChart('BR',ctx9);
     renderChart('IN',ctx10);
     renderChart('TW',ctx11);
-    renderChart('RS',ctx12);
+    renderChart('RU',ctx12);
 
     //Tmall的renderChart
 
@@ -167,7 +167,7 @@
                         },
                         elements: {
                             point: {
-                                radius: 2,
+                                radius: 0,
                                 hitRadius: 10,
                                 hoverRadius: 4,
                                 hoverBorderWidth: 3

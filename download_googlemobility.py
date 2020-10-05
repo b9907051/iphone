@@ -9,11 +9,12 @@ csv_file = open('Global_Mobility_Report.csv', 'wb')
 
 csv_file.write(url_content)
 csv_file.close()
-country_list = ['US','JP','IT','ES','CA','DE','GB','FR','BR','IN','TW','RS']
+country_list = ['US','JP','IT','ES','CA','DE','GB','FR','BR','IN','TW','RU']
 
 df = pd.read_csv("Global_Mobility_Report.csv", encoding="utf-8", index_col=False)
 # sub_rigion_1 就是國家後面跟的子區域，這裡我們只要國家的資訊所以只拿 sub_region_1 是 Nan的列
 df = df[df['sub_region_1'].isnull()].reset_index(drop=True)
+df = df[df['metro_area'].isnull()].reset_index(drop=True)
 
 datatemp = pd.DataFrame()
 # data_dic = {}
