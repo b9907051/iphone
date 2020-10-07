@@ -100,6 +100,7 @@
             )
 
         }
+    // 原本這裡要畫圓餅圖的
 
     // var ctx = document.getElementById( "polarChart" );
     // ctx.height = 150;
@@ -148,8 +149,8 @@
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
     renderChart('USA',ctx1,0,'US congestion');
-    renderChart('EU',ctx2,2,'EU congestion');
-    renderChart('CHN',ctx3,4,'CH congestion');
+    renderChart('EU',ctx2,2,'Euro congestion');
+    renderChart('CHN',ctx3,4,'China congestion');
 
     //Tmall的renderChart
 
@@ -194,7 +195,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: 'Congestion time',
+                            text: title,
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
@@ -239,7 +240,7 @@
                         },
                         elements: {
                             point: {
-                                radius: 2,
+                                radius: 0,
                                 hitRadius: 10,
                                 hoverRadius: 4,
                                 hoverBorderWidth: 3
