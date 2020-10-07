@@ -153,7 +153,29 @@ def googlemobilitytrend_page():
 @app.route("/TomTom-page")
 @is_logged_in
 def TomTom_page():
-    return render_template("TomTom.html")
+
+    city_list_us = {'new-york':17.81,'los-angeles':12.85,'chicago':7.11,
+        'san-francisco':5.78,'washington':5.63,
+        'dallas-fort-worth':5.45,'houston':5.18,
+        'boston':4.8,'philadelphia':4.63,
+        'atlanta':4.15,'seattle':4.13,
+        'san-jose':3.71,'miami':3.66,
+        'detroit':2.77,'minneapolis':2.76,
+        'phoenix':2.65,'san-diego':2.55,
+        'denver':2.25,'baltimore':2.13}
+
+    city_list_china = {'chongqing':8.21,'guangzhou':9.09,'shenzhen':9.51,'beijing':11.85,
+             'changsha':4.46,'chengdu':5.87,'xiamen':1.84,'shanghai':12.95,'nanjing':4.95,
+             'hangzhou':5.33,'wuhan':5.67,'ningbo':4.16,'tianjin':7.84}
+
+    city_list_europe = {'london':['GBR',21.79],'paris':['FRA',18.63],'madrid':['ESP',6.02],'milan':['ITA',5.64],
+                 'munich':['DEU',5.14],'berlin':['DEU',5.87],'amsterdam':['NLD',4.69],'barcelona':['ESP',4.45],
+                 'rome':['ITA',4.43],'hamburg':['DEU',4.29],'stockholm':['SWE',4.04],
+                 'stuttgart':['DEU',4.02],'dublin':['IRL',4.01],'brussels':['BEL',3.85]}
+
+    return render_template("TomTom.html",city_list_us = city_list_us,
+                                        city_list_china =city_list_china,
+                                        city_list_europe=city_list_europe)
 
 @app.route("/1H2020-page")
 @is_logged_in

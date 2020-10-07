@@ -88,7 +88,7 @@
                 // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
 
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
-                console.log('[data_set]',data_set)
+                // console.log('[data_set]',data_set)
                 var data_for_plot
 
                 data_for_plot = Object.values(data_set).map((d, i) => ({
@@ -105,7 +105,7 @@
 
                 }))
 
-                console.log('[data_for_plot]',data_for_plot)
+                // console.log('[data_for_plot]',data_for_plot)
 
                 // canvas[1] = week[1] or day[1] 去對應 html 的 label
                 // period2ctx = {

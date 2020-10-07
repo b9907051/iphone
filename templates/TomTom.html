@@ -2,20 +2,119 @@
 {% block body%}
 <div class="content my-3">
     <div class="row">
+
+        <div class="col-lg-12 col-md-12">
+            <div class="card">
+                <div class="card-header bg-dark">
+                    <strong class="card-title text-light">資料解釋</strong>
+
+                </div>
+                <div class="card-body text-white bg-danger">
+                    <p class="card-text text-light">
+                        該資料為 TomTom 導航系統公司提供，其資料為最新年度每天的塞車時間與前一年的差距，若數值為-10則表示塞車時間較前一年少10分鐘
+                        若數值為10則表示塞車時間較前一年多10分鐘。
+                        本數據有經過GDP權重加權，美國與中國的部分使用城市GDP占比，歐洲的部分以國家GDP占比進行數據加權。
+                    </p>
+
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#US">
+                        美國各城市GDP佔比
+                    </button>
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#CN">
+                        中國國各城市GDP佔比
+                    </button>
+                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#EU">
+                        歐洲各國家GDP佔比
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="US" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smallmodalLabel">美國各城市 GDP 佔比</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 將city_list_us 從後端傳進來 -->
+                        {% for key,value in city_list_us.items() %}
+                        <p>{{key}} :{{value}} %</p>
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="CN" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smallmodalLabel">中國各城市 GDP 佔比</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 將city_list_us 從後端傳進來 -->
+                        {% for key,value in city_list_china.items() %}
+                        <p>{{key}} :{{value}} %</p>
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="EU" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smallmodalLabel">歐洲各國家 GDP 佔比</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 將city_list_us 從後端傳進來 -->
+                        {% for key,value in city_list_europe.items() %}
+                        <p>{{key}} :{{value[1]}} %</p>
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- animated 結束 -->
+
         <div class="col-lg-12 col-md-12">
             <!-- <div class="card" style = "height:140vh"> -->
-            <div class="card" style = "height:140vh">
+            <div class="card" >
                 <div class="card-body">
-                    <div class="col-lg-4 col-md-4">
+ <!--                    <div class="col-lg-4 col-md-4">
                         <canvas id="polarChart"></canvas>
-                    </div>
-                    <div class="col-lg-12 col-md-12" style = "height:400px">
+                    </div> -->
+                    <!-- <div class="col-lg-12 col-md-12" style = "height:400px"> -->
+                    <div class="col-lg-12 col-md-12">
                         <canvas id="TomTom_US"></canvas>
                     </div>
-                    <div class="col-lg-12 col-md-12" style = "height:400px">
+                    <!-- <div class="col-lg-12 col-md-12" style = "height:400px"> -->
+                        <div class="col-lg-12 col-md-12">
                         <canvas id="TomTom_EU"></canvas>
                     </div>
-                    <div class="col-lg-12 col-md-12" style = "height:400px">
+                    <div class="col-lg-12 col-md-12">
+                    <!-- <div class="col-lg-12 col-md-12" style = "height:400px"> -->
                         <canvas id="TomTom_CH"></canvas>
                     </div>
                 </div>

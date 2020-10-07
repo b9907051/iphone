@@ -31,9 +31,9 @@
 
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
-    var ctx1 = $('#TomTom_US');
-    var ctx2 = $('#TomTom_CH');
-    var ctx3 = $('#TomTom_EU');
+    let ctx1 = document.getElementById('TomTom_US');
+    let ctx2 = document.getElementById('TomTom_CH');
+    let ctx3 = document.getElementById('TomTom_EU');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -101,47 +101,47 @@
 
         }
 
-    var ctx = document.getElementById( "polarChart" );
-    ctx.height = 150;
-    var myChart = new Chart( ctx, {
-        type: 'pie',
-        data: {
-            datasets: [ {
-                data:portionArr,
-                backgroundColor: colorHexArr
+    // var ctx = document.getElementById( "polarChart" );
+    // ctx.height = 150;
+    // var myChart = new Chart( ctx, {
+    //     type: 'pie',
+    //     data: {
+    //         datasets: [ {
+    //             data:portionArr,
+    //             backgroundColor: colorHexArr
 
-                            } ],
-            labels: cityArr
-        },
-        options: {
-            responsive: true,
-            legend: {
-                     display: false
-                },
+    //                         } ],
+    //         labels: cityArr
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         legend: {
+    //                  display: false
+    //             },
 
-            title: {
-                display: true,
-                text:'US GDP Composition',
-                fontSize: 20
-                },
-            // 關於滑過後的 顯示
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        var dataset = data.datasets[tooltipItem.datasetIndex];
-                        //計算總和
-                        var sum = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
-                            return previousValue + currentValue;
-                        });
-                        var currentValue = dataset.data[tooltipItem.index];
-                        var percent = Math.round(((currentValue / sum) * 100));
-                        return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
-                    }
-                }
-            },
+    //         title: {
+    //             display: true,
+    //             text:'US GDP Composition',
+    //             fontSize: 20
+    //             },
+    //         // 關於滑過後的 顯示
+    //         tooltips: {
+    //             callbacks: {
+    //                 label: function (tooltipItem, data) {
+    //                     var dataset = data.datasets[tooltipItem.datasetIndex];
+    //                     //計算總和
+    //                     var sum = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
+    //                         return previousValue + currentValue;
+    //                     });
+    //                     var currentValue = dataset.data[tooltipItem.index];
+    //                     var percent = Math.round(((currentValue / sum) * 100));
+    //                     return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+    //                 }
+    //             }
+    //         },
 
-        }
-    } );
+    //     }
+    // } );
 
 
 
@@ -176,11 +176,8 @@
                     data: totaldiff
 
                 }]
-
+                canvas.height = 400
                 // console.log('Xaxis',X_axis)
-                console.log(datasetting)
-                var test
-                console.log(test)
 
                 var myChart = new Chart(canvas, {
 

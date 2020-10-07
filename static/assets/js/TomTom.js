@@ -7,7 +7,7 @@
 
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
-    var ctx1 = $('#TomTom_US');
+    let ctx1 = document.getElementById('TomTom_US');
     var ctx2 = $('#TomTom_CH');
     var ctx3 = $('#TomTom_EU');
 
@@ -65,11 +65,11 @@
                     data: totaldiff
 
                 }]
-
+                canvas.height = 400
                 // console.log('Xaxis',X_axis)
-                console.log(datasetting)
+
                 var test
-                console.log(test)
+
 
                 var myChart = new Chart(canvas, {
 
