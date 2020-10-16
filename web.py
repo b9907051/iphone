@@ -90,11 +90,6 @@ def impose_none(Product_info):
 
 app = Flask(__name__, static_folder="static", static_url_path="")
 
-# https://stackoverflow.com/questions/35657821/the-session-is-unavailable-because-no-secret-key-was-set-set-the-secret-key-on
-app.secret_key = os.urandom(24)
-
-login_manager = flask_login.LoginManager()
-login_manager.init_app(app)
 
 # datetime.datetime.now().strftime("%Y%m%d")
 
@@ -489,7 +484,7 @@ def dashboard():
         )
 
 if __name__ == "__main__":
-    # app.secret_key = "secret123"
+    app.secret_key = "secret123"
     # app.config['SESSION_TYPE'] = 'filesystem'
 
     # sess.init_app(app)
