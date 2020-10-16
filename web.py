@@ -485,5 +485,8 @@ def dashboard():
 
 if __name__ == "__main__":
     app.secret_key = "secret123"
+    app.config['SESSION_TYPE'] = 'filesystem'
+
+    sess.init_app(app)
     app.run(debug=True, host="0.0.0.0", port=80)
 
