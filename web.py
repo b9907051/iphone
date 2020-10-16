@@ -154,24 +154,24 @@ def googlemobilitytrend_page():
 @is_logged_in
 def TomTom_page():
 
-    city_list_us = {'new-york':17.81,'los-angeles':12.85,'chicago':7.11,
-        'san-francisco':5.78,'washington':5.63,
-        'dallas-fort-worth':5.45,'houston':5.18,
-        'boston':4.8,'philadelphia':4.63,
-        'atlanta':4.15,'seattle':4.13,
-        'san-jose':3.71,'miami':3.66,
-        'detroit':2.77,'minneapolis':2.76,
-        'phoenix':2.65,'san-diego':2.55,
-        'denver':2.25,'baltimore':2.13}
+    city_list_us = {'New-York':17.81,'Los-Angeles':12.85,'Chicago':7.11,
+        'San-Francisco':5.78,'Washington':5.63,
+        'Dallas-Fort-Worth':5.45,'Houston':5.18,
+        'Boston':4.8,'Philadelphia':4.63,
+        'Atlanta':4.15,'Seattle':4.13,
+        'San-jose':3.71,'Miami':3.66,
+        'Detroit':2.77,'Minneapolis':2.76,
+        'Phoenix':2.65,'San-diego':2.55,
+        'Denver':2.25,'Baltimore':2.13}
 
-    city_list_china = {'chongqing':8.21,'guangzhou':9.09,'shenzhen':9.51,'beijing':11.85,
-             'changsha':4.46,'chengdu':5.87,'xiamen':1.84,'shanghai':12.95,'nanjing':4.95,
-             'hangzhou':5.33,'wuhan':5.67,'ningbo':4.16,'tianjin':7.84}
+    city_list_china = {'Chongqing':8.21,'Guangzhou':9.09,'Shenzhen':9.51,'Beijing':11.85,
+             'Changsha':4.46,'Chengdu':5.87,'Xiamen':1.84,'Shanghai':12.95,'Nanjing':4.95,
+             'Hangzhou':5.33,'Wuhan':5.67,'Ningbo':4.16,'Tianjin':7.84}
 
-    city_list_europe = {'london':['GBR',21.79],'paris':['FRA',18.63],'madrid':['ESP',6.02],'milan':['ITA',5.64],
-                 'munich':['DEU',5.14],'berlin':['DEU',5.87],'amsterdam':['NLD',4.69],'barcelona':['ESP',4.45],
-                 'rome':['ITA',4.43],'hamburg':['DEU',4.29],'stockholm':['SWE',4.04],
-                 'stuttgart':['DEU',4.02],'dublin':['IRL',4.01],'brussels':['BEL',3.85]}
+    city_list_europe = {'London':['GBR',21.79],'Paris':['FRA',18.63],'Madrid':['ESP',6.02],'Milan':['ITA',5.64],
+                 'Munich':['DEU',5.14],'Berlin':['DEU',5.87],'Amsterdam':['NLD',4.69],'Barcelona':['ESP',4.45],
+                 'Rome':['ITA',4.43],'Hamburg':['DEU',4.29],'Stockholm':['SWE',4.04],
+                 'Stuttgart':['DEU',4.02],'Dublin':['IRL',4.01],'Brussels':['BEL',3.85]}
 
     return render_template("TomTom.html",city_list_us = city_list_us,
                                         city_list_china =city_list_china,

@@ -13,6 +13,7 @@ bs4 = "*"
 flask = "*"
 ipykernel = "*"
 lxml = "*"
+uwsgi = "*"
 
 [requires]
 python_version = "3.7"
