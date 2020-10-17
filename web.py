@@ -90,9 +90,9 @@ def impose_none(Product_info):
 
 app = Flask(__name__, static_folder="static", static_url_path="")
 
-app.config['SESSION_TYPE'] = 'memcached'
-app.config['SECRET_KEY'] = 'super secret key'
-sess = Session()
+# app.config['SESSION_TYPE'] = 'memcached'
+# app.config['SECRET_KEY'] = 'super secret key'
+# sess = Session()
 # datetime.datetime.now().strftime("%Y%m%d")
 
 
