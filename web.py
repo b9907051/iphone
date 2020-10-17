@@ -90,7 +90,9 @@ def impose_none(Product_info):
 
 app = Flask(__name__, static_folder="static", static_url_path="")
 
-
+app.config['SESSION_TYPE'] = 'memcached'
+app.config['SECRET_KEY'] = 'super secret key'
+sess = Session()
 # datetime.datetime.now().strftime("%Y%m%d")
 
 
@@ -299,7 +301,7 @@ def dashboard():
     Index = request.values.get(
         "Index", "TimeStemp"
     )  # 這裡如果get不到index 會給default值 'TimeStemp'
-    Product = request.values.get("Product", "iPad 2020")
+    Product = request.values.get("Product", "iPhone 12")
     # print(Product)
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
