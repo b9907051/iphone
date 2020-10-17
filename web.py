@@ -90,11 +90,6 @@ def impose_none(Product_info):
 
 app = Flask(__name__, static_folder="static", static_url_path="")
 
-# app.config['SESSION_TYPE'] = 'memcached'
-# app.config['SECRET_KEY'] = 'super secret key'
-# sess = Session()
-# datetime.datetime.now().strftime("%Y%m%d")
-
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -487,8 +482,5 @@ def dashboard():
 
 if __name__ == "__main__":
     app.secret_key = "secret123"
-    # app.config['SESSION_TYPE'] = 'filesystem'
-
-    # sess.init_app(app)
     app.run(debug=True, host="0.0.0.0", port=80)
 
