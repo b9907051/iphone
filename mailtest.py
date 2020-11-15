@@ -77,10 +77,6 @@ for i in front_index:
 #用tuple包dictionary.items() 就可以進行 illiterate
 table2 = [dict(t) for t in {tuple(d.items()) for d in table}]
 
-for d in table:
-    for t in {tuple(d.items())}
-
-
 table = pd.DataFrame(table2)
 table = table[['Country','Product','Size','Colors','Last Monday','Today']]
 table = table.sort_values(by=['Country'])
