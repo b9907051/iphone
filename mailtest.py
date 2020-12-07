@@ -121,13 +121,14 @@ msg = MIMEMultipart()
 msg['From'] = 'layx@cathaylife.com.tw'
 # passwd = getpass.getpass(colors.OKGREEN + 'Password: ')
 passwd = 'Lay9821529'
-msg['To'] = 'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
-'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
-'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
-'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
-'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
-'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'\
-'layx@cathaylife.com.tw;lay9412206@gmail.com'
+#msg['To'] = 
+#'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
+#'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
+#'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
+#'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
+#'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
+#'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'\
+msg['To'] = 'layx@cathaylife.com.tw;lay9412206@gmail.com'
 
 #名單
 # 楊嘉林  jalinyang@cathaylife.com.tw
