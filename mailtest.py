@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import datetime,date,timedelta
+import platform
 
 if platform.system() == "Windows":
     # Local 端
@@ -72,12 +73,12 @@ for i in front_index:
 
             # 記錄下來這個欄位上一個週一的運送日期內容        
             temp['Last Monday'] = new_changedate_dict[j]['Deliver']
-            
-        # 刪除我們不想要的key
-                for key in key_to_be_deleted:
-                    del temp[key]
-                table.append(temp)
-                break
+                
+            # 刪除我們不想要的key
+            for key in key_to_be_deleted:
+                del temp[key]
+            table.append(temp)
+            break
 
 
 # 刪除同樣的字典 有很多產品的運送日期變化都一樣但細項不一樣 這樣資訊太多我們留下一個就好讓使用者自己去看什麼改變了
