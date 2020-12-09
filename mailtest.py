@@ -1,6 +1,15 @@
 import pandas as pd
 from datetime import datetime,date,timedelta
-data = pd.read_csv('static/data/Data.csv')
+
+if platform.system() == "Windows":
+    # Local 端
+    path = 'static/data/Data.csv'
+else:
+    # AWS 端
+    path = "/home/cathaylife04/smartphone/iphone11/static/data/Data.csv"
+
+
+data = pd.read_csv(path)
 
 # 要篩出來的國家及產品
 data = data[data['Country'].isin(['Us','Jp','Cn','De','Fr'])]
@@ -64,11 +73,11 @@ for i in front_index:
             # 記錄下來這個欄位上一個週一的運送日期內容        
             temp['Last Monday'] = new_changedate_dict[j]['Deliver']
             
-            # 刪除我們不想要的key
-            for key in key_to_be_deleted:
-                del temp[key]
-            table.append(temp)
-            break
+        # 刪除我們不想要的key
+                for key in key_to_be_deleted:
+                    del temp[key]
+                table.append(temp)
+                break
 
 
 # 刪除同樣的字典 有很多產品的運送日期變化都一樣但細項不一樣 這樣資訊太多我們留下一個就好讓使用者自己去看什麼改變了
@@ -121,14 +130,14 @@ msg = MIMEMultipart()
 msg['From'] = 'layx@cathaylife.com.tw'
 # passwd = getpass.getpass(colors.OKGREEN + 'Password: ')
 passwd = 'Lay9821529'
-#msg['To'] = 
-#'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
-#'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
-#'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
-#'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
-#'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
-#'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'\
 msg['To'] = 'layx@cathaylife.com.tw;lay9412206@gmail.com'
+#'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
+# 'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
+# 'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
+# 'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
+# 'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
+# 'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'\
+
 
 #名單
 # 楊嘉林  jalinyang@cathaylife.com.tw

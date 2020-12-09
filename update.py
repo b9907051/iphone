@@ -856,82 +856,82 @@ def replacestring(x,*bagofwords):
 res=[]
 
 # 美國的要單獨跑 因為地址網址的dictionary 是空的
-# for Model in Model_Us:
-# 	# if Product_Us_R[Model] == 'IpadPro':
-# 	# print(Model)
-#     d = {} #清空dictionary
-#     d['Country'] = 'Us'
-#     d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-#     d['Product'] = Product_Us_R[Model]
+for Model in Model_Us:
+	# if Product_Us_R[Model] == 'IpadPro':
+	# print(Model)
+    d = {} #清空dictionary
+    d['Country'] = 'Us'
+    d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+    d['Product'] = Product_Us_R[Model]
 
-#     try:
-#     # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
-#         if Product_Us_R[Model] == 'AirPodPro':
+    try:
+    # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
+        if Product_Us_R[Model] == 'AirPodPro':
 
-#             url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-#             r = requests.get(url)
-#             response = json.loads(r.text)
+            url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+            r = requests.get(url)
+            response = json.loads(r.text)
 
-#             d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+            d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 
-#             print(d)
-#             res.append(d)
+            print(d)
+            res.append(d)
 
-#         # 產品線是 AppleWatch 系列 或是 iPad 系列
-#         elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
+        # 產品線是 AppleWatch 系列 或是 iPad 系列
+        elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
 
-#         # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
-#             if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
+        # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
+            if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
 
-#                 url = f'https://www.apple.com/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
-#                 r = requests.get(url)
-#                 response = json.loads(r.text)
-#                 d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
-#                 d['Celluar'] = Celluar_R[Model]
-#                 d['Size'] = Size_R[Model]
+                url = f'https://www.apple.com/shop/delivery-message?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                r = requests.get(url)
+                response = json.loads(r.text)
+                d['Deliver'] = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]
+                d['Celluar'] = Celluar_R[Model]
+                d['Size'] = Size_R[Model]
 
-#             else:
+            else:
 
-#                 url = f'https://www.apple.com/shop/delivery-message?parts.0='+ Model + '&little=true'
-#                 r = requests.get(url)
-#                 response = json.loads(r.text)
+                url = f'https://www.apple.com/shop/delivery-message?parts.0='+ Model + '&little=true'
+                r = requests.get(url)
+                response = json.loads(r.text)
 
-#                 d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+                d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
 
 
-#             # 如果是iPad 則多了 Colar 這個 項目
-#             if Product_Us_R[Model][0:4] == 'iPad':
-#                 d['Colors'] = Color_R[Model[0:5]]
+            # 如果是iPad 則多了 Colar 這個 項目
+            if Product_Us_R[Model][0:4] == 'iPad':
+                d['Colors'] = Color_R[Model[0:5]]
 
-#             # 如果產品不是 Apple watch6 跟 ApplewatchSE
-#             if 'Celluar' not in d.keys():
-#                 d['Celluar'] = Celluar_R[Model[0:5]]
-#                 d['Size'] = Size_R[Model[0:5]]
+            # 如果產品不是 Apple watch6 跟 ApplewatchSE
+            if 'Celluar' not in d.keys():
+                d['Celluar'] = Celluar_R[Model[0:5]]
+                d['Size'] = Size_R[Model[0:5]]
 
-#             print(d)
-#             res.append(d)
+            print(d)
+            res.append(d)
 
-#         #一般的產品線:
-#         else: 
-#         # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
+        #一般的產品線:
+        else: 
+        # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
 
-#             url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
-#             print(url)
-#             d['Colors'] = Color_R[Model[0:5]]
-#             d['Size'] = Size_R[Model[0:5]]
+            url = 'https://www.apple.com/shop/delivery-message?parts.0=%s&little=true' % ( Model )
+            print(url)
+            d['Colors'] = Color_R[Model[0:5]]
+            d['Size'] = Size_R[Model[0:5]]
             
             
-#             r = requests.get(url)
-#             response = json.loads(r.text)
+            r = requests.get(url)
+            response = json.loads(r.text)
 
-#             # d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
-#             d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
-#             print(d)
-#             res.append(d)
+            # d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
+            d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]
+            print(d)
+            res.append(d)
 
 
-#     except:
-#         print(d,'下架')
+    except:
+        print(d,'下架')
 
 for Product in countries:
 	#外迴圈跑國家
