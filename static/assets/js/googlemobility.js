@@ -64,7 +64,7 @@
     const countrylist = ['US','CA','DE','JP','GB','IT','ES','FR','BR','IN','TW','RU']
     for (const len in countrylist){
     renderChart(countrylist[len], $('#google_'+countrylist[len]))
-    console.log('[len]',countrylist[len],'obj','#google_'+countrylist[len])
+    // console.log('[len]',countrylist[len],'obj','#google_'+countrylist[len])
     }
 
     function renderChart(country, canvas) {

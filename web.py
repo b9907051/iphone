@@ -177,7 +177,7 @@ def TomTom_page():
 @app.route("/Intel_AMD_Marketshare-page")
 @is_logged_in
 def Intel_AMD_Marketshare_page():
-    return render_template("Intel_AMD_Marketshare.html")
+    return render_template("Intel_AMD_marketshare.html")
 
 
 @app.route("/1H2020-page")
