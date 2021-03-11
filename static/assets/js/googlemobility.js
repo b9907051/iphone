@@ -7,20 +7,21 @@
 
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
-    var ctx1 = $('#google_US');
-    var ctx2 = $('#google_CA');
-    var ctx3 = $('#google_DE');
-    var ctx4 = $('#google_JP');
 
-    var ctx5 = $('#google_GB');
-    var ctx6 = $('#google_IT');
-    var ctx7 = $('#google_ES');
-    var ctx8 = $('#google_FR');
+    // var ctx1 = $('#google_US');
+    // var ctx2 = $('#google_CA');
+    // var ctx3 = $('#google_DE');
+    // var ctx4 = $('#google_JP');
 
-    var ctx9 = $('#google_BR');
-    var ctx10 = $('#google_IN');
-    var ctx11 = $('#google_TW');
-    var ctx12 = $('#google_RU');
+    // var ctx5 = $('#google_GB');
+    // var ctx6 = $('#google_IT');
+    // var ctx7 = $('#google_ES');
+    // var ctx8 = $('#google_FR');
+
+    // var ctx9 = $('#google_BR');
+    // var ctx10 = $('#google_IN');
+    // var ctx11 = $('#google_TW');
+    // var ctx12 = $('#google_RU');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -47,20 +48,24 @@
     }
     // 第一次渲染 直接呼叫下面的 function 引數分別是:
     // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
-    renderChart('US',ctx1);
-    renderChart('CA',ctx2);
-    renderChart('DE',ctx3);
-    renderChart('JP',ctx4);
-    renderChart('GB',ctx5);
-    renderChart('IT',ctx6);
-    renderChart('ES',ctx7);
-    renderChart('FR',ctx8);
-    renderChart('BR',ctx9);
-    renderChart('IN',ctx10);
-    renderChart('TW',ctx11);
-    renderChart('RU',ctx12);
+    // renderChart('US',ctx1);
+    // renderChart('CA',ctx2);
+    // renderChart('DE',ctx3);
+    // renderChart('JP',ctx4);
+    // renderChart('GB',ctx5);
+    // renderChart('IT',ctx6);
+    // renderChart('ES',ctx7);
+    // renderChart('FR',ctx8);
+    // renderChart('BR',ctx9);
+    // renderChart('IN',ctx10);
+    // renderChart('TW',ctx11);
+    // renderChart('RU',ctx12);
 
-    //Tmall的renderChart
+    const countrylist = ['US','CA','DE','JP','GB','IT','ES','FR','BR','IN','TW','RU']
+    for (const len in countrylist){
+    renderChart(countrylist[len], $('#google_'+countrylist[len]))
+    console.log('[len]',countrylist[len],'obj','#google_'+countrylist[len])
+    }
 
     function renderChart(country, canvas) {
         axios.get(`/google-mobility-trend?country=${country}`)

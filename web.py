@@ -174,6 +174,12 @@ def TomTom_page():
                                         city_list_china =city_list_china,
                                         city_list_europe=city_list_europe)
 
+@app.route("/Intel_AMD_Marketshare-page")
+@is_logged_in
+def Intel_AMD_Marketshare_page():
+    return render_template("Intel_AMD_Marketshare.html")
+
+
 @app.route("/1H2020-page")
 @is_logged_in
 def H12020_page():
@@ -231,6 +237,51 @@ def google_mobility_trend():
 
     return json.dumps(data_dic)
 
+@app.route("/Intel_AMD_Marketshare")
+@is_logged_in
+def Intel_AMD_Marketshare():
+
+    # 從前端 拿到要看的產品
+    product = request.values.get("product")
+
+    # name_of_data = request.values.get("namedata")
+    df = pd.read_csv("static/data/Intel_AMD_marketshare.csv")
+
+    # product Candidate
+    product_list = ['Cpu','Laptop','Server']
+    
+    # 準備存放資料
+    data_dic = {}
+
+    
+    product_Intel = product + '_Intel'
+    product_AMD = product + '_AMD'
+
+    # 時間資料的部分因為 桌機筆電都跟Cpu一樣 所以我們這裡做個判斷只要是這三者之一就都拿cpu_quarter(我資料也只有放Cpu_quarter)
+    # 這三個以外就是ServerQuarter
+    if product == 'Laptop' or product == 'Desktop' or product == 'Cpu':
+        product_quarter = 'Cpu_Quarter'
+
+    else:
+        product_quarter = 'Server_Quarter'
+
+    df_temp = pd.concat([df[ product_AMD ],df[ product_Intel ],df[product_quarter]],axis = 1)
+    df_temp.dropna(inplace = True)
+    # 將資料轉成list
+    data_dic[product] = {#'X_axis' : df_temp['X_axis'].values.tolist(),
+
+                         'Intel': df_temp[product_Intel].values.tolist(),
+
+                         'AMD': df_temp[product_AMD].values.tolist()
+    }
+    # Cpu 跟 Laptop 的季節是一樣的 這裡只用CPU就好
+    data_dic['X_axis'] = df_temp[product_quarter].values.tolist()
+    # 把 data 用json的格式 return 回 TomTom.js
+    # print(data_dic)
+
+    return json.dumps(data_dic)
+
+
 @app.route("/TomTom")
 @is_logged_in
 def TomTom():
@@ -243,6 +294,7 @@ def TomTom():
     df = df[df['Region_name'] == region]
     print(df)
     df = df.to_dict(orient='list')
+    print(df)
     # 把 data 用json的格式 return 回 TomTom.js
     return json.dumps(df)
 
