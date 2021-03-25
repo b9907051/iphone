@@ -54,7 +54,7 @@ sql_ip = "1.1.1.1.1"
 #     mypkey = paramiko.RSAKey.from_private_key_file(
 #         "/home/ubuntu/Iphone11/Layx_Tokyo.pem"
 #     )
-
+#
 # 抓下的資料若有缺值進行None的填補
 def impose_none(Product_info):
     # Max_length_data = 0
