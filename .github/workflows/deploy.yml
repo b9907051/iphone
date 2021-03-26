@@ -17,4 +17,4 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           script: |
             cd /home/cathaylife04/smartphone/iphone11
-            git pull
+            echo "enter the dir"
