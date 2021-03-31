@@ -25,7 +25,7 @@ upper_form = form[0].find_all('td')
 man_index = [] # 主幹航線準班率
 for num in range(4,11,3):
     man_index.append(float(upper_form[num].get_text()))
-
+    print(type(upper_form[num].get_text()))
 lower_form = form[1].find_all('td')
 
 arrive_harbor = [] #到離港服務準班率
@@ -99,8 +99,14 @@ website = f"https://www.sse.net.cn/index/singleIndex?indexType=gcspi_port"
 source = requests.get(website).text
 soup = Bt4(source, "lxml")
 
-form = soup.find_all('script')[1].get_text()
-print(form)
+form0 = soup.find_all('script')[0].get_text()
+form1 = soup.find_all('script')[1].string
+form2 = soup.find_all('script')[2].get_text()
+
+
+print('form1:',form1)
+
+
 # 把字串先做些前處理 把\' 換成 空的
 form = form.replace('\'',"")
 
