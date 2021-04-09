@@ -62,10 +62,10 @@ for key,value in card_id_list.items():
     print(website_url)
     source = requests.get(website_url).text
     soup = Bt4(source, "lxml")
-    list_script = soup.find_all('script')
-    target = list_script[12].getText()
+    # print(soup)
+    target = soup.find_all('script')[12].string
     data = search_rule.findall(target)
-    
+    # print(data)
     res = []
     for i in range(len(data)):
         d = {}
