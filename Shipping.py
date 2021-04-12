@@ -14,83 +14,83 @@ import shutil
 from lxml import etree
 # ----------  爬取 主幹航線準班率  ----------
 # 顯卡網址
-website = f"https://www.sse.net.cn/index/singleIndex?indexType=gcspi"
-source = requests.get(website).text
-soup = Bt4(source, "lxml")
+# website = f"https://www.sse.net.cn/index/singleIndex?indexType=gcspi"
+# source = requests.get(website).text
+# soup = Bt4(source, "lxml")
 
-form = soup.find_all('tbody')
+# form = soup.find_all('tbody')
 
-upper_form = form[0].find_all('td')
+# upper_form = form[0].find_all('td')
 
-man_index = [] # 主幹航線準班率
-for num in range(4,11,3):
-    man_index.append(float(upper_form[num].get_text()))
+# man_index = [] # 主幹航線準班率
+# for num in range(4,11,3):
+#     man_index.append(float(upper_form[num].get_text()))
 
-lower_form = form[1].find_all('td')
+# lower_form = form[1].find_all('td')
 
-arrive_harbor = [] #到離港服務準班率
-logistic = [] #收發或服務準班率
-#從第8個開始到58個 step:5
-for num in range(8,58,5):
-    arrive_harbor.append(float(lower_form[num].get_text()))
-for num in range(10,60,5):
-    logistic.append(float(lower_form[num].get_text()))
+# arrive_harbor = [] #到離港服務準班率
+# logistic = [] #收發或服務準班率
+# #從第8個開始到58個 step:5
+# for num in range(8,58,5):
+#     arrive_harbor.append(float(lower_form[num].get_text()))
+# for num in range(10,60,5):
+#     logistic.append(float(lower_form[num].get_text()))
 
-col1 = ['綜合準班率指數(%)',
-'到離港服務準班率指數(%)',
-'收发貨服務準班率指數(%)']
-col2 = ['亞洲-歐洲',
-'亞洲-地中海-到',
-'亞洲-美西-到',
-'亞洲-美東-到',
-'亞洲-波斯灣-到',
-'亞洲-澳新-到',
-'亞洲-西非-到',
-'亞洲-南非-到',
-'亞洲-南美-到',
-'歐洲-美東-到']
-col3 = ['亞洲-歐洲-收',
-'亞洲-地中海-收',
-'亞洲-美西-收',
-'亞洲-美東-收',
-'亞洲-波斯灣-收',
-'亞洲-澳新-收',
-'亞洲-西非-收',
-'亞洲-南非-收',
-'亞洲-南美-收',
-'歐洲-美東-收']
+# col1 = ['綜合準班率指數(%)',
+# '到離港服務準班率指數(%)',
+# '收发貨服務準班率指數(%)']
+# col2 = ['亞洲-歐洲',
+# '亞洲-地中海-到',
+# '亞洲-美西-到',
+# '亞洲-美東-到',
+# '亞洲-波斯灣-到',
+# '亞洲-澳新-到',
+# '亞洲-西非-到',
+# '亞洲-南非-到',
+# '亞洲-南美-到',
+# '歐洲-美東-到']
+# col3 = ['亞洲-歐洲-收',
+# '亞洲-地中海-收',
+# '亞洲-美西-收',
+# '亞洲-美東-收',
+# '亞洲-波斯灣-收',
+# '亞洲-澳新-收',
+# '亞洲-西非-收',
+# '亞洲-南非-收',
+# '亞洲-南美-收',
+# '歐洲-美東-收']
 
-main_index = pd.DataFrame({0:man_index})
-main_index = main_index.T
-main_index.columns = col1
-arrive_harbor = pd.DataFrame({0:arrive_harbor})
-arrive_harbor = arrive_harbor.T
-arrive_harbor.columns = col2
-logistic = pd.DataFrame({0:logistic})
-logistic = logistic.T
-logistic.columns = col3
+# main_index = pd.DataFrame({0:man_index})
+# main_index = main_index.T
+# main_index.columns = col1
+# arrive_harbor = pd.DataFrame({0:arrive_harbor})
+# arrive_harbor = arrive_harbor.T
+# arrive_harbor.columns = col2
+# logistic = pd.DataFrame({0:logistic})
+# logistic = logistic.T
+# logistic.columns = col3
 
-time = soup.find_all("div", {"class": "title2"})[0].get_text()[0:7]
-date = pd.DataFrame({'日期':[time]})
+# time = soup.find_all("div", {"class": "title2"})[0].get_text()[0:7]
+# date = pd.DataFrame({'日期':[time]})
 
-result = pd.concat([date,main_index,arrive_harbor,logistic],axis = 1)
+# result = pd.concat([date,main_index,arrive_harbor,logistic],axis = 1)
 
-output_direct = 'Shipping/'
-output_filename = 'shipment1'
-# 依照作業系統決定輸出的檔案位置
-if platform.system() == "Windows":
-    # Local 端
-    path = 'static/data/'
-else:
-    # AWS 端
-    path = "/home/cathaylife04/smartphone/iphone11/static/data/"
+# output_direct = 'Shipping/'
+# output_filename = 'shipment1'
+# # 依照作業系統決定輸出的檔案位置
+# if platform.system() == "Windows":
+#     # Local 端
+#     path = 'static/data/'
+# else:
+#     # AWS 端
+#     path = "/home/cathaylife04/smartphone/iphone11/static/data/"
     
-# 將新舊的資料合併
-old_data = pd.read_csv(path + output_direct +output_filename +'.csv',encoding='utf_8_sig')
-save_data = pd.concat([old_data,result])
-# 如果資料沒有更新就移除
-save_data.drop_duplicates(inplace = True)
-result.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
+# # 將新舊的資料合併
+# old_data = pd.read_csv(path + output_direct +output_filename +'.csv',encoding='utf_8_sig')
+# save_data = pd.concat([old_data,result])
+# # 如果資料沒有更新就移除
+# save_data.drop_duplicates(inplace = True)
+# result.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
 
 
 # ----------  爬取 港口班輪班率  ----------
@@ -98,10 +98,10 @@ result.to_csv(path + output_direct +output_filename +'.csv',index = False,encodi
 website = f"https://www.sse.net.cn/index/singleIndex?indexType=gcspi_port"
 source = requests.get(website).text
 soup = Bt4(source, "lxml")
-
+print(soup)
 # 在 Beautifulsoup4 的套件裡對script 的tag提文字的時候要使用string 因為他們不認為script裡藥用, 舊版本則用get_text()
 form = soup.find_all('script')[1].string
-
+print(form)
 # 把字串先做些前處理 把\' 換成 空的
 form = form.replace('\'',"")
 
@@ -203,11 +203,16 @@ df = df.apply(lambda x:x.str.replace(',','.'))
 
 result = df[(df['LOCATION']=='SHANGHAI') | (df['LOCATION']=='LOS ANGELES')]
 
-output_direct = 'Shipping/'
+output_direct = '/Shipping/'
 output_filename = 'Shippingdata'
 
-
-result.to_csv(path + output_filename +'.csv',index = False,encoding='utf_8_sig')
+if platform.system() == "Windows":
+    # Local 端
+    path = 'static/data'
+else:
+    # AWS 端
+    path = "/home/cathaylife04/smartphone/iphone11/static/data"
+result.to_csv(path+ output_direct +'xchange' +'.csv',index = False,encoding='utf_8_sig')
 
 # 打包所有檔案到zip
 shutil.make_archive( path +'/zipfile/'+output_filename, 'zip', path + output_direct)
