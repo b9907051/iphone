@@ -61,19 +61,20 @@
     // renderChart('TW',ctx11);
     // renderChart('RU',ctx12);
 
-    const countrylist = ['US','CA','DE','JP','GB','IT','ES','FR','BR','IN','TW','RU']
-    for (const len in countrylist){
-    renderChart(countrylist[len], $('#google_'+countrylist[len]))
-    // console.log('[len]',countrylist[len],'obj','#google_'+countrylist[len])
+    const productlist = ['RTX-3060','RTX-3080']
+    for (const len in productlist){
+    renderChart(productlist[len], $('#'+productlist[len]))
+    // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
     }
 
-    function renderChart(country, canvas) {
-        axios.get(`/google-mobility-trend?country=${country}`)
+
+    function renderChart(product, canvas) {
+        axios.get(`/Videocard?product=${product}`)
 
             .then(function (res) {
 
                 // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
-                const Data = res.data[country];
+                const Data = res.data[product];
                 // console.log(typeof Data)
                 // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
 
@@ -87,13 +88,13 @@
                 const X_axis = res.data['X_axis'];
                 // const workplaces = Data.workplace;
                 // const residential = Data.residential;
-                // console.log('[DATA]',Data[country])
+                // console.log('[DATA]',Data[product])
                 const Xmax =  X_axis.slice(-1)
                 // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
                 // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
 
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
-                console.log('[last data]',X_axis.slice(-1))
+
                 var data_for_plot
 
                 data_for_plot = Object.values(data_set).map((d, i) => ({
@@ -129,7 +130,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: country.concat('  Mobility-Trend') ,
+                            text: product.concat('  Mobility-Trend') ,
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉

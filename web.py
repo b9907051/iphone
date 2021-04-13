@@ -141,6 +141,11 @@ def is_logged_in(f):
 def mainpage():
     return render_template("1H2020.html")
 
+@app.route("/Videocard-page")
+@is_logged_in
+def Videocard_page():
+    return render_template("Videocard.html")
+
 @app.route("/googlemobilitytrend-page")
 @is_logged_in
 def googlemobilitytrend_page():
@@ -232,6 +237,30 @@ def google_mobility_trend():
                          'residential': df_temp['residential'].values.tolist()
     }
     data_dic['X_axis'] = df_temp['X_axis'].values.tolist()
+    # 把 data 用json的格式 return 回 TomTom.js
+    # print(data_dic)
+
+    return json.dumps(data_dic)
+
+@app.route("/Videocard")
+@is_logged_in
+def Videocard():
+
+    # 從前端 拿到要看的產品
+    product = request.values.get("product")
+
+    if product == 'price_3060':
+        df = pd.read_csv("static/data/RTX+3060+Ti.csv")
+    else:
+        df = pd.read_csv("static/data/RTX+3080.csv")
+
+    # 準備存放資料
+    data_dic = {}
+
+    # 將資料轉成list
+    data_dic[product] = df['price'].values.tolist()
+    # Cpu 跟 Laptop 的季節是一樣的 這裡只用CPU就好
+    data_dic['X_axis'] = df['date'].values.tolist()
     # 把 data 用json的格式 return 回 TomTom.js
     # print(data_dic)
 
