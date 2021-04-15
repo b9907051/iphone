@@ -1,27 +1,36 @@
 (function ($) {
     "use strict";
+    //polar chart
 
+    const red = '#c51162'
+    const pink = '#aa00ff'
+    const purple = '#6200ea'
+    const deep_purple = '#304ffe'
+    const indigo = '#2962ff'
+    const blue = '#0091ea'
+    const lightblue = '#00b8d4'
+    const cyan = '#00bfa5'
+    const teal = '#00c853'
+    const green = '#64dd17'
+    const lightgreen = '#aeea00'
+    const lime = '#ffd600'
+    const yellow = '#ffab00'
+    const amber = '#ff6d00'
+    const orange = '#dd2c00'
+    const deep_orange = '#3e2723'
+    const lightbrown = '#8d6e63'
+    const brown = '#212121'
+    const lightbrey = '#90a4ae'
+    const brey = '#263238'
+
+    const colorHexArr = [red,pink,purple,deep_purple,indigo,blue,lightblue,cyan,teal,
+    green,lightgreen,lime,yellow,amber,orange,deep_orange,lightbrown,brown,lightbrey,brey]
     // 看起來引用一次裡面的參數就不見了
     // jQuery.getScript("assets/js/trytry.js")
 
 
     // 就是這行去抓 html 的 id  畫在相對應的位置
     // 1 是 price 2 是 volume
-
-    // var ctx1 = $('#google_US');
-    // var ctx2 = $('#google_CA');
-    // var ctx3 = $('#google_DE');
-    // var ctx4 = $('#google_JP');
-
-    // var ctx5 = $('#google_GB');
-    // var ctx6 = $('#google_IT');
-    // var ctx7 = $('#google_ES');
-    // var ctx8 = $('#google_FR');
-
-    // var ctx9 = $('#google_BR');
-    // var ctx10 = $('#google_IN');
-    // var ctx11 = $('#google_TW');
-    // var ctx12 = $('#google_RU');
 
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
@@ -46,91 +55,102 @@
         const result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')'
         return result
     }
-    // 第一次渲染 直接呼叫下面的 function 引數分別是:
-    // "國家", "HTML tag", "顏色陣列裡要用哪個顏色", "標題要放什麼"
-    // renderChart('US',ctx1);
-    // renderChart('CA',ctx2);
-    // renderChart('DE',ctx3);
-    // renderChart('JP',ctx4);
-    // renderChart('GB',ctx5);
-    // renderChart('IT',ctx6);
-    // renderChart('ES',ctx7);
-    // renderChart('FR',ctx8);
-    // renderChart('BR',ctx9);
-    // renderChart('IN',ctx10);
-    // renderChart('TW',ctx11);
-    // renderChart('RU',ctx12);
 
+    // 原本這裡要畫圓餅圖的
+
+    // var ctx = document.getElementById( "polarChart" );
+    // ctx.height = 150;
+    // var myChart = new Chart( ctx, {
+    //     type: 'pie',
+    //     data: {
+    //         datasets: [ {
+    //             data:portionArr,
+    //             backgroundColor: colorHexArr
+
+    //                         } ],
+    //         labels: cityArr
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         legend: {
+    //                  display: false
+    //             },
+
+    //         title: {
+    //             display: true,
+    //             text:'US GDP Composition',
+    //             fontSize: 20
+    //             },
+    //         // 關於滑過後的 顯示
+    //         tooltips: {
+    //             callbacks: {
+    //                 label: function (tooltipItem, data) {
+    //                     var dataset = data.datasets[tooltipItem.datasetIndex];
+    //                     //計算總和
+    //                     var sum = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
+    //                         return previousValue + currentValue;
+    //                     });
+    //                     var currentValue = dataset.data[tooltipItem.index];
+    //                     var percent = Math.round(((currentValue / sum) * 100));
+    //                     return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+    //                 }
+    //             }
+    //         },
+
+    //     }
+    // } );
     const productlist = ['RTX-3060','RTX-3080']
     for (const len in productlist){
-    renderChart(productlist[len], $('#'+productlist[len]))
+    renderChart(productlist[len], $('#'+productlist[len]),len, 'Product:' + productlist[len])
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
     }
 
 
-    function renderChart(product, canvas) {
+    //Tmall的renderChart
+
+    function renderChart(product,canvas,color,title) {
+        // 這裡去跟後端拿資料
         axios.get(`/Videocard?product=${product}`)
-
             .then(function (res) {
-
-                // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
-                const Data = res.data[product];
+                const Data = res.data;
                 // console.log(typeof Data)
-                // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
-
-                // 把後端拿到的json : {US:{xaxis:[...],parks:[....],..},JP:{xaxis:[...],parks:[....]}....
-                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-                // 0: US:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
-                // 1: JP:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
-
-                                // .map(k => ({ [k]: Data[k] }));
-
-                const X_axis = res.data['X_axis'];
-                // const workplaces = Data.workplace;
-                // const residential = Data.residential;
-                // console.log('[DATA]',Data[product])
-                const Xmax =  X_axis.slice(-1)
-                // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
-                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-
-                const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
-
-                var data_for_plot
-
-                data_for_plot = Object.values(data_set).map((d, i) => ({
+                const X_axis = Data.X_axis;
+                const price = Data.price;
+                var datasetting
+                // data要記得用 array包起來不能直接放dictionary進去
+                datasetting = [{
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
-                    label: Object.keys(d)[0],
+                    label: title,
                     backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
                     // 這裡的i總共有幾個阿??
-                    borderColor: borderColorArr[i],
+                    borderColor: borderColorArr[color],
                     pointHoverBackgroundColor: '#fff',
                     borderWidth: 2,
 
                     // 這行決定要畫圖的主要資訊
-                    data: d[Object.keys(d)[0]]
+                    data: price
 
-                }))
-
-                // console.log('[data_for_plot]',data_for_plot)
-
-                // canvas[1] = week[1] or day[1] 去對應 html 的 label
-                // period2ctx = {
-                //  week: { 1: ctx1_week, 2: ctx2_week },
-                //  day: { 1: ctx1_day, 2: ctx2_day }
-                // }
+                }]
+                // 這裡的 canvas 是陣列, 在TomTom2js 裡面不是這樣宣告的所以不用加上[0]
+                canvas[0].height = 400
+                // console.log('Xaxis',X_axis)
 
                 var myChart = new Chart(canvas, {
 
                     type: 'line',
+                    // 這行的 data 是這個 js.Chart 物件裡已經定義好的
                     data: {
                         // 取出第一個Data的key
                         labels: X_axis,
-                        datasets: data_for_plot
+
+                        // 這裡的datasets 裡面就是要放 我們前面把一堆東西放進去的地方
+                        datasets: datasetting
+
                     },
                     options: {
                         title: {
                             display: true,
-                            text: product.concat('  Mobility-Trend') ,
+                            text: title,
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
@@ -142,32 +162,30 @@
                         scales: {
                             xAxes: [{
                                 ticks: {
-                                    align: 'end',
                                     autoSkip: false,
                                     // maxRotation: 90,
-                                    minRotation: 60,
-                                    // max: Xmax,
+                                    minRotation: 60
                                 },
                                 gridLines: {
                                     drawOnChartArea: false
                                 },
                                 type: 'time',
                                 time: {
-                                    unit: 'day',
-                                    unitStepSize: 20,
+                                    unit: 'day'
                                 },
-
                                 distribution: 'linear'
                             }],
                             yAxes: [{
                                 scaleLabel: {
                                     display: true,
-                                    labelString: 'percentage',
+                                    labelString: 'price',
                                     fontStyle: 'bold'
                                 },
                                 ticks: {
-                                    beginAtZero: true,
-                                    maxTicksLimit: 5,
+                                    //beginAtZero: true,
+                                    maxTicksLimit: 5
+                                    //stepSize: Step,
+                                    //max: MaxPrice
 
                                 },
                                 gridLines: {
@@ -190,7 +208,13 @@
                 // console.log(myChart)
             }
                 //Todo Tmall量的部分
-            )};
+            );
+
+
+        //這裡怎麼沒有去相對應的路由拿東西
+
+    }
+
 })(jQuery);
 
 // function random (min, max) {

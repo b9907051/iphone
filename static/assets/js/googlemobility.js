@@ -110,8 +110,8 @@
 
                 }))
 
-                // console.log('[data_for_plot]',data_for_plot)
-
+                console.log('[data_for_plot]',data_for_plot)
+                console.log('[X_axis]',X_axis)
                 // canvas[1] = week[1] or day[1] 去對應 html 的 label
                 // period2ctx = {
                 //  week: { 1: ctx1_week, 2: ctx2_week },
