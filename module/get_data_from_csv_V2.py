@@ -20,8 +20,8 @@ def get_csv(datasource, mainInfo, timeperiod="week"):
         # 如果現在不是在虛擬環境下的話路徑使用
         # Read_data = pd.read_csv("static/data/Zhongguancun.csv")
         product_info = {}
-        country_list = Read_data["Product"].unique()
-        for country in country_list:
+        product_list = Read_data["Product"].unique()
+        for product in product_list:
             temp = Read_data[Read_data['Product'] == product]
             df = pd.pivot_table(
             temp,
@@ -61,7 +61,6 @@ def get_csv(datasource, mainInfo, timeperiod="week"):
             
             tempdata = {product:tempdata}
             product_info.update(tempdata)
-
 
     else:
 

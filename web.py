@@ -22,7 +22,7 @@ import pandas as pd
 import os
 import datetime
 import impose_none
-
+import numpy as np
 
 from module.get_data_from_csv_V2 import get_csv
 
@@ -146,6 +146,12 @@ def mainpage():
 def Videocard_page():
     return render_template("Videocard.html")
 
+@app.route("/Shipping-page")
+@is_logged_in
+def Shipping_page():
+    return render_template("Shipping.html")
+
+
 @app.route("/googlemobilitytrend-page")
 @is_logged_in
 def googlemobilitytrend_page():
@@ -202,6 +208,62 @@ def Zhongguancun():
 def Tmallpage():
     return render_template("tmall.html")
 
+@app.route("/Shipping")
+@is_logged_in
+def Shipping():
+
+    # 從前端 拿到要看的產品
+    datasource = request.values.get("datasource")
+
+    if datasource == 'shipment1':
+        df = pd.read_csv("static/data/Shipping/shipment1.csv")
+    elif datasource == 'shipment2':
+        df = pd.read_csv("static/data/Shipping/shipment2.csv")
+    else:
+        df = pd.read_csv("static/data/Shipping/xchange.csv")
+
+    # 準備存放資料
+    df = pd.read_csv("static/data/Shipping/xchange.csv")
+    df = df[(df['EQ TYPE']==40) & (df['LOCATION']=='LOS ANGELES')]
+    df.drop(columns=['EQ TYPE','LOCATION'],inplace = True)
+    df = df.replace({np.nan: None})
+    year_list = df.drop(columns=['WEEK']).columns
+    data = {}
+    for year in year_list:
+        # 把資料做成
+        # {2019:{
+        #     CAX:[...],WEEK:[...]},
+        #  2010:{
+        #     CAX:[...],WEEK:[...]},...
+        # }
+        tempdata = pd.DataFrame(df[year]).to_dict(orient='list')
+        data.update(tempdata)
+    data = {'xchange':data}
+    data['X_axis'] = df['WEEK'].values.tolist()
+    return json.dumps(data)
+
+@app.route("/Videocard")
+@is_logged_in
+def Videocard():
+
+    # 從前端 拿到要看的產品
+    product = request.values.get("product")
+
+    if product == 'RTX-3060':
+        df = pd.read_csv("static/data/Videocard/RTX+3060+Ti.csv")
+    else:
+        df = pd.read_csv("static/data/Videocard/RTX+3080.csv")
+
+    # 準備存放資料
+    data_dic = {}
+
+    # 將資料轉成list
+    data_dic['price'] = df['price'].values.tolist()
+    # Cpu 跟 Laptop 的季節是一樣的 這裡只用CPU就好
+    data_dic['X_axis'] = df['date'].values.tolist()
+    # 把 data 用json的格式 return 回 TomTom.js
+
+    return json.dumps(data_dic)
 
 # JS 去後端拿資料的地方
 @app.route("/google-mobility-trend")
@@ -242,29 +304,7 @@ def google_mobility_trend():
 
     return json.dumps(data_dic)
 
-@app.route("/Videocard")
-@is_logged_in
-def Videocard():
 
-    # 從前端 拿到要看的產品
-    product = request.values.get("product")
-
-    if product == 'RTX-3060':
-        df = pd.read_csv("static/data/Videocard/RTX+3060+Ti.csv")
-    else:
-        df = pd.read_csv("static/data/Videocard/RTX+3080.csv")
-
-    # 準備存放資料
-    data_dic = {}
-
-    # 將資料轉成list
-    data_dic['price'] = df['price'].values.tolist()
-    # Cpu 跟 Laptop 的季節是一樣的 這裡只用CPU就好
-    data_dic['X_axis'] = df['date'].values.tolist()
-    # 把 data 用json的格式 return 回 TomTom.js
-
-
-    return json.dumps(data_dic)
 
 @app.route("/Intel_AMD_Marketshare")
 @is_logged_in
