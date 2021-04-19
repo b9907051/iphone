@@ -90,7 +90,7 @@ old_data = pd.read_csv(path + output_direct +output_filename +'.csv',encoding='u
 save_data = pd.concat([old_data,result])
 # 如果資料沒有更新就移除
 save_data.drop_duplicates(inplace = True)
-result.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
+save_data.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
 
 
 # ----------  爬取 港口班輪班率  ----------
@@ -181,7 +181,7 @@ old_data = pd.read_csv(path + output_direct +output_filename +'.csv',encoding='u
 save_data = pd.concat([old_data,result])
 # 如果資料沒有更新就移除
 save_data.drop_duplicates(inplace = True)
-result.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
+save_data.to_csv(path + output_direct +output_filename +'.csv',index = False,encoding='utf_8_sig')
 
 # ----------  爬取 主幹航線準班率  ----------
 
