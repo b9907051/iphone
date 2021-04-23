@@ -226,6 +226,8 @@ def Shipping():
     df = pd.read_csv("static/data/Shipping/xchange.csv")
     df = df[(df['EQ TYPE']==40) & (df['LOCATION']=='LOS ANGELES')]
     df.drop(columns=['EQ TYPE','LOCATION'],inplace = True)
+
+    # 這個步驟將nan 換成none 到時候傳json的時候才不會傳成一個字串
     df = df.replace({np.nan: None})
     year_list = df.drop(columns=['WEEK']).columns
     data = {}
@@ -251,9 +253,13 @@ def Videocard():
 
     if product == 'RTX-3060':
         df = pd.read_csv("static/data/Videocard/RTX+3060+Ti.csv")
-    else:
+    elif product == 'RTX-3080':
         df = pd.read_csv("static/data/Videocard/RTX+3080.csv")
-
+    elif product == 'RTX-3070':
+        df = pd.read_csv("static/data/Videocard/RTX+3070.csv")
+    else:
+        print(product)
+        df = pd.read_csv("static/data/Videocard/GTX+1060.csv")
     # 準備存放資料
     data_dic = {}
 

@@ -99,7 +99,7 @@
 
     //     }
     // } );
-    const productlist = ['RTX-3060','RTX-3080']
+    const productlist = ['RTX-3060','RTX-3080','RTX-3070','GTX-1060']
     for (const len in productlist){
     renderChart(productlist[len], $('#'+productlist[len]),len, 'Product:' + productlist[len])
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
@@ -171,7 +171,8 @@
                                 },
                                 type: 'time',
                                 time: {
-                                    unit: 'day'
+                                    unit: 'day',
+                                    unitStepSize: 20,
                                 },
                                 distribution: 'linear'
                             }],
