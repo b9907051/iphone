@@ -1,7 +1,6 @@
 (function ($) {
     "use strict";
     //polar chart
-
     const red = '#c51162'
     const pink = '#aa00ff'
     const purple = '#6200ea'
@@ -100,15 +99,16 @@
     //     }
     // } );
     const productlist = ['RTX-3060','RTX-3080','RTX-3070','GTX-1060']
+    const launchPrice = [399,699,499,299]
     for (const len in productlist){
-    renderChart(productlist[len], $('#'+productlist[len]),len, 'Product:' + productlist[len])
+    renderChart(productlist[len], $('#'+productlist[len]),len, launchPrice[len])
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
     }
 
 
     //Tmall的renderChart
 
-    function renderChart(product,canvas,color,title) {
+    function renderChart(product,canvas,color,launchPrice) {
         // 這裡去跟後端拿資料
         axios.get(`/Videocard?product=${product}`)
             .then(function (res) {
@@ -120,7 +120,7 @@
                 // data要記得用 array包起來不能直接放dictionary進去
                 datasetting = [{
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
-                    label: title,
+                    label: product,
                     backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
                     // 這裡的i總共有幾個阿??
                     borderColor: borderColorArr[color],
@@ -134,6 +134,17 @@
                 // 這裡的 canvas 是陣列, 在TomTom2js 裡面不是這樣宣告的所以不用加上[0]
                 canvas[0].height = 400
                 // console.log('Xaxis',X_axis)
+                const annotation1 = {
+                  type: 'line',
+                  scaleID: 'y',
+                  borderWidth: 3,
+                  borderColor: 'black',
+                  value: launchPrice,
+                  label: {
+                    content: 'launchPrice:'+launchPrice,
+                    enabled: true
+                  },
+                };
 
                 var myChart = new Chart(canvas, {
 
@@ -150,7 +161,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: title,
+                            text: 'Product:' + product,
                             fontSize: 20
                         },
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
@@ -160,7 +171,7 @@
                         },
                         responsive: true,
                         scales: {
-                            xAxes: [{
+                            x: [{
                                 ticks: {
                                     autoSkip: false,
                                     // maxRotation: 90,
@@ -176,7 +187,7 @@
                                 },
                                 distribution: 'linear'
                             }],
-                            yAxes: [{
+                            y: [{
                                 scaleLabel: {
                                     display: true,
                                     labelString: 'price',
@@ -201,8 +212,20 @@
                                 hoverRadius: 4,
                                 hoverBorderWidth: 3
                             }
-                        }
-
+                        },
+                            plugins: {
+                              annotation: {
+                                annotations: {
+                                  annotation1
+                                }
+                              }
+                            },
+                            scales: {
+                                  y: {
+                                    beginAtZero:false,
+                                    stacked: true
+                                  }
+                                }
 
                     }
                 });

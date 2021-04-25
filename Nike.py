@@ -42,14 +42,17 @@ for page_num in range(totalPages):
     '&localizedRangeStr=%7BlowestPrice%7D%20%E2%80%94%20%7BhighestPrice%7D'
     r = requests.get(url_shoe)
     response = json.loads(r.text)
-    price = response['data']['products']['products'][0]['colorways'][0]['price']['currentPrice']
+    # price = response['data']['products']['products'][0]['colorways'][0]['price']['currentPrice']
     # 迴圈loop  每個頁面總共有 item perpage個商品
     for item_count in range(itemperpage):
         # 確認每個主商品底下有幾個商品
-        colorways_count = len(response['data']['products']['products'][item_count]['colorways'])
-        for count in range(colorways_count):
-            currentprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['currentPrice'])
-            fullprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['fullPrice'])
+        try:
+            colorways_count = len(response['data']['products']['products'][item_count]['colorways'])
+            for count in range(colorways_count):
+                currentprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['currentPrice'])
+                fullprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['fullPrice'])
+        except:
+            print('colorways exception')
             
 newdata['discountrate_shoe'] = round(sum(currentprice)/sum(fullprice)*100,2)
 newdata['totalResources_shoe'] = totalResources
@@ -85,16 +88,20 @@ for page_num in range(totalPages):
         '&localizedRangeStr=%7BlowestPrice%7D%20%E2%80%94%20%7BhighestPrice%7D'
     r = requests.get(url_cloth)
     response = json.loads(r.text)
-    price = response['data']['products']['products'][0]['colorways'][0]['price']['currentPrice']
+    # price = response['data']['products']['products'][0]['colorways'][0]['price']['currentPrice']
     # 迴圈loop  每個頁面總共有 item perpage個商品
     for item_count in range(itemperpage):
         # 計算產品數量
         total_item_product += 1
         # 確認每個主商品底下有幾個商品
-        colorways_count = len(response['data']['products']['products'][item_count]['colorways'])
-        for count in range(colorways_count):
-            currentprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['currentPrice'])
-            fullprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['fullPrice'])
+
+        try:
+            colorways_count = len(response['data']['products']['products'][item_count]['colorways'])
+            for count in range(colorways_count):
+                currentprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['currentPrice'])
+                fullprice.append(response['data']['products']['products'][item_count]['colorways'][count]['price']['fullPrice'])
+        except:
+            print('colorways exception')
 
 newdata['discountrate_cloth'] = round(sum(currentprice)/sum(fullprice)*100,2)
 newdata['totalResources_cloth'] = totalResources
@@ -106,21 +113,22 @@ newdata['timestamp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 # --------------------------------------- 準備新舊資料合併
 if platform.system() == "Windows":
     # Local 端
-	path = 'static/data/Sports/nike.csv'
+    path = 'static/data/Sports/nike.csv'
 else:
     # AWS 端
-	path = "/home/cathaylife04/smartphone/iphone11/static/data/Sports/nike.csv"
+    path = "/home/cathaylife04/smartphone/iphone11/static/data/Sports/nike.csv"
 
-# # Read Old Data 
-# Data = pd.read_csv(path)
-# Old_Data = Data.to_dict('records')
-
-# newdata = newdata + Old_Data
-# newres = res
+# Read Old Data 
+Data = pd.read_csv(path)
+Old_Data = Data.to_dict('records')
 
 newdata = [newdata]
+newdata = newdata + Old_Data
+
 df = pd.DataFrame(newdata)
-df = df.drop_duplicates()
+# drop 重複的某個欄位資訊
+# https://stackoverflow.com/questions/12497402/python-pandas-remove-duplicates-by-columns-a-keeping-the-row-with-the-highest
+df = df.drop_duplicates(subset='timestamp', keep="last")
 # Pivot value:欲處理的資訊(相加 取平均 等等等)
 #index:列向量
 #columns:行向量
