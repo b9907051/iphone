@@ -1,11 +1,2 @@
-﻿discountrate_shoe,totalResources_shoe,discountrate_cloth,totalResources_cloth,timestamp
-70.9,519,69.82,1954,2021-05-03
-70.67,510,69.57,1934,2021-05-02
-70.63,520,69.67,1973,2021-05-01
-72.05,477,72.26,1778,2021-04-30
-70.85,471,72.94,1781,2021-04-29
-70.39,480,72.93,1792,2021-04-28
-71.26,476,73.73,1780,2021-04-27
-71.43,473,73.45,1797,2021-04-26
-71.43,474,73.45,1797,2021-04-25
-71.48,479,73.51,1805,2021-04-24
+﻿discount_item_ratio_shoes,discount_money_shoes,discount_item_ratio_clothes,discount_money_clothes,timestamp
+23.18,74.94,27.93,72.78,2021-05-03

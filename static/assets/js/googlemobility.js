@@ -75,7 +75,7 @@
                 // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
                 const Data = res.data[country];
                 // console.log(typeof Data)
-                console.log(res.data)
+                // console.log(res.data)
                 // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
 
                 // 把後端拿到的json : {US:{xaxis:[...],parks:[....],..},JP:{xaxis:[...],parks:[....]}....
@@ -94,9 +94,9 @@
                 // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
 
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
-                console.log('[last data]',X_axis.slice(-1))
+                // console.log('[last data]',X_axis.slice(-1))
                 var data_for_plot
-
+// 
                 data_for_plot = Object.values(data_set).map((d, i) => ({
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
                     label: Object.keys(d)[0],
@@ -112,81 +112,107 @@
                 }))
 
                 console.log('[data_for_plot]',data_for_plot)
-                console.log('[X_axis]',X_axis)
+                // console.log('[X_axis]',X_axis)
                 // canvas[1] = week[1] or day[1] 去對應 html 的 label
                 // period2ctx = {
                 //  week: { 1: ctx1_week, 2: ctx2_week },
                 //  day: { 1: ctx1_day, 2: ctx2_day }
                 // }
 
-                var myChart = new Chart(canvas, {
+                // var myChart = new Chart(canvas, {
+                //     type: 'line',
+                //     data: {
+                //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                //         datasets: [{
+                //             label: '# of Votes',
+                //             data: [12, 19, 3, 5, 2, 3]
+                //         }]
+                //     },
+                //     options: {
+                //       plugins: {
+                //         title: {
+                //           display: true,
+                //           text: "Hey look at me!",
+                //           font: {
+                //             size: 18
+                //           }
+                //         }
+                //       }
+                //     }
+                // });
 
-                    type: 'line',
-                    data: {
-                        // 取出第一個Data的key
-                        labels: X_axis,
-                        datasets: data_for_plot
-                    },
-                    options: {
-                        title: {
-                            display: true,
-                            text: country.concat('  Mobility-Trend') ,
-                            fontSize: 20
-                        },
-                        // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
-                        maintainAspectRatio: false,
-                        legend: {
-                            display: true
-                        },
-                        responsive: true,
-                        scales: {
-                            xAxes: [{
-                                ticks: {
-                                    align: 'end',
-                                    autoSkip: false,
-                                    // maxRotation: 90,
-                                    minRotation: 60,
-                                    // max: Xmax,
-                                },
-                                gridLines: {
-                                    drawOnChartArea: false
-                                },
-                                type: 'time',
-                                time: {
-                                    unit: 'day',
-                                    unitStepSize: 20,
-                                },
+                // var myChart = new Chart(canvas, {
 
-                                distribution: 'linear'
-                            }],
-                            yAxes: [{
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'percentage',
-                                    fontStyle: 'bold'
-                                },
-                                ticks: {
-                                    beginAtZero: true,
-                                    maxTicksLimit: 5,
+                //     type: 'line',
+                //     data: {
+                //         // 取出第一個Data的key
+                //         labels: X_axis,
+                //         datasets: data_for_plot
+                //     },
+                //     options: {
+                //         title: {
+                //             display: true,
+                //             // text: country.concat('  Mobility-Trend') ,
+                //             text: 'country',
+                //             fontSize: 20
+                //         },
+                //         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
+                //         maintainAspectRatio: false,
+                //         plugins: {
+                //                   legend: {
+                //                     position: 'top',
+                //                   }
+                //               },
 
-                                },
-                                gridLines: {
-                                    display: true
-                                }
-                            }]
-                        },
-                        elements: {
-                            point: {
-                                radius: 0,
-                                hitRadius: 10,
-                                hoverRadius: 4,
-                                hoverBorderWidth: 3
-                            }
-                        }
+                //         responsive: true,
+                //         scales: {
+                //             xAxes: [{
+                //                 ticks: {
+                //                     align: 'end',
+                //                     autoSkip: false,
+                //                     // maxRotation: 90,
+                //                     minRotation: 60,
+                //                     // max: Xmax,
+                //                 },
+                //                 gridLines: {
+                //                     drawOnChartArea: false
+                //                 },
+                //                 type: 'time',
+                //                 time: {
+                //                     unit: 'day',
+                //                     unitStepSize: 20,
+                //                 },
+
+                //                 distribution: 'linear'
+                //             }],
+                //             yAxes: [{
+                //                 scaleLabel: {
+                //                     display: true,
+                //                     labelString: 'percentage',
+                //                     fontStyle: 'bold'
+                //                 },
+                //                 ticks: {
+                //                     beginAtZero: true,
+                //                     maxTicksLimit: 5,
+
+                //                 },
+                //                 gridLines: {
+                //                     display: true
+                //                 }
+                //             }]
+                //         },
+                //         elements: {
+                //             point: {
+                //                 radius: 0,
+                //                 hitRadius: 10,
+                //                 hoverRadius: 4,
+                //                 hoverBorderWidth: 3
+                //             }
+                //         }
 
 
-                    }
-                });
+                //     }
+                // });
                 // console.log(myChart)
             }
                 //Todo Tmall量的部分
