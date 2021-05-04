@@ -23,6 +23,7 @@
     // var ctx11 = $('#google_TW');
     // var ctx12 = $('#google_RU');
 
+
     const brandPrimary = '#20a8d8'
     const brandSuccess = '#4dbd74'
     const brandInfo = '#63c2de'
@@ -111,35 +112,56 @@
 
                 }))
 
-                console.log('[data_for_plot]',data_for_plot)
-                // console.log('[X_axis]',X_axis)
+                // console.log('[data_for_plot]',data_for_plot)
+                console.log('[X_axis]',X_axis)
                 // canvas[1] = week[1] or day[1] 去對應 html 的 label
                 // period2ctx = {
                 //  week: { 1: ctx1_week, 2: ctx2_week },
                 //  day: { 1: ctx1_day, 2: ctx2_day }
                 // }
 
-                // var myChart = new Chart(canvas, {
-                //     type: 'line',
-                //     data: {
-                //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                //         datasets: [{
-                //             label: '# of Votes',
-                //             data: [12, 19, 3, 5, 2, 3]
-                //         }]
-                //     },
-                //     options: {
-                //       plugins: {
-                //         title: {
-                //           display: true,
-                //           text: "Hey look at me!",
-                //           font: {
-                //             size: 18
-                //           }
-                //         }
-                //       }
-                //     }
-                // });
+                var myChart = new Chart(canvas, {
+                    type: 'line',
+                    data: {
+                        // 取出第一個Data的key
+                        labels: X_axis,
+                        datasets: data_for_plot
+                    },
+                    options: {
+                        plugins: {
+                            title: {
+                              display: true,
+                              text: country.concat('  Mobility-Trend') ,
+                                  font: {
+                                    size: 18
+                                  }
+                            }
+                        },
+                        radius: 1,
+                        // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                type: 'time',
+                                // max: Xmax,
+                                time: {
+                                    unit: 'day',
+
+                                }
+                            }
+                        },
+                        elements: {
+                            PointElement: {
+                                radius: 1,
+                                hitRadius: 10,
+                                hoverRadius: 4,
+                                hoverBorderWidth: 3
+                            }
+                        }
+                    }
+                        
+                })
+            });
 
                 // var myChart = new Chart(canvas, {
 
@@ -152,7 +174,7 @@
                 //     options: {
                 //         title: {
                 //             display: true,
-                //             // text: country.concat('  Mobility-Trend') ,
+                //             // 
                 //             text: 'country',
                 //             fontSize: 20
                 //         },
@@ -216,7 +238,7 @@
                 // console.log(myChart)
             }
                 //Todo Tmall量的部分
-            )};
+
 })(jQuery);
 
 // function random (min, max) {
