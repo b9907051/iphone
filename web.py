@@ -220,7 +220,7 @@ def Tmallpage():
 def Nike():
     # 從前端 拿到要看的產品
     product = request.values.get("product")
-    df = pd.read_csv("static/data/Sports/Nike.csv")
+    df = pd.read_csv("static/data/Sports/nike.csv")
     data_dic = {}
     if product == 'Clothes':
         df_temp = df[['discount_item_ratio_clothes','discount_money_clothes']]
