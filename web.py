@@ -185,6 +185,13 @@ def TomTom_page():
                                         city_list_china =city_list_china,
                                         city_list_europe=city_list_europe)
 
+
+@app.route("/Nike-page")
+@is_logged_in
+def Nike_page():
+    return render_template("Nike.html")
+
+
 @app.route("/Intel_AMD_Marketshare-page")
 @is_logged_in
 def Intel_AMD_Marketshare_page():
@@ -207,6 +214,38 @@ def Zhongguancun():
 @is_logged_in
 def Tmallpage():
     return render_template("tmall.html")
+
+@app.route("/Nike")
+@is_logged_in
+def Nike():
+    # 從前端 拿到要看的產品
+    product = request.values.get("product")
+    df = pd.read_csv("static/data/Sports/Nike.csv")
+    data_dic = {}
+    if product == 'Clothes':
+        df_temp = df[['discount_item_ratio_clothes','discount_money_clothes']]
+
+    else:
+        df_temp = df[['discount_item_ratio_shoes','discount_money_shoes']]
+
+
+    df_temp.columns = ['打折數量比', '打折金額比']
+    # 將資料轉成list
+    data_dic[product] = {'打折數量比': df_temp['打折數量比'].values.tolist(),
+
+                         '打折金額比': df_temp['打折金額比'].values.tolist()
+    }
+    # data_dic:
+    # {clothes:
+    #     {
+    #         #打折數量比:[]
+    #         #打折金額比:[]
+    #     }
+    # }
+    data_dic['X_axis'] = df['timestamp'].values.tolist()
+
+    return json.dumps(data_dic)
+
 
 @app.route("/Shipping")
 @is_logged_in
