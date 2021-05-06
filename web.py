@@ -222,24 +222,25 @@ def Nike():
     product = request.values.get("product")
     df = pd.read_csv("static/data/Sports/nike.csv")
     data_dic = {}
-    if product == 'Clothes':
-        df_temp = df[['discount_item_ratio_clothes','discount_money_clothes']]
+    if product == '打折金額比':
+
+        df_temp = df[['discount_money_shoes','discount_money_clothes']]
 
     else:
-        df_temp = df[['discount_item_ratio_shoes','discount_money_shoes']]
+        df_temp = df[['discount_item_ratio_shoes','discount_item_ratio_clothes']]
 
 
-    df_temp.columns = ['打折數量比', '打折金額比']
+    df_temp.columns = ['shoes', 'clothes']
     # 將資料轉成list
-    data_dic[product] = {'打折數量比': df_temp['打折數量比'].values.tolist(),
+    data_dic[product] = {'shoes': df_temp['shoes'].values.tolist(),
 
-                         '打折金額比': df_temp['打折金額比'].values.tolist()
+                         'clothes': df_temp['clothes'].values.tolist()
     }
     # data_dic:
-    # {clothes:
+    # {打折金額比:
     #     {
-    #         #打折數量比:[]
-    #         #打折金額比:[]
+    #         #shoes:[]
+    #         #clothes:[]
     #     }
     # }
     data_dic['X_axis'] = df['timestamp'].values.tolist()

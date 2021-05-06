@@ -25,11 +25,13 @@
         return result
     }
 
-    const productlist = ['Clothes','Shoes']
-    for (const len in productlist){
-    renderChart(productlist[len], $('#nike_'+productlist[len]))
+    // const productlist = ['Clothes','Shoes']
+    // for (const len in productlist){
+    // renderChart(productlist[len], $('#nike_'+productlist[len]))
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
-    }
+    // }
+    renderChart('打折數量比', $('#nike_quant'))
+    renderChart('打折金額比', $('#nike_money'))
 
     function renderChart(product, canvas) {
         axios.get(`/Nike?product=${product}`)
@@ -74,8 +76,8 @@
                     data: d[Object.keys(d)[0]]
 
                 }))
-                console.log('[data_for_plot]',data_for_plot)
-                console.log('[X_axis]',X_axis)
+                // console.log('[data_for_plot]',data_for_plot)
+                // console.log('[X_axis]',X_axis)
 
                 var myChart = new Chart(canvas, {
                     type: 'line',
@@ -100,20 +102,28 @@
                         scales: {
                             x: {
                                 type: 'time',
-                                ticks:{
-                                    stepSize:50
+                                // ticks:{
+                                //     stepSize:50
+                                // },
+                                time: {
+                                      unit: 'day',
+                                      stepSize:1,
+                                      minUnit:'day'
                                 },
-                                    time: {
-                                          unit: 'day',
-                                          stepSize:20
-                                    },
+                            },
+
+                            y: {
+                                display: true,
+                                title: {
+                                  display: true,
+                                  text: 'percentage'
+                                }
                             }
                         },
                         elements: {
-                            PointElement: {
-                                radius: 1,
-                                hitRadius: 10,
-                                hoverRadius: 4,
+                            point: {
+                                radius: 2,
+                                hoverRadius: 5,
                                 hoverBorderWidth: 3
                             }
                         }
