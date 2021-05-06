@@ -159,11 +159,25 @@
 
                     },
                     options: {
-                        title: {
-                            display: true,
-                            text: 'Product:' + product,
-                            fontSize: 20
+                        type: 'line',
+                        data: {
+                            // 取出第一個Data的key
+                            labels: X_axis,
+                            datasets: datasetting
                         },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Product:' + product,
+                                fontSize: 20
+                            },
+                            annotation: {
+                                annotations: {
+                                  annotation1
+                                }
+                            }
+                        },
+
                         // 如果要自訂義畫布的大小要把 maintainAspectRatio給關掉
                         maintainAspectRatio: false,
                         legend: {
@@ -171,61 +185,36 @@
                         },
                         responsive: true,
                         scales: {
-                            x: [{
-                                ticks: {
-                                    autoSkip: false,
-                                    // maxRotation: 90,
-                                    minRotation: 60
-                                },
-                                gridLines: {
-                                    drawOnChartArea: false
-                                },
+                            x: {
                                 type: 'time',
+                                // ticks:{
+                                //     stepSize:50
+                                // },
                                 time: {
-                                    unit: 'day',
-                                    unitStepSize: 20,
+                                      unit: 'day',
+                                      stepSize:10,
+                                      // minUnit:'day'
                                 },
-                                distribution: 'linear'
-                            }],
-                            y: [{
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'price',
-                                    fontStyle: 'bold'
-                                },
-                                ticks: {
-                                    //beginAtZero: true,
-                                    maxTicksLimit: 5
-                                    //stepSize: Step,
-                                    //max: MaxPrice
+                            },
 
-                                },
-                                gridLines: {
-                                    display: true
+                            y: {
+                                display: true,
+                                // beginAtZero:false,
+                                title: {
+                                  display: true,
+                                  text: 'percentage'
                                 }
-                            }]
+                            }
                         },
                         elements: {
                             point: {
-                                radius: 0,
+                                radius: 1,
                                 hitRadius: 10,
-                                hoverRadius: 4,
+                                hoverRadius: 3,
                                 hoverBorderWidth: 3
                             }
                         },
-                            plugins: {
-                              annotation: {
-                                annotations: {
-                                  annotation1
-                                }
-                              }
-                            },
-                            scales: {
-                                  y: {
-                                    beginAtZero:false,
-                                    stacked: true
-                                  }
-                                }
+
 
                     }
                 });
