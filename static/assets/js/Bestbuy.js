@@ -30,16 +30,16 @@
     // renderChart(productlist[len], $('#nike_'+productlist[len]))
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
     // }
-    renderChart('打折數量比', $('#nike_quant'))
-    renderChart('打折金額比', $('#nike_money'))
+    renderChart('laptop','平均價格', $('#price_laptop'))
+    renderChart('laptop','市場觀察', $('#percentage_laptop'))
 
-    function renderChart(product, canvas) {
-        axios.get(`/Nike?product=${product}`)
+    function renderChart(product,request, canvas) {
+        axios.get(`/Bestbuy?product=${product}&request=${request}`)
 
             .then(function (res) {
 
                 // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
-                const Data = res.data[product];
+                const Data = res.data[request];
                 // console.log(typeof Data)
                 // console.log(res.data)
                 // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
@@ -58,7 +58,7 @@
                 const Xmax =  X_axis.slice(-1)
                 // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
                 // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-
+                console.log('[DATA]',Data)
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
                 // console.log('[last data]',X_axis.slice(-1))
                 var data_for_plot
@@ -90,7 +90,7 @@
                         plugins: {
                             title: {
                               display: true,
-                              text: product ,
+                              text: request ,
                                   font: {
                                     size: 18
                                   }

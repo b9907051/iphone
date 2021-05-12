@@ -191,6 +191,10 @@ def TomTom_page():
 def Nike_page():
     return render_template("Nike.html")
 
+@app.route("/Bestbuy-page")
+@is_logged_in
+def Bestbuy_page():
+    return render_template("Bestbuy.html")
 
 @app.route("/Intel_AMD_Marketshare-page")
 @is_logged_in
@@ -214,6 +218,42 @@ def Zhongguancun():
 @is_logged_in
 def Tmallpage():
     return render_template("tmall.html")
+
+@app.route("/Bestbuy")
+@is_logged_in
+def Bestbuy():
+
+    # 從前端 拿到要看的產品
+    product = request.values.get("product")
+    # 要看什麼資料
+    datatype = request.values.get("request")
+
+    df = pd.read_csv("static/data/Electronics/Bestbuy.csv")
+
+    # 如果欄位名稱裡面有product的字串就拿出來
+    product_cols = [col for col in df.columns if product in col]
+    # 只拿出對應產品的欄位
+    df_temp = df[product_cols]
+    data_dic = {}
+
+    # 如果是想看價格:
+    if datatype == '平均價格':
+        df_temp = df_temp[['lowprice_average_'+ product,'highprice_average_'+ product]]
+        df_temp.columns = ['lowPrice', 'highPrice']
+        data_dic[datatype] = {'lowPrice': df_temp['lowPrice'].values.tolist(),
+                             'highPrice': df_temp['highPrice'].values.tolist()
+        }
+    # 如果是想看soldout percentage or onsale percentage:
+    else:
+        df_temp = df_temp[['soldout_percent_'+ product,'onsale_percent_'+ product]]
+        df_temp.columns = ['soldout', 'onsale']
+        data_dic[datatype] = {'soldout': df_temp['soldout'].values.tolist(),
+                             'onsale': df_temp['onsale'].values.tolist()
+        }
+
+    data_dic['X_axis'] = df['timestamp'].values.tolist()
+    print(data_dic)
+    return json.dumps(data_dic)
 
 @app.route("/Nike")
 @is_logged_in

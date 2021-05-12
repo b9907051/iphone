@@ -193,7 +193,7 @@
                                 time: {
                                       unit: 'day',
                                       stepSize:10,
-                                      // minUnit:'day'
+                                      tooltipFormat:'yyyy-MM-dd'
                                 },
                             },
 
