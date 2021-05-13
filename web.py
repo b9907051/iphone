@@ -194,7 +194,8 @@ def Nike_page():
 @app.route("/Bestbuy-page")
 @is_logged_in
 def Bestbuy_page():
-    return render_template("Bestbuy.html")
+    product = request.values.get("product")
+    return render_template("Bestbuy.html",product = product)
 
 @app.route("/Intel_AMD_Marketshare-page")
 @is_logged_in
@@ -235,24 +236,32 @@ def Bestbuy():
     # 只拿出對應產品的欄位
     df_temp = df[product_cols]
     data_dic = {}
-
     # 如果是想看價格:
-    if datatype == '平均價格':
-        df_temp = df_temp[['lowprice_average_'+ product,'highprice_average_'+ product]]
-        df_temp.columns = ['lowPrice', 'highPrice']
-        data_dic[datatype] = {'lowPrice': df_temp['lowPrice'].values.tolist(),
-                             'highPrice': df_temp['highPrice'].values.tolist()
-        }
+    if 'high' in datatype:
+        df_temp = df_temp[['highprice_average_'+ product]]
+        
+        df_temp.columns = ['highPrice']
+        data_dic[datatype] = df_temp['highPrice'].values.tolist()
+
+    elif 'low' in datatype:
+        df_temp = df_temp[['lowprice_average_'+ product]]
+        
+        df_temp.columns = ['lowPrice']
+        data_dic[datatype] = df_temp['lowPrice'].values.tolist()
     # 如果是想看soldout percentage or onsale percentage:
-    else:
-        df_temp = df_temp[['soldout_percent_'+ product,'onsale_percent_'+ product]]
-        df_temp.columns = ['soldout', 'onsale']
-        data_dic[datatype] = {'soldout': df_temp['soldout'].values.tolist(),
-                             'onsale': df_temp['onsale'].values.tolist()
-        }
+    elif 'onsale' in datatype:
+        df_temp = df_temp[['stock_onsale_'+ product]]
+        
+        df_temp.columns = ['stock_onsale']
+        data_dic[datatype] = df_temp['stock_onsale'].values.tolist()
+
+    elif 'soldout' in datatype:
+        df_temp = df_temp[['stock_soldout_'+ product]]
+        
+        df_temp.columns = ['stock_soldout']
+        data_dic[datatype] = df_temp['stock_soldout'].values.tolist()
 
     data_dic['X_axis'] = df['timestamp'].values.tolist()
-    print(data_dic)
     return json.dumps(data_dic)
 
 @app.route("/Nike")

@@ -85,7 +85,7 @@
                 // 1: JP:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
 
                                 // .map(k => ({ [k]: Data[k] }));
-
+                
                 const X_axis = res.data['X_axis'];
                 // const workplaces = Data.workplace;
                 // const residential = Data.residential;

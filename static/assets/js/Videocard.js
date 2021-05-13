@@ -131,6 +131,7 @@
                     data: price
 
                 }]
+                console.log(datasetting)
                 // 這裡的 canvas 是陣列, 在TomTom2js 裡面不是這樣宣告的所以不用加上[0]
                 canvas[0].height = 400
                 // console.log('Xaxis',X_axis)

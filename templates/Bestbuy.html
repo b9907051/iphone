@@ -11,9 +11,10 @@
                 </div>
                 <div class="card-body text-white bg-danger">
                     <p class="card-text text-light">
-                        本資料提供兩項關鍵數據 【打折金額比】 及 【打折數量比】<br>
-                        打折金額比: 所有打折的項目之現價加總 / 所有打折的項目之原價加總<br>
-                        打折數量比: 所有打折的項目之數量 / 所有品項
+                        本資料提供四關鍵數據 【高/低價平均價格】 及 【完售比】 及 【打折數量比】 <br>
+                        平均價格: {{product}} 產品在前/後 50名平均價格<br>
+                        完售比: soldout 數量占產品數量比重 (%)<br>
+                        打折數量比: onsale 數量數量占產品數量比重 (%)
                     </p>
 
                 </div>
@@ -29,13 +30,18 @@
                         <canvas id="polarChart"></canvas>
                     </div> -->
                     <!-- <div class="col-lg-12 col-md-12" style = "height:400px"> -->
-                    <div class="col-lg-12 col-md-12" style = "height:400px">
-                        <canvas id="price_laptop"></canvas>
+                    <div class="col-lg-6 col-md-6" style = "height:200px">
+                        <canvas id="price_high_laptop"></canvas>
                     </div>
-                    <div class="col-lg-12 col-md-12" style = "height:400px">
-                        <canvas id="percentage_laptop"></canvas>
+                    <div class="col-lg-6 col-md-6" style = "height:200px">
+                        <canvas id="price_low_laptop"></canvas>
                     </div>
-                    <!-- <div class="col-lg-12 col-md-12" style = "height:400px"> -->
+                    <div class="col-lg-6 col-md-6" style = "height:200px">
+                        <canvas id="stock_onsale_laptop"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style = "height:200px">
+                        <canvas id="stock_soldout_laptop"></canvas>
+                    </div>
 
 
                 </div>
