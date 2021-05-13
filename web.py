@@ -229,7 +229,7 @@ def Bestbuy():
     # 要看什麼資料
     datatype = request.values.get("request")
 
-    df = pd.read_csv("static/data/Electronics/Bestbuy.csv")
+    df = pd.read_csv("static/data/Electronics/bestbuy.csv")
 
     # 如果欄位名稱裡面有product的字串就拿出來
     product_cols = [col for col in df.columns if product in col]
