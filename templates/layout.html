@@ -127,18 +127,26 @@
         <!-- /header -->
         <!-- Header-->
 
-        <div class="breadcrumbs" style = "line-height:3;">
+        <!-- <div class="breadcrumbs" style = "line-height:3;"> -->
             
-            <div class="col-sm-4">
+
+            <header id="header" class="header">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
-                        <div class="page-header float-left">
+                            <a class="btn-secondary btn-lg mb-1" href="data/zipfile/Videocard.zip" role="button">Graphicard Data</a>
+                            <a class="btn-secondary btn-lg mb-1" href="data/zipfile/Shippingdata.zip" role="button">Shipping Data</a>
+                            <a class="btn-secondary btn-lg mb-1" href="data/Sports/nike.csv" role="button">Nike Data</a>
+                        <!-- </div> -->
+                        <!-- <div class="col-lg-1 col-md-1"> -->
+
+                        <!-- </div> -->
+<!--                         <div class="page-header float-left">
                             <div class="page-title" style = "position:relative; top:9px;">
                                 <a class="btn btn-primary" href="data/zipfile/Videocard.zip" role="button">Graphicard Data</a>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="page-header float-left">
+<!--                         <div class="page-header float-left">
                             <div class="page-title" style = "position:relative; top:9px; bottom:9px;">
                              <a class="btn btn-primary" href="data/zipfile/Shippingdata.zip" role="button">Shipping Data</a>
                             </div>
@@ -148,11 +156,12 @@
                             <div class="page-title" style = "position:relative; top:9px; bottom:9px;">
                              <a class="btn btn-primary" href="data/Sports/nike.csv" role="button">Nike Data</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-            </div>
 
-            <div class="col-sm-8">
+            </header>
+
+<!--             <div class="col-sm-8">
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
@@ -160,8 +169,8 @@
                         </ol>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
         {% block body %}
 

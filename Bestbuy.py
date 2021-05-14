@@ -10,6 +10,11 @@ import random
 import platform
 import numpy as np
 
+# 拿到一年前的日期 協理指示我們只要看一年內的產品 52weeks
+datetimenow = datetime.datetime.now()
+one_year_earlier = datetimenow - datetime.timedelta(weeks=52)
+one_year_earlier = datetime.datetime.strftime(one_year_earlier, "%Y-%m-%d")
+
 
 product_list = {
     'laptop':'pcmcat138500050001'
@@ -21,7 +26,8 @@ for product,code in product_list.items():
 
     # 我們直接取排名50個
     # 搜索某個類別按價格排序(低到高)(條件:要是可以購買的狀態 orderable=Available)
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available )'\
+    
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available&startDate>{one_year_earlier})'\
     '?format=json&show=salePrice&pageSize=50&sort=salePrice&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
@@ -32,7 +38,7 @@ for product,code in product_list.items():
     newdata['lowprice_average_'+ product ] = round(np.average(lowprice),2)
 
     # 搜索某個類別按價格排序(高到低)(條件:要是可以購買的狀態 orderable=Available)
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available )'\
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available&startDate>{one_year_earlier})'\
     '?format=json&show=salePrice&pageSize=50&sort=salePrice.dsc&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
@@ -43,7 +49,7 @@ for product,code in product_list.items():
     newdata['highprice_average_'+ product] = round(np.average(highprice),2)
 
     # 搜索某個類別全部的商品
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&(orderable=Available|orderable=SoldOut))'\
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&(orderable=Available|orderable=SoldOut)&startDate>{one_year_earlier})'\
     '?format=json&show=onSale&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
@@ -51,7 +57,7 @@ for product,code in product_list.items():
     print('total_amount:',total_amount)
 
     # 搜索某個類別在架上的商品
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available)'\
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=Available&startDate>{one_year_earlier})'\
     '?format=json&show=onSale&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
@@ -59,7 +65,7 @@ for product,code in product_list.items():
     print('orderable_amount:',orderable_amount)
 
     # 搜索某個類別有打折且在架上的商品
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&onSale=true&orderable=Available)'\
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&onSale=true&orderable=Available&startDate>{one_year_earlier})'\
     '?format=json&show=onSale&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
@@ -68,21 +74,22 @@ for product,code in product_list.items():
 
 
     # 搜索某個類別賣光的商品
-    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=SoldOut)'\
+    url = f'https://api.bestbuy.com/v1/products(categoryPath.id={code}&orderable=SoldOut&startDate>{one_year_earlier})'\
     '?format=json&show=orderable&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
+    print(response)
     soldout_amount = response['total']
     print('soldout_amount:',soldout_amount)
 
 
     # 賣光比: 所有賣光的量/所有商品量
-    newdata['soldout_percent_'+ product] = round(soldout_amount/total_amount*100,2)
-    print('sold_outratio',newdata['soldout_percent_'+ product])
+    newdata['stock_soldout_'+ product] = round(soldout_amount/total_amount*100,2)
+    print('soldout_ratio:',newdata['stock_soldout_'+ product])
 
     # 打折比比: 所有打折的量/所有架上商品量
-    newdata['onsale_percent_'+ product] = round(onsale_amount/orderable_amount*100,2)
-    print('onsale_percent',newdata['onsale_percent_'+ product])
+    newdata['stock_onsale_'+ product] = round(onsale_amount/orderable_amount*100,2)
+    print('onsale_ratio:',newdata['stock_onsale_'+ product])
 
     # 加上時間戳記
     newdata['timestamp'] = datetime.datetime.today().strftime("%Y-%m-%d")
