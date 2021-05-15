@@ -41,7 +41,7 @@
     const brandmeat = '#FFD4CA'
     const brandbrown = '#6b3900'
     var borderColorArr = [brandSuccess, brandDanger, brandPrimary,
-        brandyellow, brandblack, brandblue,
+        brandblack, brandblue, brandyellow, 
         brandmeat, brandbrown]
 
     // converHex 這個函數在後面會給出rgba(r,g,b)的字串 讓chart.js使用

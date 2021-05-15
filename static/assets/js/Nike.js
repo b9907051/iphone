@@ -11,7 +11,7 @@
     const brandmeat = '#FFD4CA'
     const brandbrown = '#6b3900'
     var borderColorArr = [brandSuccess, brandDanger, brandPrimary,
-        brandyellow, brandblack, brandblue,
+         brandblack, brandblue,brandyellow,
         brandmeat, brandbrown]
 
     // converHex 這個函數在後面會給出rgba(r,g,b)的字串 讓chart.js使用
@@ -40,28 +40,10 @@
 
                 // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
                 const Data = res.data[product];
-                // console.log(typeof Data)
-                // console.log(res.data)
-                // 這裡把data的key, 在google的檔案裡就是國家 ex:US,JP 傳到 map函數的 k 
-
-                // 把後端拿到的json : {US:{xaxis:[...],parks:[....],..},JP:{xaxis:[...],parks:[....]}....
-                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-                // 0: US:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
-                // 1: JP:{'X_axis':[....],'grocery_and_pharmacy':[.....],'parks':[....]}
-
-                                // .map(k => ({ [k]: Data[k] }));
-
                 const X_axis = res.data['X_axis'];
-                // const workplaces = Data.workplace;
-                // const residential = Data.residential;
-                // console.log('[DATA]',Data[product])
-                const Xmax =  X_axis.slice(-1)
-                // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
-                // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
                 // console.log('[last data]',X_axis.slice(-1))
-                var data_for_plot
+                let data_for_plot
 // 
                 data_for_plot = Object.values(data_set).map((d, i) => ({
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
@@ -79,7 +61,7 @@
                 // console.log('[data_for_plot]',data_for_plot)
                 // console.log('[X_axis]',X_axis)
 
-                var myChart = new Chart(canvas, {
+                let myChart = new Chart(canvas, {
                     type: 'line',
                     data: {
                         // 取出第一個Data的key
