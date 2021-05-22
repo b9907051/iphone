@@ -78,7 +78,7 @@ for product,code in product_list.items():
     '?format=json&show=orderable&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
     r = requests.get(url)
     response = json.loads(r.text)
-    print(response)
+    # print(response)
     soldout_amount = response['total']
     print('soldout_amount:',soldout_amount)
 
@@ -122,3 +122,4 @@ for product,code in product_list.items():
     #columns:行向量
     # path
     df.to_csv(path,encoding='utf_8_sig', index=False)
+    print('順利執行完成')
