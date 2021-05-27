@@ -273,10 +273,10 @@ def Nike():
     data_dic = {}
     if product == '打折金額比':
 
-        df_temp = df[['discount_money_shoes','discount_money_clothes']]
+        df_temp = df[['discount_money_shoes','discount_money_cloth']]
 
     else:
-        df_temp = df[['discount_item_ratio_shoes','discount_item_ratio_clothes']]
+        df_temp = df[['discount_item_ratio_shoes','discount_item_ratio_cloth']]
 
 
     df_temp.columns = ['shoes', 'clothes']
