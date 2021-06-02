@@ -197,7 +197,7 @@ for product,code in product_list.items():
     print('輸出統計資料')
     store_csv(newdata_status,'data_detail_allproduct_'+product)
     # print('onsale_percent:',newdata['onsale_percent'])
-    
+
     # print('total_amount:',newdata['total_amount'])
     # print('ordeble_amount:',newdata['ordeble_amount'])
     # print('soldout_amount:',newdata['soldout_amount'])
@@ -207,7 +207,7 @@ for product,code in product_list.items():
 
     
 #----- 將檔案打包成 zip file -------
-
+# product = 'laptop'
 if platform.system() == "Windows":
     # Local 端
     path = 'static/data'
