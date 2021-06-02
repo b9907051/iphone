@@ -228,40 +228,38 @@ def Bestbuy():
     product = request.values.get("product")
     # 要看什麼資料
     datatype = request.values.get("request")
+    # 拿出product 對應的csv
+    df = pd.read_csv("static/data/Electronics/bestbuy_"+product+".csv")
 
-    df = pd.read_csv("static/data/Electronics/bestbuy.csv")
 
-    # 如果欄位名稱裡面有product的字串就拿出來
-    product_cols = [col for col in df.columns if product in col]
-    # 只拿出對應產品的欄位
-    df_temp = df[product_cols]
     data_dic = {}
     # 如果是想看價格:
     if 'high' in datatype:
-        df_temp = df_temp[['highprice_average_'+ product]]
+        df_temp = df[['highprice_average']]
         
         df_temp.columns = ['highPrice']
         data_dic[datatype] = df_temp['highPrice'].values.tolist()
 
     elif 'low' in datatype:
-        df_temp = df_temp[['lowprice_average_'+ product]]
+        df_temp = df[['lowprice_average']]
         
         df_temp.columns = ['lowPrice']
         data_dic[datatype] = df_temp['lowPrice'].values.tolist()
     # 如果是想看soldout percentage or onsale percentage:
     elif 'onsale' in datatype:
-        df_temp = df_temp[['stock_onsale_'+ product]]
+        df_temp = df[['onsale_percent']]
         
         df_temp.columns = ['stock_onsale']
         data_dic[datatype] = df_temp['stock_onsale'].values.tolist()
 
     elif 'soldout' in datatype:
-        df_temp = df_temp[['stock_soldout_'+ product]]
+        df_temp = df[['soldout_percent']]
         
         df_temp.columns = ['stock_soldout']
         data_dic[datatype] = df_temp['stock_soldout'].values.tolist()
 
     data_dic['X_axis'] = df['timestamp'].values.tolist()
+
     return json.dumps(data_dic)
 
 @app.route("/Nike")

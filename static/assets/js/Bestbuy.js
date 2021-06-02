@@ -61,7 +61,7 @@
                 // const Xmax =  X_axis.slice(-1)
                 // 把後端拿到的json : {JP:{residential:[...],workplaces:[....],..}
                 // 拆開成一個一個dictionary 用陣列包著, 每個陣列裡的資訊是原本的key 對應到 該key對應到的data
-                // console.log('[DATA]',Data)
+
 
                 // console.log('[last data]',X_axis.slice(-1))
                 var data_for_plot
@@ -79,6 +79,7 @@
                     data: Y_value
 
                 }]
+
                 switch (request) {
                   case 'price_high':
                     titleofpic = "高價位平均價格";
@@ -93,8 +94,8 @@
                     titleofpic = "打折數量比";
                     break;
                 }
-                // console.log('[data_for_plot]',data_for_plot)
-                // console.log('[X_axis]',X_axis)
+                console.log('[data_for_plot]',data_for_plot)
+                console.log('[X_axis]',X_axis)
 
                 var myChart = new Chart(canvas, {
                     type: 'line',
@@ -105,6 +106,7 @@
                     },
                     options: {
                         plugins: {
+                            legend:false,
                             title: {
                               display: true,
                               text: titleofpic ,
