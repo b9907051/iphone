@@ -37,7 +37,7 @@ def store_csv(newdata,data_name):
     # drop 重複的某個欄位資訊
     # https://stackoverflow.com/questions/12497402/python-pandas-remove-duplicates-by-columns-a-keeping-the-row-with-the-highest
 
-    df = df.drop_duplicates(subset='Timestamp', keep="last")
+    df = df.drop_duplicates()
     # Pivot value:欲處理的資訊(相加 取平均 等等等)
     #index:列向量
     #columns:行向量

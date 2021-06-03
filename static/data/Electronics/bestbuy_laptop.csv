@@ -1,4 +1,5 @@
-﻿highprice_average,lowprice_average,soldout_percent,onsale_percent,total_amount,ordeble_amount,soldout_amount,onsale_amount,non_onsale_amount,timestamp
-2002.15,293.41,37.16,15.28,479,301,178,46,255,2021-06-02
-2027.55,298.21,36.19,15.74,478,305,173,48,257,2021-06-01
-1996.79,279.91,35.62,16.18,480,309,171,50,259,2021-05-31
+﻿lowprice_average,highprice_average,soldout_percent,onsale_percent,total_amount,ordeble_amount,soldout_amount,onsale_amount,non_onsale_amount,timestamp
+289.61,1994.37,35.61,14.57,469,302,167,44,258,2021-06-03
+293.41,2002.15,37.16,15.28,479,301,178,46,255,2021-06-02
+298.21,2027.55,36.19,15.74,478,305,173,48,257,2021-06-01
+279.91,1996.79,35.62,16.18,480,309,171,50,259,2021-05-31

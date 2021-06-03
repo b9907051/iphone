@@ -1,4 +1,473 @@
 ﻿timestamp,regularPrice_laptop,salePricelaptop,item_laptop,orderable_laptop,onSale_laptop,sale_start_date
+2021-06-03,999.99,999.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Space Gray",Available,False,2020-11-10
+2021-06-03,1249.99,1249.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Space Gray",Available,False,2020-11-10
+2021-06-03,1299.0,1299.0,"HP - ProBook 650 G5 Notebook PC - 15.6"" Display - 8 GB RAM - 256 GB SSD",SoldOut,False,2020-06-15
+2021-06-03,349.0,349.0,Lenovo - 14e Chromebook Multi-Touch,Available,False,2020-07-01
+2021-06-03,1999.99,1999.99,"Acer - Swift 7 14"" Touchscreen Notebook - i7-8500Y - 16GB Memory - UHD Graphics 615 - 512GB Solid State Drive",SoldOut,False,2020-10-27
+2021-06-03,1789.0,1789.0,"HP - Elite Dragonfly Notebook PC - 13.3"" Display - 16 GB RAM - 256 GB SSD",Available,False,2020-06-15
+2021-06-03,929.0,929.0,"Lenovo - 15.6"" ThinkPad E15 Laptop - 8GB Memory - Intel Core i7 - 500GB Hard Drive",Available,False,2020-08-26
+2021-06-03,849.99,849.99,ASUS - ExpertBook 14 ”Laptop i5-8265U 8GB 256GB  + TPM - Slab Gray,Available,False,2020-07-12
+2021-06-03,219.0,219.0,"HP - 11.6"" Chromebook - Intel Celeron - 4GB Memory - 32GB eMMC Flash Memory - Ash Gray",Available,False,2020-06-08
+2021-06-03,1149.99,1149.99,"Acer - TravelMate P6 14""Laptop - Intel Core i5-8250U - 8G Memory - 256GB Solid Stste Drive - W10Pro",Available,False,2021-04-10
+2021-06-03,879.0,879.0,"Lenovo - 14"" ThinkPad E14 Laptop -8GB Memory - Intel Core i7 - 500GB  Hard Drive",Available,False,2020-08-26
+2021-06-03,344.0,344.0,HP - ProBook x360 11 G5 EE Notebook - 4 GB Memory - 64 GB eMMC Storage,Available,False,2021-01-20
+2021-06-03,629.0,629.0,"HP - 2-in-1 14"" Touch-Screen Chromebook - Intel Core i3 - 8GB Memory - 64GB eMMC Flash Memory - Mineral Silver",Available,False,2020-06-08
+2021-06-03,729.99,729.99,"Dell - Inspiron 14 7000 2-in-1 - 14"" Touch Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB SSD - Sandstorm",Available,False,2020-06-19
+2021-06-03,929.99,929.99,"Dell - Inspiron 14 7000 2-in-1 - 14"" Touch-Screen Laptop - AMD Ryzen 7 - 16GB Memory - 512GB SSD - Sandstorm",Available,False,2020-06-19
+2021-06-03,1149.99,1034.99,"Dell - Inspiron 15 7000 2-in-1 15.6"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD + 32GB Intel Optane - silver",SoldOut,True,2020-06-19
+2021-06-03,1099.0,1099.0,"Apple - Macbook Air With Retina True Tone Display - 13.3"" - Core i5 - 8 GB RAM - 256 GB SSD",SoldOut,False,2020-06-22
+2021-06-03,1299.0,1299.0,"Apple - Macbook Air With Retina True Tone Display - 13.3"" - CORE i5 - 16 GB RAM - 256 GB SSD",SoldOut,False,2020-06-22
+2021-06-03,779.99,779.99,"Dell - Inspiron 2-in-1 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Titan Gray",SoldOut,False,2020-07-17
+2021-06-03,889.99,889.99,"Dell - Inspiron 2-in-1 14"" Touch-Screen Laptop - Intel Core i7 - 8GB Memory - 256GB SSD - Titan Gray",SoldOut,False,2020-07-17
+2021-06-03,499.0,499.0,"Lenovo - C340-15 2-in-1 15.6"" Touch-Screen Chromebook - Intel Core i3 - 4GB Memory - 64GB eMMC Flash Memory - Mineral Gray",Available,False,2020-06-05
+2021-06-03,999.99,999.99,"ASUS - Chromebook Flip C436 2-in-1 14"" Touchscreen FHD Laptop - i5-10210U 16GB 512GB - Wi-Fi 6  Magnesium Alloy - White - White",Available,False,2020-09-18
+2021-06-03,969.99,969.99,"Dell - Latitude 3000 13.3"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Black",Available,False,2020-12-24
+2021-06-03,2259.0,2259.0,"HP Elite Dragonfly Notebook PC - 13.3"" Display - 16 GB RAM - 512 GB SSD",Available,False,2020-06-15
+2021-06-03,219.99,219.99,"HP - Stream 11.6"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC Flash Memory - Diamond White",Available,False,2020-06-07
+2021-06-03,949.99,949.99,"Samsung - Galaxy Book S 13.3"" Laptop – Intel® Core™ i5-L16G7 Processor - 8GB Memory - 256GB SSD - Mercury Gray",SoldOut,False,2020-07-17
+2021-06-03,899.99,899.99,ASUS - ExpertBook 14”Laptop i5-8265U 8GB 512GB + TPM - Slab Gray,Available,False,2020-07-12
+2021-06-03,899.99,899.99,"MSI - 14"" FHD IPS Notebook - Intel Core i5 (10th Gen) i5-10210U - 8GB - NVIDIA GeForce MX330 - 512GB SSD - Carbon Gray",Available,False,2020-06-10
+2021-06-03,849.99,849.99,"MSI - Modern 15 A10M-242 15.6"" Notebook - Intel Core i5 (10th Gen) i5-10210U - 8GB - Interl UHD - 512GB SSD - Black",SoldOut,False,2020-06-10
+2021-06-03,799.99,799.99,"ASUS - ZenBook - 13"" Ultra-Slim FHD Laptop - Intel Core i5-1035G1 - 8GB 256GB - Pine Grey",Available,False,2020-07-20
+2021-06-03,629.0,629.0,"Acer - Chromebook Spin 713 2-in-1 13.5"" 2K VertiView 3:2 Touch - Intel i5-10210U - 8GB Memory - 128GB SSD – Steel Gray",Available,False,2020-06-14
+2021-06-03,2359.0,2359.0,"HP - Elite Dragonfly Notebook PC - 13.3"" Display - 16 GB RAM - 1 TB SSD",Available,False,2020-06-15
+2021-06-03,999.99,999.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Silver",Available,False,2020-11-10
+2021-06-03,1249.99,1249.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Silver",Available,False,2020-11-10
+2021-06-03,999.99,999.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Gold",Available,False,2020-11-10
+2021-06-03,1249.99,1249.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Gold",Available,False,2020-11-10
+2021-06-03,1299.99,1199.99,"MacBook Pro 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Space Gray",Available,True,2020-11-10
+2021-06-03,1299.99,1199.99,"MacBook Pro 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Silver",Available,True,2020-11-10
+2021-06-03,1499.99,1399.99,"MacBook Pro 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Space Gray",Available,True,2020-11-10
+2021-06-03,1499.99,1399.99,"MacBook Pro 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Silver",Available,True,2020-11-10
+2021-06-03,299.99,219.99,"Kano PC - 11.6"" Kids Touch-Screen Laptop & Tablet - 1.10 GhZ Processor - Windows 10 - 4GB Memory - 64GB Storage - Black",Available,True,2020-06-15
+2021-06-03,199.0,169.0,"Lenovo - Chromebook 3 11"" Chromebook - AMD A6 - 4GB Memory - 32GB eMMC Flash Memory - Onyx Black",Available,True,2020-09-23
+2021-06-03,279.0,223.99,"Lenovo - Chromebook Flex 3 11"" MTK 2-in-1 11.6"" Touch Screen Chromebook - MediaTek MT8173C - 4GB Memory - 32GB eMMC Flash Memory - Platinum Grey",SoldOut,True,2020-10-04
+2021-06-03,869.99,869.99,"Dell - Latitude 3410 14"" Laptop - i5-10210U - 8GB Memory - Intel UHD Graphics - 256GB Solid State Drive",Available,False,2020-12-24
+2021-06-03,746.99,746.99,"Dell - Latitude 3000 15.6"" Laptop - Intel Core i5 - 4 GB Memory - 500 GB HDD - Gray",Available,False,2020-12-24
+2021-06-03,859.99,859.99,"Dell - Latitude 3510 15.6"" Notebook - Intel Core i5 10210U - 8 GB RAM - Intel UHD - 256 GB SSD",Available,False,2021-01-26
+2021-06-03,949.99,892.99,"Dell - Latitude 3000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,True,2020-12-24
+2021-06-03,969.99,969.99,"Lenovo - 15.6"" ThinkPad L15 Gen 1 Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",Available,False,2020-08-26
+2021-06-03,746.99,746.99,"Dell - Latitude 3000 15.6"" Laptop - Intel Core i5 - 8 GB Memory - 500 GB HDD - Gray",Available,False,2020-12-24
+2021-06-03,2099.99,2099.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i7 - 16 GB Memory - 512 GB SSD - Aluminum Titan Gray",SoldOut,False,2021-01-26
+2021-06-03,1349.99,1349.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2020-12-24
+2021-06-03,616.99,616.99,"Dell - Latitude 3000 15.6"" Laptop - Intel Core i3 - 4 GB Memory - 500 GB HDD - Gray",Available,False,2020-12-24
+2021-06-03,464.0,464.0,HP - ProBook x360 11 G5 EE Notebook - 4 GB Memory - 64 GB eMMC Storage,Available,False,2021-01-20
+2021-06-03,799.99,799.99,"ASUS - Chromebook Flip C436 14"" 2-in-1 Touchscreen FHD Laptop - Intel Core i3-10110U 8GB 128GB Magnesium-Alloy - Silver",Available,False,2020-09-18
+2021-06-03,379.99,379.99,"ASUS - 15.6"" Laptop AMD Athlon Silver 3050U 8GB 1TB - Slate Grey",Available,False,2020-07-27
+2021-06-03,969.0,969.0,"Lenovo - 14"" ThinkBook 14 IIL Laptop - 16GB Memory - Intel Core i7 - 512GB Hard Drive",Available,False,2020-08-26
+2021-06-03,859.0,859.0,"Lenovo - 13.3"" ThinkPad L13 Laptop, Silver",Available,False,2020-11-16
+2021-06-03,1009.99,1009.99,"Dell - Latitude 3000 3510 15.6"" Notebook Full HD - Intel(10th Gen) i7-10510U Quad-core - 8 GB RAM - Intel UHD - 256 GB SSD",Available,False,2021-01-26
+2021-06-03,919.99,919.99,"Lenovo - 14"" ThinkPad L14 Gen 1 Laptop - 8GB Memory - AMD Ryzen 5 PRO - 256GB Hard Drive",Available,False,2020-08-26
+2021-06-03,1769.0,1769.0,HP - EliteBook 840 G7 Notebook - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,1769.0,1769.0,HP - EliteBook 850 G7 Notebook - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,2095.99,2095.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i7 - 16 GB Memory - 512 GB SSD - Gray",Available,False,2020-12-24
+2021-06-03,249.0,249.0,"ASUS - 14.0"" Chromebook - Intel Celeron N3350 - 4GB Memory  - 32GB eMMC - Grey",Available,False,2020-08-16
+2021-06-03,299.99,299.99,"ASUS - 14.0"" Laptop - Intel Celeron N4020 - 4GB Memory - 128GB eMMC - Blue",Available,False,2020-11-18
+2021-06-03,219.99,219.99,"HP - 14"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Snowflake white",Available,False,2020-09-06
+2021-06-03,1659.0,1659.0,"Lenovo - 15.6"" ThinkPad P15s Gen 1 Laptop, Black",Available,False,2020-11-16
+2021-06-03,799.99,799.99,"ASUS - Vivobook 17.3"" Laptop - AMD Ryzen 7 - 12GB Memory - AMD Radeon Vega 10 - 512GB SSD - Silver",Available,False,2020-11-17
+2021-06-03,1729.99,1529.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Shadow Black",Available,True,2020-10-14
+2021-06-03,799.99,799.99,"Lenovo - IdeaPad S340 15"" Touch-Screen Laptop - AMD Ryzen 7 3700U - 12GB Memory - 512GB Solid State Drive - Abyss Blue",Available,False,2020-09-23
+2021-06-03,1049.99,899.99,"Lenovo - Yoga 7i 2-in-1 14"" Touch Screen Laptop - Intel Evo Platform Core i7 - 12GB Memory - 512GB Solid State Drive - Slate Grey",Available,True,2020-10-14
+2021-06-03,829.99,829.99,"Lenovo - Yoga 7i 2-in-1 15.6"" Touch Screen Laptop - Intel Core i5 - 8GB Memory - 256GB Solid State Drive - Slate Grey",Available,False,2020-10-14
+2021-06-03,1399.99,1199.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Mica",Available,True,2020-09-30
+2021-06-03,929.99,799.99,"Lenovo - Yoga 7i 2-in-1 14"" Touch Screen Laptop - Intel Evo Platform Core i5 - 12GB Memory - 512GB Solid State Drive - Dark Moss",Available,True,2020-10-14
+2021-06-03,1829.99,1629.99,"Lenovo - Yoga 9i 15"" 2-in-1 Touch-Screen Laptop - Intel Core i7 - 16GB Memory - NVIDIA GeForce GTX 1650Ti - 1TB SSD - Slate Gray",Available,True,2020-10-14
+2021-06-03,599.99,449.99,"Lenovo - IdeaPad 3 15"" Touch Screen Laptop - Intel Core i5-1035G1 - 12GB Memory - 256GB SSD - Platinum Grey",SoldOut,True,2020-10-04
+2021-06-03,1079.99,1079.99,"Lenovo - Yoga 7i 2-in-1 15.6"" HDR Touch Screen Laptop - Intel Evo Platform Core i7 - 12GB Memory - 512GB Solid State Drive - Dark Moss",Available,False,2020-10-14
+2021-06-03,1479.99,1479.99,"Lenovo - 13.3"" ThinkPad X13 Gen 1 Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",Available,False,2020-08-26
+2021-06-03,1949.99,1949.99,"Lenovo - 14"" ThinkPad T14s Gen 1 Laptop - 16GB Memory - Intel Core i7 - 512GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1519.99,1519.99,"Lenovo - 14"" ThinkPad T14s Gen 1 Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1829.99,1829.99,"Lenovo - 14"" ThinkPad T14s Gen 1 Laptop - 16GB Memory - Intel Core i7 - 512GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1969.99,1969.99,"Lenovo - 13.3"" ThinkPad X13 Yoga Gen 1 Laptop - 16GB Memory - Intel Core i7 - 512GB Hard Drive",Available,False,2020-08-26
+2021-06-03,1639.99,1639.99,"Lenovo - 15.6"" Legion 5 Gaming Laptop - 16GB Memory -Intel Core i7 - 1TB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,3099.99,3099.99,"Lenovo - 15.6"" Legion 7 Gaming Laptop - 32GB Memory - Intel Core i9 - 1TB Hard Drive",Available,False,2020-08-26
+2021-06-03,1674.0,1525.99,"Lenovo - 14"" ThinkPad X1 Yoga Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",Available,True,2020-08-26
+2021-06-03,1699.0,1699.0,"Lenovo - 14"" ThinkPad X1 Gen 8 Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",Available,False,2020-08-26
+2021-06-03,1469.99,1469.99,"Lenovo - 14"" ThinkPad T14 Gen 1 Laptop - 8GB Memory -Intel Core i5 - 256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1369.0,1369.0,"Lenovo - 14"" ThinkPad T14 Gen 1 Laptop - 8GB Memory -Intel Core i5 - 256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,959.0,959.0,"Lenovo - 15.6"" ThinkPad L15 Gen 1 Laptop - 8GB Memory - AMD Ryzen 5 PRO - 256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,969.99,969.99,"Lenovo - 14"" ThinkPad L14 Gen 1 Laptop - 8GB Memory - Intel Core i5 -256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1169.0,1169.0,"Lenovo - 14"" ThinkPad X13 Gen 1 Laptop - 8GB Memory - AMD Ryzen PRO - 256GB Hard Drive",Available,False,2020-08-26
+2021-06-03,1749.99,1749.99,"Lenovo - 14"" ThinkPad T14s Gen 1 Laptop - 16GB Memory - Intel Core i5 - 512GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,1649.99,1649.99,"Lenovo - 14"" ThinkPad T14s Gen 1 Laptop - 8GB Memory - Intel Core i7 - 256GB Hard Drive",SoldOut,False,2020-08-26
+2021-06-03,729.99,729.99,"Lenovo Yoga 6 13 2-in-1 13.3"" Touch Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB SSD - Abyss Blue Fabric Cover",Available,False,2020-10-12
+2021-06-03,929.99,929.99,"Lenovo Yoga 6 13 2-in-1 13.3"" Touch Screen Laptop - AMD Ryzen 7 - 16GB Memory - 512GB SSD - Abyss Blue Fabric Cover",Available,False,2021-03-14
+2021-06-03,464.0,464.0,HP - ProBook x360 11 G5 EE Notebook - 4 GB Memory - 64 GB eMMC Storage,SoldOut,False,2021-01-20
+2021-06-03,219.99,219.99,"HP - 14"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Pale Gold",Available,False,2020-09-27
+2021-06-03,1199.99,1079.99,"MSI - Prestige14EVO012 14"" Laptop - Intel® Evo™ Platform - Intel Core i7 - 16GB Memory - 1TB SSD - Carbon Gray",Available,True,2020-10-01
+2021-06-03,999.99,999.99,"MSI - Modern 15.6"" Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Carbon Gray",Available,False,2020-10-01
+2021-06-03,2249.99,2249.99,"Dell - XPS 15.6"" UHD+ Touch Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - NVIDIA GeForce GTX 1650 Ti - White",Available,False,2020-09-20
+2021-06-03,1699.99,1699.99,"Dell - XPS 15.6"" FHD+ Laptop - Intel Core i7 - 16GB Memory - 256GB SSD - NVIDIA GeForce GTX 1650 Ti - Silver cover, black interior",Available,False,2020-09-20
+2021-06-03,2799.99,2799.99,"Dell - XPS 17"" UHD+ Touch Laptop - Intel Core i7 - 16GB Memory - 1TB SSD - NVIDIA GeForce RTX 2060 6GB - Silver cover, black interior",Available,False,2020-09-20
+2021-06-03,264.99,264.99,"ASUS - L410 L410MADB02 14"" Notebook -HD - 1920 x 1080 - Intel Celeron N4020 1.10 GHz - 4 GB RAM - 64 GB Flash Memory",Available,False,2020-09-18
+2021-06-03,599.99,599.99,"ASUS - VivoBook Flip Thin and Light 2 in 1 Touchscreen Laptop 14""- R5 8G 256G - Bespoke Black",Available,False,2020-08-17
+2021-06-03,1379.0,1379.0,HP - EliteBook 840 G7 Notebook - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,899.99,899.99,"Dell - Inspiron 2-in-1 14"" Touch-Screen Laptop - Intel Core i7 - 12GB Memory - 512GB SSD - Titan Grey",SoldOut,False,2020-08-28
+2021-06-03,1619.99,1619.99,"HP - Spectre x360 2-in-1 15.6"" 4K UHD Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD + 32GB Optane - Nightfall Black",Available,False,2020-10-02
+2021-06-03,1719.99,1719.99,"HP - Spectre x360 2-in-1 13.5"" Touchscreen Laptop - Intel Evo Platform - Core i7 - 16GB Memory - 1TB SSD + 32GB Intel Optane - Nightfall Black",Available,False,2020-10-02
+2021-06-03,849.99,764.99,"HP - Pavilion x360 2-in-1 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD + 32GB Optane - Warm Gold",Available,True,2020-10-02
+2021-06-03,799.99,799.99,"HP - Pavilion x360 2-in-1 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Warm Gold",Available,False,2020-10-02
+2021-06-03,1429.0,1429.0,HP - EliteBook 850 G7 Notebook - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,799.99,799.99,Dell - Inspiron 15 3593- 15.6” HD Touch Screen Laptop - Intel Core i7 - 12GB Memory - 512GB SSD - Black,SoldOut,False,2020-09-27
+2021-06-03,1319.99,1319.99,"HP - Spectre x360 2-in-1 13"" 4K OLED Touch-Screen Laptop - Intel Evo Platform Core i5 - 8GB Memory - 512GB SSD + 32GB Optane - Nightfall Black",Available,False,2020-10-02
+2021-06-03,1026.99,1026.99,"Dell - Latitude 3000 13.3"" Laptop - Intel Core i5 - 8 GB Memory - 128 GB SSD - Black",Available,False,2020-12-24
+2021-06-03,2909.0,2909.0,HP ZBook Firefly 15 G7 Mobile Workstation - 32 GB Memory - 1 TB SSD,SoldOut,False,2021-01-20
+2021-06-03,1613.99,1613.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2020-12-24
+2021-06-03,949.99,949.99,"Acer - TravelMate P2 14"" Laptop - Intel Core i7-10510U - 8GB Memory - 256GB Solid State Drive - Win10Pro",Available,False,2021-04-10
+2021-06-03,1749.99,1658.99,"Dell - Latitude 5511 15.6"" FHD Laptop - i5 - 16GB Mempry - 256GB Solid State Drive",SoldOut,True,2020-12-24
+2021-06-03,1639.99,1639.99,"Dell - Latitude 5511 15.6"" FHD Laptop - i5 - 8GB Memory - 256GB Solid State Drive",SoldOut,False,2020-12-24
+2021-06-03,1799.99,1799.99,"MSI - Creator 15 -Professional Creator Series - 15.6"" FHD Touchscreen Laptop -  i7-10875H - 16GB - RTX 2060 - 512GB SSD - Space Gray",SoldOut,False,2020-09-18
+2021-06-03,2599.99,2599.99,"MSI - Creator 15 -Professional Creator Series - 15.6"" 4K UHD 3840 x 2160 Laptop - i7-10875H - 32GB - 1TB - Space Gray",SoldOut,False,2020-09-18
+2021-06-03,899.99,899.99,"Dell - Inspiron 7000 2-in-1 - 13.3"" FHD Touchscreen Laptop - Intel Evo Platform - Core i5 - 8GB RAM - 512GB SSD+32GB Optane - Silver",Available,False,2020-10-23
+2021-06-03,1299.99,1299.99,"Dell - Inspiron 7000 2-in-1 - 17"" QHD+ Touch Laptop - 11th Gen Intel Core i7 -NVIDIA - 16GB RAM - 512GB SSD+32GB Optane - Silver",Available,False,2020-10-23
+2021-06-03,999.99,999.99,"Dell - Inspiron 7000 2-in-1 - 17"" QHD+ Touchscreen Laptop - 11th Gen Intel Core i7 -8GB RAM - 256GB SSD - Silver",Available,False,2020-12-14
+2021-06-03,1349.99,1349.99,"Dell - Inspiron 7000 2-in-1 - 13.3"" UHD Touch Laptop - Intel Evo Platform - Core i7 - 16GB RAM - 512GB SSD+32GB Optane - Pen - Black",Available,False,2020-10-23
+2021-06-03,1149.99,1149.99,"Dell - Inspiron 7000 2-in-1 - 15.6"" FHD Touch Laptop - 11th Gen Intel Core i7 - 16GB RAM - 512GB SSD + 32GB Optane - Silver",Available,False,2020-10-23
+2021-06-03,929.99,929.99,"Dell - Inspiron 7000 2-in-1 - 15.6"" FHD Touchscreen Laptop - 11th Gen Intel Core i5 - 12GB RAM - 512GB SSD+32GB Optane - Silver",Available,False,2020-10-23
+2021-06-03,1549.99,1549.99,"Dell - Inspiron 7000 2-in-1 - 15.6"" UHD Touch Laptop - 11th Gen Intel Core i7 - Xe MAX - 16GB RAM - 1TB SSD+32GB Optane - Black",Available,False,2020-10-23
+2021-06-03,249.99,249.99,"HP - 14"" Laptop - 4GB Memory - 64GB eMMC Hard Drive - Natural Silver",SoldOut,False,2020-09-28
+2021-06-03,269.99,269.99,"HP - 14"" Laptop - AMD 3020e - 4GB Memory - 64GB eMMC Hard Drive  - Indigo Blue",SoldOut,False,2020-09-28
+2021-06-03,1369.99,1369.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2020-12-24
+2021-06-03,999.99,999.99,"Dell - Inspiron 14 7000 - 14"" FHD Laptop - Intel Core i7 - 8GB Memory - 512 GB SSD - Silver",Available,False,2020-10-25
+2021-06-03,1949.99,1949.99,"Lenovo - 15.6"" ThinkPad P15 Gen 1 Laptop, Black",Available,False,2020-11-16
+2021-06-03,2089.0,2089.0,HP - EliteBook 850 G7 Notebook - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,1969.0,1969.0,HP ZBook Firefly 15 G7 Mobile Workstation - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,884.99,884.99,"Lenovo - Yoga 7i 15 2-in-1 15.6"" Touch Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Dark Moss",SoldOut,False,2020-12-06
+2021-06-03,1255.99,1255.99,"Lenovo - Yoga 7i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 1TB SSD - Slate Grey",Available,False,2020-10-27
+2021-06-03,1305.99,1305.99,"Lenovo - Yoga 7i 15 2-in-1 15.6"" Touch Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 1024GB SSD - Slate Grey",Available,False,2020-12-06
+2021-06-03,1849.99,1849.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 1024GB SSD - Shadow Black",Available,False,2020-12-06
+2021-06-03,1710.99,1710.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Mica",Available,False,2020-12-06
+2021-06-03,1110.99,1110.99,"Lenovo - Yoga 7i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 12GB Memory - 512GB SSD - Dark Moss",Available,False,2020-12-06
+2021-06-03,1610.99,1610.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Shadow Black",Available,False,2020-12-06
+2021-06-03,1135.99,1135.99,"Lenovo - Yoga 7i 15 2-in-1 15.6"" Touch Screen Laptop - Intel Evo Platform Core i7 - 12GB Memory - 512GB SSD - Slate Grey",Available,False,2020-12-06
+2021-06-03,1449.99,1449.99,"Lenovo - Yoga 9i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i7 - 8GB Memory - 256GB SSD - Shadow Black",Available,False,2020-12-06
+2021-06-03,982.99,982.99,"Lenovo - Yoga 7i 14 2-in-1 14"" Touch-Screen Laptop - Intel Evo Platform Core i5 - 12GB Memory - 512GB SSD - Slate Grey",Available,False,2020-12-06
+2021-06-03,1749.99,1749.99,"Lenovo - Yoga 9i 15"" 2-in-1 Touch-Screen Laptop - Intel Core i7 - 12GB Memory - NVIDIA GeForce GTX 1650Ti - 512GB SSD - Slate Gray",Available,False,2020-12-06
+2021-06-03,773.99,773.99,"Lenovo Yoga 6 13 2-in-1 13.3"" Touch Screen Laptop - AMD Ryzen 5 - 8GB Memory - 512GB SSD - Abyss Blue Fabric Cover",Available,False,2020-12-06
+2021-06-03,967.99,967.99,"Lenovo Yoga 6 13 2-in-1 13.3"" Touch Screen Laptop - AMD Ryzen 7 - 16GB Memory - 1024GB SSD - Abyss Blue Fabric Cover",Available,False,2020-12-06
+2021-06-03,2399.99,2399.99,"Lenovo - Yoga 9i 15"" 2-in-1 4K Ultra HD Touch-Screen Laptop - Intel Core i9 - 16GB Memory - NVIDIA GeForce GTX 1650Ti - 1TB SSD - Slate Gray",Available,False,2020-11-13
+2021-06-03,1159.99,1159.99,"Lenovo - 13"" 16GB Yoga Duet 7 13IML05 Notebook, Slate Gray",Available,False,2020-11-16
+2021-06-03,1549.0,1549.0,HP - EliteBook 840 G7 Notebook - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,989.99,989.99,"HP - 13.3""  Factory Recertified Spectre - Intel i7-1065 - 8GB Memory - 512GB SSD + 32GB Optane  Hard Drive - Silver",SoldOut,False,2020-09-18
+2021-06-03,2129.99,2129.99,"Lenovo - 15.6"" Mobile Workstation P1 Gen 3, Black",Available,False,2020-11-16
+2021-06-03,799.99,799.99,"Acer - Spin 3 SP314-54N 14"" Laptop - Intel Core i3 - 8 GB Memory - 128 GB SSD - Pure Silver",Available,False,2021-04-10
+2021-06-03,849.99,849.99,"ASUS - Q507IQ 15.6"" Touch-Screen Laptop - AMD Ryzen 7 - 8GB Memory - NVIDIA GeForce MX350 - 256GB SSD - Light Grey - Light Grey",Available,False,2020-11-15
+2021-06-03,1499.99,1499.99,"ASUS - ZenBook Flip 15 Q538EI 15.6"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - GTX1650Ti Max-Q - 1TB SSD - Grey",Available,False,2020-11-15
+2021-06-03,1199.99,1199.99,"ASUS - ZenBook Flip 15 Q528EH 15.6"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - GTX1650 Max-Q - 512GB SSD - Grey",SoldOut,False,2020-11-15
+2021-06-03,1699.99,1699.99,"ASUS - ExpertBook B9 14"" Laptop - Intel Core i7 - 16GB Memory - 1TB SSD - Star Black",Available,False,2020-11-18
+2021-06-03,1999.99,1999.99,"ASUS - ExpertBook B9 14"" Laptop - Intel Core i7 - 32GB Memory - 2TB SSD - Star Black",Available,False,2020-11-18
+2021-06-03,1249.99,1213.99,"MSI - 15.6"" Mobile Workstation - i7-10750H - 16GB - NVIDIA Quadro P620 - 512GB SSD - WIN10 Pro",Available,True,2020-10-13
+2021-06-03,2899.99,2899.99,"Dell - XPS 17"" UHD+ Touch Laptop - Intel Core i7 - 32GB Memory - 1TB SSD - NVIDIA GeForce RTX 2060 6GB - Platinum Silver, black interior",Available,False,2020-10-05
+2021-06-03,1699.99,1699.99,"ASUS - ZenBook S 13.9"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 1TB Solid State Drive - Jade Black",Available,False,2020-11-17
+2021-06-03,1199.99,1199.99,"ASUS - ZenBook Flip 2-in-1 13.3"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB Solid State Drive - Pine Gray",Available,False,2020-11-17
+2021-06-03,949.99,949.99,"ASUS - ZenBook Flip 2-in-1 13.3"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB Solid State Drive - Pine Gray",Available,False,2020-11-17
+2021-06-03,1549.99,1549.99,"ASUS - ZenBook Flip S 2-in-1 13.3"" 4K Ultra HD Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 1TB Solid State Drive - Jade Black",Available,False,2020-11-17
+2021-06-03,1689.99,1689.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Aluminum Titan Gray",Available,False,2021-01-26
+2021-06-03,219.99,219.99,"HP - 14"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Indigo Blue",Available,False,2020-11-01
+2021-06-03,649.99,649.99,MSI - Modern 15 A10M-455 - Intel I5 - 8GB Memory - 512GB SSD - Black,SoldOut,False,2020-11-01
+2021-06-03,699.99,699.99,MSI - Modern 15 A10M-449 - Intel I5 - 8GB Memory - 512GB SSD - Space Gray,Available,False,2020-11-01
+2021-06-03,899.99,899.99,MSI - Modern 15 A10M-450 - Intel I7 - 16GB Memory - 512GB SSD - Space Gray,Available,False,2020-11-01
+2021-06-03,2099.99,2099.99,"LG - gram 17"" Laptop – 11th Gen Intel Core i7 - 16GB Memory - 2TB SSD - Silver",SoldOut,False,2020-11-20
+2021-06-03,229.99,229.99,"Hyundai - 14.1"" Thinnote-A Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Expandable 2.5"" SATA HDD Slot - Silver",Available,False,2020-10-27
+2021-06-03,229.99,229.99,"Hyundai - 14.1"" Thinnote-A Laptop - Intel Celeron - 8GB Memory - 64GB eMMC - Expandable 2.5"" SATA HDD Slot - Space Gray",Available,False,2020-10-27
+2021-06-03,1739.99,1739.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Aluminum Titan Gray",SoldOut,False,2021-01-26
+2021-06-03,219.99,219.99,"HP - 14"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Rose Gold",Available,False,2020-11-01
+2021-06-03,829.99,829.99,"Acer - Spin 3 14"" 2in1 Touchscreen Laptop - Intel Core i5-1035G4 - 8GB Memory - 512GB Solid State Drive W10Home",SoldOut,False,2020-10-27
+2021-06-03,1099.99,1092.99,"Acer - ENDURO N3 EN31451W53RR 14"" Notebook - Full HD - 1920 x 1080",SoldOut,True,2020-10-27
+2021-06-03,229.99,229.99,"Thomson - Neo 14.1"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Black",SoldOut,False,2020-10-27
+2021-06-03,329.99,329.99,"Thomson - Neo 14.1"" Laptop - Intel Core i3 - 4GB Memory - 128GB SSD - Silver",Available,False,2020-10-27
+2021-06-03,229.99,229.99,"Thomson - Neo 14.1"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Pink",SoldOut,False,2020-10-27
+2021-06-03,249.99,249.99,"Thomson - NEO X 14.1"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Pink",Available,False,2020-10-27
+2021-06-03,189.99,189.99,"Thomson - NEO 10.1"" Laptop - Intel Atom - 4GB Memory - 64GB eMMC - Black",Available,False,2020-10-27
+2021-06-03,429.99,429.99,"Thomson - Neo 15.6"" Laptop - Intel Core i5 - 4GB Memory - 256GB SSD - Black",SoldOut,False,2020-10-27
+2021-06-03,249.99,249.99,"Thomson - NEO X 14.1"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Blue",Available,False,2020-10-27
+2021-06-03,189.99,189.99,"Thomson - NEO 10.1"" Laptop - Intel Atom - 4GB Memory - 64GB eMMC - White",Available,False,2020-10-27
+2021-06-03,229.99,229.99,"Thomson - Neo 14.1"" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - White",SoldOut,False,2020-10-27
+2021-06-03,1799.99,1799.99,"Dell - Latitude 9000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Anodized Titan Gray",Available,False,2020-12-24
+2021-06-03,1909.99,1909.99,"Dell - Latitude 7310 13.3"" Touchscreen 2 in 1 Laptop - i5 -16GB Memory - 256GB Solid State Drive",Available,False,2020-12-24
+2021-06-03,1419.99,1419.99,"Dell - Latitude 5000 13.3"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Black",Available,False,2020-12-24
+2021-06-03,1519.99,1519.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",SoldOut,False,2020-12-24
+2021-06-03,1379.99,1379.99,"Dell - Latitude 5511 15.6"" FHD Laptop - i5 - 8GB Memory - 256GB Solid State Drive",Available,False,2020-12-24
+2021-06-03,1649.99,1649.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Gray",SoldOut,False,2020-12-24
+2021-06-03,1589.99,1589.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2020-12-24
+2021-06-03,699.99,699.99,"Acer - CP713-2W 13.5"" Touch-Screen Chromebook - Intel Core i3 - 8 GB Memory - 256 GB SSD - Steel Gray",SoldOut,False,2021-04-10
+2021-06-03,1679.99,1679.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Aluminum Titan Gray",Available,False,2021-01-26
+2021-06-03,1149.99,1149.99,"Dell - Inspiron 14.0"" FHD 2in1 Laptop - i7-1165G7 -16GB - Intel Iris Xe Graphics - 512GB SSD - Titan Grey",Available,False,2020-11-02
+2021-06-03,799.99,799.99,"Dell - Inspiron 14.0"" FHD 2in1 Laptop - i5-1135G7 - 8GB - Intel Iris Xe Graphics - 256 GB SSD - Titan Grey",Available,False,2020-11-02
+2021-06-03,729.99,729.99,"Dell - Inspiron 15.6"" HD Non Touch Laptop -AMD Ryzen 7 3700U - 12GB RAM - 512 GB SSD - Black",Available,False,2020-11-16
+2021-06-03,2019.0,2019.0,HP ZBook Firefly 15 G7 Mobile Workstation - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,1489.0,1489.0,HP ZBook Firefly 15 G7 Mobile Workstation - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,2249.99,2249.99,"Dell - XPS 13.4"" 2-in-1 Touch UHD+ Laptop - Intel Core i7- 32GB Memory - 1TB Solid State Drive - Platinum Silver, Black interior",SoldOut,False,2020-11-10
+2021-06-03,1999.99,1999.99,"Dell - XPS 13.4"" 2-in-1 Touch UHD+ Laptop - Intel Core i7- 16GB Memory - 512GB Solid State Drive - Platinum Silver, Arctic White interior",Available,False,2020-11-10
+2021-06-03,617.99,617.99,"Lenovo - Flex 5 14"" 2-in-1 14"" Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 128GB SSD - Graphite Gray",Available,False,2020-11-12
+2021-06-03,649.99,649.99,"MSI - Modern 14"" Laptop - R5-4500U - 8GB Memory - 256GB SSD",SoldOut,False,2020-11-18
+2021-06-03,749.99,749.99,"MSI - Modern14 - 14"" Laptop - R7-4700U - 8GB Memory -256GB SSD",Available,False,2020-11-18
+2021-06-03,1399.99,1399.99,"MSI - WF65 10TI-444 15.6"" Moblie Workstation - i7-10750H - 16GB - NVIDIA Quadro T1000 - 512GB SSD",SoldOut,False,2020-11-18
+2021-06-03,1729.99,1729.99,"Lenovo - 14"" ThinkPad P14s Gen 1 Laptop, Black",SoldOut,False,2020-11-16
+2021-06-03,1699.99,1699.99,"Lenovo - 15.6"" ThinkPad P15v Gen 1 Mobile WorkStation, Black",SoldOut,False,2020-11-16
+2021-06-03,1729.99,1729.99,"Lenovo - 15.6"" Mobile Workstation P15s Gen 1 with 10-point Multi-touch, Black",Available,False,2020-11-16
+2021-06-03,2099.99,2099.99,"Lenovo - 17.3"" ThinkPad P17 Gen 1 Mobile Workstation, Black",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Resolute Red/Transparent Silver",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S14 14"" Laptop - Intel Core i5 - 8GB Memory - 512GB Solid State Drive - Dreamy White/Transparent Silver",SoldOut,False,2020-11-16
+2021-06-03,879.99,879.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Dreamy White",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Indie Black/Gray",SoldOut,False,2020-11-16
+2021-06-03,869.99,869.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Black",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S14 14"" Laptop - Intel Core i5 - 8GB Memory - 512GB Solid State Drive - Indie Black/Light Gray",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Dreamy White/Transparent Silver",SoldOut,False,2020-11-16
+2021-06-03,699.99,699.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Gaia Green/Transparent Silver",SoldOut,False,2020-11-16
+2021-06-03,999.99,999.99,"ASUS - VivoBook S 15.6"" Laptop - Intel Core i7 - 16GB Memory - NVIDIA GeForce MX350 - 1TB SSD - Transparent Silver",SoldOut,False,2020-11-16
+2021-06-03,529.0,459.0,"Acer - Chromebook Spin 713 CP713-2W-3311, 13.5"" 2K  VertiView - Intel Core i3-10110U, 4GB DDR4, 64GB eMMC",Available,True,2020-11-29
+2021-06-03,1599.99,1599.99,"Razer Book 13.4"" FHD+ Touch Screen Laptop - Intel Evo Platform - Intel Core i7 - 16GB Memory - 256GB SSD - Mercury White - Mercury White",Available,False,2020-11-30
+2021-06-03,1999.99,1999.99,"Razer Book 13.4"" UHD+ Touch Screen Laptop - Intel Evo Platform - Intel Core i7 - 16GB Memory - 512GB SSD - Mercury White - Mercury White",Available,False,2020-11-30
+2021-06-03,1499.99,1499.99,"Dell - XPS 13"" 2-in-1 Touch FHD+ Laptop - Intel Evo Platform Core i7- 8GB RAM- 256GB SSD - Platinum Silver - Platinum Silver with Black Palmrest",Available,False,2020-12-31
+2021-06-03,1519.99,1519.99,"Dell - XPS 13"" Touch-Screen Laptop -Intel Evo Platform- Intel Core i7 - 8GB Memory - 512GB SSD - Platinum Silver - Platinum Silver",Available,False,2020-12-31
+2021-06-03,1899.99,1899.99,"Dell - XPS 13"" UHD+ Touch-Screen Laptop -Intel Evo Platform- Intel Core i7 - 16GB Memory - 512GB SSD - Frost White - Frost white",Available,False,2020-12-31
+2021-06-03,1899.99,1899.99,"MSI - Creator 15.6 "" Touchscreen Notebook - i7-10875H 16GB  NVIDIA GeForce RTX 2060 with 6 GB 1TB SSD - Space Gray with Silver Diamond Cut",SoldOut,False,2020-12-08
+2021-06-03,1599.99,1599.99,"MSI - Creator 15.6 "" Notebook - i7-10750H 16GB NVIDIA GeForce GTX 1660 Ti Super  512GB SSD - Space Gray with Silver Diamond Cut",Available,False,2020-12-08
+2021-06-03,1099.99,1099.99,"MSI - Prestige 14"" Notebook - Intel® Evo™ Platform Core i5-1135G7 - 16GB Intel Iris Xe Graphics 512GB SSD - Carbon Gray - Carbon Gray",Available,False,2020-12-08
+2021-06-03,1149.99,1149.99,"MSI - Prestige 14"" Notebook - Intel® Evo™ Platform Core i7-1185G7 - 16GB Intel Iris Xe Graphics 512GB SSD - Carbon Gray - Carbon Gray",Available,False,2020-12-08
+2021-06-03,2459.0,2459.0,HP ZBook Firefly 15 G7 Mobile Workstation - 32 GB Memory - 512 GB SSD,SoldOut,False,2021-01-20
+2021-06-03,699.99,699.99,"ASUS - VivoBook 15 15.6"" Laptop - AMD Ryzen 7 - 8GB Memory - 1TB SSD - Indie Black",SoldOut,False,2020-12-04
+2021-06-03,414.99,414.99,"ASUS - VivoBook 15 15.6"" Laptop - AMD Ryzen 3 - 8GB Memory - 256GB SSD - Slate Gray",SoldOut,False,2020-12-04
+2021-06-03,1199.99,1199.99,"ASUS - ZenBook Flip 2-in-1 13.3"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Pine Gray",Available,False,2020-12-04
+2021-06-03,264.99,264.99,"ASUS - 15.6"" Laptop - Intel Celeron N4020 - 4GB Memory - 64GB eMMC - Star Black",Available,False,2020-12-04
+2021-06-03,599.99,599.99,"ASUS - VivoBook 15 15.6"" Laptop - AMD Ryzen 5 - 8GB Memory - 512GB SSD - Indie Black",SoldOut,False,2020-12-04
+2021-06-03,849.99,849.99,"ASUS - VivoBook S15 15.6"" Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Indie Black",SoldOut,False,2020-12-04
+2021-06-03,899.99,899.99,"ASUS - ZenBook Flip 2-in-1 13.3"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Pine Gray",Available,False,2020-12-04
+2021-06-03,2149.99,2149.99,"Lenovo - 15.6"" ThinkPad T15g Gen 1 Laptop - 16GB Memory - Intel Core i7 - 512GB Hard Drive",SoldOut,False,2020-12-15
+2021-06-03,3279.0,3279.0,"Lenovo - 13.3"" ThinkPad X1 Fold Gen1 All in One Laptop - 8GB Memory - Intel Core i5 - 512GB Hard Drive",Available,False,2020-12-15
+2021-06-03,2799.0,2799.0,"Lenovo - 13"" ThinkPad X1 Fold Gen1 Laptop - 8GB Memory - Intel Core i5 - 256GB Hard Drive",Available,False,2020-12-15
+2021-06-03,1609.99,1609.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Gray",Available,False,2021-01-26
+2021-06-03,2499.99,2499.99,"ASUS - ZenBook Pro Duo 15.6"" 4K Ultra HD Touch-Screen Laptop - Intel Core i7 - 32GB Memory - NVIDIA GeForce RTX 2060 - 1TB SSD - Celestial Blue",SoldOut,False,2020-12-13
+2021-06-03,324.99,324.99,"ASUS - VivoBook Flip 14 2-in-1 14"" Touch-Screen Laptop - Intel Celeron - 4GB Memory - 64GB eMMC Flash Memory - Light Gray",SoldOut,False,2020-12-13
+2021-06-03,469.99,459.99,"HP - 14"" FHD Laptop - Intel Core i3-1115G4 - 4GB - 128GB SSD - Silver",Available,True,2020-12-23
+2021-06-03,629.99,629.99,"HP - 17.3"" Laptop - Intel Core i5 - 8GB Memory - 256GB SSD",SoldOut,False,2020-12-27
+2021-06-03,899.99,899.99,"ASUS - ZenBook 14"" Laptop - Intel Core i7 - 8GB Memory - 512GB Solid State Drive - Pine Gray",Available,False,2020-12-23
+2021-06-03,1199.99,1199.99,"ASUS - ZenBook 14"" Laptop - Intel Core i7 - 16GB Memory - NVIDIA GeForce MX450 - 512GB SSD - Pine Gray",Available,False,2020-12-23
+2021-06-03,899.99,899.99,"ASUS - VivoBook 15 15.6"" Laptop - Intel Core i7 - 16GB Memory - GeForce MX350 - 1TB HDD + 256GB Solid State Drive - Indie Black",SoldOut,False,2020-12-23
+2021-06-03,1799.99,1799.99,"MSI - Summit  14"" Touchscreen Laptop - i7-1185G7 - 32GB Memory - 1TB SSD",Available,False,2020-12-23
+2021-06-03,899.99,899.99,"MSI - Summit  14""Laptop - i5-1135G7 - 8GB Memory - 512GB SSD",Available,False,2020-12-23
+2021-06-03,749.99,749.99,"MSI - Modern 14"" Laptop - 10th Generation i5-10210U - 8GB Memory - 256GB Solid State Drive - Win10 Pro - Black",Available,False,2020-12-23
+2021-06-03,999.99,999.99,MSI - Summit 15.6”Laptop - i5-1135G7 - 8GB Memory - 512 GB SSD,Available,False,2020-12-23
+2021-06-03,1899.99,1899.99,"MSI - Summit 15.6"" Touchcsreen Laptop - i7-1185G7  - 16GB Memory - NVIDIA GeForce GTX1650Ti MAX-Q - 1TB SSD - WIN10PRO",SoldOut,False,2020-12-23
+2021-06-03,1699.99,1699.99,"MSI - Summit 15.6"" Laptop - i7-1185G7 - 16GB Memory -  NVIDIA GeForce GTX 1650 Ti Max-Q - 1TB SSD - WIN10 Pro",Available,False,2020-12-23
+2021-06-03,1899.99,1899.99,MSI - Summit 14” Laptop - i7-1185G7 - 16GB Memory - 1TB SSD,Available,False,2020-12-23
+2021-06-03,749.99,749.99,"MSI - Modern  15.6"" Laptop - i5-10210U - 8GB Memory - 256GB SSD",Available,False,2020-12-23
+2021-06-03,1499.99,1499.99,"MSI - Prestige 14"" Laptop - i7-1185G7 - 16GB Memory - 1TB SSD",Available,False,2020-12-23
+2021-06-03,599.99,599.99,"MSI - Modern 14 "" Laptop - i3-10110U - 8GB Memory - 512GB SSD",Available,False,2020-12-23
+2021-06-03,949.99,949.99,"MSI - Modern 14"" Laptop - i7-10510U - 16GB Memory - 512GB SSD - Win10 PRO - Carbon Gray",Available,False,2020-12-23
+2021-06-03,599.99,599.99,"MSI - Modern 15.6"" Laptop - i3-10110U - 8GB Memory - 512GB SSD",Available,False,2020-12-23
+2021-06-03,1899.99,1899.99,"MSI - Summit  15.6"" Touchscreen Laptop - i7-1185G7 - 32GB Memory - NVIDIA GeForce GTX 1650 Ti Max-Q  - 1TB SSD - WIN10PRO",Available,False,2020-12-23
+2021-06-03,1199.99,1199.99,"MSI - Summit 14"" Laptop - i7-1165G7 - 16GB Memory - 1TB SSD",Available,False,2020-12-23
+2021-06-03,519.99,519.99,"Dell - Inspiron 15.6"" FHD  Touch Laptop -AMD Ryzen 5 - 8GB RAM - 256 GB SSD - Black",Available,False,2021-02-14
+2021-06-03,569.99,569.99,"Dell - Inspiron 15.6"" FHD  Touch Laptop -Intel Core i5-1035G1 - 8GB RAM - 256 GB SSD - Black",Available,False,2021-02-14
+2021-06-03,599.99,599.99,"Dell - Inspiron 15.6"" FHD  Touch Laptop -Intel Core i5-1035G1 - 12GB RAM - 256 GB SSD - Black",Available,False,2021-02-14
+2021-06-03,519.99,519.99,"Lenovo - IdeaPad 3 14"" Laptop - AMD Ryzen 5 3500U - 8GB Memory - 1TB HDD + 128GB Solid State Drive",Available,False,2021-04-12
+2021-06-03,269.0,269.0,"Lenovo Chromebook 3 14"" Laptop - Mediatek MT8183 - 4GB Memory - 64GB eMMC - Arctic Grey",Available,False,2021-04-18
+2021-06-03,299.0,299.0,"Lenovo Chromebook 3 14"" Touch Laptop - Mediatek MT8183 - 4GB Memory - 64GB eMMC - Arctic Grey",Available,False,2021-04-18
+2021-06-03,599.99,449.99,"Lenovo - 14"" V14 IIL Laptop - 4GB Memory - Intel Core i5-1035G1 - 256GB Hard Drive - Black",Available,True,2021-03-21
+2021-06-03,469.99,469.99,"Thomson - Neo 15.6"" Laptop - Intel Core i5 - 8GB Memory - 1TB HDD - Black",Available,False,2021-01-13
+2021-06-03,1399.99,1399.99,"MSI - Modern 15.6"" Laptop, 15.6"" - i7-1165G7 - 32GB Memory - NVIDIA GeForce MX450 - 1TB SSD - WIN10 Pro - Carbon Gray",Available,False,2021-01-13
+2021-06-03,1149.99,1149.99,"MSI - Prestige 14 EVO 14"" FHD Laptop - i7-1185G7 - 16GB Memory - IrisXe - 512GB SSD - Win10Home",Available,False,2021-01-13
+2021-06-03,1099.99,1019.99,"MSI - Modern 14"" Laptop -  i5-1135G7 - 8GB Memory - 1TB SSD - Win10PRO - Carbon Gray",Available,True,2021-01-13
+2021-06-03,1149.99,1149.99,"MSI - Prestige 14 EVO 14"" FHD Laptop - i5-1135G7 - 16GB Memory - IrisXe - 512GB SSD - Win10Home - Rose Pink",SoldOut,False,2021-01-13
+2021-06-03,1099.99,1099.99,"MSI - Prestige 14 EVO 14"" FHD Laptop - i5-1135G7 - 16GB Memory - IrisXe - 512GB SSD - Win10Home",Available,False,2021-01-13
+2021-06-03,1249.99,1249.99,"MSI - Modern 14"" Laptop - i7-1165G7 - 16GB Memory - 1TB - Carbon Gray",SoldOut,False,2021-01-13
+2021-06-03,1113.57,1113.57,"MSI - Prestige 14 EVO 14"" FHD Laptop - i7-1185G7 - 16GB Memory - IrisXe - 512GB SSD - Win10Home",SoldOut,False,2021-01-13
+2021-06-03,649.99,649.99,MSI - Modern 15 - 15.6 “ Full HD Laptop - Intel Core i3 i3-10110U - 8GB Memory - 256GB Solid State Drive,SoldOut,False,2021-01-13
+2021-06-03,859.99,844.99,"HP - Pavilion 15.6"" Touch-Screen  Laptop - Intel Core i7-1165G7 - 8GB Memory - 512GB SSD",SoldOut,True,2021-01-18
+2021-06-03,819.99,804.99,"HP - Pavilion 15.6"" Touch-Screen Laptop - Intel Core i7-1165G7 - 8GB Memory - 256GB SSD",SoldOut,True,2021-01-18
+2021-06-03,889.99,874.99,"HP - ENVY 13.3"" Touch - Screen Laptop - Intel Core i5-1135G7 - 8GB Memory - 256GB SSD",Available,True,2021-01-18
+2021-06-03,689.99,674.99,"HP - Pavilion 15.6"" Touch-Screen  Laptop - Intel Core i5-1135G7 -  8GB Memory - 256GB SSD",Available,True,2021-01-18
+2021-06-03,619.99,604.99,"HP - Pavilion 15.6"" Touch-Screen Laptop - Intel Core i3-1125G4 - 8GB Memory - 256GB SSD",SoldOut,True,2021-01-18
+2021-06-03,1059.99,1044.99,"HP - ENVY 13.3"" Touch - Screen Laptop - Intel Core i7-1165G7 Intel Evo platform - 8GB Memory - 512GB SSD",SoldOut,True,2021-01-18
+2021-06-03,759.99,744.99,"HP - Pavilion 15.6"" Touch-Screen Laptop -Intel Core i5-1135G7 - 8GB Memory - 512GB SSD",Available,True,2021-01-18
+2021-06-03,1269.99,1219.99,"HP - ENVY  14"" Touch-Screen Laptop -Intel Core i5-1135G7 - 16GB Memory - 256GB SSD",Available,True,2021-01-18
+2021-06-03,779.99,764.99,"HP - Pavilion 13.3"" Micro-Edge Laptop - Intel Core i5-1135G7 - 8GB Memory - 512GB SSD",Available,True,2021-01-18
+2021-06-03,699.0,699.0,"Samsung - Galaxy Chromebook 2 - 13.3"" QLED Touch-Screen - Intel® Core™ i3 - 8GB Memory - 128GB eMMC - Fiesta Red",Available,False,2021-02-01
+2021-06-03,699.0,699.0,"Samsung - Galaxy Chromebook 2 - 13.3"" QLED Touch-Screen - Intel® Core™ i3 - 8GB Memory - 128GB eMMC - Mercury Gray",Available,False,2021-02-01
+2021-06-03,229.0,189.0,"HP - 11.6"" Chromebook - MediaTek MT8183 - 4GB Memory - 32GB eMMC - Ash Gray",Available,True,2021-03-14
+2021-06-03,1729.99,1729.99,"Dell - XPS 15.6"" FHD+ Laptop -Intel Core i7 - 16GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-01-27
+2021-06-03,899.99,899.99,"Dell - Inspiron 15.6"" FHD Laptop - Intel Core i7 - 8GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-01-26
+2021-06-03,724.0,724.0,HP - mt45 Mobile Thin Client - 4 GB Memory - 128 GB SSD,SoldOut,False,2021-02-05
+2021-06-03,629.99,629.99,"Lenovo - Ideapad 3 17 17"" Laptop - Intel Core i5 - 8GB Memory - 1TB HDD - Abyss Blue",Available,False,2021-01-31
+2021-06-03,449.99,449.99,"Lenovo - Ideapad 3 15 15.6"" Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Abyss Blue",Available,False,2021-01-31
+2021-06-03,399.99,399.99,"Lenovo - Ideapad 3 15 15.6"" Laptop - AMD Ryzen 3 - 8GB Memory - 128GB SSD - Platinum Grey",SoldOut,False,2021-02-28
+2021-06-03,219.0,219.0,"ASUS - 11.6"" Chromebook - Intel Celeron - 4GB Memory - 32GB eMMC Flash Memory - Gray - Grey",Available,False,2021-03-28
+2021-06-03,569.0,569.0,"ASUS - 2-in-1 15.6"" Touch-Screen Chromebook - Intel Core 11th Gen i3 - 8GB Memory - 128GB SSD - Matte White - Matte White",Available,False,2021-04-11
+2021-06-03,849.99,849.99,"ASUS - Vivobook 17.3"" Laptop - Intel Core 10th Gen i7 - 16GB Memory - 1TB SSD - Transparent Silver",Available,False,2021-04-11
+2021-06-03,369.99,319.99,"ASUS - Vivobook 14"" Laptop - Intel 10th Gen i3 - 4GB Memory - 128GB SSD - DREAMY WHITE",Available,True,2021-04-11
+2021-06-03,219.99,219.99,"ASUS - 14.0"" Laptop - Intel Celeron N4020 - 4GB Memory - 64GB eMMC - Peacock Blue - Peacock Blue",SoldOut,False,2021-05-30
+2021-06-03,219.99,219.99,"ASUS - 14.0"" Laptop - Intel Celeron N4020 - 4GB Memory - 64GB eMMC - Star Black - Star Black",Available,False,2021-03-07
+2021-06-03,699.99,699.99,"ASUS - Vivobook 15.6"" Laptop - Intel 10th Gen i7 - 8GB Memory - 1TB+256GB PCIE SSD - Slate Grey - Slate Grey",SoldOut,False,2021-05-23
+2021-06-03,219.99,219.99,"ASUS - 14.0"" Laptop - Intel Celeron N4020 - 4GB Memory - 64GB eMMC - Rose Gold - Rose Gold",SoldOut,False,2021-05-30
+2021-06-03,1099.99,1099.99,"Lenovo - ThinkPad L13  13.3"" Laptop - Intel Core i7- 10510U - 16GB Memory - 512GB Solid State Drive",Available,False,2021-02-22
+2021-06-03,299.99,299.99,"HP - 14"" Laptop - AMD Athlon - 4GB Memory - 128GB SSD - Jet Black",Available,False,2021-02-07
+2021-06-03,699.99,599.99,"HP - 15.6"" Touch-Screen Laptop - AMD Ryzen 7 - 8GB Memory - 512GB SSD - Natural Silver",Available,True,2021-03-11
+2021-06-03,1949.99,1949.99,"Dell - Latitude 5000 5410 14"" Notebook Full HD 1920 x 1080 Intel (10th Gen) i7-10610U Quad-core 16 GB RAM 512 GB SSD",Available,False,2021-01-26
+2021-06-03,1699.99,1699.99,LG - gram 16” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Black,Available,False,2021-03-01
+2021-06-03,1699.99,1699.99,LG - gram 16” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Silver,Available,False,2021-03-01
+2021-06-03,1999.99,1999.99,LG - gram 2-in-1 16” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 2TB NVMe Solid State Drive - Silver,ComingSoon,False,2021-03-01
+2021-06-03,1699.99,1699.99,LG - gram 2-in-1 14” WUXGA Laptop – Intel  Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Green,ComingSoon,False,2021-02-14
+2021-06-03,1999.99,1999.99,LG - gram 2-in-1 16” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 2TB NVMe Solid State Drive - Black,ComingSoon,False,2021-03-01
+2021-06-03,1699.99,1699.99,LG - gram 2-in-1 14” WUXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Black,ComingSoon,False,2021-02-14
+2021-06-03,549.0,549.0,"Samsung - Galaxy Chromebook 2 - 13.3"" QLED Touch-Screen - Intel Celeron - 4GB Memory - 64GB eMMC - Fiesta Red",Available,False,2021-02-01
+2021-06-03,549.0,549.0,"Samsung - Galaxy Chromebook 2 - 13.3"" QLED Touch-Screen - Intel Celeron - 4GB Memory - 64GB eMMC - Mercury Gray",Available,False,2021-02-01
+2021-06-03,1749.99,1749.99,LG - gram 2-in-1 16” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Black,SoldOut,False,2021-04-01
+2021-06-03,1799.99,1699.99,LG - gram 17” WQXGA Laptop – Intel Evo Platform Core i7 – 16GB RAM – 1TB NVMe Solid State Drive - Black,Available,True,2021-02-14
+2021-06-03,799.99,799.99,LG Ultra PC 13” Full HD Laptop – Ryzen 5 – 8GB RAM – 256GB NVMe Solid State Drive - White,Available,False,2021-03-01
+2021-06-03,1199.99,1049.99,LG - gram 14” WUXGA Laptop – Intel Evo Platform Core i5 – 8GB RAM – 256GB NVMe Solid State Drive - White,Available,True,2021-02-14
+2021-06-03,1499.99,1499.99,LG Ultra PC 17.0” i7 Processor Ultra-Slim Laptop - Grey,ComingSoon,False,2021-02-14
+2021-06-03,929.99,779.99,"Lenovo - ThinkPad L13 Yoga 2-in-1 13.3"" Touch Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Black",Available,True,2021-03-03
+2021-06-03,549.99,549.99,"HP - Pavilion 2-in-1 14"" Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Natural Silver",SoldOut,False,2021-03-14
+2021-06-03,279.0,279.0,Acer - Chromebook 512 – 12” IPS Display - Intel Celeron N4020 - 4GB Memory - 32GB eMMC – Ruggedized – Spill Resistant KB,Available,False,2021-03-01
+2021-06-03,219.0,199.0,"Acer - 11.6"" HD- Chromebook 311- Intel Celeron N4000-4GB Memory -32GB eMMC",Available,True,2021-03-01
+2021-06-03,1299.99,1299.99,"ASUS - ZenBook Duo 14"" Touch-Screen Laptop - Intel Core i7 - 8GB Memory - 512GB SSD - Celestial Blue",SoldOut,False,2021-02-22
+2021-06-03,1499.99,1499.99,"ASUS - ZenBook 14"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - NVIDIA GeForce MX450 - 1TB SSD - Celestial Blue",SoldOut,False,2021-02-22
+2021-06-03,899.99,899.99,"ASUS - VivoBook S14 14"" Laptop - Intel Core i7 - 8GB Memory - 512GB SSD - Deep Green/Light Gray",Available,False,2021-02-22
+2021-06-03,599.99,599.99,"ASUS - VivoBook 15 15.6"" Laptop - AMD Ryzen 5 - 16GB Memory - 512GB Solid State Drive - Slate Gray",SoldOut,False,2021-02-22
+2021-06-03,699.99,699.99,"ASUS - ZenBook 14"" Laptop - AMD Ryzen 5 - 8GB Memory - 512GB SSD - Pine Gray",SoldOut,False,2021-02-22
+2021-06-03,999.99,999.99,"ASUS - ZenBook Duo 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD - Celestial Blue",SoldOut,False,2021-02-22
+2021-06-03,899.99,899.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 8GB Memory - 512GB Solid State Drive - Blue Stone",Available,False,2021-02-04
+2021-06-03,899.99,899.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 8GB Memory - 512GB Solid State Drive - Carbon Gray",Available,False,2021-02-04
+2021-06-03,1099.99,1099.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 16GB Memory - 512GB Solid State Drive - Carbon Gray",Available,False,2021-02-04
+2021-06-03,1099.99,1099.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 16GB Memory - 512GB Solid State Drive - Blue Stone",SoldOut,False,2021-02-04
+2021-06-03,999.99,999.99,"MSI - Modern 15.6"" Laptop - Intel Core i7-1165G7 - 16GB Memory - 512GB Solid State Drive - Carbon Gray",Available,False,2021-02-04
+2021-06-03,899.99,899.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 8GB Memory - 512GB Solid State Drive - Beige Mousse",Available,False,2021-02-04
+2021-06-03,1099.99,1099.99,"MSI - Modern 15.6"" Laptop - Intel Core i7-1165G7 - 16GB Memory - 1TB Solid State Drive - Carbon Gray",Available,False,2021-02-04
+2021-06-03,1099.99,1099.99,"MSI - Modern 14""Laptop - Intel Core i7-1165G7 - 16GB Memory - 512GB Solid State Drive - Beige Mousse",Available,False,2021-02-04
+2021-06-03,1019.99,1004.99,"HP - ENVY  13.3"" Laptop - Intel Core i7 1165G7 - 8GB Memory -256GB SSD",Available,True,2021-02-11
+2021-06-03,1799.0,1799.0,"Lenovo - 15.6"" ThinkPad P15v Gen 1 Laptop, 16GB Memory, Intel Core i5-10300H, 512GB SSD - Black",SoldOut,False,2021-05-02
+2021-06-03,1809.99,1809.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 16 GB Memory - 512 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,899.99,899.99,"Acer - TravelMate P4 P414-51 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Slate Blue",Available,False,2021-04-10
+2021-06-03,1649.0,1649.0,HP ZBook Firefly 14 G7 Mobile Workstation - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-02-11
+2021-06-03,2039.0,2039.0,HP - EliteBook 840 G7 Notebook - 16 GB Memory - 512 GB SSD,Available,False,2021-02-11
+2021-06-03,1579.0,1579.0,HP - EliteBook 850 G7 Notebook - 8 GB Memory - 256 GB SSD,SoldOut,False,2021-02-11
+2021-06-03,2189.0,2189.0,HP ZBook Firefly 14 G7 Mobile Workstation - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-02-11
+2021-06-03,1769.0,1769.0,HP - EliteBook 840 G7 Notebook - 16 GB Memory - 512 GB SSD,SoldOut,False,2021-02-11
+2021-06-03,499.99,499.99,"MSI - Modern 14"" Laptop - Intel I3 - 8GB Memory - 128GB SSD - Black",Available,False,2021-03-14
+2021-06-03,1069.99,1019.99,"HP - ENVY x360 2-in-1 15.6"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD + 32GB Intel Optane - Natural Silver",Available,True,2021-03-21
+2021-06-03,1269.99,1269.99,"HP - ENVY 17.3"" Touch-Screen Laptop - Intel Core i7 - 12GB Memory - 512GB SSD + 32GB Intel Optane - Natural Silver",Available,False,2021-03-21
+2021-06-03,1079.99,1079.99,"Lenovo - ThinkPad L14 14.0"" Laptop -  Intel Core i5-10210U - 16GB Memory - 512GB Solid State Drive",SoldOut,False,2021-02-22
+2021-06-03,1159.99,1159.99,"Lenovo - ThinkPad L14 14"" Laptop - Intel i7-10510U -16GB Memory - 512GB Solid State Drive",SoldOut,False,2021-02-22
+2021-06-03,819.99,819.99,"HP - Pavilion x360 2-in-1 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Warm Gold",Available,False,2021-03-21
+2021-06-03,869.99,869.99,"HP - Pavilion x360 2-in-1 14"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD + 32GB Intel Optane - Warm Gold",Available,False,2021-03-21
+2021-06-03,809.99,809.99,"HP - ENVY x360 2-in-1 15.6"" Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB SSD - Nightfall Black",Available,False,2021-03-21
+2021-06-03,899.99,799.99,"HP - ENVY x360 2-in-1 15.6"" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Natural Silver",Available,True,2021-03-21
+2021-06-03,399.99,399.99,"HP - Pavilion x360 2-in-1 11.6"" Touch-Screen Laptop - Intel Pentium Silver - 4GB Memory - 128GB SSD - Natural Silver",Available,False,2021-03-21
+2021-06-03,979.99,979.99,"HP - ENVY x360 2-in-1 15.6"" Touch-Screen Laptop - AMD Ryzen 7 - 8GB Memory - 512GB SSD - Nightfall Black",Available,False,2021-03-21
+2021-06-03,3429.0,3429.0,"Lenovo - 15.6"" ThinkPad X1 Extreme Gen 3 Laptop, 16GB Memory, Intel Core i9-10885H, 1TB - Midnight Black",SoldOut,False,2021-03-17
+2021-06-03,1799.99,1799.99,"MSI - Prestige 15.6"" 4K UHD Laptop - Intel Core i7-1185G7 - 32GB Memory - 1TB Solid State Drive - Carbon Gray",Available,False,2021-02-28
+2021-06-03,1019.99,1019.99,"HP - ENVY 2-in-1 13.3"" Touch-Screen Laptop - Intel Evo Platform - Core i7 - 8GB Memory - 512GB SSD - Pale gold",Available,False,2021-05-02
+2021-06-03,559.0,559.0,Acer – Chromebook Spin 514 – Convertible - 14” Full HD Touch – AMD Ryzen 3 – 8GB DDR4 – 64GB eMMC – Mist Green,ComingSoon,False,2021-05-09
+2021-06-03,629.0,629.0,Acer – Chromebook Spin 514 – Convertible - 14” Full HD Touch – AMD Ryzen 5 – 8GB DDR4 – 128GB eMMC – HDMI – Mist Green,ComingSoon,False,2021-05-09
+2021-06-03,1899.99,1899.99,"Summit E13 FLIP 13.4"" 2in1 Touch Laptop - i7-1185G7 - IRISXe - 32GB Memory - 1TBSSD - Win10PRO with MSI Pen - Pure White",Available,False,2021-03-08
+2021-06-03,1499.99,1499.99,"MSI - Creator 15.6"" 4K Laptop - i7-10875H - 16GB Memory - NVIDIA GeForce RTX 2060 - 512GB Solid State Drive - Win10 Pro - Space Gray with Silver Diamond cut",SoldOut,False,2021-03-08
+2021-06-03,1799.99,1789.99,"MSI - Prestige 15A 15.6"" 4K Laptop - i7-1185G7 - 32GB Memory, 1TB 512GB Solid State Drive - Silver",SoldOut,True,2021-03-08
+2021-06-03,999.99,999.99,"MSI - Modern 15.6"" Ultrabook Laptop - i7-1165G7 - 16GB Memory - 512GB Solid State Drive - Urban Silver",SoldOut,False,2021-03-08
+2021-06-03,1599.99,1599.99,"Summit E13 FLIP 13.4"" 2in1 Touch Laptop - i7-1185G7 - IRISXe - 16GB Memory - 512GB SSD - Win10 with MSI Pen - Pure White",Available,False,2021-03-08
+2021-06-03,1899.99,1899.99,"Summit E13 FLIP 13.4"" 2in1 Touch Laptop - i7-1185G7 - IRISXe - 32GB Memory - 1TBSSD - Win10PRO with MSI Pen - Ink Black",Available,False,2021-03-08
+2021-06-03,1599.99,1599.99,"Summit E13 FLIP 13.4"" 2in1 Touch Laptop- i7-1185G7 - IRISXe - 16GB Memory - 512GB SSD - Win10 with MSI Pen - Ink Black",Available,False,2021-03-08
+2021-06-03,1629.99,1629.99,"Dell - XPS 13.4"" 2 in 1 FHD+ WLED Touch Display -  Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD- Intel Iris Xe - Frost exterior, arctic white interior",Available,False,2021-03-08
+2021-06-03,1429.99,1429.99,"Dell - XPS 13.4"" 2-in-1 FHD+ WLED Touch Display -  Intel Evo Platform Core i7 - 8GB Memory - 256GB SSD- Intel Iris Xe - Frost exterior, arctic white interior",Available,False,2021-03-08
+2021-06-03,279.0,279.0,"HP - 14"" Chromebook - Intel Celeron - 4GB Memory - 32GB eMMC - Mineral Silver",Available,False,2021-03-07
+2021-06-03,279.0,279.0,"HP - 14"" Chromebook - Intel Celeron - 4GB Memory - 32GB eMMC - Ceramic white",Available,False,2021-03-07
+2021-06-03,319.99,319.99,"HP - 14"" HD Touch Screen Laptop - Intel Celetron N4000 - 4GB - 32GB eMMC - Mineral silver",SoldOut,False,2021-03-08
+2021-06-03,319.99,319.99,"HP - 14"" HD Touch Screen Laptop - Intel UHD Graphics 600 - 4GB - 32GB eMMC - Forest teal",Available,False,2021-03-08
+2021-06-03,339.99,289.99,"HP - 14"" HD Touch Screen Laptop - Intel Celeron N4020 - 4GB - 32GB eMMC - Ceramic white",Available,True,2021-03-08
+2021-06-03,269.0,229.0,"HP - 11.6"" Touch-screen Chromebook - MediaTek MT8183 - 4GB Memory - 32GB eMMC - Indigo Blue",Available,True,2021-03-14
+2021-06-03,1899.99,1899.99,LG - gram 15.6” i7 Processor Ultra-Slim Laptop - Black,ComingSoon,False,2021-05-15
+2021-06-03,1229.99,1029.99,"Lenovo - ThinkPad L13 Yoga 2-in-1 13.3"" Touch Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Black",Available,True,2021-03-18
+2021-06-03,1049.99,749.99,"Lenovo Yoga C740 2-in-1 15.6"" Touch Screen Laptop - Intel Core i7 - 12GB Memory - 512GB SSD - Mica",Available,True,2021-03-15
+2021-06-03,499.99,499.99,"HP - 15.6"" Touch-screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Natural Silver",Available,False,2021-03-14
+2021-06-03,949.99,649.99,"Lenovo Yoga C740 2-in-1 15.6"" Touch Screen Laptop - Intel Core i5 - 8GB Memory - 512GB SSD + 32GB Optane H10 - Iron Grey",Available,True,2021-03-15
+2021-06-03,2009.99,2009.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i7 - 16 GB Memory - 512 GB SSD - Gray",SoldOut,False,2021-03-17
+2021-06-03,1819.99,1819.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i7 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,1659.99,1659.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Gray",SoldOut,False,2021-03-17
+2021-06-03,1489.99,1489.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,1659.99,1659.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,2089.99,2089.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i7 - 16 GB Memory - 512 GB SSD - Carbon Fiber, Black",SoldOut,False,2021-03-17
+2021-06-03,1549.99,1549.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,1869.99,1869.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Carbon Fiber, Black",Available,False,2021-03-17
+2021-06-03,1789.99,1789.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 16 GB Memory - 256 GB SSD - Carbon Fiber, Black",SoldOut,False,2021-03-17
+2021-06-03,1909.99,1909.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i7 - 16 GB Memory - 256 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,1419.99,1334.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,True,2021-03-17
+2021-06-03,1579.99,1579.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Carbon Fiber, Black",Available,False,2021-03-17
+2021-06-03,1379.99,1367.99,"Dell - Latitude 5000 15.6"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Gray",Available,True,2021-03-17
+2021-06-03,1729.99,1729.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Carbon Fiber, Black",Available,False,2021-03-17
+2021-06-03,1599.99,1599.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Black",Available,False,2021-03-17
+2021-06-03,1999.99,1999.99,"Dell - Latitude 5000 14"" Laptop - Intel Core i7 - 16 GB Memory - 512 GB SSD - Gray",Available,False,2021-03-17
+2021-06-03,1779.99,1779.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i5 - 16 GB Memory - 512 GB SSD - Carbon Fiber, Black",SoldOut,False,2021-03-17
+2021-06-03,2039.99,2039.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i7 - 16 GB Memory - 256 GB SSD - Aluminum Gray",SoldOut,False,2021-03-17
+2021-06-03,2069.99,2069.99,"Dell - Latitude 7000 14"" Laptop - Intel Core i7 - 16 GB Memory - 256 GB SSD - Carbon Fiber, Black",SoldOut,False,2021-03-17
+2021-06-03,379.0,379.0,"HP - 14"" 2-In-1  Touchscreen Chromebook - Intel Celeron - 4GB Memory - 32GB eMMC - Natural Silver",ComingSoon,False,2021-05-02
+2021-06-03,419.0,419.0,"HP - 14"" 2-In-1  Touchscreen Chromebook - Intel Pentium Silver - 4GB Memory - 64GB eMMC - Spruce Blue",ComingSoon,False,2021-05-02
+2021-06-03,279.99,279.99,"HP - 14"" Touch-Screen Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Pale Rose Gold",Available,False,2021-03-21
+2021-06-03,499.99,499.99,"HP - 14"" Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Natural Silver",Available,False,2021-03-21
+2021-06-03,629.99,629.99,"HP - 17.3"" Laptop - AMD Ryzen 5 - 8GB Memory - 256GB SSD - Natural Silver",SoldOut,False,2021-03-28
+2021-06-03,499.99,499.99,"HP - 17.3"" Laptop - Intel Core i3 - 8GB Memory - 1TB HDD - Natural Silver",Available,False,2021-03-12
+2021-06-03,289.0,229.0,"HP - 14"" Touch-Screen Chromebook - AMD A4 - 4GB Memory - 32GB eMMC - Chalkboard Gray",Available,True,2021-03-12
+2021-06-03,1499.99,1499.99,"Acer - CN315-71P 15.6"" Laptop - Intel Core i5 - 16 GB Memory - NVIDIA Quadro T1000 - 512 GB SSD - White",Available,False,2021-04-10
+2021-06-03,949.0,949.0,"HP - 13.5"" 2-in-1 x360 Touch-Screen Chromebook - Intel Core i5 - 8GB Memory - 256GB SSD - Natural Silver",Available,False,2021-03-28
+2021-06-03,849.99,849.99,"Samsung - Galaxy Book Flex2 Alpha 13.3"" QLED Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB SSD - Royal Silver",Available,False,2021-04-28
+2021-06-03,1299.99,1299.99,"Samsung - Galaxy Book Pro 360 15.6"" AMOLED Touch-Screen Laptop - Intel Evo Platform Core i7 - 8GB Memory - 512GB SSD - Mystic Navy",Available,False,2021-04-28
+2021-06-03,1499.99,1499.99,"Samsung - Galaxy Book Pro 360 15.6"" AMOLED Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 1TB SSD - Mystic Bronze",Available,False,2021-04-28
+2021-06-03,1049.99,1049.99,"Samsung - Galaxy Book Flex2 Alpha 13.3"" QLED Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Mystic Black",Available,False,2021-04-28
+2021-06-03,1399.99,1399.99,"Samsung - Galaxy Book Pro 360 13.3"" AMOLED Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Mystic Navy",Available,False,2021-04-28
+2021-06-03,1499.99,1499.99,"Samsung - Galaxy Book Pro 360 15.6"" AMOLED Touch-Screen Laptop - Intel Evo Platform Core i7 - 16GB Memory - 1TB SSD - Mystic Navy",Available,False,2021-04-28
+2021-06-03,259.0,199.0,"HP - 14"" Chromebook - AMD Dual-Core A4 - 4GB Memory - 32GB eMMC - Ink Blue",Available,True,2021-03-31
+2021-06-03,649.0,649.0,"HP - 14"" 2-In-1  Touchscreen Chromebook - Intel Core i3 - 8GB Memory - 128GB SSD - Mineral Silver",Available,False,2021-04-09
+2021-06-03,2340.99,2340.99,"Dell - XPS 17.0"" UHD+ Touch Laptop - Intel Core i7 - 16GB Memory - NVIDIA GTX 1650 Ti - 512GB Solid State Drive - Platinum Silver",SoldOut,False,2021-03-24
+2021-06-03,1099.99,1099.99,"Samsung - Galaxy Book Pro 15.6"" AMOLED Laptop - Intel Evo Platform Core i5 - 8GB Memory - 512GB SSD - Mystic Blue",Available,False,2021-04-28
+2021-06-03,1099.99,1099.99,"Samsung - Galaxy Book Pro 15.6"" AMOLED Laptop - Intel Evo Platform Core i5 - 8GB Memory - 512GB SSD - Mystic Silver",Available,False,2021-04-28
+2021-06-03,1199.99,1199.99,"Samsung - Galaxy Book Pro 13.3"" AMOLED Laptop - Intel Evo Platform Core i7 - 8GB Memory - 512GB SSD - Mystic Blue",Available,False,2021-04-28
+2021-06-03,1299.99,1299.99,"Samsung - Galaxy Book Pro 15.6"" AMOLED Laptop - Intel Evo Platform Core i7 - 16GB Memory - 512GB SSD - Mystic Blue",Available,False,2021-04-28
+2021-06-03,699.0,699.0,"Acer – Chromebook Spin 713 Laptop - 13.5"" 2K - Gorilla Glass – Intel Evo Core i5 – 8GB RAM – 256GB SSD – Thunderbolt 4",ComingSoon,False,2021-05-27
+2021-06-03,899.99,899.99,"Dell - Inspiron 7000 2-in-1 14.0"" Touch-Screen Laptop - AMD Ryzen 7 - 16GB Memory - 512GB Solid State Drive - Blue",Available,False,2021-05-30
+2021-06-03,699.99,699.99,"Dell - Inspiron 7000 2-in-1 14.0"" Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",Available,False,2021-05-05
+2021-06-03,1949.99,1949.99,"Dell - XPS 13.4"" OLED 3.5K Touchscreen Laptop - Intel Evo Platform Intel Core i7 - 16GB - Intel Iris Xe - 512GB SSD - White",SoldOut,False,2021-04-10
+2021-06-03,1999.99,1999.99,"Acer - CN515-71P 15.6"" Laptop - Intel Core i7 - 32 GB Memory - NVIDIA Quadro T1000 - 512 GB SSD - Black",SoldOut,False,2021-04-10
+2021-06-03,999.99,999.99,"Acer - CP713-2W 13.5"" Touch-Screen Chromebook - Intel Core i7 - 16 GB Memory - 128 GB SSD - Steel Gray",SoldOut,False,2021-04-10
+2021-06-03,1099.99,1099.99,"Acer - Spin 5 SP513-54N 13.5"" Laptop - Intel Core i5 - 8 GB Memory - 256 GB SSD - Steel Gray",Available,False,2021-04-10
+2021-06-03,699.99,699.99,"Dell - Vostro 14 3000 14"" Laptop - Intel Core i5 - 8 GB Memory - 1 TB HDD + 256 GB SSD - Black Accent",Available,False,2021-04-03
+2021-06-03,659.99,659.99,"MSI - Modern 14"" Ultrabook Laptop - i3 1115G4 - 8GB Memory - Intel Iris Xe - 512GB Solid State Drive - Blue Stone",SoldOut,False,2021-04-10
+2021-06-03,659.99,659.99,"MSI - Modern 14"" Ultrabook Laptop - i3 1115G4 - 8GB Memory - Intel Iris Xe - 512GB Solid State Drive - Carbon Gray",Available,False,2021-04-10
+2021-06-03,659.99,659.99,"MSI - Modern 14"" Ultrabook Laptop - i3 1115G4 - 8GB Memory - Intel Iris Xe - 512GB Solid State Drive - Beige Mousse",SoldOut,False,2021-04-10
+2021-06-03,579.99,579.99,"Dell - Inspiron 15.6"" Laptop - Intel Core i5  - 12GB Memory - 256GB Solid State Drive - Black",Available,False,2021-05-10
+2021-06-03,319.99,319.99,"HP - 14"" Chromebook - Intel Celetron N4000 - 4GB - 32GB eMMC",SoldOut,False,2021-04-09
+2021-06-03,319.99,319.99,"HP - 14"" Chromebook - Intel Celeron  N4000 - 4GB - 32GB eMMC",Available,False,2021-04-09
+2021-06-03,319.99,319.99,"HP - 14"" Chromebook - Intel Celeron N4000 - 4GB - 32GB eMMC",Available,False,2021-04-09
+2021-06-03,1399.99,1399.99,"ADATA - XPG Xenia Xe, 15.6-inch Full HD Laptop, Intel® Core TM i5-1135G7 1TB SSD, 8GB memory, NVMe - Silver",Available,False,2021-04-14
+2021-06-03,1599.99,1599.99,"ADATA - XPG Xenia Xe, 15.6-inch Full HD Laptop, Intel® Core TM i7-1165G7  1TB SSD, 16GB memory, NVMe - Silver",Available,False,2021-04-14
+2021-06-03,729.99,729.99,"Dell - Inspiron 5000  15.6"" Laptop - Intel Core i5 - 8GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,999.99,999.99,"Dell - Inspiron 5000  15.6"" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - NVIDIA GeForce MX450 - 512GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,779.99,779.99,"Dell - Inspiron 5000  15.6"" Laptop - Intel Core i5 - 12GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,829.99,829.99,"Dell - Inspiron 5000  15.6"" Laptop - Intel Core i7 - 8GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,1359.99,1359.99,"Dell - G3 15.6"" Gaming Laptop - Intel Core i7 - 16GB Memory - NVIDIA RTX 2060 - 512GB SSD - Black",SoldOut,False,2021-04-29
+2021-06-03,779.99,779.99,"Dell - Inspiron 5000 2-in-1 14.0"" FHD Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 256GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,929.99,929.99,"Dell - Inspiron 5000 2-in-1 14.0"" FHD Touch-Screen Laptop - Intel Core i7 - 8GB Memory - 512GB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,2499.99,2499.99,"Dell - XPS 9310 13.4"" UHD+ Touch Laptop- Intel Evo Platform Core i7 - 32GB Memory - 2TB Solid State Drive - Silver",SoldOut,False,2021-04-29
+2021-06-03,549.99,549.99,"Lenovo Ideapad 3 15.6"" Touch Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Almond",SoldOut,False,2021-06-01
+2021-06-03,509.99,509.99,"HP - 15.6"" Laptop Intel Core i3 - 8GB Memory - 256GB SSD - Natural Silver",Available,False,2021-05-09
+2021-06-03,609.99,609.99,"HP - 15.6"" Laptop Intel Core i5 - 8GB Memory - 256GB SSD - Natural Silver",SoldOut,False,2021-05-09
+2021-06-03,599.99,599.99,"HP - 17.3"" Laptop - Intel Core i5 - 8GB Mmeory - 256GB SSD - Natural Silver",Available,False,2021-05-09
+2021-06-03,549.99,534.99,"HP - 17.3"" Touch-Screen Laptop - AMD Athlon Gold 3150U - 8GB Memory - 512GB  SSD",SoldOut,True,2021-05-03
+2021-06-03,989.99,974.99,"HP - ENVY x360  2-in-1  15.6"" Touch-Screen Laptop - Intel Core  i7-1165G7 - 12GB Memory - 256GB SSD",SoldOut,True,2021-05-03
+2021-06-03,1799.99,1799.99,"MSI - Prestige 15.6"" 4K UHD Laptop - Intel Core i7-10710U - 32GB Memory - 1TB Solid State Drive - Windows 10 Pro - Gray with Blue Diamond cut",SoldOut,False,2021-04-29
+2021-06-03,1969.0,1969.0,"Lenovo - 14"" ThinkPad P14s Gen 2 Laptop - 16GB Memory - Intel Core i7-1165G7 - 512GB SSD - Black",Available,False,2021-04-30
+2021-06-03,1969.0,1969.0,"Lenovo - 15.6"" ThinkPad P15s Gen 2 Laptop - 16GB Memory - Intel Core i7-1165G7 - 512GB SSD - Black",SoldOut,False,2021-04-30
+2021-06-03,1999.0,1999.0,"Lenovo - 15.6"" ThinkPad P15s Gen 2 Laptop - 16GB Memory - Intel Core i7-1185G7 - 512GB SSD - Black",SoldOut,False,2021-04-30
+2021-06-03,1549.0,1549.0,"Lenovo - 14"" ThinkPad P14s Gen 1 Laptop - 8GB Memory - AMD Ryzen 7 PRO 4750U - 512GB SSD - Black",Available,False,2021-04-30
+2021-06-03,1919.0,1919.0,"Lenovo - 15.6"" ThinkPad P15s Gen2 Laptop - 16GB Memory - Intel Core i7-1165G7 - 512GB SSD - Black",SoldOut,False,2021-04-30
+2021-06-03,339.99,339.99,"Lenovo Ideapad 3 14"" Laptop - Intel Pentium Silver N5030 - 4GB Memory - 128GB SSD - Platinum Grey",ComingSoon,False,2021-06-01
+2021-06-03,399.99,399.99,Geo - GeoBook 240 14.1-inch FHD Laptop - Intel Pentium Silver Quad Core Processor - 8GB Memory - 128GB SSD - Black,ComingSoon,False,2021-05-30
+2021-06-03,259.99,259.99,Geo - GeoBook 120 Minecraft Edition 12.5-inch HD Laptop - Intel Celeron Quad Core Processor - 4GB Memory - 64GB eMMC - Minecraft Green,Available,False,2021-05-30
+2021-06-03,239.99,239.99,Geo - GeoBook 120 12.5-inch HD Laptop - Intel Celeron Dual Core Processor - 4GB Memory - 64GB eMMC - Purple,ComingSoon,False,2021-05-30
+2021-06-03,239.99,239.99,Geo - GeoBook 120 12.5-inch HD Laptop - Intel Celeron Dual Core Processor - 4GB Memory - 64GB eMMC - Blue,ComingSoon,False,2021-05-30
+2021-06-03,239.99,239.99,Geo - GeoBook 120 12.5-inch HD Laptop - Intel Celeron Quad Core Processor - 4GB Memory - 64GB eMMC - Pink,ComingSoon,False,2021-05-30
+2021-06-03,1349.99,1349.99,"MSI - Summit B15 15.6"" Touch Laptop, i7-1165G7, 16GB, 1TB,  Win10 Pro - Ink Black",SoldOut,False,2021-05-17
+2021-06-03,599.99,599.99,"HP - 17.3"" Touch-Screen Laptop - Intel Core i3 - 1125G4 - 8GB Memory - 512GB SSD - Natural silver",SoldOut,False,2021-05-24
 2021-06-02,999.99,999.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Space Gray",Available,False,2020-11-10
 2021-06-02,1249.99,1249.99,"MacBook Air 13.3"" Laptop - Apple M1 chip - 8GB Memory - 512GB SSD (Latest Model) - Space Gray",Available,False,2020-11-10
 2021-06-02,1299.0,1299.0,"HP - ProBook 650 G5 Notebook PC - 15.6"" Display - 8 GB RAM - 256 GB SSD",SoldOut,False,2020-06-15
