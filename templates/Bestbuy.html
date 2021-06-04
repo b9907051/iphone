@@ -11,10 +11,13 @@
                 </div>
                 <div class="card-body text-white bg-danger">
                     <p class="card-text text-light">
-                        本資料提供四關鍵數據 【高/低價平均價格】 及 【完售數量比】 及 【打折數量比】 <br>
-                        平均價格: {{product}} 產品在前/後 50名平均價格<br>
-                        完售數量比: soldout 數量占產品數量比重 (%)<br>
-                        打折數量比: onsale 數量占產品數量比重 (%)
+                        本資料提供四關鍵數據 【高/低價平均價格】 、 【完售數量比】 、【打折金額比】 及 【打折數量比】 <br>
+                        <br>
+                        <b>平均價格:</b> {{product}} 產品在前/後 50名平均價格<br>
+                        <b>打折數量比:</b> 可購買之打折產品數量 占 可購買產品數量比重 (%)<br>
+                        <b>打折金額比:</b> 可購買產品總打折金額 / 可購買產品總原價金額 (%)<br>
+                        <b>完售數量比:</b> soldout 數量占 總產品數量比重 (%)<br>
+                        註: 可購買產品數量 = 總產品數量 - 完售產品數量
                     </p>
 
                 </div>
@@ -33,14 +36,17 @@
                     <div class="col-lg-6 col-md-6" style = "height:230px">
                         <canvas id="price_low_laptop"></canvas>
                     </div>
+
+                    <div class="col-lg-6 col-md-6" style = "height:230px">
+                        <canvas id="stock_dollar_onsale"></canvas>
+                    </div>
                     <div class="col-lg-6 col-md-6" style = "height:230px">
                         <canvas id="stock_onsale_laptop"></canvas>
                     </div>
+
                     <div class="col-lg-6 col-md-6" style = "height:230px">
                         <canvas id="stock_soldout_laptop"></canvas>
                     </div>
-
-
                 </div>
             </div>
         </div> 

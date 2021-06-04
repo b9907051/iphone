@@ -245,12 +245,21 @@ def Bestbuy():
         
         df_temp.columns = ['lowPrice']
         data_dic[datatype] = df_temp['lowPrice'].values.tolist()
+
+    # 如果想看打折金額比:
+    elif 'dollar' in datatype:
+        df_temp = df[['onsale_dollar_percent']]
+        
+        df_temp.columns = ['stock_dollar_onsale']
+        data_dic[datatype] = df_temp['stock_dollar_onsale'].values.tolist()
+
     # 如果是想看soldout percentage or onsale percentage:
     elif 'onsale' in datatype:
         df_temp = df[['onsale_percent']]
         
         df_temp.columns = ['stock_onsale']
         data_dic[datatype] = df_temp['stock_onsale'].values.tolist()
+
 
     elif 'soldout' in datatype:
         df_temp = df[['soldout_percent']]

@@ -138,6 +138,8 @@ product_list = {
     'laptop':'pcmcat138500050001'
 }
 newdata_status = []
+onsale_price = []
+regular_price = []
 total_amount = 0
 soldout_amount = 0
 ordeble_amount = 0
@@ -173,14 +175,20 @@ for product,code in product_list.items():
                 #------ 紀錄要做計算的數字---#
                 # 所有商品的數量
                 total_amount += 1
+
                 # 使用商品現在可不可以購買 來統計 賣完 以及 還可以買的數量
                 if response['products'][i]['orderable'] == 'Available':
                     ordeble_amount += 1
                     # 在可以購買商品的狀態下 如果 有打折的話:
                     if response['products'][i]['onSale'] == True:
+                        # 紀錄打折的價格
+                        onsale_price.append(response['products'][i]['salePrice'])
                         onsale_amount += 1
                     else:
+                        # 紀錄沒打折的價格
+                        regular_price.append(response['products'][i]['regularPrice'])
                         non_onsale_amount += 1
+
                 else:
                     soldout_amount += 1
                     
@@ -192,7 +200,9 @@ for product,code in product_list.items():
     newdata['soldout_amount'] = soldout_amount
     newdata['onsale_amount'] = onsale_amount
     newdata['non_onsale_amount'] = non_onsale_amount
+    newdata['onsale_dollar_percent'] = round(sum(onsale_price)/sum(regular_price)*100,2)
     newdata['timestamp'] = datetime.datetime.strftime(datetimenow, "%Y-%m-%d")
+
     store_csv([newdata],'bestbuy_'+product)
     print('輸出統計資料')
     store_csv(newdata_status,'data_detail_allproduct_'+product)

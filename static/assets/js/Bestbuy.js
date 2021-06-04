@@ -11,7 +11,7 @@
     const brandmeat = '#FFD4CA'
     const brandbrown = '#6b3900'
     var borderColorArr = [brandSuccess, brandDanger, brandPrimary,
-        brandyellow, brandblack, brandblue,
+        brandblack, brandblue,
         brandmeat, brandbrown]
 
     // converHex 這個函數在後面會給出rgba(r,g,b)的字串 讓chart.js使用
@@ -33,8 +33,9 @@
     renderChart('laptop','price_high',borderColorArr[0], $('#price_high_laptop'))
     renderChart('laptop','price_low',borderColorArr[1], $('#price_low_laptop'))
     renderChart('laptop','stock_onsale',borderColorArr[2], $('#stock_onsale_laptop'))
-    renderChart('laptop','stock_soldout',borderColorArr[4], $('#stock_soldout_laptop'))
-
+    renderChart('laptop','stock_soldout',borderColorArr[3], $('#stock_soldout_laptop'))
+    renderChart('laptop','stock_dollar_onsale',borderColorArr[4], $('#stock_dollar_onsale'))
+    console.log(borderColorArr[5])
     function renderChart(product,request,color, canvas) {
         axios.get(`/Bestbuy?product=${product}&request=${request}`)
 
@@ -65,6 +66,7 @@
 
                 // console.log('[last data]',X_axis.slice(-1))
                 var data_for_plot
+                let y_lable
                 let titleofpic
                 data_for_plot = [{
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
@@ -83,19 +85,27 @@
                 switch (request) {
                   case 'price_high':
                     titleofpic = "高價位平均價格";
+                    y_lable = 'US dollar($)';
                     break;
                   case 'price_low':
                     titleofpic = "低價位平均價格";
+                    y_lable = 'US dollar($)';
                     break;
                   case 'stock_onsale':
                     titleofpic = "完售數量比";
+                    y_lable = 'Percentage(%)';
+                    break;
+                  case 'stock_dollar_onsale':
+                    titleofpic = "打折金額比";
+                    y_lable = 'Percentage(%)';
                     break;
                   case 'stock_soldout':
                     titleofpic = "打折數量比";
+                    y_lable = 'Percentage(%)';
                     break;
                 }
-                console.log('[data_for_plot]',data_for_plot)
-                console.log('[X_axis]',X_axis)
+                // console.log('[data_for_plot]',data_for_plot)
+                // console.log('[X_axis]',X_axis)
 
                 var myChart = new Chart(canvas, {
                     type: 'line',
@@ -135,7 +145,7 @@
                                 display: true,
                                 title: {
                                   display: true,
-                                  text: 'percentage'
+                                  text: y_lable
                                 }
                             }
                         },
