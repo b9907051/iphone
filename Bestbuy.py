@@ -117,14 +117,14 @@ def price_handle(product_list,one_year_earlier,datetimenow):
 
         # 價格部份的檢查資訊在這裡了
         newdata_detail_price = pd.concat([df_lowprice,df_highprice],axis=1)
+
         # 還是要轉換成 dictionary 跟舊資料合併
         newdata_data_detail_price = newdata_detail_price.to_dict('records')
         # 存檔
         store_csv(newdata_data_detail_price,'data_detail_HLprice'+product)
-        print('輸出所有價格排序的細節')
+        return newdata
 
-
-def statictis_handle(product_list,one_year_earlier,datetimenow):
+def statictis_handle(product_list,one_year_earlier,datetimenow,newdata):
     # 所有產品的資訊 以及 產品的統計數據
     url = f'https://api.bestbuy.com/v1/products(categoryPath.id=pcmcat138500050001&startDate>{one_year_earlier})'\
     '?format=json&show=name,regularPrice,salePrice,onSale,orderable,&pageSize=100&apiKey=qhqws47nyvgze2mq3qx4jadt'
@@ -134,7 +134,7 @@ def statictis_handle(product_list,one_year_earlier,datetimenow):
     product_list = {
         'laptop':'pcmcat138500050001'
     }
-    newdata = {}
+
     newdata_status = []
     onsale_price = []
     regular_price = []
@@ -216,33 +216,27 @@ def statictis_handle(product_list,one_year_earlier,datetimenow):
         print('輸出所有商品細節')
 
 
-
-
-
-#----- 將檔案打包成 zip file -------
-
-# if platform.system() == "Windows":
-#     # Local 端
-#     path = 'static/data'
-# else:
-#     # AWS 端
-#     path = "/home/cathaylife04/smartphone/iphone11/static/data"
-# output_direct = '/Electronics/'
-# output_filename = 'Bestbuy_'+product
-# # 打包所有檔案到zip
-# # shutil.make_archive( path +'/zipfile/'+output_filename, 'zip', path + output_direct)
-# print('打包zip 成功')
-
-
 def main():
-
-
     # 拿到一年前的日期 協理指示我們只要看一年內的產品 52weeks
     datetimenow = datetime.datetime.now()
     one_year_earlier = datetimenow - datetime.timedelta(weeks=52)
     one_year_earlier = datetime.datetime.strftime(one_year_earlier, "%Y-%m-%d")
 
-    price_handle(product_list,one_year_earlier,datetimenow)
-    statictis_handle(product_list,one_year_earlier,datetimenow)
+    newdata = price_handle(product_list,one_year_earlier,datetimenow)
+    statictis_handle(product_list,one_year_earlier,datetimenow,newdata)
+    
+    #----- 將檔案打包成 zip file -------
+    product = 'laptop'
+    if platform.system() == "Windows":
+        # Local 端
+        path = 'static/data'
+    else:
+        # AWS 端
+        path = "/home/cathaylife04/smartphone/iphone11/static/data"
+    output_direct = '/Electronics/'
+    output_filename = 'Bestbuy_'+product
+    # 打包所有檔案到zip
+    shutil.make_archive( path +'/zipfile/'+output_filename, 'zip', path + output_direct)
+    print('打包zip 成功')
 if __name__ == '__main__':
     main()
