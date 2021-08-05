@@ -99,7 +99,7 @@
                                 display: true,
                                 title: {
                                   display: true,
-                                  text: 'percentage'
+                                  text: 'Median Days'
                                 }
                             }
                         },
