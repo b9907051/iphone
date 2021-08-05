@@ -30,16 +30,17 @@
     // renderChart(productlist[len], $('#nike_'+productlist[len]))
     // console.log('[len]',productlist[len],'obj','#google_'+productlist[len])
     // }
-    renderChart('打折數量比', $('#nike_quant'))
-    renderChart('打折金額比', $('#nike_money'))
+    renderChart('Arrive', $('#marine_arrive'))
+    renderChart('Departure', $('#marine_depart'))
 
     function renderChart(product, canvas) {
-        axios.get(`/Nike?product=${product}`)
+        axios.get(`/MarineTraffic?categorization=${product}`)
 
             .then(function (res) {
-                console.log(res)
+
                 // 這裡 axios 去後端拿的 data 必須要沒有nan 不然拿回來不會是object
-                const Data = res.data[product];
+                const Data = res.data['Data'];
+                console.log(res)
                 const X_axis = res.data['X_axis'];
                 const data_set = Object.keys(Data).map(k => ({ [k]: Data[k] }));
                 // console.log('[last data]',X_axis.slice(-1))
@@ -83,15 +84,15 @@
                         maintainAspectRatio: false,
                         scales: {
                             x: {
-                                type: 'time',
+                                // type: 'time',
                                 // ticks:{
                                 //     stepSize:50
                                 // },
-                                time: {
-                                      unit: 'day',
-                                      stepSize:1,
-                                      tooltipFormat:'yyyy-MM-dd'
-                                },
+                                // time: {
+                                //       unit: 'day',
+                                //       stepSize:1,
+                                //       tooltipFormat:'yyyy-MM-dd'
+                                // },
                             },
 
                             y: {

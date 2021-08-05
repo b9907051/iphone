@@ -141,6 +141,11 @@ def is_logged_in(f):
 def mainpage():
     return render_template("Videocard.html")
 
+@app.route("/Marine-page")
+@is_logged_in
+def Marine_page():
+    return render_template("Marine.html")
+
 @app.route("/Videocard-page")
 @is_logged_in
 def Videocard_page():
@@ -219,6 +224,33 @@ def Zhongguancun():
 @is_logged_in
 def Tmallpage():
     return render_template("tmall.html")
+
+@app.route("/MarineTraffic")
+@is_logged_in
+def MarineTraffic():
+
+    # 從前端 拿到要看的產品
+    categorization = request.values.get("categorization")
+
+    df = pd.read_csv("static/data/Shipping/congestion.csv")
+
+    # 根據前端送來要看的種類塞出來 'Arrive' 或 'Depart' 的資料
+    df = df[df['categorization'] == categorization]
+    df = df[['Calendar_Week','Port_ID','ALL']]
+    df = df.replace({np.nan: None})
+
+    Port_ID = df['Port_ID'].unique()
+    # df_temp[df_temp['Port_ID'] == Port_ID[0]]
+    data_dic = {'Data':{}}
+    for Port in Port_ID:
+        temp_dict = {}
+        df_temp = df[df['Port_ID'] == Port]
+        temp_dict[Port] = df_temp['ALL'].values.tolist()
+        data_dic['Data'].update(temp_dict)
+
+    data_dic['X_axis'] = df_temp['Calendar_Week'].values.tolist()
+    print(data_dic)
+    return json.dumps(data_dic)
 
 @app.route("/Bestbuy")
 @is_logged_in
