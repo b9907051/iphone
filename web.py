@@ -249,7 +249,6 @@ def MarineTraffic():
         data_dic['Data'].update(temp_dict)
 
     data_dic['X_axis'] = df_temp['Calendar_Week'].values.tolist()
-    print(data_dic)
     return json.dumps(data_dic)
 
 @app.route("/Bestbuy")

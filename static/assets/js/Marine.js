@@ -71,6 +71,9 @@
                     },
                     options: {
                         plugins: {
+                            legend:{
+                                position:'left'
+                            },
                             title: {
                               display: true,
                               text: product ,
