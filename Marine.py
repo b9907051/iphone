@@ -4,6 +4,7 @@ import datetime
 import pandas as pd
 import numpy as np
 import platform
+# 有時候的登入狀態會抓不到資料:
 # 要抓的港口 'ID': 港口名稱
 port_ID_map = {'87':'Los Angeles','2727':'longBeach','93':'Oakland','1253':'Shanhi','1006':'Yantian',
               '290':'Singapore','172':'Hamburg','2036':'Rotterdam','199':'Felixstowe'}
@@ -87,6 +88,7 @@ for port_ID,port_name in port_ID_map.items():
         else:
             myobj['configID'] = 'VesselType_TaP'
         r = s.post(url,headers = headers, data = myobj)
+        # print(r.text)
         response = json.loads(r.text)
         for i in range(len(response)):
             if job == 'TaA':
@@ -98,7 +100,7 @@ for port_ID,port_name in port_ID_map.items():
 
 df = pd.DataFrame(result)
 # 轉型把數字都轉成float
-print(df.columns)
+# print(df.columns)
 df.loc[:,ship_type] = df.loc[:,ship_type].astype(float)
 # 把port_ID maping 到看得懂的名字
 df['Port_ID'] = df['Port_ID'].apply(lambda x: port_ID_map[x])
