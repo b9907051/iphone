@@ -109,6 +109,8 @@ df['Port_ID'] = df['Port_ID'].apply(lambda x: port_ID_map[x])
 df = df[['Calendar_Week','Port_ID','categorization','ALL','CONTAINER SHIPS','DRY BREAKBULK'
            ,'DRY BULK','LNG CARRIERS','LPG CARRIERS','PASSENGER SHIPS','RO/RO','WET BULK'
            ,'SUPPORTING VESSELS']]
+
+print(df)
 # 檔案位置
 if platform.system() == "Windows":
     # Local 端
