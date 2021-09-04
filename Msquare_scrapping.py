@@ -6,7 +6,7 @@ import requests
 import platform
 import shutil
 #35177 各支線, 35158 FBX指數
-chart_dict = {'35158':'FBX指數','35177':'FBX支線'}
+chart_dict = {'35158':'FBX指數','35177':'FBX支線','947':'SCFI'}
 # '773'
 # search_stk = re.compile('data-stk')
 
