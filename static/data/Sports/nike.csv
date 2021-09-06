@@ -1,4 +1,6 @@
 ﻿timestamp,discount_item_ratio_cloth,discount_money_cloth,total_num_cloth,soldout_num_cloth,instock_num_cloth,discount_num_cloth,discount_item_ratio_shoes,discount_money_shoes,total_num_shoes,soldout_num_shoes,instock_num_shoes,discount_num_shoes
+2021-09-06,16.1,69.76,35907,493,35414,5702,10.35,69.75,4725,97,4628,479
+2021-09-05,15.65,69.66,32981,499,32482,5082,5.62,73.93,4703,236,4467,251
 2021-09-04,15.36,69.51,32894,429,32465,4988,15.54,69.62,4940,151,4789,744
 2021-09-03,16.83,69.62,36595,471,36124,6080,16.23,65.65,4036,12,4024,653
 2021-09-02,17.88,69.82,37183,837,36346,6498,19.11,68.58,6073,56,6017,1150
