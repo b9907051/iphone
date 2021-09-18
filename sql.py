@@ -46,7 +46,7 @@ for key,index in product_index.items():
 
 # return render_template('index.html')
 # print(res)
-sql_hostname = 'mytestdb.c72ftrj7ifc7.ap-northeast-1.rds.amazonaws.com'
+sql_hostname = '127.0.0.1'
 sql_username = 'root'
 sql_password = 'lay911225'
 sql_main_database = 'Appleinfo'
