@@ -8,6 +8,7 @@ import pandas as pd
 import platform
 import shutil
 import datetime
+from module import delivermsg_to_num
 
 if platform.system() == "Windows":
     # Local 端
@@ -447,20 +448,20 @@ countries = {
 
 
 Us ={
-	'iPhone 13 Pro Max':["MLKP3LL/A","MLKV3LL/A","MLL03LL/A","MLL53LL/A","MLL33LL/A","MLKX3LL/A","MLKT3LL/A","MLKM3LL/A","MLKN3LL/A",
-	"MLKU3LL/A","MLKY3LL/A","MLL43LL/A","MLL23LL/A","MLKW3LL/A","MLKR3LL/A","MLKL3LL/A"],
+	# 'iPhone 13 Pro Max':["MLKP3LL/A","MLKV3LL/A","MLL03LL/A","MLL53LL/A","MLL33LL/A","MLKX3LL/A","MLKT3LL/A","MLKM3LL/A","MLKN3LL/A",
+	# "MLKU3LL/A","MLKY3LL/A","MLL43LL/A","MLL23LL/A","MLKW3LL/A","MLKR3LL/A","MLKL3LL/A"],
 
-	'iPhone 13 Pro':["MLTT3LL/A","MLU03LL/A","MLU73LL/A","MLUD3LL/A","MLUA3LL/A","MLU33LL/A","MLTX3LL/A","MLTQ3LL/A","MLTR3LL/A",
-	"MLTY3LL/A","MLU43LL/A","MLUC3LL/A","MLU93LL/A","MLU13LL/A","MLTW3LL/A","MLTP3LL/A"],
+	# 'iPhone 13 Pro':["MLTT3LL/A","MLU03LL/A","MLU73LL/A","MLUD3LL/A","MLUA3LL/A","MLU33LL/A","MLTX3LL/A","MLTQ3LL/A","MLTR3LL/A",
+	# "MLTY3LL/A","MLU43LL/A","MLUC3LL/A","MLU93LL/A","MLU13LL/A","MLTW3LL/A","MLTP3LL/A"],
 
-    'iPhone 13':["MLJ23LL/A","MLMN3LL/A","MLMY3LL/A","MLN43LL/A","MLN83LL/A","MLN13LL/A","MLMT3LL/A","MLML3LL/A","MLMU3LL/A",
-    "MLN23LL/A","MLN33LL/A","MLMX3LL/A","MLMM3LL/A","MLMQ3LL/A","MLN03LL/A"],
+ #    'iPhone 13':["MLJ23LL/A","MLMN3LL/A","MLMY3LL/A","MLN43LL/A","MLN83LL/A","MLN13LL/A","MLMT3LL/A","MLML3LL/A","MLMU3LL/A",
+ #    "MLN23LL/A","MLN33LL/A","MLMX3LL/A","MLMM3LL/A","MLMQ3LL/A","MLN03LL/A"],
 
 
-	'iPad 2021': ["MK2K3LL/A","MK663LL/A","MK693LL/A","MK2N3LL/A","MK2P3LL/A","MK6A3LL/A","MK673LL/A","MK2L3LL/A"],
+	# 'iPad 2021': ["MK2K3LL/A","MK663LL/A","MK693LL/A","MK2N3LL/A","MK2P3LL/A","MK6A3LL/A","MK673LL/A","MK2L3LL/A"],
 
-    'iPad mini 2021': ["MK893LL/A","MK7M3LL/A","MK7T3LL/A","MK8F3LL/A","MLX93LL/A","MLWR3LL/A","MLWL3LL/A","MLX43LL/A",
-    "MK8E3LL/A","MK7R3LL/A","MK7X3LL/A","MK8K3LL/A","MK8H3LL/A","MK7V3LL/A","MK7P3LL/A","MK8C3LL/A"]
+ #    'iPad mini 2021': ["MK893LL/A","MK7M3LL/A","MK7T3LL/A","MK8F3LL/A","MLX93LL/A","MLWR3LL/A","MLWL3LL/A","MLX43LL/A",
+ #    "MK8E3LL/A","MK7R3LL/A","MK7X3LL/A","MK8K3LL/A","MK8H3LL/A","MK7V3LL/A","MK7P3LL/A","MK8C3LL/A"]
 
 	# 'iPhone 12 Pro Max':["MGCF3LL/A","MGCK3LL/A","MGCP3LL/A","MGCG3LL/A","MGCL3LL/A","MGCQ3LL/A","MGCH3LL/A","MGCM3LL/A","MGCR3LL/A","MGCJ3LL/A","MGCN3LL/A","MGCT3LL/A"],
 	# 'iPhone 12 Pro':["MGLN3LL/A","MGLT3LL/A","MGLX3LL/A","MGLP3LL/A","MGLU3LL/A","MGLY3LL/A","MGLQ3LL/A","MGLV3LL/A","MGM23LL/A","MGLR3LL/A","MGLW3LL/A","MGM43LL/A"],
@@ -1114,6 +1115,9 @@ for Model in Model_Us:
 
         d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
 
+        # d['Days'] = delivermsg_to_num.Us(d['Deliver'],d['TimeStemp'])
+        # d["Days"] = eval('delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
+        exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
         print(d)
         res.append(d)
 
@@ -1148,6 +1152,9 @@ for Model in Model_Us:
             d['Celluar'] = Celluar_R[Model[0:5]]
             d['Size'] = Size_R[Model[0:5]]
 
+        # d['Days'] = delivermsg_to_num.Us(d['Deliver'],d['TimeStemp'])
+        # d["Days"] = eval('delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
+        exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
         print(d)
         res.append(d)
 
@@ -1166,12 +1173,12 @@ for Model in Model_Us:
 
         # d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['quote']
         d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
+        
+        # d["Days"] = eval('delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
+        exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
         print(d)
         res.append(d)
 
-
-    # except:
-    	# print(d,'下架')
 
 for Product in countries:
 	#外迴圈跑國家
@@ -1197,6 +1204,7 @@ for Product in countries:
                 response = json.loads(r.text)
                 deliver_string = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
                 d['Deliver'] = replacestring(deliver_string,*bagofwords)
+                exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
                 print(d)
                 res.append(d)
 
@@ -1222,6 +1230,7 @@ for Product in countries:
                     deliver_string = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
                     d['Deliver'] = replacestring(deliver_string,*bagofwords)
 
+                
                 print(url)
 
                 # 如果是iPad 則多了 Colar 這個 項目
@@ -1234,7 +1243,7 @@ for Product in countries:
                     d['Size'] = Size_R[Model[0:5]]
                 
                 
-
+                exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
                 print(d)
                 res.append(d)
 
@@ -1251,6 +1260,7 @@ for Product in countries:
                 response = json.loads(r.text)
                 deliver_string = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
                 d['Deliver'] = replacestring(deliver_string,*bagofwords)
+                exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
                 print(d)
                 res.append(d)
 

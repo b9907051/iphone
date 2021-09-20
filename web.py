@@ -554,7 +554,9 @@ def dashboard():
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
     df = pd.read_csv("static/data/Data.csv")
-
+    
+    # 如果不把讀取的東西轉成str 他會預設用float 在pivot時會出錯
+    df['Day'] = df['Day'].astype(str)
     # 如果現在不是在虛擬環境下的話路徑使用
     # df = pd.read_csv("static/data/Data.csv")
     df = df.drop_duplicates()
@@ -601,7 +603,7 @@ def dashboard():
 
             pivot = pd.pivot_table(
             df,
-            values="Deliver",
+            values="Day",
             # index=["All_countries", "Colors", "Size"],
             index=Index,
             columns=["All_countries", "Colors", "Size","Celluar"],
@@ -613,7 +615,7 @@ def dashboard():
 
             pivot = pd.pivot_table(
             df,
-            values="Deliver",
+            values="Day",
             # index=["All_countries", "Colors", "Size"],
             index=Index,
             columns=["All_countries", "Size","Celluar"],
@@ -624,7 +626,7 @@ def dashboard():
         # 少了 Celluar
             pivot = pd.pivot_table(
                 df,
-                values="Deliver",
+                values="Day",
                 # index=["All_countries", "Colors", "Size"],
                 index=Index,
                 columns=["All_countries", "Colors", "Size"],
@@ -647,7 +649,7 @@ def dashboard():
                 
             except:
                 pivot = pivot[cols3]
-                
+
         finally:
             # df_fill_country會把篩選過後的表格輸出
 
@@ -666,7 +668,7 @@ def dashboard():
 
                     pivot = pd.pivot_table(
                     df_fill_country,
-                    values="Deliver",
+                    values="Day",
                     index=Index,
                     columns=["All_countries","Colors", "Size","Celluar"],
                     aggfunc=lambda x: " ".join(x),
@@ -676,7 +678,7 @@ def dashboard():
 
                     pivot = pd.pivot_table(
                     df_fill_country,
-                    values="Deliver",
+                    values="Day",
                     # index=["All_countries", "Colors", "Size"],
                     index=Index,
                     columns=["Size","Celluar"],
@@ -687,7 +689,7 @@ def dashboard():
                 # 少了 Celluar
                     pivot = pd.pivot_table(
                         df_fill_country,
-                        values="Deliver",
+                        values="Day",
                         # index=["All_countries", "Colors", "Size"],
                         index=Index,
                         columns=[ "Colors", "Size"],
@@ -709,7 +711,7 @@ def dashboard():
         pivot = df
         pivot = pd.pivot_table(
             pivot,
-            values="Deliver",
+            values="Day",
             index=Index,
             columns=["All_countries"],
             aggfunc=lambda x: " ".join(x),
