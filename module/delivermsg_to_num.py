@@ -109,12 +109,15 @@ def Tw(text,time_text):
     # 3-4 週 13165
     case1_re = re.compile(r'(\d+)-(\d+)')
     # 2019/06/14 - 2019/06/18 43985
-    case2_re = re.compile(r'(.*)\s-\s(.*)')
+    # 2021/10/23 - 2021/10/30 — 免額外付費
+    case2_re = re.compile(r'(.*)\s-\s(.{10})')
     # Delivers 13 November 15386
     case3_re = re.compile(r'\s(.*)')
 
     # 多數地區 10 月 23 日送達 15173
     case4_re = re.compile(r'\s(\d+\s月\s\d+\s)日') 
+
+
     # 2021/1/5 13633
     # 有現貨 0
     if check_is_number_re.findall(text[0]):
@@ -123,6 +126,7 @@ def Tw(text,time_text):
             try:
                 start_day = dateparser.parse(case2_re.findall(text)[0][0])
                 end_day = dateparser.parse(case2_re.findall(text)[0][1])
+                print(start_day,end_day)
                 # start_day 已經是跟Timestamp的時間差了 ex: 5天
                 start_day = date_gap_calculate(start_day,time_text)
                 end_day = date_gap_calculate(end_day,time_text)
