@@ -545,6 +545,7 @@ def Tmall():
 def dashboard():
     # 進行 request
     # 從網頁的呼叫拿資訊
+
     Country = request.values.get("Country")
     Index = request.values.get(
         "Index", "TimeStemp"
@@ -554,7 +555,7 @@ def dashboard():
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
     df = pd.read_csv("static/data/Data.csv")
-    
+
     # 如果不把讀取的東西轉成str 他會預設用float 在pivot時會出錯
     df['Day'] = df['Day'].astype(str)
     # 如果現在不是在虛擬環境下的話路徑使用
@@ -590,8 +591,8 @@ def dashboard():
 
     df["All_countries"] = df.Country.map(All_countries)
     # 只把我們要的 product 拿出來
-    df = df[df["Product"] == Product]
 
+    df = df[df["Product"] == Product]
     try:
     # 把Size裡的項目轉成類別等等進行pivot就會排好
         Product_Categories = df["Size"].unique().tolist()
