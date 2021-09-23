@@ -560,7 +560,7 @@ def dashboard():
     df['Day'] = df['Day'].astype(str)
     # 如果現在不是在虛擬環境下的話路徑使用
     # df = pd.read_csv("static/data/Data.csv")
-    df = df.drop_duplicates()
+    # df = df.drop_duplicates()
     # --------------------- Maping 不同的 國家的名字 ---------------------#
     All_countries = {
         "Us": "美國",
