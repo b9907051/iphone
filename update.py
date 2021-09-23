@@ -456,9 +456,9 @@ Us ={
 
     'iPhone 13':["MLJ23LL/A","MLMN3LL/A","MLMY3LL/A","MLN43LL/A","MLN83LL/A","MLN13LL/A","MLMT3LL/A","MLML3LL/A","MLMU3LL/A",
     "MLN23LL/A","MLN33LL/A","MLMX3LL/A","MLMM3LL/A","MLMQ3LL/A","MLN03LL/A"],
-    
+
     'iPhone 13 mini':["MLHP3LL/A","MLHV3LL/A","MLJ13LL/A","MLJ33LL/A","MLHX3LL/A","MLHR3LL/A","MLHM3LL/A","MLHT3LL/A","MLHY3LL/A",
-    "MLJ03LL/A","MLHU3LL/A","MLHN3LL/A","MLHQ3LL/A","MLHW3LL/A","MLJ23LL/A"]
+    "MLJ03LL/A","MLHU3LL/A","MLHN3LL/A","MLHQ3LL/A","MLHW3LL/A","MLJ23LL/A"],
 
 	'iPad 2021': ["MK2K3LL/A","MK663LL/A","MK693LL/A","MK2N3LL/A","MK2P3LL/A","MK6A3LL/A","MK673LL/A","MK2L3LL/A"],
 
@@ -1278,7 +1278,7 @@ df = df.drop_duplicates()
 #index:列向量
 #columns:行向量
 # path
-df.to_csv(path,encoding='utf_8_sig', index=False)
+# df.to_csv(path,encoding='utf_8_sig', index=False)
 
 
 # #要去哪裡
