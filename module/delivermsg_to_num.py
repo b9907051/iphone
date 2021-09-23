@@ -30,7 +30,7 @@ def Ru(text,time_text):
             date_gap = start_day + (end_day - start_day)/2 
         else:
             date_gap = int(case0_re.findall(text)[0])
-        if 'недели' in text:
+        if 'недели' in text or 'недель' in text:
             date_gap = date_gap * 7
             return date_gap
         # 就是日
