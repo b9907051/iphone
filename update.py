@@ -9,6 +9,7 @@ import platform
 import shutil
 import datetime
 from module import delivermsg_to_num
+import time
 
 if platform.system() == "Windows":
     # Local 端
@@ -894,7 +895,7 @@ Size = {
 			#iPhone13 Pro
 			"MLU73","MLU33","MLU43","MLU13","MLVU3","MLVN3","MLVQ3","MLVH3","MLTJ3","MLTG3","MLTH3","MLTF3","MLV03","MLUW3","MLUY3","MLUV3","MLWD3","MLWA3","MLWC3","MLW93",
             #iPhone13 
-            "MLN43","MLN83","MLN23","MLN33","MLN53","MLQE3","MLQG3","MLQC3","MLQD3","MLQF3","MLE93","MLEC3","MLE63","MLE73","MLEA3","MLNQ3","MLNT3","MLNN3","MLNP3","MLNR3","MLPA3","MLPD3","MLP83","MLP93","MLPC3","MLN53"
+            "MLN43","MLN83","MLN23","MLN33","MLN53","MLQE3","MLQG3","MLQC3","MLQD3","MLQF3","MLE93","MLEC3","MLE63","MLE73","MLEA3","MLNQ3","MLNT3","MLNN3","MLNP3","MLNR3","MLPA3","MLPD3","MLP83","MLP93","MLPC3","MLN53",
             #iPhone13 mini
             "MLJ13","MLJ33","MLHY3","MLJ03","MLJ23","MLKD3","MLKF3","MLKA3","MLKC3","MLKE3","MLDQ3","MLDT3","MLDN3","MLDP3","MLDR3","MLJU3","MLJY3","MLJP3","MLJR3","MLJW3","MLMF3","MLMK3","MLM93","MLMC3","MLMH3",
 			# #iPhone12 Pro
@@ -1099,7 +1100,11 @@ def replacestring(x,*bagofwords):
 res=[]
 
 # 美國的要單獨跑 因為地址網址的dictionary 是空的
+# count = 0
 for Model in Model_Us:
+    # count = count +1
+    # if count % 30 == 0 :
+    #     time.sleep(5)
 	# if Product_Us_R[Model] == 'IpadPro':
 	# print(Model)
     d = {} #清空dictionary
