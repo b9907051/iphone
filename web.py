@@ -27,6 +27,7 @@ import numpy as np
 from module.get_data_from_csv_V2 import get_csv
 
 # from module.get_data_from_sql import get_datafromsql
+#如果 在 module 裡的 init 裡面有寫 import 一個py 如果
 from module import dailydata_to_weeklydata as dw
 
 # 登入資訊 login page

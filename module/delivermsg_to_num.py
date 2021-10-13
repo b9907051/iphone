@@ -280,7 +280,8 @@ def Hk(text,time_text):
     #6–8 weeks
     case1_re = re.compile(r'(\d+)–(\d+)')
     # 01/04/2021 - 08/04/2021. 10/1- 10/8
-    case2_re = re.compile(r'(.*)\s-\s(.*)')
+    # "12/11/2021 - 19/11/2021 — Free",
+    case2_re = re.compile(r'(.*)\s-\s(.{10})')
     # Wed 31/03/2021
     case3_re = re.compile(r'\s(.*)')
 
@@ -289,7 +290,6 @@ def Hk(text,time_text):
     if check_is_number_re.findall(text[0]):
         #   01/04/2021 - 08/04/2021.
         if len(text)>20:
-            
             start_day = dateparser.parse(case2_re.findall(text)[0][0],date_formats=['%d/%m/%Y'])
             end_day = dateparser.parse(case2_re.findall(text)[0][1],date_formats=['%d/%m/%Y'])
             # start_day 已經是跟Timestamp的時間差了 ex: 5天
