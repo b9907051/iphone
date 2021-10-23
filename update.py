@@ -59,12 +59,13 @@ def anti_scrapping(d,url):
             d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
             exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
             print(d)
-            
+            time.sleep(1)
         # 如果被反爬蟲的話持續進行這個迴圈
         except Exception as e:
             print('被反爬蟲',str(e))
-            f = random.uniform(1, 10)
-            time.sleep(math.floor(f * 10) / 10.0)
+            # f = random.uniform(1, 10)
+            # time.sleep(math.floor(f * 10) / 10.0)
+            time.sleep(2)
             continue
         # 如果try 成功的話 break 迴圈
         else:
@@ -217,7 +218,7 @@ df = df.drop_duplicates()
 #index:列向量
 #columns:行向量
 # path
-df.to_csv(path,encoding='utf_8_sig', index=False)
+# df.to_csv(path,encoding='utf_8_sig', index=False)
 
 
 # #要去哪裡

@@ -61,7 +61,7 @@ def send_mail(subject_normal,subject_abnormal,mail_output):
     msg.attach(MIMEText(start + body + end, 'html'))
 
     # 信箱
-    msg['To'] ='lay9412206@gmail.com;layx@cathaylife.com.tw'
+    msg['To'] ='lay9412206@gmail.com'
     # ;layx@cathaylife.com.tw;'\
     # 'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
     # 'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\

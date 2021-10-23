@@ -1,4 +1,7 @@
 # Zscore function
+import numpy as np
+import pandas as pd
+
 #----函數處理------
 def fun_apply(x, targetfunction, window, **kwargs):
     # 軸向是0 就是一個一個列往下apply
@@ -78,7 +81,7 @@ def true_false(x,window):
     y = [bool(i) for i in x]
     return y
 
-def mail_content(df):
+def mail_content(df,dataname):
     # 要拿來算產品的差幅的週數
 #     df = df_BDIBCI
     
@@ -107,7 +110,12 @@ def mail_content(df):
 
     # 我們只在乎前一周的資料沒有訊號 然後 本周的資料是有訊號的
     # 我們只要前一周的資料是False 且最後一周是True的
-    Result_signal_plus = (signal_price_plus.iloc[-2,:] == False) & (signal_price_plus.iloc[-1,:] == True)
+    if dataname == "SCFI":
+        # SCFI 的條件比較嚴格 前一周要沒出訊才行
+        Result_signal_plus = (signal_price_plus.iloc[-2,:] == False) & (signal_price_plus.iloc[-1,:] == True)
+    else:
+        # BDI的條件比較鬆散 當周出訊就送
+        Result_signal_plus = signal_price_plus.iloc[-1,:] == True
     Result_signal_minus = signal_price_minus.iloc[-1,:] == True
     # 符合目標 Zscore 的產品的最新報價
     # chemicalprice[chemicalprice.columns[Result_signal]].iloc[-1:,:]

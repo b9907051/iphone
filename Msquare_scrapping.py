@@ -6,7 +6,7 @@ import requests
 import platform
 import shutil
 #35177 各支線, 35158 FBX指數
-chart_dict = {'35158':'FBX指數','35177':'FBX支線','947':'SCFI'}
+chart_dict = {'35158':'FBX指數','35177':'FBX支線','947':'SCFI','773':'BDIBCI'}
 # '773'
 # search_stk = re.compile('data-stk')
 
@@ -80,6 +80,10 @@ for chart_num, data_name in chart_dict.items():
 
 
     df = pd.DataFrame(data_list)
+
+    if data_name == 'BDIBCI':
+        df = df[(df['dataname'] == 'BDI乾散貨指數') | (df['dataname'] == 'BCI海岬型貨運指數')]
+
     df2 = df.pivot(index='date', columns='dataname', values='price')
 
     if platform.system() == "Windows":
