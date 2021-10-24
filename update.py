@@ -218,7 +218,7 @@ df = df.drop_duplicates()
 #index:列向量
 #columns:行向量
 # path
-# df.to_csv(path,encoding='utf_8_sig', index=False)
+df.to_csv(path,encoding='utf_8_sig', index=False)
 
 
 # #要去哪裡

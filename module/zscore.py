@@ -132,8 +132,8 @@ def mail_content(df,dataname):
         # 如果 表 不是空的話執行 (表如果只有index也是空的)
         if df.size != 0:
             df['指數'] = df.index
-            df.columns = ['報價','漲跌幅','指數']
-            df = df[['指數','報價','漲跌幅']]
+            df.columns = ['報價','月漲跌幅(%)','指數']
+            df = df[['指數','報價','月漲跌幅(%)']]
             #     df = df.T
             #     df['航線'] = df.index
             #     df = df[['航線','報價','漲跌幅']]

@@ -61,14 +61,13 @@ def send_mail(subject_normal,subject_abnormal,mail_output):
     msg.attach(MIMEText(start + body + end, 'html'))
 
     # 信箱
-    msg['To'] ='lay9412206@gmail.com'
-    # ;layx@cathaylife.com.tw;'\
-    # 'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
-    # 'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
-    # 'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
-    # 'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
-    # 'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
-    # 'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'
+    msg['To'] ='lay9412206@gmail.com;'\
+    'jalinyang@cathaylife.com.tw;patrickyen@cathaylife.com.tw;'\
+    'ericfly168@cathaylife.com.tw;renny@cathaylife.com.tw;kcyu@cathaylife.com.tw;'\
+    'aywlang@cathaylife.com.tw;wthuang@cathaylife.com.tw;evanyeh@cathaylife.com.tw;'\
+    'jianyou@cathaylife.com.tw;sylviayang@cathaylife.com.tw;cw_huang@cathaylife.com.tw;'\
+    'boyu.chen@cathaylife.com.tw;layx@cathaylife.com.tw;liuziwei@cathaylife.com.tw;'\
+    'yitsung@cathaylife.com.tw;joelin@cathaylife.com.tw;yaojih@cathaylife.com.tw;yung666666@cathaylife.com.tw;'
 
     to = msg['To'].split(";")
     #名單
