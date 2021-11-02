@@ -8,8 +8,17 @@ from module.zscore import *
 from module.mail_module import send_mail
 # 加入最新的資料
 def data_preprocess(data_csv):
-    dataname = data_csv + '.csv'
-    df = pd.read_csv(dataname,encoding = 'utf_8_sig')
+
+    if platform.system() == "Windows":
+        # Local 端
+        path = f'static/data/Shipping/' + data_csv
+        zip_path = f'static/data/'
+    else:
+        # AWS 端
+        path = f'/home/cathaylife04/smartphone/iphone11/static/data/Shipping/'+ data_csv
+        zip_path = f'/home/cathaylife04/smartphone/iphone11/static/data/'
+
+    df = pd.read_csv(path,encoding = 'utf_8_sig')
     df['date'] = pd.to_datetime(df['date'],format = '%Y-%m-%d')
     #資料如果有NA就拿掉整列
     df.dropna(axis='rows',how = 'any',inplace = True)
@@ -34,8 +43,8 @@ def data_preprocess(data_csv):
     return (df)
     
     
-df_SCFI = data_preprocess('SCFI')
-df_BDIBCI = data_preprocess('BDIBCI')
+df_SCFI = data_preprocess('SCFI.csv')
+df_BDIBCI = data_preprocess('BDIBCI.csv')
 
 mailcontent_plus_SCFI,mailcontent_minus_SCFI = mail_content(df_SCFI,'SCFI')
 mailcontent_plus_BDI,mailcontent_minus_BDI = mail_content(df_BDIBCI,'BDIBCI')
