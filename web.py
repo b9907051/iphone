@@ -142,6 +142,11 @@ def is_logged_in(f):
 def mainpage():
     return render_template("Videocard.html")
 
+@app.route("/SCFI-page")
+@is_logged_in
+def SCFI_page():
+    return render_template("SCFI.html")
+
 @app.route("/Marine-page")
 @is_logged_in
 def Marine_page():
@@ -332,6 +337,39 @@ def Nike():
     #     }
     # }
     data_dic['X_axis'] = df['timestamp'].values.tolist()
+
+    return json.dumps(data_dic)
+
+@app.route("/SCFI")
+@is_logged_in
+def SCFI():
+
+    # 從前端 拿到要看的產品
+    index = request.values.get("index")
+
+    # 準備存放資料
+    df = pd.read_csv("static/data/Shipping/SCFI_branch.csv")
+
+    # 要把 news_ID 給drop 掉
+    df.drop(columns=['News_ID'],inplace = True)
+
+    column_list = df.drop(columns=['Date']).columns
+    data_dic = {}
+
+    if index == 'East':
+        df_temp = df['SCFI美東']
+
+    elif index == 'West':
+        df_temp = df['SCFI美西']
+
+    elif index == 'Europe':
+        df_temp = df['SCFI歐洲']
+
+    elif index == 'SCFI':
+        df_temp = df['SCFI綜合']
+    # 將資料轉成list
+    data_dic['Index'] = df_temp.values.tolist()
+    data_dic['X_axis'] = df['Date'].values.tolist()
 
     return json.dumps(data_dic)
 

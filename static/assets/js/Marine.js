@@ -90,6 +90,7 @@
                                 // type: 'time',
                                 // ticks:{
                                 //     stepSize:50
+                                //     minRotation: 60
                                 // },
                                 // time: {
                                 //       unit: 'day',

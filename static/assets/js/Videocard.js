@@ -116,9 +116,9 @@
                 // console.log(typeof Data)
                 const X_axis = Data.X_axis;
                 const price = Data.price;
-                var datasetting
+                // var datasetting
                 // data要記得用 array包起來不能直接放dictionary進去
-                datasetting = [{
+                const datasetting = [{
                     // 因為這裡是拿Data 裡面的 value 做資料整合所以key沒有被引進來
                     label: product,
                     backgroundColor: convertHex(brandInfo, 10),//輸出形式 rgb()
@@ -161,11 +161,11 @@
                     },
                     options: {
                         type: 'line',
-                        data: {
-                            // 取出第一個Data的key
-                            labels: X_axis,
-                            datasets: datasetting
-                        },
+                        // data: {
+                        //     // 取出第一個Data的key
+                        //     labels: X_axis,
+                        //     datasets: datasetting
+                        // },
                         plugins: {
                             title: {
                                 display: true,

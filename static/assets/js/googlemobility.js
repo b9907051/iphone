@@ -143,7 +143,7 @@
                                 },
                                     time: {
                                           unit: 'day',
-                                          stepSize:20
+                                          stepSize:10
                                     },
                             }
                         },

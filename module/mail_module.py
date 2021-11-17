@@ -23,7 +23,13 @@ def send_mail(subject_normal,subject_abnormal,mail_output):
         msg['subject'] = subject_normal
     else:
         msg['subject'] = subject_abnormal
-        
+
+    # 依照不同的警示訊息給不同的內容
+    if '塑化' in subject_normal :
+        zscore_text = ''
+    else if '航運' in subject_normal :
+        zscore_text = '複'
+
     start = f"""<html>
                     <body>
                     <style>
@@ -34,6 +40,7 @@ def send_mail(subject_normal,subject_abnormal,mail_output):
                             text-decoration:underline;
                         }}
                     </style>
+
                     <p> 本訊號上漲只有 上週 Z-score 為<span style="color: #000000;">負</span>本週Z-score為<span>正</span>才會出現 </p>
                     <p> 本訊號下跌只要 本週 Z-score為<span>正</span>就會出現 </p>
                     <p> 該Z-score 之計算為<span>(每週報價之月漲幅-歷史平均)/歷史標準差</span></p>

@@ -70,7 +70,7 @@ def anti_scrapping(d,url):
         # 如果try 成功的話 break 迴圈
         else:
             break
-    return d,res,url_fail_list
+    return d
 
 res=[]
 # 如果被反爬蟲擋下來
@@ -94,7 +94,7 @@ for Model in Model_Us:
     if Product_Us_R[Model] == 'AirPodPro':
 
         url = 'https://www.apple.com/shop/fulfillment-messages?parts.0=%s&little=true' % ( Model )
-        d,res,url_fail_list = anti_scrapping(d,url)
+        d = anti_scrapping(d,url)
         res.append(d)
 
     # 產品線是 AppleWatch 系列 或是 iPad 系列
@@ -105,12 +105,12 @@ for Model in Model_Us:
             d['Celluar'] = Celluar_R[Model]
             d['Size'] = Size_R[Model]
 
-            d,res,url_fail_list = anti_scrapping(d,url)
+            d = anti_scrapping(d,url)
 
 
         else:
             url = f'https://www.apple.com/shop/fulfillment-messages?parts.0='+ Model + '&little=true'
-            d,res,url_fail_list = anti_scrapping(d,url)
+            d = anti_scrapping(d,url)
 
         # 如果是iPad 則多了 Colar 這個 項目
         if Product_Us_R[Model][0:4] == 'iPad':
@@ -132,7 +132,7 @@ for Model in Model_Us:
         url = 'https://www.apple.com/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % ( Model )
         d['Colors'] = Color_R[Model[0:5]]
         d['Size'] = Size_R[Model[0:5]]
-        d,res,url_fail_list = anti_scrapping(d,url)
+        d = anti_scrapping(d,url)
         res.append(d)
             # print(url)
             # f = random.uniform(1, 1.5)
@@ -160,7 +160,7 @@ for Product in countries:
 
                 url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
 
-                d,res,url_fail_list = anti_scrapping(d,url)
+                d = anti_scrapping(d,url)
                 res.append(d)
 
             # 產品線是 AppleWatch 系列 或是 iPad 系列
@@ -180,7 +180,7 @@ for Product in countries:
                 else:
 
                     url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-                    d,res,url_fail_list = anti_scrapping(d,url)
+                    d = anti_scrapping(d,url)
 
 
                 # 如果是iPad 則多了 Colar 這個 項目
@@ -203,7 +203,7 @@ for Product in countries:
                 d['Colors'] = Color_R[Model[0:5]]
                 d['Size'] = Size_R[Model[0:5]]
 
-                d,res,url_fail_list = anti_scrapping(d,url)
+                d = anti_scrapping(d,url)
                 res.append(d)
 
             # except:
