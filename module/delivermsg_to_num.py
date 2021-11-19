@@ -126,7 +126,7 @@ def Tw(text,time_text):
             try:
                 start_day = dateparser.parse(case2_re.findall(text)[0][0])
                 end_day = dateparser.parse(case2_re.findall(text)[0][1])
-                print(start_day,end_day)
+                
                 # start_day 已經是跟Timestamp的時間差了 ex: 5天
                 start_day = date_gap_calculate(start_day,time_text)
                 end_day = date_gap_calculate(end_day,time_text)

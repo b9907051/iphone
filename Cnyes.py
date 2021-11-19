@@ -6,12 +6,12 @@ import pandas as pd
 import re
 from bs4 import BeautifulSoup
 import time
-from module import get_directory
+from module.get_csv_directory import get_directory
 
 # 準備舊資料
 
 path = get_directory('Shipping/SCFI_branch.csv')
-data = pd.read_csv('path.csv')
+data = pd.read_csv(path)
 Old_Data = data.to_dict('records')
 
 # 對 api 下達 搜尋 航運指數 的結果

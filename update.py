@@ -3,7 +3,6 @@
 # from functools import wraps
 import requests
 import json
-import datetime
 import pandas as pd
 import platform
 import shutil
@@ -37,13 +36,12 @@ headers = {
 }
 s = requests.Session()
 # 把 預期要刪掉的字串組成 list 傳到 function裡
-bagofwords = [' – 送料無料',' — Free',' – 免額外付費']
+bagofwords = [' – 送料無料',' — Free',' – 免額外付費',' — 免額外付費']
 
 # 引數前面加星號 就是不預設有幾個變數
-def replacestring(x,*bagofwords):
+def replacestring(x,bagofwords):
     for text in bagofwords:
         if text in x:
-
             y = x.replace(text,'')
             return y
     return x
@@ -56,7 +54,9 @@ def anti_scrapping(d,url):
             print(url)
             r = s.post(url,headers = headers)
             response = json.loads(r.text)
-            d['Deliver'] = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
+            deliever_msg = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
+            deliever_msg = replacestring(deliever_msg, bagofwords)
+            d['Deliver'] = deliever_msg
             exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
             print(d)
             time.sleep(1)
@@ -76,7 +76,7 @@ res=[]
 # 如果被反爬蟲擋下來
 url_fail_list = []
 # 美國的要單獨跑 因為地址網址的dictionary 是空的
-# count = 0
+count = 0
 for Model in Model_Us:
 
     # count = count +1
@@ -152,7 +152,6 @@ for Product in countries:
             d['Country'] = Country
             d['Product'] = Product_R[Model]
             d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-
             # try:
 
                 # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
