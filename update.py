@@ -13,6 +13,15 @@ from module.Apple_ID.all_id import *
 import random
 import math
 
+#如果 shutdown_US = 1 就跳過美國的產品
+shutdown_US = 1
+
+#一般商品開啟測試模式 =1
+nonus_test = 0
+if nonus_test == 1:
+    product_test = 'iPhone 13 mini'
+    country_test = 'Tw'
+
 if platform.system() == "Windows":
     # Local 端
 	path = 'static/data/Data.csv'
@@ -25,7 +34,7 @@ else:
 Data = pd.read_csv(path)
 Old_Data = Data.to_dict('records')
 
-# 把
+
 headers = {
 'sec-ch-ua':'"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
 'sec-ch-ua-mobile':'?0',
@@ -77,136 +86,141 @@ res=[]
 url_fail_list = []
 # 美國的要單獨跑 因為地址網址的dictionary 是空的
 count = 0
-for Model in Model_Us:
+if shutdown_US != 1:
+    for Model in Model_Us:
 
-    # count = count +1
-    # if count % 30 == 0 :
-    #     time.sleep(5)
-	# if Product_Us_R[Model] == 'IpadPro':
-	# print(Model)
-    d = {} #清空dictionary
-    d['Country'] = 'Us'
-    d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-    d['Product'] = Product_Us_R[Model]
+        # count = count +1
+        # if count % 30 == 0 :
+        #     time.sleep(5)
+    	# if Product_Us_R[Model] == 'IpadPro':
+    	# print(Model)
+        d = {} #清空dictionary
+        d['Country'] = 'Us'
+        d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+        d['Product'] = Product_Us_R[Model]
 
-    # try:
-    # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
-    if Product_Us_R[Model] == 'AirPodPro':
+        # try:
+        # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
+        if Product_Us_R[Model] == 'AirPodPro':
 
-        url = 'https://www.apple.com/shop/fulfillment-messages?parts.0=%s&little=true' % ( Model )
-        d = anti_scrapping(d,url)
-        res.append(d)
-
-    # 產品線是 AppleWatch 系列 或是 iPad 系列
-    elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
-    # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
-        if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
-            url = f'https://www.apple.com/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
-            d['Celluar'] = Celluar_R[Model]
-            d['Size'] = Size_R[Model]
-
+            url = 'https://www.apple.com/shop/fulfillment-messages?parts.0=%s&little=true' % ( Model )
             d = anti_scrapping(d,url)
+            res.append(d)
+
+        # 產品線是 AppleWatch 系列 或是 iPad 系列
+        elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
+        # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
+            if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
+                url = f'https://www.apple.com/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                d['Celluar'] = Celluar_R[Model]
+                d['Size'] = Size_R[Model]
+
+                d = anti_scrapping(d,url)
 
 
-        else:
-            url = f'https://www.apple.com/shop/fulfillment-messages?parts.0='+ Model + '&little=true'
-            d = anti_scrapping(d,url)
+            else:
+                url = f'https://www.apple.com/shop/fulfillment-messages?parts.0='+ Model + '&little=true'
+                d = anti_scrapping(d,url)
 
-        # 如果是iPad 則多了 Colar 這個 項目
-        if Product_Us_R[Model][0:4] == 'iPad':
+            # 如果是iPad 則多了 Colar 這個 項目
+            if Product_Us_R[Model][0:4] == 'iPad':
+                d['Colors'] = Color_R[Model[0:5]]
+
+            # 如果產品不是 Apple watch6 跟 ApplewatchSE
+            if 'Celluar' not in d.keys():
+                d['Celluar'] = Celluar_R[Model[0:5]]
+                d['Size'] = Size_R[Model[0:5]]
+
+            # d['Days'] = delivermsg_to_num.Us(d['Deliver'],d['TimeStemp'])
+            # d["Days"] = eval('delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
+
+            res.append(d)
+        #一般的產品線:
+        else: 
+        # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
+
+            url = 'https://www.apple.com/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % ( Model )
             d['Colors'] = Color_R[Model[0:5]]
-
-        # 如果產品不是 Apple watch6 跟 ApplewatchSE
-        if 'Celluar' not in d.keys():
-            d['Celluar'] = Celluar_R[Model[0:5]]
             d['Size'] = Size_R[Model[0:5]]
-
-        # d['Days'] = delivermsg_to_num.Us(d['Deliver'],d['TimeStemp'])
-        # d["Days"] = eval('delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
-
-        res.append(d)
-    #一般的產品線:
-    else: 
-    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
-
-        url = 'https://www.apple.com/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % ( Model )
-        d['Colors'] = Color_R[Model[0:5]]
-        d['Size'] = Size_R[Model[0:5]]
-        d = anti_scrapping(d,url)
-        res.append(d)
-            # print(url)
-            # f = random.uniform(1, 1.5)
-            # time.sleep(math.floor(f * 10) / 10.0)
-            # r = requests.get(url)
-            # response = json.loads(r.text)
+            d = anti_scrapping(d,url)
+            res.append(d)
+                # print(url)
+                # f = random.uniform(1, 1.5)
+                # time.sleep(math.floor(f * 10) / 10.0)
+                # r = requests.get(url)
+                # response = json.loads(r.text)
 
 
 for Product in countries:
 	#外迴圈跑國家
-    for Country in countries[Product]:
-    #內迴圈跑型號
-        for Model in countries[Product][Country]:
-            # if Product_R[Model] == 'IpadPro':
-            d = {} #清空dictionary
-            # 現在 要處理新增的選項一樣丟在color裡嗎XD
-            d['Country'] = Country
-            d['Product'] = Product_R[Model]
-            d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
-            # try:
+    # 如果產品是我們想要測試的項目 或是 要測試的產品是 none
+    if (Product == product_test) or (nonus_test == 0):
 
-                # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-            if Product_R[Model] == 'AirPodPro':
+        for Country in countries[Product]:
+            if (Country == country_test) or (nonus_test == 0):
+        #內迴圈跑型號
+                for Model in countries[Product][Country]:
+                    # if Product_R[Model] == 'IpadPro':
+                    d = {} #清空dictionary
+                    # 現在 要處理新增的選項一樣丟在color裡嗎XD
+                    d['Country'] = Country
+                    d['Product'] = Product_R[Model]
+                    d['TimeStemp'] = datetime.datetime.today().strftime("%Y-%m-%d")
+                    # try:
 
-                url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+                        # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
+                    if Product_R[Model] == 'AirPodPro':
 
-                d = anti_scrapping(d,url)
-                res.append(d)
+                        url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
 
-            # 產品線是 AppleWatch 系列 或是 iPad 系列
-            elif Product_R[Model][0:10] == 'AppleWatch' or Product_R[Model][0:4] == 'iPad':
+                        d = anti_scrapping(d,url)
+                        res.append(d)
 
-                # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-                if Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
+                    # 產品線是 AppleWatch 系列 或是 iPad 系列
+                    elif Product_R[Model][0:10] == 'AppleWatch' or Product_R[Model][0:4] == 'iPad':
 
-                    url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
-                    r = requests.get(url)
-                    response = json.loads(r.text)
-                    deliver_string = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]['displayName']
+                        # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
+                        if Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
 
-                    d['Deliver'] = replacestring(deliver_string,*bagofwords)
-                    d['Celluar'] = Celluar_R[Model]
-                    d['Size'] = Size_R[Model]
-                else:
+                            url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
+                            r = requests.get(url)
+                            response = json.loads(r.text)
+                            deliver_string = response['body']['content']['deliveryMessage']['Z0YQ']['deliveryOptionMessages'][0]['displayName']
 
-                    url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
-                    d = anti_scrapping(d,url)
+                            d['Deliver'] = replacestring(deliver_string,*bagofwords)
+                            d['Celluar'] = Celluar_R[Model]
+                            d['Size'] = Size_R[Model]
+                        else:
+
+                            url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
+                            d = anti_scrapping(d,url)
 
 
-                # 如果是iPad 則多了 Colar 這個 項目
-                if Product_R[Model][0:4] == 'iPad':
-                    d['Colors'] = Color_R[Model[0:5]]
+                        # 如果是iPad 則多了 Colar 這個 項目
+                        if Product_R[Model][0:4] == 'iPad':
+                            d['Colors'] = Color_R[Model[0:5]]
 
-                # 如果產品不是 Apple watch6 跟 ApplewatchSE
-                if 'Celluar' not in d.keys():
-                    d['Celluar'] = Celluar_R[Model[0:5]]
-                    d['Size'] = Size_R[Model[0:5]]
-                
-                res.append(d)
+                        # 如果產品不是 Apple watch6 跟 ApplewatchSE
+                        if 'Celluar' not in d.keys():
+                            d['Celluar'] = Celluar_R[Model[0:5]]
+                            d['Size'] = Size_R[Model[0:5]]
+                        
+                        res.append(d)
 
-			#一般的產品線:
-            else:
-            # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
-                
-                url = 'https://www.apple.com/%s/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % (d['Country'].lower(), Model)
+        			#一般的產品線:
+                    else:
+                    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
+                        
+                        url = 'https://www.apple.com/%s/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % (d['Country'].lower(), Model)
 
-                d['Colors'] = Color_R[Model[0:5]]
-                d['Size'] = Size_R[Model[0:5]]
+                        d['Colors'] = Color_R[Model[0:5]]
+                        d['Size'] = Size_R[Model[0:5]]
 
-                d = anti_scrapping(d,url)
-                res.append(d)
+                        d = anti_scrapping(d,url)
+                        res.append(d)
 
-            # except:
-                # print(d,'下架')
+                    # except:
+                        # print(d,'下架')
 
 
 newres = res + Old_Data

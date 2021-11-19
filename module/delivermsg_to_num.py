@@ -52,9 +52,7 @@ def Ru(text,time_text):
     elif 'на складе' in text:
         date_gap = 0
         return date_gap
-    else:
-        date_gap = np.nan
-        return date_gap
+
 #--------------------------------------------------------------------
 def Cn(text,time_text):
     #判斷是不是數字
@@ -95,9 +93,7 @@ def Cn(text,time_text):
     elif '有现货' in text:
         date_gap = 0
         return date_gap
-    else:
-        date_gap = np.nan
-        return date_gap
+
 #--------------------------------------------------------------------
 def Tw(text,time_text):
     #判斷是不是數字
@@ -175,9 +171,10 @@ def Tw(text,time_text):
     elif '有現貨' in text:
         date_gap = 0
         return date_gap
-    else:
-        date_gap = np.nan
+    elif '明天' == text:
+        date_gap = 1
         return date_gap
+
 #--------------------------------------------------------------------
 def Uk(text,time_text):
     # 2 weeks 9595
@@ -268,8 +265,7 @@ def Uk(text,time_text):
     elif 'In stock' in text:
         date_gap = 0
         return date_gap
-    else:
-        return np.nan
+
 #--------------------------------------------------------------------
 
 def Hk(text,time_text):
@@ -334,8 +330,7 @@ def Hk(text,time_text):
     elif 'Tomorrow' in text:
         date_gap = 1
         return date_gap
-    else:
-        return np.nan
+
 #--------------------------------------------------------------------
 def De(text,time_text):
     #判斷是不是數字
@@ -431,8 +426,7 @@ def De(text,time_text):
     elif 'Auf Lager' in text:
         date_gap = 0
         return (date_gap)
-    else:
-        return (np.nan)
+
 #--------------------------------------------------------------------
 def Fr(text,time_text):
     #判斷是不是數字
@@ -537,8 +531,6 @@ def Fr(text,time_text):
     elif 'En stock' in text:
         date_gap = 0
         return date_gap
-    else:
-        return np.nan
 #--------------------------------------------------------------------
 def Us(text,time_text):
     #判斷是不是數字
@@ -578,8 +570,7 @@ def Us(text,time_text):
     elif 'In Stock' in text:
         date_gap = 0
         return date_gap
-    else:
-        return np.nan
+
 #-----------------------------------------------------------------------
 def Jp(text,time_text):
     # 如果是隔一天就可以拿到，只要是長這樣都是隔一天拿到 範例: 水 2020/10/14
@@ -649,8 +640,7 @@ def Jp(text,time_text):
     elif '在庫' in text:
         date_gap = 0
         return date_gap
-    else:
-        return np.nan
+
     #-----------------------------------------------------------------------
 # date_gap_calculate 函數會把 要寄送的日期 跟 紀錄的時間進行相減並調整
 def date_gap_calculate(date,time_text)-> float:
