@@ -21,6 +21,9 @@ nonus_test = 0
 if nonus_test == 1:
     product_test = 'iPhone 13 mini'
     country_test = 'Tw'
+else:
+    product_test = ''
+    country_test = ''
 
 if platform.system() == "Windows":
     # Local 端
