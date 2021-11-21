@@ -14,7 +14,7 @@ import random
 import math
 
 #如果 shutdown_US = 1 就跳過美國的產品
-shutdown_US = 1
+shutdown_US = 0
 
 #一般商品開啟測試模式 =1
 nonus_test = 0
