@@ -46,10 +46,10 @@ headers = {
 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36',
 'upgrade-insecure-requests': '1'
 }
-s = requests.Session()
+
 # 把 預期要刪掉的字串組成 list 傳到 function裡
 bagofwords = [' – 送料無料',' — Free',' – 免額外付費',' — 免額外付費']
-
+failnum = 0
 # 引數前面加星號 就是不預設有幾個變數
 def replacestring(x,bagofwords):
     for text in bagofwords:
@@ -62,9 +62,12 @@ def replacestring(x,bagofwords):
 # 傳入 d產品資訊, url產品的連結
 def anti_scrapping(d,url):
     while True:
+        failnum = 0
         try:
             print(url)
+            s = requests.Session()
             r = s.post(url,headers = headers)
+            # print(s.cookies)
             response = json.loads(r.text)
             deliever_msg = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
             deliever_msg = replacestring(deliever_msg, bagofwords)
@@ -74,7 +77,9 @@ def anti_scrapping(d,url):
             time.sleep(1)
         # 如果被反爬蟲的話持續進行這個迴圈
         except Exception as e:
-            print('被反爬蟲',str(e))
+            failnum = failnum +1
+            print('被反爬蟲',str(e),'嘗試次數',failnum)
+
             # f = random.uniform(1, 10)
             # time.sleep(math.floor(f * 10) / 10.0)
             time.sleep(2)
@@ -86,7 +91,7 @@ def anti_scrapping(d,url):
 
 res=[]
 # 如果被反爬蟲擋下來
-url_fail_list = []
+url_us_fail_list = []
 # 美國的要單獨跑 因為地址網址的dictionary 是空的
 count = 0
 if shutdown_US != 1:
