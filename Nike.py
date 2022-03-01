@@ -12,7 +12,7 @@ itemperpage = 48
 # url 產生函數, 參數(ID,從第幾個產品開始,每一次querry拿幾個產品)
 # url 產生函數, 參數(ID,從第幾個產品開始,每一次querry拿幾個產品)
 def get_url(ID:str,pruduct_start:int,querry_each_num:int):
-    url = f'https://api.nike.com/cic/browse/v1?queryid=products&anonymousId=SmrGtQORwBasB6-53jE61&country=us'\
+    url = f'https://api.nike.com/cic/browse/v2?queryid=products&anonymousId=SmrGtQORwBasB6-53jE61&country=us'\
                 '&endpoint=%2Fproduct_feed%2Frollup_threads%2Fv2%3Ffilter%3Dmarketplace(US)%26filter%3Dlanguage(en)'\
                 f'%26filter%3DemployeePrice(true)%26filter%3DattributeIds('+ID+')'\
                 f'%26anchor%3D{pruduct_start}%26consumerChannelId%3Dd9a5bc42-4b9c-4976-858a-f159cf99c647%26count%3D'+str(itemperpage)+'&language=en'\
