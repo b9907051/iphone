@@ -18,6 +18,7 @@ services:
         MYSQL_USER: user
         MYSQL_PASSWORD: Cathay168
         MYSQL_ROOT_PASSWORD: Cathay168
+    restart: always
     volumes:
         - mysql:/var/lib/mysql
         - ./env/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d/
