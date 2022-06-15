@@ -71,8 +71,6 @@ def product_list_create(tag,product_list):
             pass
     return product_list
 
-
-
 product_list = []
 payload_list = []
 
@@ -116,6 +114,8 @@ for k,v in product_dict.items():
 for k,v in payload_dict.items():
     payload_list.append(v)
 
+print('準備好 要抓的所有頁面')
+
 # 進行商品的 querry
 url_1 = 'https://www.dell.com/csbapi/shipping/deliveryoptions/us/en/dhs/19/?zipcode=94016'
 url_2 = 'https://www.dell.com/csbapi/shipping/deliverydates/us/en/bsd/04/?zipcode=94016'
@@ -126,15 +126,22 @@ headers = {
 def delievery_time(r):
     if 'tomorrow' in r.text:
         date_gap = 1
+
     # 沒有的話 要取最後一個
     else:    
         soup1 = Bt4(r.text, "html.parser")
-        date = soup1.find_all("td", class_="date")[0].get_text()
-        date = dateparser.parse(date)
+
+        date_text = soup1.find_all("td", class_="date")[0].get_text()
+            # 如果日期是這樣子的話 By Thursday, Jun 23
+            # if 'By' in date_text:
+            #     date_text = date_text[3:]
+        date = dateparser.parse(date_text)
         date_gap = (date- datetime.today()).days
+
     return date_gap
 
 for i in range(len(payload_list)):
+# for i in range(10):
     # 如果是要post json 記得格式要使用下面的樣子 json =...
     r = requests.post(url_1,headers=headers,json = payload_list[i])
     
@@ -157,17 +164,16 @@ for i in range(len(payload_list)):
         
         pass
 
-
 product_list = []
 # 把更新好的 dicitonary 寫進新的 product_list準備換成DF
 for k,v in product_dict.items():
     product_list.append(v)
 
+
 # 有一種可能是 product_list 裡面的產品 沒有在 pyload_list裡面: 網站上有這個產品 但賣完了所以沒有可運送資訊
 # 直接填寫資訊為0
 df = pd.DataFrame(product_list)
 df['DateGAP'].fillna(0,inplace=True)
-
 
 import db
 from db import db as db_task

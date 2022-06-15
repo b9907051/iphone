@@ -12,7 +12,7 @@ CREATE TABLE `Laptop`.`Dell`(
 CREATE TABLE `Laptop`.`HP`(
     `Date` DATE NOT NULL,
     `Oid` int NOT NULL,
-    `ProdutType` VARCHAR(20) NOT NULL,
+    `ProductType` VARCHAR(20) NOT NULL,
     `ModleName` VARCHAR(100) NOT NULL,
     `DelieverMSG` VARCHAR(50) NOT NULL,
     `RegularPrice` SMALLINT unsigned NOT NULL,
