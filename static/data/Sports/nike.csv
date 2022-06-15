@@ -1,4 +1,6 @@
 ﻿timestamp,discount_item_ratio_cloth,discount_money_cloth,total_num_cloth,soldout_num_cloth,instock_num_cloth,discount_num_cloth,discount_item_ratio_shoes,discount_money_shoes,total_num_shoes,soldout_num_shoes,instock_num_shoes,discount_num_shoes
+2022-06-15,30.62,68.22,28681,890,27791,8509,30.7,75.11,4444,167,4277,1313
+2022-06-14,31.98,66.96,28586,885,27701,8858,29.25,74.15,4052,144,3908,1143
 2022-06-13,30.04,67.89,28473,889,27584,8286,17.9,74.93,4567,277,4290,768
 2022-06-12,25.92,67.19,31138,542,30596,7932,14.57,69.9,4088,553,3535,515
 2022-06-11,26.82,66.37,27080,464,26616,7139,11.02,75.96,4338,590,3748,413

@@ -15,6 +15,7 @@ ipykernel = "*"
 lxml = "*"
 pretty-html-table = "*"
 dateparser = "*"
+dataparser = "*"
 
 [requires]
 python_version = "3.8"
