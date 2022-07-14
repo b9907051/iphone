@@ -205,7 +205,9 @@ def statictis_handle(product_list,one_year_earlier,datetimenow,newdata):
         print('onsaleprice:',sum(onsale_price),'regularprice:',sum(regular_price))
         print('打折金額:',newdata['onsale_dollar_percent'])
         print('輸出統計資料')
-        store_csv(newdata_status,'data_detail_allproduct_'+product)
+
+        # 輸出所有產品的細節
+        #store_csv(newdata_status,'data_detail_allproduct_'+product)
         # print('onsale_percent:',newdata['onsale_percent'])
 
         # print('total_amount:',newdata['total_amount'])

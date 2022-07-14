@@ -19,3 +19,16 @@ CREATE TABLE `Laptop`.`HP`(
     `SalePrice` SMALLINT unsigned NOT NULL,
     PRIMARY KEY(`Oid`, `Date`)
 )
+
+CREATE DATABASE phone;
+CREATE TABLE `phone`.`iPhone`(
+    `Country` VARCHAR(2) NOT NULL,
+    `TimeStemp` DATE NOT NULL,
+    `Product` VARCHAR(20) NOT NULL,
+    `Colors` VARCHAR(10) NOT NULL,
+    `Size` VARCHAR(5) NOT NULL,
+    `Deliver` VARCHAR(30) NOT NULL,
+    `Day` SMALLINT unsigned NOT NULL,
+    `Celluar` VARCHAR(15),
+    PRIMARY KEY(`Country`,`Product`,`Colors`,`Size`,`Celluar`, `TimeStemp`)
+)
