@@ -135,13 +135,17 @@ def delievery_time(r):
             # 如果日期是這樣子的話 By Thursday, Jun 23
             # if 'By' in date_text:
             #     date_text = date_text[3:]
+        print(date_text)
+        # 如果是 Jly1 - Jly3 這種日期的期間 要再額外處理
+        if '-' in date_text:
+            date_text = "".join(date_text.split()[0:1])
         date = dateparser.parse(date_text)
         date_gap = (date- datetime.today()).days
 
     return date_gap
 
 for i in range(len(payload_list)):
-# for i in range(10):
+#for i in range(10):
     # 如果是要post json 記得格式要使用下面的樣子 json =...
     r = requests.post(url_1,headers=headers,json = payload_list[i])
     

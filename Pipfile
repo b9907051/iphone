@@ -16,6 +16,9 @@ lxml = "*"
 pretty-html-table = "*"
 dateparser = "*"
 dataparser = "*"
+loguru = "*"
+sqlalchemy = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.8"
