@@ -69,7 +69,7 @@ def anti_scrapping(d,url):
             r = s.post(url,headers = headers)
             # print(s.cookies)
             response = json.loads(r.text)
-            deliever_msg = response['body']['content']['deliveryMessage'][Model]['deliveryOptionMessages'][0]['displayName']
+            deliever_msg = response['body']['content']['deliveryMessage'][Model]['regular']['deliveryOptions'][0]['date']
             deliever_msg = replacestring(deliever_msg, bagofwords)
             d['Deliver'] = deliever_msg
             exec('d["Day"] = delivermsg_to_num.'+d['Country']+'(d["Deliver"],d["TimeStemp"])')
