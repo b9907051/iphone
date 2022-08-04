@@ -30,7 +30,7 @@ if platform.system() == "Windows":
 	path = 'static/data/Data.csv'
 else:
     # AWS 端
-	path = "/home/cathaylife04/smartphone/iphone11/static/data/Data.csv"
+	path = "/home/cathaylife04/smartphone/iphone/static/data/Data.csv"
 
 
 # path = 'static/data/Data.csv'
