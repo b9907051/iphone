@@ -16,6 +16,7 @@ from os.path import expanduser
 import paramiko
 from paramiko import SSHClient
 
+
 product_index = {'Opporeno':['1262','1261155'],'小米9':['1225','1224655'],
 				'華為P30':['1213','1212233'],'華為P30Pro':['1224','1223829']}
 
