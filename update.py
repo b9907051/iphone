@@ -30,7 +30,7 @@ if platform.system() == "Windows":
 	path = 'static/data/Data.csv'
 elif platform.system() == "Darwin":
     # MAC端
-    path = "static//Data.csv"
+    path = "static/Data.csv"
 else:
     # AWS 端
 	path = "/home/cathaylife04/smartphone/iphone/static/data/Data.csv"
@@ -112,14 +112,14 @@ if shutdown_US != 1:
 
         # try:
         # 如果是AirPodPro 因為沒有Size也沒有Color的資訊所以 除了 AirPodPro 以外其他產品都有Color 跟 Size 的 key
-        if Product_Us_R[Model] == 'AirPodPro':
+        if Product_Us_R[Model] == 'AirPodPro鑫君':
 
             url = 'https://www.apple.com/shop/fulfillment-messages?parts.0=%s&little=true' % ( Model )
             d = anti_scrapping(d,url)
             res.append(d)
 
         # 產品線是 AppleWatch 系列 或是 iPad 系列
-        elif Product_Us_R[Model][0:10] == 'AppleWatch' or Product_Us_R[Model][0:4] == 'iPad':
+        elif Product_Us_R[Model][0:10] == 'AppleWatch鑫君' or Product_Us_R[Model][0:4] == 'iPad鑫君':
         # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了所以要單獨處理
             if Product_Us_R[Model] == 'AppleWatch6' or Product_Us_R[Model] == 'AppleWatchSE':
                 url = f'https://www.apple.com/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
@@ -134,7 +134,7 @@ if shutdown_US != 1:
                 d = anti_scrapping(d,url)
 
             # 如果是iPad 則多了 Colar 這個 項目
-            if Product_Us_R[Model][0:4] == 'iPad':
+            if Product_Us_R[Model][0:4] == 'iPad鑫君':
                 d['Colors'] = Color_R[Model[0:5]]
 
             # 如果產品不是 Apple watch6 跟 ApplewatchSE
@@ -147,8 +147,8 @@ if shutdown_US != 1:
 
             res.append(d)
         #一般的產品線:
-        else: 
-        # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架  
+        else:
+        # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架
 
             url = 'https://www.apple.com/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % ( Model )
             d['Colors'] = Color_R[Model[0:5]]
@@ -180,7 +180,7 @@ for Product in countries:
                     # try:
 
                         # 如果是AirPod 因為沒有Size也沒有Color的資訊所以單獨處理
-                    if Product_R[Model] == 'AirPodPro':
+                    if Product_R[Model] == 'AirPodPro鑫君':
 
                         url = 'https://www.apple.com/%s/shop/fulfillment-messages?parts.0=%s&little=true' % (d['Country'].lower(), Model)
 
@@ -188,10 +188,10 @@ for Product in countries:
                         res.append(d)
 
                     # 產品線是 AppleWatch 系列 或是 iPad 系列
-                    elif Product_R[Model][0:10] == 'AppleWatch' or Product_R[Model][0:4] == 'iPad':
+                    elif Product_R[Model][0:10] == 'AppleWatch鑫君' or Product_R[Model][0:4] == 'iPad鑫君':
 
                         # Applwatch6 及 AppleWatchSE 的型號要塞 兩個 變得比較複雜了
-                        if Product_R[Model] == 'AppleWatch6' or Product_R[Model] == 'AppleWatchSE':
+                        if Product_R[Model] == 'AppleWatch6鑫君' or Product_R[Model] == 'AppleWatchSE':
 
                             url = f'https://www.apple.com/'+ d['Country'].lower() +'/shop/fulfillment-messages?parts.0=Z0YQ&option.0='+ Model +'&little=true'
                             r = requests.get(url)
@@ -208,20 +208,20 @@ for Product in countries:
 
 
                         # 如果是iPad 則多了 Colar 這個 項目
-                        if Product_R[Model][0:4] == 'iPad':
+                        if Product_R[Model][0:4] == 'iPad鑫君':
                             d['Colors'] = Color_R[Model[0:5]]
 
                         # 如果產品不是 Apple watch6 跟 ApplewatchSE
                         if 'Celluar' not in d.keys():
                             d['Celluar'] = Celluar_R[Model[0:5]]
                             d['Size'] = Size_R[Model[0:5]]
-                        
+
                         res.append(d)
 
         			#一般的產品線:
                     else:
-                    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架	
-                        
+                    # 如果找不到 Size 就 不去做request. 產品都會對 Size 256GB做下架
+
                         url = 'https://www.apple.com/%s/shop/fulfillment-messages?mt=regular&parts.0=%s&little=true' % (d['Country'].lower(), Model)
 
                         d['Colors'] = Color_R[Model[0:5]]
