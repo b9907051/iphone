@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 # from bs4 import BeautifulSoup as Bt4
 import requests
 from flask import (
