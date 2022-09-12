@@ -593,7 +593,7 @@ def dashboard():
     # print(Product)
     # df = get_df()
     # 如果現在是在虛擬環境下的畫路徑使用
-    df = pd.read_csv("static/Data.csv")
+    df = pd.read_csv("static/data/Data.csv")
 
     # 如果不把讀取的東西轉成str 他會預設用float 在pivot時會出錯
     df['Day'] = df['Day'].astype(str)
