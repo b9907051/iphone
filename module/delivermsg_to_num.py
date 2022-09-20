@@ -2,6 +2,7 @@ import re
 import dateparser
 from datetime import datetime
 import numpy as np
+import pandas as pd
 
 def Ru(text,time_text):
     # 3–5 рабочих дней
@@ -405,7 +406,9 @@ def De(text,time_text):
         if 'Lieferung' in text:
             date = case4_re.findall(text)[0]
             # 為了要通過dateparser 把. 換成/
+            date = re.sub(r'(\d{1,2}).(\d{1,2})', '\\2.\\1', date)
             date = date.replace(".", "/")
+            
             date = dateparser.parse(date)
 
             date_gap = date_gap_calculate(date,time_text)
@@ -508,6 +511,7 @@ def Fr(text,time_text):
         # Livraison le 13/11. 11/13 送達
         if 'Livraison' in text:
             date = case4_re.findall(text)[0]
+            date = re.sub(r'(\d{1,2}).(\d{1,2})', '\\2.\\1', date)
             date = dateparser.parse(date)
             # 把 timestamp 的 年份 帶入 寄送日期
             # 進行日期差的計算
