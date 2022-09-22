@@ -19,6 +19,9 @@ url = 'https://www.videocardbenchmark.net/gpu.php?gpu=GeForce+'
 if platform.system() == "Windows":
     # Local 端
     path = 'static/data/'
+elif platform.system() == "Darwin":
+    # MAC端
+    path = "static/data/"
 else:
     # AWS 端
     path = "/home/cathaylife04/smartphone/iphone/static/data/"
@@ -86,6 +89,10 @@ output_filename = 'Videocard'
 if platform.system() == "Windows":
     # Local 端
     path = 'static/data/'
+    
+elif platform.system() == "Darwin":
+    # MAC端
+    path = "static/data/"
 else:
     # AWS 端
     path = "/home/cathaylife04/smartphone/iphone11/static/data/"
