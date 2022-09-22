@@ -21,7 +21,7 @@ if platform.system() == "Windows":
     path = 'static/data/'
 else:
     # AWS 端
-    path = "/home/cathaylife04/smartphone/iphone11/static/data/"
+    path = "/home/cathaylife04/smartphone/iphone/static/data/"
     
 card_id_list = {'GTX+1050':'&id=3596',
 'GTX+1050+Ti':'&id=3595',
