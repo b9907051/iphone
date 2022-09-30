@@ -88,7 +88,7 @@
                                 //     stepSize:50
                                 // },
                                 time: {
-                                      unit: 'day',
+                                      unit: 'month',
                                       stepSize:1,
                                       tooltipFormat:'yyyy-MM-dd'
                                 },
