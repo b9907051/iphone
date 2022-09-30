@@ -101,9 +101,12 @@ newdata['timestamp'] = datetime.datetime.today().strftime("%Y-%m-%d")
 if platform.system() == "Windows":
     # Local 端
     path = 'static/data/Sports/nike.csv'
+elif platform.system() == "Darwin":
+    # MAC端
+    path = "static/data/Sports/nike.csv"
 else:
     # AWS 端
-    path = "/home/cathaylife04/smartphone/iphone11/static/data/Sports/nike.csv"
+    path = "/home/cathaylife04/smartphone/iphone/static/data/Sports/nike.csv"
 
 newdata = [newdata]
 # Read Old Data 
