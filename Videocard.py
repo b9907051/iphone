@@ -95,6 +95,6 @@ elif platform.system() == "Darwin":
     path = "static/data/"
 else:
     # AWS 端
-    path = "/home/cathaylife04/smartphone/iphone11/static/data/"
+    path = "/home/cathaylife04/smartphone/iphone/static/data/"
 
 shutil.make_archive( path +'/zipfile/'+output_filename, 'zip', path + output_directname)
